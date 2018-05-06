@@ -1,0 +1,44 @@
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 269] - -----------------------------------------------------------------------------------------
+
+
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 294] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 294] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 294] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 304] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:51793 )
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 304] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:51793, SOMAXCONN=5.
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 305] - server-configs:
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 305] - 	internalAddr : 192.168.0.106:51793
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:12 305] - 	componentID : 6000
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:13 809] - ---- cellappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 52E8E19C86891AC3218081DFAA2FD187. Config: Debug X86. Built: 15:52:42 Apr 29 2018. AppID: 6000. UID: 21461. PID: 22084 ----
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:13 809] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:13 810] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:13 810] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:14 118] - ---- cellappmgr is running ----
+   DEBUG cellappmgr-1 21461 6000  [2018-04-29 15:56:14 118] - Components::process(): Request for the process of identity...
+ WARNING cellappmgr-1 21461 6000  [2018-04-29 15:56:17 471] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20750, errorno=10048
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 512] - Components::findComponents: find logger(1)...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 586] - Components::findComponents: found logger, addr:192.168.0.106:51799
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 586] - Components::addComponent: reset orderLog, uid=21461!
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 587] - Components::addComponent[logger], uid=21461, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 589] - Components::findComponents: find dbmgr(2)...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 691] - Components::findComponents: found dbmgr, addr:192.168.0.106:51795
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 691] - Components::addComponent: reset orderLog, uid=21461!
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 692] - Components::addComponent[dbmgr], uid=21461, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:21 692] - Components::findComponents: found dbmgr, addr:192.168.0.106:51795
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:23 698] - Components::findComponents: find baseappmgr(1)...
+ WARNING cellappmgr-1 21461 6000  [2018-04-29 15:56:24 008] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20326, errorno=10048
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:24 411] - ServerApp::onRegisterNewApp: uid:21461, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:51792, extaddr:nonsupport, extport:0,  from 192.168.0.106:51814/0/0/0.
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:24 411] - Components::addComponent[baseappmgr], uid=21461, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:25 011] - Components::findComponents: find baseappmgr(2)...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:25 043] - Components::findComponents: found baseappmgr, addr:192.168.0.106:51792
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:25 044] - Components::findComponents: found baseappmgr, addr:192.168.0.106:51792
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:27 091] - Components::findComponents: register self to dbmgr...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:27 097] - Components::findComponents: register self to baseappmgr...
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:27 110] - Components::process(): Found all the components!
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:28 011] - ServerApp::onRegisterNewApp: uid:21461, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:51796, extaddr:nonsupport, extport:0,  from 192.168.0.106:51821/0/0/0.
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:28 011] - Components::addComponent[cellapp], uid=21461, componentID=8001, globalorderid=3, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:28 110] - Cellappmgr::getCellapp: added new cellapp(8001).
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:28 411] - ServerApp::onRegisterNewApp: uid:21461, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:51797, extaddr:192.168.0.106, extport:20015,  from 192.168.0.106:51826/0/0/0.
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:28 411] - Components::addComponent[baseapp], uid=21461, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 21461 6000  [2018-04-29 15:56:32 710] - Cellappmgr::onCellappInitProgress: cid=8001, progress=1.
+   DEBUG cellappmgr-1 21461 6000  [2018-04-29 15:56:32 710] - Cellappmgr::addCellappComponentID: cellapp component id 8001, group order id 1

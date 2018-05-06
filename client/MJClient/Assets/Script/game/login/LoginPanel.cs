@@ -22,7 +22,8 @@ public class LoginPanel : MonoBehaviour {
         KBEngine.Event.registerOut("onScriptVersionNotMatch", this, "onScriptVersionNotMatch");
         KBEngine.Event.registerOut("onLoginGatewayFailed", this, "onLoginGatewayFailed");
         KBEngine.Event.registerOut("onLoginSuccessfully", this, "onLoginSuccessfully");
-        KBEngine.Event.registerOut("login_baseapp", this, "login_baseapp");
+		KBEngine.Event.registerOut("OnReqCreateAvatar", this, "OnReqCreateAvatar");
+		KBEngine.Event.registerOut("login_baseapp", this, "login_baseapp");
         KBEngine.Event.registerOut("Loginapp_importClientMessages", this, "Loginapp_importClientMessages");
         KBEngine.Event.registerOut("Baseapp_importClientMessages", this, "Baseapp_importClientMessages");
         KBEngine.Event.registerOut("Baseapp_importClientEntityDef", this, "Baseapp_importClientEntityDef");
@@ -91,10 +92,31 @@ public class LoginPanel : MonoBehaviour {
     {
         
         GameManager.GetInstance().showWaiting("登陆成功!", 1);
+		print("isNewPlayer ="+accountEntity.isNewPlayer);
+		print("playerName_base=" + accountEntity.playerName_base);
+		print("playerID_base=" + accountEntity.playerID_base);
+		//if (accountEntity.isNewPlayer == 1) {
+			accountEntity.baseEntityCall.reqCreateAvatar("撒旦");
+		//}
+	}
+	public void OnReqCreateAvatar(int code) {
+		print("OnReqCreateAvatar "+code);
+		if (code == 0) {
+			Account ac = (Account)KBEngineApp.app.player();
+			print("isNewPlayer=" + ac.isNewPlayer);
+			print("playerName_base=" + ac.playerName_base);
+			print("playerID_base=" + ac.playerID_base);
+		}else if(code == 1){
+			print("和服务器上的玩家重名了");
+		}
+		else if (code == 2)
+		{
+			print("你已经有一个角色了  不需要在创建了");
+		}
+	}
 
-    }
 
-    public void Loginapp_importClientMessages()
+	public void Loginapp_importClientMessages()
     {
         GameManager.GetInstance().showWaiting("请求建立登录通信协议...");
         print("请求建立登录通信协议...");

@@ -122,11 +122,56 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(spaceID / 40002).");
 
+			Property pAccount_isNewPlayer = new Property();
+			pAccount_isNewPlayer.name = "isNewPlayer";
+			pAccount_isNewPlayer.properUtype = 5;
+			pAccount_isNewPlayer.properFlags = 32;
+			pAccount_isNewPlayer.aliasID = 4;
+			Byte Account_isNewPlayer_defval;
+			Byte.TryParse("1", out Account_isNewPlayer_defval);
+			pAccount_isNewPlayer.defaultVal = Account_isNewPlayer_defval;
+			pAccountModule.propertys["isNewPlayer"] = pAccount_isNewPlayer; 
+
+			pAccountModule.usePropertyDescrAlias = true;
+			pAccountModule.idpropertys[(UInt16)pAccount_isNewPlayer.aliasID] = pAccount_isNewPlayer;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(isNewPlayer / 5).");
+
+			Property pAccount_playerID = new Property();
+			pAccount_playerID.name = "playerID";
+			pAccount_playerID.properUtype = 4;
+			pAccount_playerID.properFlags = 4;
+			pAccount_playerID.aliasID = 5;
+			UInt16 Account_playerID_defval;
+			UInt16.TryParse("", out Account_playerID_defval);
+			pAccount_playerID.defaultVal = Account_playerID_defval;
+			pAccountModule.propertys["playerID"] = pAccount_playerID; 
+
+			pAccountModule.usePropertyDescrAlias = true;
+			pAccountModule.idpropertys[(UInt16)pAccount_playerID.aliasID] = pAccount_playerID;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(playerID / 4).");
+
+			Property pAccount_playerID_base = new Property();
+			pAccount_playerID_base.name = "playerID_base";
+			pAccount_playerID_base.properUtype = 2;
+			pAccount_playerID_base.properFlags = 32;
+			pAccount_playerID_base.aliasID = 6;
+			UInt16 Account_playerID_base_defval;
+			UInt16.TryParse("", out Account_playerID_base_defval);
+			pAccount_playerID_base.defaultVal = Account_playerID_base_defval;
+			pAccountModule.propertys["playerID_base"] = pAccount_playerID_base; 
+
+			pAccountModule.usePropertyDescrAlias = true;
+			pAccountModule.idpropertys[(UInt16)pAccount_playerID_base.aliasID] = pAccount_playerID_base;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(playerID_base / 2).");
+
 			Property pAccount_playerName = new Property();
 			pAccount_playerName.name = "playerName";
-			pAccount_playerName.properUtype = 1;
-			pAccount_playerName.properFlags = 32;
-			pAccount_playerName.aliasID = 4;
+			pAccount_playerName.properUtype = 3;
+			pAccount_playerName.properFlags = 4;
+			pAccount_playerName.aliasID = 7;
 			string Account_playerName_defval = "";
 			pAccount_playerName.defaultVal = Account_playerName_defval;
 			pAccountModule.propertys["playerName"] = pAccount_playerName; 
@@ -134,22 +179,52 @@ namespace KBEngine
 			pAccountModule.usePropertyDescrAlias = true;
 			pAccountModule.idpropertys[(UInt16)pAccount_playerName.aliasID] = pAccount_playerName;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(playerName / 1).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(playerName / 3).");
 
-			List<DATATYPE_BASE> pAccount_baseCallTest_args = new List<DATATYPE_BASE>();
+			Property pAccount_playerName_base = new Property();
+			pAccount_playerName_base.name = "playerName_base";
+			pAccount_playerName_base.properUtype = 1;
+			pAccount_playerName_base.properFlags = 32;
+			pAccount_playerName_base.aliasID = 8;
+			string Account_playerName_base_defval = "";
+			pAccount_playerName_base.defaultVal = Account_playerName_base_defval;
+			pAccountModule.propertys["playerName_base"] = pAccount_playerName_base; 
 
-			Method pAccount_baseCallTest = new Method();
-			pAccount_baseCallTest.name = "baseCallTest";
-			pAccount_baseCallTest.methodUtype = 1;
-			pAccount_baseCallTest.aliasID = -1;
-			pAccount_baseCallTest.args = pAccount_baseCallTest_args;
+			pAccountModule.usePropertyDescrAlias = true;
+			pAccountModule.idpropertys[(UInt16)pAccount_playerName_base.aliasID] = pAccount_playerName_base;
 
-			pAccountModule.methods["baseCallTest"] = pAccount_baseCallTest; 
-			pAccountModule.base_methods["baseCallTest"] = pAccount_baseCallTest;
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(playerName_base / 1).");
 
-			pAccountModule.idbase_methods[pAccount_baseCallTest.methodUtype] = pAccount_baseCallTest;
+			List<DATATYPE_BASE> pAccount_OnReqCreateAvatar_args = new List<DATATYPE_BASE>();
+			pAccount_OnReqCreateAvatar_args.Add(EntityDef.id2datatypes[2]);
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(baseCallTest / 1).");
+			Method pAccount_OnReqCreateAvatar = new Method();
+			pAccount_OnReqCreateAvatar.name = "OnReqCreateAvatar";
+			pAccount_OnReqCreateAvatar.methodUtype = 2;
+			pAccount_OnReqCreateAvatar.aliasID = 1;
+			pAccount_OnReqCreateAvatar.args = pAccount_OnReqCreateAvatar_args;
+
+			pAccountModule.methods["OnReqCreateAvatar"] = pAccount_OnReqCreateAvatar; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_OnReqCreateAvatar.aliasID] = pAccount_OnReqCreateAvatar;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 2).");
+
+			List<DATATYPE_BASE> pAccount_reqCreateAvatar_args = new List<DATATYPE_BASE>();
+			pAccount_reqCreateAvatar_args.Add(EntityDef.id2datatypes[12]);
+
+			Method pAccount_reqCreateAvatar = new Method();
+			pAccount_reqCreateAvatar.name = "reqCreateAvatar";
+			pAccount_reqCreateAvatar.methodUtype = 1;
+			pAccount_reqCreateAvatar.aliasID = -1;
+			pAccount_reqCreateAvatar.args = pAccount_reqCreateAvatar_args;
+
+			pAccountModule.methods["reqCreateAvatar"] = pAccount_reqCreateAvatar; 
+			pAccountModule.base_methods["reqCreateAvatar"] = pAccount_reqCreateAvatar;
+
+			pAccountModule.idbase_methods[pAccount_reqCreateAvatar.methodUtype] = pAccount_reqCreateAvatar;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 1).");
 
 		}
 

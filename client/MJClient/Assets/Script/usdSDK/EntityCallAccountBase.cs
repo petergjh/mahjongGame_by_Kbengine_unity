@@ -21,12 +21,13 @@ namespace KBEngine
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_BASE;
 		}
 
-		public void baseCallTest()
+		public void reqCreateAvatar(string arg1)
 		{
-			Bundle pBundle = newCall("baseCallTest", 0);
+			Bundle pBundle = newCall("reqCreateAvatar", 0);
 			if(pBundle == null)
 				return;
 
+			bundle.writeUnicode(arg1);
 			sendCall(null);
 		}
 

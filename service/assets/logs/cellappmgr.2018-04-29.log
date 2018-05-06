@@ -1,0 +1,39 @@
+  INFO root [2018-04-29 15:56:12,247] - 
+  INFO root [2018-04-29 15:56:12,268] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-04-29 15:56:12,293] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-04-29 15:56:12,294] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-04-29 15:56:12,294] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-04-29 15:56:12,304] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:51793 )
+  INFO root [2018-04-29 15:56:12,304] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:51793, SOMAXCONN=5.
+  INFO root [2018-04-29 15:56:12,305] - server-configs:
+  INFO root [2018-04-29 15:56:12,305] - 	internalAddr : 192.168.0.106:51793
+  INFO root [2018-04-29 15:56:12,305] - 	componentID : 6000
+  INFO root [2018-04-29 15:56:13,809] - ---- cellappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 52E8E19C86891AC3218081DFAA2FD187. Config: Debug X86. Built: 15:52:42 Apr 29 2018. AppID: 6000. UID: 21461. PID: 22084 ----
+  INFO root [2018-04-29 15:56:13,809] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-04-29 15:56:13,810] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-04-29 15:56:13,810] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-04-29 15:56:14,118] - ---- cellappmgr is running ----
+ DEBUG root [2018-04-29 15:56:14,118] - Components::process(): Request for the process of identity...
+  WARN root [2018-04-29 15:56:17,471] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20750, errorno=10048
+  INFO root [2018-04-29 15:56:21,511] - Components::findComponents: find logger(1)...
+  INFO root [2018-04-29 15:56:21,585] - Components::findComponents: found logger, addr:192.168.0.106:51799
+  INFO root [2018-04-29 15:56:21,586] - Components::addComponent: reset orderLog, uid=21461!
+  INFO root [2018-04-29 15:56:21,586] - Components::addComponent[logger], uid=21461, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-04-29 15:56:21,588] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-04-29 15:56:21,691] - Components::findComponents: found dbmgr, addr:192.168.0.106:51795
+  INFO root [2018-04-29 15:56:21,691] - Components::addComponent: reset orderLog, uid=21461!
+  INFO root [2018-04-29 15:56:21,692] - Components::addComponent[dbmgr], uid=21461, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-04-29 15:56:21,692] - Components::findComponents: found dbmgr, addr:192.168.0.106:51795
+  WARN root [2018-04-29 15:56:22,692] - Forwarding logs to logger[192.168.0.106:51799/0/0/0]...
+ ERROR root [2018-04-29 15:56:34,323] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-04-29 15:56:34,341] - The following logs sent to logger failed:
+  WARN root [2018-04-29 15:56:34,341] - ==> [2018-04-29 15:56:34 319] TCPPacketReceiver::processPendingEvents(192.168.0.106:51799): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-04-29 15:56:34,341] - ==> [2018-04-29 15:56:34 324] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-04-29 15:56:34,400] - TCPPacketReceiver::processPendingEvents(192.168.0.106:51795): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-04-29 15:56:34,405] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-04-29 15:56:34,428] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-04-29 15:56:34,429] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-04-29 15:56:34,430] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-04-29 15:56:34,430] - ThreadPool::destroy(): starting size 2.

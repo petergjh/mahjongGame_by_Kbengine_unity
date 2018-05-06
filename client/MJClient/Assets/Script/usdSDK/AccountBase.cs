@@ -19,9 +19,18 @@ namespace KBEngine
 		public EntityBaseEntityCall_AccountBase baseEntityCall = null;
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
+		public Byte isNewPlayer = 1;
+		public virtual void onIsNewPlayerChanged(Byte oldValue) {}
+		public UInt16 playerID = 0;
+		public virtual void onPlayerIDChanged(UInt16 oldValue) {}
+		public UInt16 playerID_base = 0;
+		public virtual void onPlayerID_baseChanged(UInt16 oldValue) {}
 		public string playerName = "";
 		public virtual void onPlayerNameChanged(string oldValue) {}
+		public string playerName_base = "";
+		public virtual void onPlayerName_baseChanged(string oldValue) {}
 
+		public abstract void OnReqCreateAvatar(Byte arg1); 
 
 		public AccountBase()
 		{
@@ -90,6 +99,10 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
+				case 2:
+					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
+					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
+					break;
 				default:
 					break;
 			};
@@ -154,7 +167,55 @@ namespace KBEngine
 						}
 
 						break;
-					case 1:
+					case 5:
+						Byte oldval_isNewPlayer = isNewPlayer;
+						isNewPlayer = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onIsNewPlayerChanged(oldval_isNewPlayer);
+						}
+						else
+						{
+							if(inWorld)
+								onIsNewPlayerChanged(oldval_isNewPlayer);
+						}
+
+						break;
+					case 4:
+						UInt16 oldval_playerID = playerID;
+						playerID = stream.readUint16();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPlayerIDChanged(oldval_playerID);
+						}
+						else
+						{
+							if(inWorld)
+								onPlayerIDChanged(oldval_playerID);
+						}
+
+						break;
+					case 2:
+						UInt16 oldval_playerID_base = playerID_base;
+						playerID_base = stream.readUint16();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPlayerID_baseChanged(oldval_playerID_base);
+						}
+						else
+						{
+							if(inWorld)
+								onPlayerID_baseChanged(oldval_playerID_base);
+						}
+
+						break;
+					case 3:
 						string oldval_playerName = playerName;
 						playerName = stream.readUnicode();
 
@@ -167,6 +228,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onPlayerNameChanged(oldval_playerName);
+						}
+
+						break;
+					case 1:
+						string oldval_playerName_base = playerName_base;
+						playerName_base = stream.readUnicode();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPlayerName_baseChanged(oldval_playerName_base);
+						}
+						else
+						{
+							if(inWorld)
+								onPlayerName_baseChanged(oldval_playerName_base);
 						}
 
 						break;
@@ -221,8 +298,71 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_isNewPlayer = isNewPlayer;
+			Property prop_isNewPlayer = pdatas[4];
+			if(prop_isNewPlayer.isBase())
+			{
+				if(inited && !inWorld)
+					onIsNewPlayerChanged(oldval_isNewPlayer);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_isNewPlayer.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onIsNewPlayerChanged(oldval_isNewPlayer);
+					}
+				}
+			}
+
+			UInt16 oldval_playerID = playerID;
+			Property prop_playerID = pdatas[5];
+			if(prop_playerID.isBase())
+			{
+				if(inited && !inWorld)
+					onPlayerIDChanged(oldval_playerID);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_playerID.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPlayerIDChanged(oldval_playerID);
+					}
+				}
+			}
+
+			UInt16 oldval_playerID_base = playerID_base;
+			Property prop_playerID_base = pdatas[6];
+			if(prop_playerID_base.isBase())
+			{
+				if(inited && !inWorld)
+					onPlayerID_baseChanged(oldval_playerID_base);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_playerID_base.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPlayerID_baseChanged(oldval_playerID_base);
+					}
+				}
+			}
+
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[4];
+			Property prop_playerName = pdatas[7];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -238,6 +378,27 @@ namespace KBEngine
 					else
 					{
 						onPlayerNameChanged(oldval_playerName);
+					}
+				}
+			}
+
+			string oldval_playerName_base = playerName_base;
+			Property prop_playerName_base = pdatas[8];
+			if(prop_playerName_base.isBase())
+			{
+				if(inited && !inWorld)
+					onPlayerName_baseChanged(oldval_playerName_base);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_playerName_base.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPlayerName_baseChanged(oldval_playerName_base);
 					}
 				}
 			}

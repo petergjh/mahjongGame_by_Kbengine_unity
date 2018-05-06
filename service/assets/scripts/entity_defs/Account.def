@@ -1,0 +1,48 @@
+<root>
+	<Properties>
+		<playerName_base>
+			<Type>	UNICODE					</Type>
+			<Flags>	BASE_AND_CLIENT					</Flags>
+			<Persistent>	true						</Persistent>
+		</playerName_base>
+		<playerID_base>
+			<Type>	UINT16					</Type>
+			<Flags>	BASE_AND_CLIENT					</Flags>
+			<Persistent>	true						</Persistent>
+		</playerID_base>
+		<playerName>
+			<Type>	UNICODE					</Type>
+			<Flags>	ALL_CLIENTS					</Flags>
+			<Persistent>	true						</Persistent>
+		</playerName>
+		<playerID>
+			<Type>	UINT16					</Type>
+			<Flags>	ALL_CLIENTS					</Flags>
+			<Persistent>	true						</Persistent>
+		</playerID>
+		<isNewPlayer>
+			<Type>		UINT8			</Type>
+			<Flags>		BASE_AND_CLIENT				</Flags>
+			<Persistent>		true				</Persistent>
+			<Default>		1				</Default>
+		</isNewPlayer>
+	</Properties>
+
+	<ClientMethods>
+		<OnReqCreateAvatar>
+			<Arg>	UINT8	</Arg>
+		</OnReqCreateAvatar>
+		
+	</ClientMethods>
+
+	<BaseMethods>
+		<reqCreateAvatar>
+			<Exposed/>
+			<Arg>	UNICODE	</Arg>
+		</reqCreateAvatar>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>
