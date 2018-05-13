@@ -1,0 +1,36 @@
+<root>
+	<Properties>
+		<roomKey>
+			<Type>			SPACE_KEY			</Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</roomKey>
+		<RoomType>
+			<Type>			UINT8			</Type>
+			<Flags>			ALL_CLIENTS				</Flags>
+		</RoomType>
+		<EnterPlayerList>
+			<Type>			ENTITY_LIST			</Type>
+			<Flags>			BASE				</Flags>
+		</EnterPlayerList>
+		<playerMaxCount>
+			<Type>			UINT8			</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+		</playerMaxCount>
+	</Properties>
+
+	<ClientMethods>		
+	</ClientMethods>
+
+	<BaseMethods>
+		<NeedPlayersCount>
+		</NeedPlayersCount>
+		<enterRoom>
+			<Arg>		ENTITYCALL		</Arg>
+		</enterRoom>
+		
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>
