@@ -73,3 +73,5 @@ class Account(KBEngine.Proxy):
 		else:
 			self.client.OnReqCreateAvatar(1)
 
+	def onLeaveRoom(self):
+		self.destroyCellEntity()

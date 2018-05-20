@@ -23,6 +23,22 @@ class Room(KBEngine.Entity):
 
 		if self.cell is not None:
 			#向cell投送玩家
-			#self.cell.
-			pass
+			if self.cell is not None:
+				self.cell.enterRoom(entityCall)
 
+	def leaveRoom(self,entityID):
+		for i in range(len(self.EnterPlayerList)):
+			if self.EnterPlayerList[i].id == entityID:
+				self.EnterPlayerList.pop(i)
+				break
+
+		if self.RoomType == 0:
+			KBEngine.globalData["Halls"].roomNeedPlayer(self,self.roomKey)
+
+	def onGetCell(self):
+		"""
+		KBEngine method.
+		entity的cell部分实体被创建成功
+		"""
+		for playerEntity in self.EnterPlayerList:
+			self.enterRoom(playerEntity)

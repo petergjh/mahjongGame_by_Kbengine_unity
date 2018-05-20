@@ -1,0 +1,216 @@
+  INFO root [2018-05-09 00:08:13,690] - 
+  INFO root [2018-05-09 00:08:13,692] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-05-09 00:08:13,693] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-05-09 00:08:13,693] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-05-09 00:08:13,693] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-05-09 00:08:13,699] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50374 )
+  INFO root [2018-05-09 00:08:13,699] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50374, SOMAXCONN=5.
+  INFO root [2018-05-09 00:08:13,699] - server-configs:
+  INFO root [2018-05-09 00:08:13,699] - 	internalAddr : 192.168.0.106:50374
+  INFO root [2018-05-09 00:08:13,699] - 	componentID : 4000
+  WARN root [2018-05-09 00:08:14,010] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20122, errorno=10048
+  INFO root [2018-05-09 00:08:14,013] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 2973. PID: 7104 ----
+  INFO root [2018-05-09 00:08:14,014] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-05-09 00:08:14,014] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-05-09 00:08:14,014] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-05-09 00:08:14,141] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:08:14,141] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:08:14,142] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:08:14,145] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:08:14,145] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:08:14,145] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:08:14,145] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:08:14,175] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:08:14,204] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-05-09 00:08:14,204] - Script::install(): KBExtra is successfully!
+  INFO root [2018-05-09 00:08:14,235] - Dbmgr::initializeEnd: digest(A31C5E2451836DC1934D7B06B6ED9B47)
+S_INFO root [2018-05-09 00:08:14,235] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-05-09 00:08:14,236] - TelnetServer server is running on port 32000
+  INFO root [2018-05-09 00:08:14,236] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+  WARN root [2018-05-09 00:08:14,529] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+335D495C22BB87EE80661B8F9083962D91FE1D2736429DBEB3C3AE9B01E3D84E1994D1F95C07A5F1B156F0939EF720C9613C40BA6C241FB53209F6EE41172CAC35710DF460967D3FB450ED13139D3A8C29DDF952E92BA6AC1EE06A1B87EF0E69FEC41661BB123DB9D8176C85A82C77E44EF78EABECDE1CF278CDDB98B4D9CC70
+ DEBUG root [2018-05-09 00:08:14,531] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ ERROR root [2018-05-09 00:08:16,532] - DBInterfaceMysql::attach: mysql_errno=2003, mysql_error=Can't connect to MySQL server on 'localhost' (10061)
+ ERROR root [2018-05-09 00:08:16,534] - DBUtil::createInterface: attach to database failed!
+	dbinterface=0x2df364
+	args=interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=no.
+
+ ERROR root [2018-05-09 00:08:16,535] - Dbmgr::initDB(): can't create dbInterface!
+  WARN root [2018-05-09 00:08:16,538] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 2.30 seconds
+ ERROR root [2018-05-09 00:08:16,539] - app::initialize(): initialization failed!
+ DEBUG root [2018-05-09 00:08:16,540] - ThreadPool::destroy(): starting size 0.
+ DEBUG root [2018-05-09 00:08:16,941] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:08:16,942] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:08:16,942] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:08:16,943] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:08:16,943] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:08:16,944] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:08:16,944] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:08:16,945] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:08:16,945] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:08:16,976] - Script::uninstall(): is successfully!
+ DEBUG root [2018-05-09 00:08:16,977] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-05-09 00:08:17,277] - ThreadPool::destroy(): waiting for thread(2)[0x6bebc8,0x6beb60,], try=1
+ DEBUG root [2018-05-09 00:08:17,678] - TPThread::~TPThread(): 0x6bebc8
+ DEBUG root [2018-05-09 00:08:17,679] - TPThread::~TPThread(): 0x6beb60
+ DEBUG root [2018-05-09 00:08:17,679] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:08:17,680] - Bundle::destroyObjPool(): size 13.
+ DEBUG root [2018-05-09 00:08:17,681] - Channel::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:17,682] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:17,683] - UDPPacket::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:17,683] - EndPoint::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:17,684] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:17,684] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:17,685] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-05-09 00:08:24,486] - EventDispatcher()::~EventDispatcher: Num timers = 1
+  INFO root [2018-05-09 00:08:42,711] - 
+  INFO root [2018-05-09 00:08:42,711] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-05-09 00:08:42,712] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-05-09 00:08:42,712] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-05-09 00:08:42,712] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-05-09 00:08:42,715] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50409 )
+  INFO root [2018-05-09 00:08:42,715] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50409, SOMAXCONN=5.
+  INFO root [2018-05-09 00:08:42,715] - server-configs:
+  INFO root [2018-05-09 00:08:42,715] - 	internalAddr : 192.168.0.106:50409
+  INFO root [2018-05-09 00:08:42,715] - 	componentID : 4000
+  WARN root [2018-05-09 00:08:43,026] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20576, errorno=10048
+  INFO root [2018-05-09 00:08:43,029] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 3068. PID: 10484 ----
+  INFO root [2018-05-09 00:08:43,030] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-05-09 00:08:43,030] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-05-09 00:08:43,030] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-05-09 00:08:43,156] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:08:43,156] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:08:43,156] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:08:43,159] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:08:43,159] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:08:43,160] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:08:43,160] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:08:43,186] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:08:43,215] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-05-09 00:08:43,215] - Script::install(): KBExtra is successfully!
+  INFO root [2018-05-09 00:08:43,221] - Dbmgr::initializeEnd: digest(A31C5E2451836DC1934D7B06B6ED9B47)
+S_INFO root [2018-05-09 00:08:43,222] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-05-09 00:08:43,222] - TelnetServer server is running on port 32000
+  INFO root [2018-05-09 00:08:43,222] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+  WARN root [2018-05-09 00:08:43,490] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+CF9E69B4519B4A2A60A90E080F27BCA7635C0493938D1EB4200CA12C092E6063AE2FB02416E4CB1FE637CC60901BDA9662622912F5AE3F4456A8BF6B410237E41A8D54386A61C89279CECB227871D3DF31BB8709F6696C77CF95A66997BB44DBBA7EE58D47996235C2D2C5B42278314B42D6427181555E34FF23F0DFDEFEC68B
+ DEBUG root [2018-05-09 00:08:43,492] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ ERROR root [2018-05-09 00:08:45,494] - DBInterfaceMysql::attach: mysql_errno=2003, mysql_error=Can't connect to MySQL server on 'localhost' (10061)
+ ERROR root [2018-05-09 00:08:45,496] - DBUtil::createInterface: attach to database failed!
+	dbinterface=0x46eeec
+	args=interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=no.
+
+ ERROR root [2018-05-09 00:08:45,497] - Dbmgr::initDB(): can't create dbInterface!
+  WARN root [2018-05-09 00:08:45,500] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 2.28 seconds
+ ERROR root [2018-05-09 00:08:45,501] - app::initialize(): initialization failed!
+ DEBUG root [2018-05-09 00:08:45,502] - ThreadPool::destroy(): starting size 0.
+ DEBUG root [2018-05-09 00:08:45,903] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:08:45,903] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:08:45,904] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:08:45,904] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:08:45,905] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:08:45,905] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:08:45,905] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:08:45,906] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:08:45,906] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:08:45,933] - Script::uninstall(): is successfully!
+ DEBUG root [2018-05-09 00:08:45,934] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-05-09 00:08:46,234] - ThreadPool::destroy(): waiting for thread(2)[0x8c4220,0x8c41b8,], try=1
+ DEBUG root [2018-05-09 00:08:46,635] - TPThread::~TPThread(): 0x8c4220
+ DEBUG root [2018-05-09 00:08:46,635] - TPThread::~TPThread(): 0x8c41b8
+ DEBUG root [2018-05-09 00:08:46,636] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:08:46,636] - Bundle::destroyObjPool(): size 13.
+ DEBUG root [2018-05-09 00:08:46,637] - Channel::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:46,638] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:46,638] - UDPPacket::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:46,638] - EndPoint::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:08:46,639] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:46,639] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:08:46,639] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-05-09 00:08:53,440] - EventDispatcher()::~EventDispatcher: Num timers = 1
+  INFO root [2018-05-09 00:08:57,892] - 
+  INFO root [2018-05-09 00:08:57,892] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-05-09 00:08:57,893] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-05-09 00:08:57,893] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-05-09 00:08:57,893] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-05-09 00:08:57,907] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50420 )
+  INFO root [2018-05-09 00:08:57,907] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50420, SOMAXCONN=5.
+  INFO root [2018-05-09 00:08:57,907] - server-configs:
+  INFO root [2018-05-09 00:08:57,907] - 	internalAddr : 192.168.0.106:50420
+  INFO root [2018-05-09 00:08:57,907] - 	componentID : 4000
+  WARN root [2018-05-09 00:08:58,218] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20657, errorno=10048
+  INFO root [2018-05-09 00:08:58,221] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 3117. PID: 9456 ----
+  INFO root [2018-05-09 00:08:58,222] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-05-09 00:08:58,222] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-05-09 00:08:58,222] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-05-09 00:08:58,352] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:08:58,352] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:08:58,352] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:08:58,355] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:08:58,356] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:08:58,356] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:08:58,356] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:08:58,382] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:08:58,409] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-05-09 00:08:58,409] - Script::install(): KBExtra is successfully!
+  INFO root [2018-05-09 00:08:58,416] - Dbmgr::initializeEnd: digest(A31C5E2451836DC1934D7B06B6ED9B47)
+S_INFO root [2018-05-09 00:08:58,416] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-05-09 00:08:58,416] - TelnetServer server is running on port 32000
+  INFO root [2018-05-09 00:08:58,416] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+  WARN root [2018-05-09 00:08:58,710] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+7D6FC3FFA4560461E24276237C141D3D1DC4FE94B4D61A26C3297920F84A0EF919EF9F2A0B9E86BFDEFBC5046D0612F35C360DF844F033E89BF0DA78A14497C0057B3A07ACC2FDD31F0FEEA1D942AE6DA76235B7103A995FAA1AA264370C1C53F30D57BA2266A3317131E1AB8AE622124238F8827AD94F1AD54374BFE34B9682
+ DEBUG root [2018-05-09 00:08:58,712] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ ERROR root [2018-05-09 00:09:00,712] - DBInterfaceMysql::attach: mysql_errno=2003, mysql_error=Can't connect to MySQL server on 'localhost' (10061)
+ ERROR root [2018-05-09 00:09:00,714] - DBUtil::createInterface: attach to database failed!
+	dbinterface=0x39f13c
+	args=interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=no.
+
+ ERROR root [2018-05-09 00:09:00,715] - Dbmgr::initDB(): can't create dbInterface!
+  WARN root [2018-05-09 00:09:00,718] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 2.30 seconds
+ ERROR root [2018-05-09 00:09:00,719] - app::initialize(): initialization failed!
+ DEBUG root [2018-05-09 00:09:00,721] - ThreadPool::destroy(): starting size 0.
+ DEBUG root [2018-05-09 00:09:01,121] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:09:01,122] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-09 00:09:01,122] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-09 00:09:01,123] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-09 00:09:01,123] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-09 00:09:01,124] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-05-09 00:09:01,124] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-09 00:09:01,124] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-09 00:09:01,125] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-09 00:09:01,155] - Script::uninstall(): is successfully!
+ DEBUG root [2018-05-09 00:09:01,156] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-05-09 00:09:01,456] - ThreadPool::destroy(): waiting for thread(2)[0x834220,0x8341b8,], try=1
+ DEBUG root [2018-05-09 00:09:01,858] - TPThread::~TPThread(): 0x834220
+ DEBUG root [2018-05-09 00:09:01,859] - TPThread::~TPThread(): 0x8341b8
+ DEBUG root [2018-05-09 00:09:01,859] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-09 00:09:01,860] - Bundle::destroyObjPool(): size 13.
+ DEBUG root [2018-05-09 00:09:01,861] - Channel::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:09:01,861] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:09:01,862] - UDPPacket::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:09:01,862] - EndPoint::destroyObjPool(): size 15.
+ DEBUG root [2018-05-09 00:09:01,863] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:09:01,863] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-05-09 00:09:01,864] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-05-09 00:09:08,664] - EventDispatcher()::~EventDispatcher: Num timers = 1
+  INFO root [2018-05-09 00:09:12,216] - 
+  INFO root [2018-05-09 00:09:12,217] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-05-09 00:09:12,217] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-05-09 00:09:12,217] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-05-09 00:09:12,218] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-05-09 00:09:12,233] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50438 )
+  INFO root [2018-05-09 00:09:12,233] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50438, SOMAXCONN=5.
+  INFO root [2018-05-09 00:09:12,233] - server-configs:
+  INFO root [2018-05-09 00:09:12,233] - 	internalAddr : 192.168.0.106:50438
+  INFO root [2018-05-09 00:09:12,233] - 	componentID : 4000

@@ -511,3 +511,56 @@ lastquery=insert into tbl_CheckName (sm_playerName)  values("撒旦")
    DEBUG      dbmgr-1 8948 4000  [2018-05-06 16:06:44 046] - Dbmgr::DBTaskServerLog()
    DEBUG      dbmgr-1 8948 4000  [2018-05-06 17:06:44 091] - Dbmgr::DBTaskServerLog()
    DEBUG      dbmgr-1 8948 4000  [2018-05-06 18:06:44 115] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:06:44 160] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:40:02 993] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=0, componentID=0, entityID=0, dbid=3, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:40:03 533] - Dbmgr::queryAccount: 1, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:40:06 833] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:40:06 853] - Dbmgr::onEntityOffline: 3, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:40:06 829] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=3, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:55:28 220] - Dbmgr::onAccountLogin:loginName=11, accountName=11, success=0, componentID=0, entityID=0, dbid=2, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:55:28 640] - Dbmgr::queryAccount: 11, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:55:41 780] - Dbmgr::writeEntity: Account(2).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:55:41 820] - Dbmgr::onEntityOffline: 2, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:55:41 777] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=2, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:56:28 220] - Dbmgr::onAccountLogin:loginName=11, accountName=11, success=0, componentID=0, entityID=0, dbid=2, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:56:28 620] - Dbmgr::queryAccount: 11, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:56:41 420] - Dbmgr::writeEntity: CheckName(0).
+ WARNING      dbmgr-1 8948 4000  [2018-05-06 19:56:41 400] - DBInterfaceMysql::processException: Exception: Duplicate entry '1234' for key 'sm_playerName'
+lastquery=insert into tbl_CheckName (sm_playerName)  values("1234")
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:56:52 020] - Dbmgr::writeEntity: CheckName(6).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:31 240] - Dbmgr::writeEntity: Account(2).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:31 260] - Dbmgr::onEntityOffline: 2, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:57:31 235] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=2, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:42 021] - Dbmgr::onAccountLogin:loginName=11, accountName=11, success=0, componentID=0, entityID=0, dbid=2, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:42 521] - Dbmgr::queryAccount: 11, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:55 520] - Dbmgr::writeEntity: Account(2).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:57:55 540] - Dbmgr::onEntityOffline: 2, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:57:55 513] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=2, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:43 441] - Dbmgr::onAccountLogin:loginName=11, accountName=11, success=0, componentID=0, entityID=0, dbid=2, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:43 941] - Dbmgr::queryAccount: 11, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:50 920] - Dbmgr::writeEntity: Account(2).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:50 940] - Dbmgr::onEntityOffline: 2, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:58:50 917] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=2, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:56 141] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=0, componentID=0, entityID=0, dbid=3, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:58:56 661] - Dbmgr::queryAccount: 1, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:01 561] - Dbmgr::writeEntity: Account(3).
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:59:01 551] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=3, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:01 581] - Dbmgr::onEntityOffline: 3, entityType=1.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:06 441] - Dbmgr::onAccountLogin:loginName=2, accountName=2, success=0, componentID=0, entityID=0, dbid=6, flags=0, deadline=0.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:59:06 382] - DBTaskAccountLogin::db_thread_process(): not found account[2], autocreate successfully!
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:06 941] - Dbmgr::queryAccount: 2, success=1, flags=0, deadline=0.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 19:59:14 576] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=6, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:14 581] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:14 601] - Dbmgr::onEntityOffline: 6, entityType=1.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:19 421] - Dbmgr::onAccountLogin:loginName=2, accountName=2, success=0, componentID=0, entityID=0, dbid=6, flags=0, deadline=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:19 941] - Dbmgr::queryAccount: 2, success=1, flags=0, deadline=0.
+ WARNING      dbmgr-1 8948 4000  [2018-05-06 19:59:30 201] - DBInterfaceMysql::processException: Exception: Duplicate entry '1234' for key 'sm_playerName'
+lastquery=insert into tbl_CheckName (sm_playerName)  values("1234")
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:30 281] - Dbmgr::writeEntity: CheckName(0).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 19:59:39 061] - Dbmgr::writeEntity: CheckName(8).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 20:01:01 442] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 20:01:01 462] - Dbmgr::onEntityOffline: 6, entityType=1.
+    INFO      dbmgr-1 8948 4000  [2018-05-06 20:01:01 429] - Buffered_DBTasks::onFiniTask: Playing buffered task for entityID=0, dbid=6, dbid_tasks_size=1, entityid_tasks_size=0.
+   DEBUG      dbmgr-1 8948 4000  [2018-05-06 20:06:44 185] - Dbmgr::DBTaskServerLog()
+ WARNING      dbmgr-1 8948 4000  [2018-05-06 20:37:05 175] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50862): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   ERROR      dbmgr-1 8948 4000  [2018-05-06 20:37:05 181] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054

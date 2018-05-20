@@ -747,3 +747,103 @@ delay time is too long, please check the dbmgr logs!
    DEBUG    baseapp01 8948 7001  [2018-05-06 14:07:40 291] - Account::onClientDeath: 2001.
    S_DBG    baseapp01 8948 7001  [2018-05-06 14:07:40 291] - Account[2001].onClientDeath:
    DEBUG    baseapp01 8948 7001  [2018-05-06 14:07:40 291] - Account::~Account(): 2001
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:40:03 091] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:40:03 391] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53240/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:40:03 391] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53240/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:40:03 491] - Baseapp::loginBaseapp: new user[1], channel[192.168.0.106:53240/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:40:03 591] - PendingLoginMgr::remove: 1, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:40:03 591] - EntityApp::createEntity: new Account 2003
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:40:03 592] - account[2003] entities enable. entityCall:Client id:2003, utype:1, component=client[0], addr: 192.168.0.106:53240.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:40:03 592] - Baseapp::onQueryAccountCBFromDbmgr: user=1, uuid=6552431325440573440, entityID=2003, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:40:06 784] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53240): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:40:06 784] - Account::onClientDeath: 2003.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:40:06 784] - Account[2003].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:40:06 785] - Account::~Account(): 2003
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:55:28 289] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:55:28 489] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53343/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:55:28 489] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53343/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:55:28 589] - Baseapp::loginBaseapp: new user[11], channel[192.168.0.106:53343/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:55:28 689] - PendingLoginMgr::remove: 11, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:55:28 689] - EntityApp::createEntity: new Account 2004
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:55:28 689] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 192.168.0.106:53343.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:55:28 689] - Baseapp::onQueryAccountCBFromDbmgr: user=11, uuid=6552435298285322240, entityID=2004, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:55:41 729] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53343): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:55:41 730] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:55:41 730] - Account[2004].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:55:41 730] - Account::~Account(): 2004
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:56:28 289] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:28 489] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53352/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:56:28 489] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53352/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:28 589] - Baseapp::loginBaseapp: new user[11], channel[192.168.0.106:53352/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:56:28 689] - PendingLoginMgr::remove: 11, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:28 689] - EntityApp::createEntity: new Account 2005
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:56:28 689] - account[2005] entities enable. entityCall:Client id:2005, utype:1, component=client[0], addr: 192.168.0.106:53352.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:28 689] - Baseapp::onQueryAccountCBFromDbmgr: user=11, uuid=6552435555983360000, entityID=2005, flags=0, deadline=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:41 389] - EntityApp::createEntity: new CheckName 2006
+    INFO    baseapp01 8948 7001  [2018-05-06 19:56:51 989] - EntityApp::createEntity: new CheckName 2007
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:57:31 183] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53352): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:31 184] - Account::onClientDeath: 2005.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:57:31 184] - Account[2005].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:31 184] - Account::~Account(): 2005
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:42 089] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:57:42 389] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53359/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:57:42 389] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53359/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:57:42 489] - Baseapp::loginBaseapp: new user[11], channel[192.168.0.106:53359/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:42 589] - PendingLoginMgr::remove: 11, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:57:42 589] - EntityApp::createEntity: new Account 2008
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:57:42 589] - account[2008] entities enable. entityCall:Client id:2008, utype:1, component=client[0], addr: 192.168.0.106:53359.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:57:42 589] - Baseapp::onQueryAccountCBFromDbmgr: user=11, uuid=6552435873810939904, entityID=2008, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:57:55 474] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53359): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:55 474] - Account::onClientDeath: 2008.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:57:55 475] - Account[2008].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:57:55 476] - Account::~Account(): 2008
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:43 489] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:43 789] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53366/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:58:43 789] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53366/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:43 889] - Baseapp::loginBaseapp: new user[11], channel[192.168.0.106:53366/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:43 989] - PendingLoginMgr::remove: 11, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:43 989] - EntityApp::createEntity: new Account 2009
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:58:43 989] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 192.168.0.106:53366.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:43 989] - Baseapp::onQueryAccountCBFromDbmgr: user=11, uuid=6552436135803944960, entityID=2009, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:58:50 871] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53366): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:50 871] - Account::onClientDeath: 2009.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:58:50 871] - Account[2009].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:50 871] - Account::~Account(): 2009
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:56 189] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:56 489] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53370/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:58:56 489] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53370/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:56 589] - Baseapp::loginBaseapp: new user[1], channel[192.168.0.106:53370/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:58:56 689] - PendingLoginMgr::remove: 1, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:56 689] - EntityApp::createEntity: new Account 2010
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:58:56 689] - account[2010] entities enable. entityCall:Client id:2010, utype:1, component=client[0], addr: 192.168.0.106:53370.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:58:56 689] - Baseapp::onQueryAccountCBFromDbmgr: user=1, uuid=6552436191638519808, entityID=2010, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:59:01 504] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53370): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:01 504] - Account::onClientDeath: 2010.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:59:01 505] - Account[2010].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:01 506] - Account::~Account(): 2010
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:06 488] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:06 788] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53374/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:59:06 788] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53374/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:06 888] - Baseapp::loginBaseapp: new user[2], channel[192.168.0.106:53374/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:06 988] - PendingLoginMgr::remove: 2, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:06 988] - EntityApp::createEntity: new Account 2011
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:59:06 988] - account[2011] entities enable. entityCall:Client id:2011, utype:1, component=client[0], addr: 192.168.0.106:53374.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:06 988] - Baseapp::onQueryAccountCBFromDbmgr: user=2, uuid=6552436234588192768, entityID=2011, flags=0, deadline=0.
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:59:14 539] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53374): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:14 539] - Account::onClientDeath: 2011.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 19:59:14 539] - Account[2011].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:14 540] - Account::~Account(): 2011
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:19 488] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:19 788] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:53378/0/0/0
+ WARNING    baseapp01 8948 7001  [2018-05-06 19:59:19 788] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:53378/0/0/0
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:19 888] - Baseapp::loginBaseapp: new user[2], channel[192.168.0.106:53378/0/0/0].
+   DEBUG    baseapp01 8948 7001  [2018-05-06 19:59:19 988] - PendingLoginMgr::remove: 2, size=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:19 988] - EntityApp::createEntity: new Account 2012
+  S_INFO    baseapp01 8948 7001  [2018-05-06 19:59:19 988] - account[2012] entities enable. entityCall:Client id:2012, utype:1, component=client[0], addr: 192.168.0.106:53378.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:19 989] - Baseapp::onQueryAccountCBFromDbmgr: user=2, uuid=6552436290422767616, entityID=2012, flags=0, deadline=0.
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:30 189] - EntityApp::createEntity: new CheckName 2013
+    INFO    baseapp01 8948 7001  [2018-05-06 19:59:38 988] - EntityApp::createEntity: new CheckName 2014
+ WARNING    baseapp01 8948 7001  [2018-05-06 20:01:01 381] - TCPPacketReceiver::processPendingEvents(192.168.0.106:53378): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   DEBUG    baseapp01 8948 7001  [2018-05-06 20:01:01 382] - Account::onClientDeath: 2012.
+   S_DBG    baseapp01 8948 7001  [2018-05-06 20:01:01 382] - Account[2012].onClientDeath:
+   DEBUG    baseapp01 8948 7001  [2018-05-06 20:01:01 382] - Account::~Account(): 2012
