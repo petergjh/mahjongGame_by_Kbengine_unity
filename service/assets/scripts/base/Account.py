@@ -2,11 +2,14 @@
 import KBEngine
 from KBEDebug import *
 import Functor
-
+MAIN_STATE_IDEL = 1
+MAIN_STATE_MATCH = 2
+MAIN_STATE_INGAME = 3
 class Account(KBEngine.Proxy):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
-	
+		self.MainState = MAIN_STATE_IDEL
+
 	def onTimer(self, id, userArg):
 		"""
 		KBEngine method.
@@ -39,7 +42,7 @@ class Account(KBEngine.Proxy):
 		客户端对应实体已经销毁
 		"""
 		DEBUG_MSG("Account[%i].onClientDeath:" % self.id)
-		self.destroy()
+		#self.destroy()
 
 	def reqCreateAvatar(self,name):
 		#客户端请求创建一个角色
@@ -75,3 +78,12 @@ class Account(KBEngine.Proxy):
 
 	def onLeaveRoom(self):
 		self.destroyCellEntity()
+
+	def EnterMatchesMatch(self):
+		if self.MainState != MAIN_STATE_IDEL:
+			return
+		self.MainState = MAIN_STATE_MATCH
+		KBEngine.globalData["Halls"].EnterMatchesMatch(self)
+
+	def createCell(self,roomCell):
+		self.createCellEntity(roomCell)

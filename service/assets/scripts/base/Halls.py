@@ -1,6 +1,8 @@
 import KBEngine
 from KBEDebug import *
 import Functor
+import random
+
 ROOM_MAX_PLAYER = 2
 FEN_PEI_TIMER = 1
 class Halls(KBEngine.Entity):
@@ -8,7 +10,7 @@ class Halls(KBEngine.Entity):
 		KBEngine.Entity.__init__(self)
 		KBEngine.globalData["Halls"] = self
 		self.waitingEnterPlayerEntitys = []
-		self.fen_pei_timer == 0
+		self.fen_pei_timer = 0
 		self.NeedPlayerRoomEntity = {}
 		self.allRoomEntityList = {}
 
@@ -35,7 +37,9 @@ class Halls(KBEngine.Entity):
 		playerCount = len(self.waitingEnterPlayerEntitys)
 		if playerCount>0:
 			deleRoomList = []
+			print("123123123------")
 			for roomId,entity in self.NeedPlayerRoomEntity.items():
+				print(len(self.NeedPlayerRoomEntity))
 				freeSet = entity.NeedPlayersCount()
 				if freeSet>0:
 					if playerCount < freeSet:
@@ -47,9 +51,13 @@ class Halls(KBEngine.Entity):
 							entity.enterRoom(self.waitingEnterPlayerEntitys.pop(0))
 							playerCount-=1
 						deleRoomList.append(roomId)
-				else:
-					deleRoomList.append(roomId)
 
+					if playerCount == 0:
+						return
+
+
+			print("结束后长度")
+			print(len(self.NeedPlayerRoomEntity))
 			for i in range(len(deleRoomList)):
 				self.NeedPlayerRoomEntity.pop(deleRoomList[i])
 

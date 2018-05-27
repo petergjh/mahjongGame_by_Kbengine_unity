@@ -708,5 +708,84 @@ namespace KBEngine
 		}
 	}
 
+	public struct SPACE_KEY
+	{
+		UInt64 value;
+
+		SPACE_KEY(UInt64 value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator UInt64(SPACE_KEY value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator SPACE_KEY(int value)
+		{
+			UInt64 tvalue = (UInt64)value;
+			return new SPACE_KEY(tvalue);
+		}
+
+		public static UInt64 MaxValue
+		{
+			get
+			{
+				return UInt64.MaxValue;
+			}
+		}
+
+		public static UInt64 MinValue
+		{
+			get
+			{
+				return UInt64.MinValue;
+			}
+		}
+	}
+
+	public struct ENTITY_ID
+	{
+		UInt32 value;
+
+		ENTITY_ID(UInt32 value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator UInt32(ENTITY_ID value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator ENTITY_ID(int value)
+		{
+			UInt32 tvalue = (UInt32)value;
+			return new ENTITY_ID(tvalue);
+		}
+
+		public static UInt32 MaxValue
+		{
+			get
+			{
+				return UInt32.MaxValue;
+			}
+		}
+
+		public static UInt32 MinValue
+		{
+			get
+			{
+				return UInt32.MinValue;
+			}
+		}
+	}
+
+	public class ENTITY_LIST : List<byte[]>
+	{
+
+	}
+
 
 }

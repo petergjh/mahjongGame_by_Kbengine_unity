@@ -49,7 +49,11 @@ public class hallPanel : MonoBehaviour {
 	}
 	void Click(Transform tr){
 		if (tr == xzddBtn) {
-					
+			Account acc = (Account)KBEngineApp.app.player();
+			if (acc != null)
+			{
+				acc.baseEntityCall.EnterMatchesMatch();
+			}
 		} else if (tr == enterRoomBtn) {
 			
 			

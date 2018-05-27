@@ -39,5 +39,9 @@ def onLogWrote(logData):
 	有需要的用户可以在此处把日志写入到其它的地方（如数据库）
 	@param logData: bytes
 	"""
-	pass
+	path='mylog/mylog.log'
+	f=KBEngine.open(path,'ab')
+	f.write(logData)
+	f.close()
+
 

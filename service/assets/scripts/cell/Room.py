@@ -13,6 +13,7 @@ class Room(KBEngine.Entity):
 			if seat.userId == 0:
 				seat.userId = EntityCall.id;
 				seat.score = 1000   #带入分数
+				self.base.CanEnterRoom(EntityCall)
 				return
 
 	
@@ -20,7 +21,7 @@ class Room(KBEngine.Entity):
 		#通知玩家base销毁cell
 		EntityCall.base.onLeaveRoom()
 		#让base向大厅要人
-		self.base.leaveRoom(self.id)
+		self.base.leaveRoom(EntityCall.id)
 		#清除该玩家坐过的椅子数据
 		self.roomInfo.clearDataByEntityID(EntityCall.id)
 

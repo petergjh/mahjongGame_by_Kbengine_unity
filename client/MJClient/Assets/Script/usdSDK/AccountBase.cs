@@ -99,7 +99,7 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 2:
+				case 4:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;

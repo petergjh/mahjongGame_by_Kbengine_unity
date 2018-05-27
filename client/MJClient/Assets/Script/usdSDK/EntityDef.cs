@@ -200,7 +200,7 @@ namespace KBEngine
 
 			Method pAccount_OnReqCreateAvatar = new Method();
 			pAccount_OnReqCreateAvatar.name = "OnReqCreateAvatar";
-			pAccount_OnReqCreateAvatar.methodUtype = 2;
+			pAccount_OnReqCreateAvatar.methodUtype = 4;
 			pAccount_OnReqCreateAvatar.aliasID = 1;
 			pAccount_OnReqCreateAvatar.args = pAccount_OnReqCreateAvatar_args;
 
@@ -208,7 +208,22 @@ namespace KBEngine
 			pAccountModule.useMethodDescrAlias = true;
 			pAccountModule.idmethods[(UInt16)pAccount_OnReqCreateAvatar.aliasID] = pAccount_OnReqCreateAvatar;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 2).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 4).");
+
+			List<DATATYPE_BASE> pAccount_EnterMatchesMatch_args = new List<DATATYPE_BASE>();
+
+			Method pAccount_EnterMatchesMatch = new Method();
+			pAccount_EnterMatchesMatch.name = "EnterMatchesMatch";
+			pAccount_EnterMatchesMatch.methodUtype = 3;
+			pAccount_EnterMatchesMatch.aliasID = -1;
+			pAccount_EnterMatchesMatch.args = pAccount_EnterMatchesMatch_args;
+
+			pAccountModule.methods["EnterMatchesMatch"] = pAccount_EnterMatchesMatch; 
+			pAccountModule.base_methods["EnterMatchesMatch"] = pAccount_EnterMatchesMatch;
+
+			pAccountModule.idbase_methods[pAccount_EnterMatchesMatch.methodUtype] = pAccount_EnterMatchesMatch;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(EnterMatchesMatch / 3).");
 
 			List<DATATYPE_BASE> pAccount_reqCreateAvatar_args = new List<DATATYPE_BASE>();
 			pAccount_reqCreateAvatar_args.Add(EntityDef.id2datatypes[12]);
@@ -225,6 +240,98 @@ namespace KBEngine
 			pAccountModule.idbase_methods[pAccount_reqCreateAvatar.methodUtype] = pAccount_reqCreateAvatar;
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 1).");
+
+			ScriptModule pRoomModule = new ScriptModule("Room");
+			EntityDef.moduledefs["Room"] = pRoomModule;
+			EntityDef.idmoduledefs[4] = pRoomModule;
+
+			Property pRoom_position = new Property();
+			pRoom_position.name = "position";
+			pRoom_position.properUtype = 40000;
+			pRoom_position.properFlags = 4;
+			pRoom_position.aliasID = 1;
+			Vector3 Room_position_defval = new Vector3();
+			pRoom_position.defaultVal = Room_position_defval;
+			pRoomModule.propertys["position"] = pRoom_position; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_position.aliasID] = pRoom_position;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(position / 40000).");
+
+			Property pRoom_direction = new Property();
+			pRoom_direction.name = "direction";
+			pRoom_direction.properUtype = 40001;
+			pRoom_direction.properFlags = 4;
+			pRoom_direction.aliasID = 2;
+			Vector3 Room_direction_defval = new Vector3();
+			pRoom_direction.defaultVal = Room_direction_defval;
+			pRoomModule.propertys["direction"] = pRoom_direction; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_direction.aliasID] = pRoom_direction;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(direction / 40001).");
+
+			Property pRoom_spaceID = new Property();
+			pRoom_spaceID.name = "spaceID";
+			pRoom_spaceID.properUtype = 40002;
+			pRoom_spaceID.properFlags = 16;
+			pRoom_spaceID.aliasID = 3;
+			UInt32 Room_spaceID_defval;
+			UInt32.TryParse("", out Room_spaceID_defval);
+			pRoom_spaceID.defaultVal = Room_spaceID_defval;
+			pRoomModule.propertys["spaceID"] = pRoom_spaceID; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_spaceID.aliasID] = pRoom_spaceID;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(spaceID / 40002).");
+
+			Property pRoom_RoomType = new Property();
+			pRoom_RoomType.name = "RoomType";
+			pRoom_RoomType.properUtype = 8;
+			pRoom_RoomType.properFlags = 4;
+			pRoom_RoomType.aliasID = 4;
+			Byte Room_RoomType_defval;
+			Byte.TryParse("", out Room_RoomType_defval);
+			pRoom_RoomType.defaultVal = Room_RoomType_defval;
+			pRoomModule.propertys["RoomType"] = pRoom_RoomType; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_RoomType.aliasID] = pRoom_RoomType;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(RoomType / 8).");
+
+			Property pRoom_playerMaxCount = new Property();
+			pRoom_playerMaxCount.name = "playerMaxCount";
+			pRoom_playerMaxCount.properUtype = 10;
+			pRoom_playerMaxCount.properFlags = 4;
+			pRoom_playerMaxCount.aliasID = 5;
+			Byte Room_playerMaxCount_defval;
+			Byte.TryParse("", out Room_playerMaxCount_defval);
+			pRoom_playerMaxCount.defaultVal = Room_playerMaxCount_defval;
+			pRoomModule.propertys["playerMaxCount"] = pRoom_playerMaxCount; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_playerMaxCount.aliasID] = pRoom_playerMaxCount;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(playerMaxCount / 10).");
+
+			Property pRoom_roomKey = new Property();
+			pRoom_roomKey.name = "roomKey";
+			pRoom_roomKey.properUtype = 7;
+			pRoom_roomKey.properFlags = 4;
+			pRoom_roomKey.aliasID = 6;
+			UInt64 Room_roomKey_defval;
+			UInt64.TryParse("", out Room_roomKey_defval);
+			pRoom_roomKey.defaultVal = Room_roomKey_defval;
+			pRoomModule.propertys["roomKey"] = pRoom_roomKey; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_roomKey.aliasID] = pRoom_roomKey;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(roomKey / 7).");
 
 		}
 
@@ -254,7 +361,7 @@ namespace KBEngine
 
 			{
 				UInt16 utype = 5;
-				string typeName = "UINT64";
+				string typeName = "SPACE_KEY";
 				string name = "UINT64";
 				DATATYPE_BASE val = null;
 				EntityDef.datatypes.TryGetValue(name, out val);
@@ -265,7 +372,7 @@ namespace KBEngine
 
 			{
 				UInt16 utype = 4;
-				string typeName = "UINT32";
+				string typeName = "ENTITY_ID";
 				string name = "UINT32";
 				DATATYPE_BASE val = null;
 				EntityDef.datatypes.TryGetValue(name, out val);
@@ -457,6 +564,15 @@ namespace KBEngine
 				DATATYPE_BASE val = null;
 				EntityDef.datatypes.TryGetValue(name, out val);
 				EntityDef.datatypes[typeName] = val;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 22;
+				string typeName = "ENTITY_LIST";
+				DATATYPE_ENTITY_LIST datatype = new DATATYPE_ENTITY_LIST();
+				EntityDef.datatypes[typeName] = datatype;
 				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
 				EntityDef.datatype2id[typeName] = utype;
 			}

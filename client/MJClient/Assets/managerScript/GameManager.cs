@@ -30,15 +30,55 @@ public class GameManager : MonoBehaviour
     {
 
         DontDestroyOnLoad(gameObject);
-    }
+		installEvents();
 
-    void OnDestroy()
+
+	}
+	void installEvents()
+	{
+		KBEngine.Event.registerOut("addSpaceGeometryMapping", this, "addSpaceGeometryMapping");
+		KBEngine.Event.registerOut("onEnterWorld", this, "onEnterWorld");
+		//KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
+	}
+	public void onEnterWorld(KBEngine.Entity entity)
+	{
+		if (gameSceneManager.instance == null)
+		{
+			pendingEnterEntityIDs.Add(entity.id);
+		}
+		else {
+			gameSceneManager.instance.EnterWorld(entity);
+
+		}
+	}
+	public void gameSceneLoadeOver() {
+		foreach (Int32 id in pendingEnterEntityIDs)
+		{
+			print(id);
+			KBEngine.Entity entity = KBEngineApp.app.findEntity(id);
+			if (entity != null)
+			{
+				gameSceneManager.instance.EnterWorld(entity);
+			}
+		}
+		pendingEnterEntityIDs.Clear();
+
+	}
+	void OnDestroy()
     {
-
-    }
-
-    // 显示等待界面
-    public void showWaiting(string showInfoMessage = "", int showTime = 30, showWaitingCB cb = null)
+		
+	}
+	public void addSpaceGeometryMapping(string path)
+	{
+		print(path);
+		switch (path) {
+			case "spaces/mjRoom":
+				UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("gameScene");
+				break;
+		}
+	}
+	// 显示等待界面
+	public void showWaiting(string showInfoMessage = "", int showTime = 30, showWaitingCB cb = null)
     {
         //closeWaitingPanel();
         print(showInfoMessage);

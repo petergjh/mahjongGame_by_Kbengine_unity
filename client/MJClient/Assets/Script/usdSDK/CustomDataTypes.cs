@@ -12,4 +12,32 @@ namespace KBEngine
 	using System.Collections.Generic;
 
 
+
+	public class DATATYPE_ENTITY_LIST : DATATYPE_BASE
+	{
+		public ENTITY_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			ENTITY_LIST datas = new ENTITY_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(stream.readPython());
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, ENTITY_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				stream.writePython(v[i]);
+			};
+		}
+	}
+
+
 }

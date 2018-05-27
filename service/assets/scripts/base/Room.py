@@ -12,7 +12,7 @@ class Room(KBEngine.Entity):
 	def NeedPlayersCount(self):
 		if self.isDestroyed:
 			return 0
-
+		print(str(self.roomKey)+"-需要玩家数量--"+str(self.MaxPlayerCount - len(self.EnterPlayerList)))
 		return self.MaxPlayerCount - len(self.EnterPlayerList)
 
 	def enterRoom(self,entityCall):
@@ -42,3 +42,11 @@ class Room(KBEngine.Entity):
 		"""
 		for playerEntity in self.EnterPlayerList:
 			self.enterRoom(playerEntity)
+
+		if self.MaxPlayerCount>len(self.EnterPlayerList) and self.RoomType == 0:
+			KBEngine.globalData["Halls"].roomNeedPlayer(self,self.roomKey)
+
+	def CanEnterRoom(self,entityCall):
+		if entityCall.cell is None:
+			print("没有cell")
+			entityCall.createCell(self.cell)
