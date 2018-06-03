@@ -200,7 +200,7 @@ namespace KBEngine
 
 			Method pAccount_OnReqCreateAvatar = new Method();
 			pAccount_OnReqCreateAvatar.name = "OnReqCreateAvatar";
-			pAccount_OnReqCreateAvatar.methodUtype = 4;
+			pAccount_OnReqCreateAvatar.methodUtype = 6;
 			pAccount_OnReqCreateAvatar.aliasID = 1;
 			pAccount_OnReqCreateAvatar.args = pAccount_OnReqCreateAvatar_args;
 
@@ -208,13 +208,27 @@ namespace KBEngine
 			pAccountModule.useMethodDescrAlias = true;
 			pAccountModule.idmethods[(UInt16)pAccount_OnReqCreateAvatar.aliasID] = pAccount_OnReqCreateAvatar;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 4).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 6).");
+
+			List<DATATYPE_BASE> pAccount_playerLevelRoom_args = new List<DATATYPE_BASE>();
+
+			Method pAccount_playerLevelRoom = new Method();
+			pAccount_playerLevelRoom.name = "playerLevelRoom";
+			pAccount_playerLevelRoom.methodUtype = 7;
+			pAccount_playerLevelRoom.aliasID = 2;
+			pAccount_playerLevelRoom.args = pAccount_playerLevelRoom_args;
+
+			pAccountModule.methods["playerLevelRoom"] = pAccount_playerLevelRoom; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_playerLevelRoom.aliasID] = pAccount_playerLevelRoom;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(playerLevelRoom / 7).");
 
 			List<DATATYPE_BASE> pAccount_EnterMatchesMatch_args = new List<DATATYPE_BASE>();
 
 			Method pAccount_EnterMatchesMatch = new Method();
 			pAccount_EnterMatchesMatch.name = "EnterMatchesMatch";
-			pAccount_EnterMatchesMatch.methodUtype = 3;
+			pAccount_EnterMatchesMatch.methodUtype = 4;
 			pAccount_EnterMatchesMatch.aliasID = -1;
 			pAccount_EnterMatchesMatch.args = pAccount_EnterMatchesMatch_args;
 
@@ -223,14 +237,14 @@ namespace KBEngine
 
 			pAccountModule.idbase_methods[pAccount_EnterMatchesMatch.methodUtype] = pAccount_EnterMatchesMatch;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(EnterMatchesMatch / 3).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(EnterMatchesMatch / 4).");
 
 			List<DATATYPE_BASE> pAccount_reqCreateAvatar_args = new List<DATATYPE_BASE>();
 			pAccount_reqCreateAvatar_args.Add(EntityDef.id2datatypes[12]);
 
 			Method pAccount_reqCreateAvatar = new Method();
 			pAccount_reqCreateAvatar.name = "reqCreateAvatar";
-			pAccount_reqCreateAvatar.methodUtype = 1;
+			pAccount_reqCreateAvatar.methodUtype = 2;
 			pAccount_reqCreateAvatar.aliasID = -1;
 			pAccount_reqCreateAvatar.args = pAccount_reqCreateAvatar_args;
 
@@ -239,7 +253,22 @@ namespace KBEngine
 
 			pAccountModule.idbase_methods[pAccount_reqCreateAvatar.methodUtype] = pAccount_reqCreateAvatar;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 1).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 2).");
+
+			List<DATATYPE_BASE> pAccount_LeaveRoom_args = new List<DATATYPE_BASE>();
+
+			Method pAccount_LeaveRoom = new Method();
+			pAccount_LeaveRoom.name = "LeaveRoom";
+			pAccount_LeaveRoom.methodUtype = 1;
+			pAccount_LeaveRoom.aliasID = -1;
+			pAccount_LeaveRoom.args = pAccount_LeaveRoom_args;
+
+			pAccountModule.methods["LeaveRoom"] = pAccount_LeaveRoom; 
+			pAccountModule.cell_methods["LeaveRoom"] = pAccount_LeaveRoom;
+
+			pAccountModule.idcell_methods[pAccount_LeaveRoom.methodUtype] = pAccount_LeaveRoom;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(LeaveRoom / 1).");
 
 			ScriptModule pRoomModule = new ScriptModule("Room");
 			EntityDef.moduledefs["Room"] = pRoomModule;

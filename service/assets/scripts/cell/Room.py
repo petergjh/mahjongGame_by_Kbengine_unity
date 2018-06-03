@@ -4,7 +4,7 @@ class Room(KBEngine.Entity):
 	def __init__(self):
 		KBEngine.Entity.__init__(self)
 		KBEngine.addSpaceGeometryMapping(self.spaceID,None,"spaces/mjRoom")
-		KBEngine.globalData["Room_%i" % self.roomKey] = self
+		KBEngine.globalData["Room_%i" % self.spaceID] = self
 		self.roomInfo = roomInfo(self.roomKey,self.playerMaxCount)
 
 	def enterRoom(self,EntityCall):

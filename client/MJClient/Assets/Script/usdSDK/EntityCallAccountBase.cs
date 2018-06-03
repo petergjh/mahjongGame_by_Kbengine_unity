@@ -50,5 +50,14 @@ namespace KBEngine
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
 		}
 
+		public void LeaveRoom()
+		{
+			Bundle pBundle = newCall("LeaveRoom", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
 	}
 	}

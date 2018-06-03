@@ -11,6 +11,11 @@
 			Event.fireOut("OnReqCreateAvatar", new object[] { (int)arg1 });
 		}
 
+		public override void playerLevelRoom()
+		{
+			Event.fireOut("playerLevelRoom");
+		}
+
 		public override void __init__()
         {
             Event.fireOut("onLoginSuccessfully", new object[] { KBEngineApp.app.entity_uuid, id, this });

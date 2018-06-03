@@ -87,3 +87,8 @@ class Account(KBEngine.Proxy):
 
 	def createCell(self,roomCell):
 		self.createCellEntity(roomCell)
+
+	def onLoseCell(self):
+		self.MainState = MAIN_STATE_IDEL
+		if self.client:
+			self.client.playerLevelRoom()

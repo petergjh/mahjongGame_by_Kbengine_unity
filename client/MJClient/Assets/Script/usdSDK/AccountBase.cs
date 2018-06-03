@@ -31,6 +31,7 @@ namespace KBEngine
 		public virtual void onPlayerName_baseChanged(string oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void playerLevelRoom(); 
 
 		public AccountBase()
 		{
@@ -99,9 +100,12 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 4:
+				case 6:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
+					break;
+				case 7:
+					playerLevelRoom();
 					break;
 				default:
 					break;

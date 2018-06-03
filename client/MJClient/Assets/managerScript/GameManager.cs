@@ -47,8 +47,7 @@ public class GameManager : MonoBehaviour
 			pendingEnterEntityIDs.Add(entity.id);
 		}
 		else {
-			gameSceneManager.instance.EnterWorld(entity);
-
+			MJpanel.instance.EnterWorld(entity);
 		}
 	}
 	public void gameSceneLoadeOver() {
@@ -58,7 +57,7 @@ public class GameManager : MonoBehaviour
 			KBEngine.Entity entity = KBEngineApp.app.findEntity(id);
 			if (entity != null)
 			{
-				gameSceneManager.instance.EnterWorld(entity);
+				MJpanel.instance.EnterWorld(entity);
 			}
 		}
 		pendingEnterEntityIDs.Clear();
