@@ -50,3 +50,14 @@ class Room(KBEngine.Entity):
 		if entityCall.cell is None:
 			print("没有cell")
 			entityCall.createCell(self.cell)
+		else:
+			entityCall.OnTeleport(self)
+
+	def changeRoomSuccess(self,playerEntity):
+		for i in range(len(self.EnterPlayerList)):
+			if self.EnterPlayerList[i] == playerEntity:
+				self.EnterPlayerList.pop(i)
+				if self.RoomType == 0:
+					KBEngine.globalData["Halls"].roomNeedPlayer(self,self.roomKey)
+				self.cell.changeRoomSuccess(playerEntity.id)
+				break

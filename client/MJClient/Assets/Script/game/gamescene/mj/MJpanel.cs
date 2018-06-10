@@ -40,7 +40,8 @@ public class MJpanel : MonoBehaviour {
 		if (tr == leaveBtn) {
 			KBEngine.Account acc = (KBEngine.Account)KBEngine.KBEngineApp.app.player();
 			if (acc != null) {
-				acc.cellEntityCall.LeaveRoom();
+				//acc.cellEntityCall.LeaveRoom();
+				acc.baseEntityCall.reqChangeRoom();
 			}
 
 		}

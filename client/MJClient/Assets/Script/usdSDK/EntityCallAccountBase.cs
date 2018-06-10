@@ -30,6 +30,15 @@ namespace KBEngine
 			sendCall(null);
 		}
 
+		public void reqChangeRoom()
+		{
+			Bundle pBundle = newCall("reqChangeRoom", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
 		public void reqCreateAvatar(string arg1)
 		{
 			Bundle pBundle = newCall("reqCreateAvatar", 0);

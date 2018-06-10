@@ -100,11 +100,11 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 6:
+				case 9:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 7:
+				case 10:
 					playerLevelRoom();
 					break;
 				default:

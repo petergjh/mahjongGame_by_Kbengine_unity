@@ -16,6 +16,7 @@ class Halls(KBEngine.Entity):
 
 	def EnterMatchesMatch(self,entityCall):
 		if entityCall in self.waitingEnterPlayerEntitys:
+			print("已经在匹配队列中了。。。。")
 			return
 		self.waitingEnterPlayerEntitys.append(entityCall)
 		if self.fen_pei_timer==0:
@@ -119,3 +120,23 @@ class Halls(KBEngine.Entity):
 	def roomIsFull(self,entityCall,roomId):
 		if self.NeedPlayerRoomEntity.get(roomId,None)!= None:
 			self.NeedPlayerRoomEntity.pop(roomId)
+
+
+	def changeRoom(self,entityMailbox,curRoomId):
+		isEnterNewRoom = False
+		if len(self.NeedPlayerRoomEntity)>0:
+			for roomId in list(self.NeedPlayerRoomEntity):
+				if roomId != curRoomId:
+					self.NeedPlayerRoomEntity[roomId].enterRoom(entityMailbox)
+					isEnterNewRoom = True
+
+		if isEnterNewRoom==False:
+			EntityList = [entityMailbox]
+			self._creatRoomEntity(EntityList)
+			isEnterNewRoom = True
+
+		if isEnterNewRoom:
+			#交换房间成功，清除上一个房间交换者的数据
+			self.allRoomEntityList[curRoomId].changeRoomSuccess(entityMailbox)
+		else:
+			print("没有多余的房间了")	

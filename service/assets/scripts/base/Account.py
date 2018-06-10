@@ -9,6 +9,8 @@ class Account(KBEngine.Proxy):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
 		self.MainState = MAIN_STATE_IDEL
+		self.roomKey = 0;
+
 
 	def onTimer(self, id, userArg):
 		"""
@@ -92,3 +94,17 @@ class Account(KBEngine.Proxy):
 		self.MainState = MAIN_STATE_IDEL
 		if self.client:
 			self.client.playerLevelRoom()
+
+	def enterRoomSuccess(self,roomKey):
+		self.roomKey = roomKey
+
+	def reqChangeRoom(self):
+		KBEngine.globalData["Halls"].changeRoom(self,self.roomKey)
+
+	#房间通知玩家换房间
+	def OnTeleport(self,space):
+		print("开始换房间，当前房间号---"+str(self.roomKey))
+		self.teleport(space)
+	#换房间成功回调
+	def onTeleportSuccess(self):
+		print("换房间成功，当前房间号---"+str(self.roomKey))
