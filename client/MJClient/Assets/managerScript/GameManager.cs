@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void onEnterWorld(KBEngine.Entity entity)
 	{
-		if (gameSceneManager.instance == null)
+		if (MJpanel.instance == null)
 		{
 			pendingEnterEntityIDs.Add(entity.id);
 		}

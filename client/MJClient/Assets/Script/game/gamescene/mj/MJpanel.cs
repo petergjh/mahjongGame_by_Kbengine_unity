@@ -4,7 +4,7 @@ using UnityEngine;
 using KBEngine;
 using UnityEngine.UI;
 public class MJpanel : MonoBehaviour {
-	Transform leaveBtn;
+	Transform leaveBtn,changeRoomBtn, readyBtn;
 	Text roomIdText;
 	public static MJpanel instance;
 	// Use this for initialization
@@ -12,7 +12,11 @@ public class MJpanel : MonoBehaviour {
 		instance = this;
 		roomIdText = transform.Find("roomID").GetComponent<Text>();
 		leaveBtn = transform.Find("leaveBtn");
+		changeRoomBtn = transform.Find("changeBtn");
+		readyBtn = transform.Find("readyBtn");
 		EventInterface.AddOnEvent(leaveBtn, Click);
+		EventInterface.AddOnEvent(changeRoomBtn, Click);
+		EventInterface.AddOnEvent(readyBtn, Click);
 		print("进入麻将房间成功");
 		GameManager.GetInstance().gameSceneLoadeOver();
 		installEvents();
@@ -37,14 +41,35 @@ public class MJpanel : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Click(Transform tr) {
-		if (tr == leaveBtn) {
+		if (tr == leaveBtn)
+		{
 			KBEngine.Account acc = (KBEngine.Account)KBEngine.KBEngineApp.app.player();
-			if (acc != null) {
-				//acc.cellEntityCall.LeaveRoom();
-				acc.baseEntityCall.reqChangeRoom();
+			if (acc != null)
+			{
+				acc.cellEntityCall.LeaveRoom();
 			}
 
 		}
+		else if (tr == changeRoomBtn) {
+			KBEngine.Account acc = (KBEngine.Account)KBEngine.KBEngineApp.app.player();
+			if (acc != null)
+			{
+				acc.baseEntityCall.reqChangeRoom();
+				instance = null;
+			}
+
+		} else if (tr == readyBtn) {
+			KBEngine.Account acc = (KBEngine.Account)KBEngine.KBEngineApp.app.player();
+			if (acc != null)
+			{
+				
+			}
+		}
 		
+	}
+	void OnDestroy()
+	{
+		instance = null;
+		KBEngine.Event.deregisterOut(this);
 	}
 }
