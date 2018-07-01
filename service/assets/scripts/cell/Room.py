@@ -13,6 +13,8 @@ class Room(KBEngine.Entity):
 			if seat.userId == 0:
 				seat.userId = EntityCall.id;
 				seat.score = 1000   #带入分数
+				print("玩家进来了---"+str(seat.userId)+" 座位号为 "+str(i))
+				EntityCall.changeRoomSeatIndex(i)
 				self.base.CanEnterRoom(EntityCall)
 				EntityCall.enterRoomSuccess(self.roomKey)
 				return

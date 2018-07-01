@@ -108,3 +108,9 @@ class Account(KBEngine.Proxy):
 	#换房间成功回调
 	def onTeleportSuccess(self):
 		print("换房间成功，当前房间号---"+str(self.roomKey))
+
+	def changeRoomSeatIndex(self,index):
+		if self.cell:
+			self.cell.changeRoomSeatIndex(index);
+		else:
+			self.cellData["roomSeatIndex"] = index

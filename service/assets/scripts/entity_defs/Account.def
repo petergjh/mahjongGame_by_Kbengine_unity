@@ -26,6 +26,10 @@
 			<Persistent>		true				</Persistent>
 			<Default>		1				</Default>
 		</isNewPlayer>
+		<roomSeatIndex>
+			<Type>	UINT8				</Type>
+			<Flags>	ALL_CLIENTS			</Flags>
+		</roomSeatIndex>
 	</Properties>
 
 	<ClientMethods>
@@ -62,12 +66,20 @@
 		<OnTeleport>
 			<Arg>		ENTITYCALL					</Arg>
 		</OnTeleport>
+		<changeRoomSeatIndex>
+			<Arg>		UINT8		</Arg>
+			<!-- 座位号 -->
+		</changeRoomSeatIndex>
 	</BaseMethods>
 
 	<CellMethods>
 		<LeaveRoom>
 			<Exposed/>
 		</LeaveRoom>
+		<changeRoomSeatIndex>
+			<Arg>		UINT8		</Arg>
+			<!-- 座位号 -->
+		</changeRoomSeatIndex>
 	</CellMethods>
 
 </root>

@@ -11,3 +11,6 @@ class Account(KBEngine.Entity):
 		if callerEntityID!=self.id:
 			return
 		KBEngine.globalData["Room_%i" % self.spaceID].ReqLeaveRoom(self)
+
+	def changeRoomSeatIndex(self,index):
+		self.roomSeatIndex = index

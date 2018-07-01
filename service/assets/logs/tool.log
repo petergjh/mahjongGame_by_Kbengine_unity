@@ -1,944 +1,402 @@
-  INFO root [2018-04-29 19:15:50,481] - 
-  INFO root [2018-04-29 19:15:50,481] - 
-  INFO root [2018-04-29 19:15:50,481] - -----------------------------------------------------------------------------------------
+  INFO root [2018-05-27 11:15:30,432] - 
+  INFO root [2018-05-27 11:15:30,433] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-29 19:15:50,481] - -----------------------------------------------------------------------------------------
+  INFO root [2018-05-27 11:15:30,455] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-05-27 11:15:30,455] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-05-27 11:15:30,455] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-05-27 11:15:30,501] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.104 ( 192.168.0.104:50510 )
+  INFO root [2018-05-27 11:15:30,506] - NetworkInterface::initialize(INTERNAL): address 192.168.0.104:50510, SOMAXCONN=5.
+  INFO root [2018-05-27 11:15:30,565] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 2231. PID: 10680 ----
+  INFO root [2018-05-27 11:15:30,566] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-05-27 11:15:30,567] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-05-27 11:15:30,582] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-05-27 11:15:31,155] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-27 11:15:31,163] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-27 11:15:31,168] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-27 11:15:31,203] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-27 11:15:31,205] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-05-27 11:15:31,205] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-27 11:15:31,207] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-27 11:15:31,377] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-27 11:15:31,592] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-05-27 11:15:31,592] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-05-27 11:15:32,251] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-05-27 11:15:32,252] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-05-27 11:15:32,252] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-05-27 11:15:32,276] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-05-27 11:15:32,278] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-05-27 11:15:32,279] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-05-27 11:15:32,281] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-05-27 11:15:32,282] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-05-27 11:15:32,282] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-05-27 11:15:32,285] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-05-27 11:15:32,285] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-05-27 11:15:32,286] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-05-27 11:15:32,286] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-05-27 11:15:32,287] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-05-27 11:15:32,287] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-05-27 11:15:32,288] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-05-27 11:15:32,322] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-05-27 11:15:32,322] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-05-27 11:15:32,323] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-05-27 11:15:32,324] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-05-27 11:15:32,325] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-05-27 11:15:32,353] - Script::uninstall(): is successfully!
+ DEBUG root [2018-05-27 11:15:32,353] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-05-27 11:15:32,653] - ThreadPool::destroy(): waiting for thread(2)[0x63f728,0x63f6c0,], try=1
+ DEBUG root [2018-05-27 11:15:33,053] - TPThread::~TPThread(): 0x63f728
+ DEBUG root [2018-05-27 11:15:33,054] - TPThread::~TPThread(): 0x63f6c0
+ DEBUG root [2018-05-27 11:15:33,054] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-05-27 11:15:33,103] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-05-27 11:15:33,103] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,103] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,103] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,104] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,104] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,104] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-05-27 11:15:33,104] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-05-27 11:15:33,104] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-05-27 11:15:34,105] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-06-03 13:30:00,704] - 
+  INFO root [2018-06-03 13:30:00,716] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-29 19:15:50,482] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-29 19:15:50,485] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50373 )
-  INFO root [2018-04-29 19:15:50,485] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50374 )
-  INFO root [2018-04-29 19:15:50,485] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50373, SOMAXCONN=5.
-  INFO root [2018-04-29 19:15:50,485] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50374, SOMAXCONN=5.
-  INFO root [2018-04-29 19:15:50,489] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 15:52:39 Apr 29 2018. AppID: 0. UID: 27811. PI  INFO root [2018-04-29 19:15:50,489] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 15:52:39 Apr 29 2018. AppID: 0. UID: 27811. PID: 9620 ----
-D: 7220 ----
-  INFO root [2018-04-29 19:15:50,490] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-29 19:15:50,490] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-29 19:15:50,490] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-29 19:15:50,490] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-29 19:15:50,490] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
-  INFO root [2018-04-29 19:15:50,490] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-29 19:15:50,649] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:15:50,649] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:15:50,649] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:15:50,649] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:15:50,649] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:15:50,650] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:15:50,652] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:15:50,652] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:15:50,653] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:15:50,682] - Script::install_py_dlls(): PyInit_unicodedata
- DEBUG root [2018-04-29 19:15:50,682] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-29 19:15:50,710] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-29 19:15:50,710] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-29 19:15:50,710] - Script::install(): KBExtra is successfully!
-  INFO root [2018-04-29 19:15:50,710] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-29 19:15:51,004] - ClientSDK::writeServerErrorDescrsModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//ServerErrorDescrs.cs
- DEBUG root [2018-04-29 19:15:51,004] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/ServerErrorDescrs.cs
- DEBUG root [2018-04-29 19:15:51,005] - ClientSDK::writeEngineMessagesModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//Messages.cs
- DEBUG root [2018-04-29 19:15:51,008] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/Messages.cs
- DEBUG root [2018-04-29 19:15:51,009] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/KBETypes.cs
- DEBUG root [2018-04-29 19:15:51,010] - ClientSDK::writeEntityDefsModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//EntityDef.cs
- DEBUG root [2018-04-29 19:15:51,011] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/EntityDef.cs
- DEBUG root [2018-04-29 19:15:51,012] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/CustomDataTypes.cs
- DEBUG root [2018-04-29 19:15:51,012] - ClientSDK::writeEntityModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//Account
- DEBUG root [2018-04-29 19:15:51,013] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/AccountBase.cs
- DEBUG root [2018-04-29 19:15:51,013] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/EntityCallAccountBase.cs
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:15:51,014] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-29 19:15:51,021] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-29 19:15:51,021] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-29 19:15:51,321] - ThreadPool::destroy(): waiting for thread(2)[0x4b8548,0x4b84e0,], try=1
- DEBUG root [2018-04-29 19:15:51,401] - ClientSDK::writeServerErrorDescrsModule(): E:\kbengine\assets\/kbengine_ue4_plugins//
- DEBUG root [2018-04-29 19:15:51,402] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/ServerErrorDescrs.h
- DEBUG root [2018-04-29 19:15:51,403] - ClientSDK::writeEngineMessagesModule(): E:\kbengine\assets\/kbengine_ue4_plugins//Messages.cpp
- DEBUG root [2018-04-29 19:15:51,427] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/Messages.cpp
- DEBUG root [2018-04-29 19:15:51,429] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/Messages.h
- DEBUG root [2018-04-29 19:15:51,431] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/KBETypes.h
- DEBUG root [2018-04-29 19:15:51,432] - ClientSDK::writeEntityDefsModule(): E:\kbengine\assets\/kbengine_ue4_plugins//EntityDef.cpp
- DEBUG root [2018-04-29 19:15:51,444] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityDef.cpp
- DEBUG root [2018-04-29 19:15:51,445] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityDef.h
- DEBUG root [2018-04-29 19:15:51,447] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/CustomDataTypes.cpp
- DEBUG root [2018-04-29 19:15:51,448] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/CustomDataTypes.h
- DEBUG root [2018-04-29 19:15:51,449] - ClientSDK::writeEntityModule(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine//Account
- DEBUG root [2018-04-29 19:15:51,451] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/AccountBase.cpp
- DEBUG root [2018-04-29 19:15:51,452] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/AccountBase.h
- DEBUG root [2018-04-29 19:15:51,460] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityCallAccountBase.cpp
- DEBUG root [2018-04-29 19:15:51,461] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityCallAccountBase.h
- DEBUG root [2018-04-29 19:15:51,462] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:15:51,462] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:15:51,463] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:15:51,463] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:15:51,463] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:15:51,463] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:15:51,463] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:15:51,464] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-29 19:15:51,482] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-29 19:15:51,482] - ThreadPool::destroy(): starting size 2.
- DEBUG root [2018-04-29 19:15:51,721] - TPThread::~TPThread(): 0x4b8548
- DEBUG root [2018-04-29 19:15:51,721] - TPThread::~TPThread(): 0x4b84e0
- DEBUG root [2018-04-29 19:15:51,721] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-29 19:15:51,733] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-29 19:15:51,733] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,733] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,733] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,733] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,734] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,734] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:51,734] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-29 19:15:51,734] - tool(0) has shut down. ClientSDK=1
-  WARN root [2018-04-29 19:15:51,782] - ThreadPool::destroy(): waiting for thread(2)[0x698518,0x6984b0,], try=1
- DEBUG root [2018-04-29 19:15:52,182] - TPThread::~TPThread(): 0x698518
- DEBUG root [2018-04-29 19:15:52,182] - TPThread::~TPThread(): 0x6984b0
- DEBUG root [2018-04-29 19:15:52,182] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-29 19:15:52,190] - Bundle::destroyObjPool(): size 14.
- DEBUG root [2018-04-29 19:15:52,190] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,190] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,190] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,190] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,190] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,191] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:15:52,191] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-29 19:15:52,191] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-29 19:15:52,734] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-29 19:15:53,192] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-29 19:36:14,396] - 
-  INFO root [2018-04-29 19:36:14,396] - -----------------------------------------------------------------------------------------
+  INFO root [2018-06-03 13:30:00,730] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-06-03 13:30:00,730] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-06-03 13:30:00,731] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-06-03 13:30:00,762] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.103 ( 192.168.0.103:64722 )
+  INFO root [2018-06-03 13:30:00,769] - NetworkInterface::initialize(INTERNAL): address 192.168.0.103:64722, SOMAXCONN=5.
+  INFO root [2018-06-03 13:30:00,782] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 4759. PID: 15692 ----
+  INFO root [2018-06-03 13:30:00,782] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-06-03 13:30:00,783] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-06-03 13:30:00,795] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-06-03 13:30:01,168] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-03 13:30:01,182] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-03 13:30:01,187] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-03 13:30:01,234] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-03 13:30:01,236] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-06-03 13:30:01,236] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-03 13:30:01,237] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-03 13:30:01,370] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-03 13:30:01,481] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-06-03 13:30:01,482] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-06-03 13:30:02,196] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-06-03 13:30:02,197] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-06-03 13:30:02,197] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-06-03 13:30:02,229] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-06-03 13:30:02,230] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-06-03 13:30:02,231] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-06-03 13:30:02,233] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-06-03 13:30:02,233] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-06-03 13:30:02,234] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-06-03 13:30:02,249] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-06-03 13:30:02,250] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-06-03 13:30:02,250] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-06-03 13:30:02,250] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-06-03 13:30:02,251] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-06-03 13:30:02,251] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-06-03 13:30:02,252] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-06-03 13:30:02,252] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-06-03 13:30:02,252] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-06-03 13:30:02,253] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-06-03 13:30:02,254] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-06-03 13:30:02,254] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-03 13:30:02,255] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-03 13:30:02,255] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-03 13:30:02,274] - Script::uninstall(): is successfully!
+ DEBUG root [2018-06-03 13:30:02,274] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-06-03 13:30:02,574] - ThreadPool::destroy(): waiting for thread(2)[0x4ff758,0x4ff6f0,], try=1
+ DEBUG root [2018-06-03 13:30:02,974] - TPThread::~TPThread(): 0x4ff758
+ DEBUG root [2018-06-03 13:30:02,974] - TPThread::~TPThread(): 0x4ff6f0
+ DEBUG root [2018-06-03 13:30:02,974] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-06-03 13:30:03,013] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-06-03 13:30:03,014] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,014] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,014] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,015] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,015] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,015] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:30:03,016] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-06-03 13:30:03,016] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-06-03 13:30:04,017] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-06-03 13:42:00,596] - 
+  INFO root [2018-06-03 13:42:00,598] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-29 19:36:14,397] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-29 19:36:14,397] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-29 19:36:14,397] - 
-  INFO root [2018-04-29 19:36:14,397] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-29 19:36:14,398] - -----------------------------------------------------------------------------------------
+  INFO root [2018-06-03 13:42:00,598] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-06-03 13:42:00,598] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-06-03 13:42:00,598] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-06-03 13:42:00,603] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.103 ( 192.168.0.103:64808 )
+  INFO root [2018-06-03 13:42:00,603] - NetworkInterface::initialize(INTERNAL): address 192.168.0.103:64808, SOMAXCONN=5.
+  INFO root [2018-06-03 13:42:00,607] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 7113. PID: 18288 ----
+  INFO root [2018-06-03 13:42:00,607] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-06-03 13:42:00,608] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-06-03 13:42:00,608] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-06-03 13:42:00,749] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-03 13:42:00,749] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-03 13:42:00,750] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-03 13:42:00,752] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-03 13:42:00,753] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-06-03 13:42:00,753] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-03 13:42:00,753] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-03 13:42:00,781] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-03 13:42:00,809] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-06-03 13:42:00,809] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-06-03 13:42:01,120] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-06-03 13:42:01,121] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-06-03 13:42:01,121] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-06-03 13:42:01,124] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-06-03 13:42:01,126] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-06-03 13:42:01,127] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-06-03 13:42:01,129] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-06-03 13:42:01,130] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-06-03 13:42:01,130] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-06-03 13:42:01,131] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-06-03 13:42:01,132] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-06-03 13:42:01,132] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-06-03 13:42:01,133] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-06-03 13:42:01,134] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-06-03 13:42:01,134] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-06-03 13:42:01,134] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-06-03 13:42:01,135] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-06-03 13:42:01,135] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-06-03 13:42:01,136] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-06-03 13:42:01,136] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-03 13:42:01,137] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-03 13:42:01,145] - Script::uninstall(): is successfully!
+ DEBUG root [2018-06-03 13:42:01,145] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-06-03 13:42:01,445] - ThreadPool::destroy(): waiting for thread(2)[0x719b78,0x719b10,], try=1
+ DEBUG root [2018-06-03 13:42:01,845] - TPThread::~TPThread(): 0x719b78
+ DEBUG root [2018-06-03 13:42:01,845] - TPThread::~TPThread(): 0x719b10
+ DEBUG root [2018-06-03 13:42:01,845] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-06-03 13:42:01,862] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-06-03 13:42:01,863] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,863] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,863] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,863] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,864] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,864] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-06-03 13:42:01,864] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-06-03 13:42:01,864] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-06-03 13:42:02,864] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-06-10 11:33:39,786] - 
+  INFO root [2018-06-10 11:33:39,795] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-29 19:36:14,398] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-29 19:36:14,398] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-29 19:36:14,398] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-29 19:36:14,400] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50877 )
-  INFO root [2018-04-29 19:36:14,400] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50877, SOMAXCONN=5.
-  INFO root [2018-04-29 19:36:14,401] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50878 )
-  INFO root [2018-04-29 19:36:14,401] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50878, SOMAXCONN=5.
-  INFO root [2018-04-29 19:36:14,404] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 15:52:39 Apr 29 2018. AppID: 0. UID: 31808. PID: 2516 ----
-  INFO root [2018-04-29 19:36:14,404] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 15:52:39 Apr 29 2018. AppID: 0. UID: 31808. PID: 11128 ----
-  INFO root [2018-04-29 19:36:14,404] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-29 19:36:14,404] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-29 19:36:14,404] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-29 19:36:14,405] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-29 19:36:14,405] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
-  INFO root [2018-04-29 19:36:14,405] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-29 19:36:14,559] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:36:14,560] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:36:14,560] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:36:14,560] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:36:14,560] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:36:14,560] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:36:14,563] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:36:14,563] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:36:14,564] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:36:14,564] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:36:14,564] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:36:14,564] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:36:14,565] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:36:14,565] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:36:14,595] - Script::install_py_dlls(): PyInit_unicodedata
- DEBUG root [2018-04-29 19:36:14,595] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-29 19:36:14,623] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-29 19:36:14,623] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-29 19:36:14,623] - Script::install(): KBExtra is successfully!
-  INFO root [2018-04-29 19:36:14,623] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-29 19:36:14,924] - ClientSDK::writeServerErrorDescrsModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//ServerErrorDescrs.cs
- DEBUG root [2018-04-29 19:36:14,924] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/ServerErrorDescrs.cs
- DEBUG root [2018-04-29 19:36:14,925] - ClientSDK::writeEngineMessagesModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//Messages.cs
- DEBUG root [2018-04-29 19:36:14,928] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/Messages.cs
- DEBUG root [2018-04-29 19:36:14,930] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/KBETypes.cs
- DEBUG root [2018-04-29 19:36:14,930] - ClientSDK::writeEntityDefsModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//EntityDef.cs
- DEBUG root [2018-04-29 19:36:14,931] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/EntityDef.cs
- DEBUG root [2018-04-29 19:36:14,932] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/CustomDataTypes.cs
- DEBUG root [2018-04-29 19:36:14,932] - ClientSDK::writeEntityModule(): E:\kbengine\assets\/kbengine_unity3d_plugins//Account
- DEBUG root [2018-04-29 19:36:14,933] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/AccountBase.cs
- DEBUG root [2018-04-29 19:36:14,934] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_unity3d_plugins/EntityCallAccountBase.cs
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:36:14,934] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:36:14,935] - Script::uninstall_py_dlls(): PyInit_unicodedata
- DEBUG root [2018-04-29 19:36:14,937] - ClientSDK::writeServerErrorDescrsModule(): E:\kbengine\assets\/kbengine_ue4_plugins//
- DEBUG root [2018-04-29 19:36:14,937] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/ServerErrorDescrs.h
- DEBUG root [2018-04-29 19:36:14,937] - ClientSDK::writeEngineMessagesModule(): E:\kbengine\assets\/kbengine_ue4_plugins//Messages.cpp
- DEBUG root [2018-04-29 19:36:14,941] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/Messages.cpp
- DEBUG root [2018-04-29 19:36:14,941] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/Messages.h
-  INFO root [2018-04-29 19:36:14,942] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-29 19:36:14,942] - ThreadPool::destroy(): starting size 2.
- DEBUG root [2018-04-29 19:36:14,942] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/KBETypes.h
- DEBUG root [2018-04-29 19:36:14,942] - ClientSDK::writeEntityDefsModule(): E:\kbengine\assets\/kbengine_ue4_plugins//EntityDef.cpp
- DEBUG root [2018-04-29 19:36:14,943] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityDef.cpp
- DEBUG root [2018-04-29 19:36:14,944] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityDef.h
- DEBUG root [2018-04-29 19:36:14,945] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/CustomDataTypes.cpp
- DEBUG root [2018-04-29 19:36:14,945] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/CustomDataTypes.h
- DEBUG root [2018-04-29 19:36:14,945] - ClientSDK::writeEntityModule(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine//Account
- DEBUG root [2018-04-29 19:36:14,946] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/AccountBase.cpp
- DEBUG root [2018-04-29 19:36:14,946] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/AccountBase.h
- DEBUG root [2018-04-29 19:36:14,947] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityCallAccountBase.cpp
- DEBUG root [2018-04-29 19:36:14,947] - ClientSDK::saveFile(): E:\kbengine\assets\/kbengine_ue4_plugins/Source/KBEnginePlugins/Engine/EntityCallAccountBase.h
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-29 19:36:14,948] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-29 19:36:14,955] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-29 19:36:14,955] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-29 19:36:15,242] - ThreadPool::destroy(): waiting for thread(2)[0x718548,0x7184e0,], try=1
-  WARN root [2018-04-29 19:36:15,255] - ThreadPool::destroy(): waiting for thread(2)[0x3b8518,0x3b84b0,], try=1
- DEBUG root [2018-04-29 19:36:15,643] - TPThread::~TPThread(): 0x718548
- DEBUG root [2018-04-29 19:36:15,643] - TPThread::~TPThread(): 0x7184e0
- DEBUG root [2018-04-29 19:36:15,644] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-29 19:36:15,656] - TPThread::~TPThread(): 0x3b8518
- DEBUG root [2018-04-29 19:36:15,656] - TPThread::~TPThread(): 0x3b84b0
- DEBUG root [2018-04-29 19:36:15,657] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-29 19:36:15,676] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-29 19:36:15,676] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,677] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,677] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,678] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,678] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,678] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,679] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-29 19:36:15,679] - tool(0) has shut down. ClientSDK=1
- DEBUG root [2018-04-29 19:36:15,688] - Bundle::destroyObjPool(): size 14.
- DEBUG root [2018-04-29 19:36:15,689] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,689] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,689] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,689] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,689] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,690] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-29 19:36:15,690] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-29 19:36:15,690] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-29 19:36:16,680] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-29 19:36:16,691] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:05:00,457] - 
-  INFO root [2018-04-30 20:05:00,473] - -----------------------------------------------------------------------------------------
+  INFO root [2018-06-10 11:33:39,826] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-06-10 11:33:39,827] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-06-10 11:33:39,827] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-06-10 11:33:39,854] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.103 ( 192.168.0.103:50843 )
+  INFO root [2018-06-10 11:33:39,855] - NetworkInterface::initialize(INTERNAL): address 192.168.0.103:50843, SOMAXCONN=5.
+  INFO root [2018-06-10 11:33:39,869] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 23675. PID: 8168 ----
+  INFO root [2018-06-10 11:33:39,869] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-06-10 11:33:39,870] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-06-10 11:33:39,879] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-06-10 11:33:40,194] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-10 11:33:40,216] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-10 11:33:40,222] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-10 11:33:40,279] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-10 11:33:40,281] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-06-10 11:33:40,282] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-10 11:33:40,284] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-10 11:33:40,362] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-10 11:33:40,432] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-06-10 11:33:40,432] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-06-10 11:33:41,039] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-06-10 11:33:41,040] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-06-10 11:33:41,041] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-06-10 11:33:41,055] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-06-10 11:33:41,057] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-06-10 11:33:41,058] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-06-10 11:33:41,060] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-06-10 11:33:41,061] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-06-10 11:33:41,062] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-06-10 11:33:41,064] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-06-10 11:33:41,064] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-06-10 11:33:41,064] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-06-10 11:33:41,065] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-06-10 11:33:41,066] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-06-10 11:33:41,066] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-06-10 11:33:41,067] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-06-10 11:33:41,067] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-06-10 11:33:41,068] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-06-10 11:33:41,069] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-06-10 11:33:41,069] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-10 11:33:41,070] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-10 11:33:41,084] - Script::uninstall(): is successfully!
+ DEBUG root [2018-06-10 11:33:41,084] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-06-10 11:33:41,384] - ThreadPool::destroy(): waiting for thread(2)[0x41ecc0,0x41ec58,], try=1
+ DEBUG root [2018-06-10 11:33:41,785] - TPThread::~TPThread(): 0x41ecc0
+ DEBUG root [2018-06-10 11:33:41,785] - TPThread::~TPThread(): 0x41ec58
+ DEBUG root [2018-06-10 11:33:41,786] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-06-10 11:33:41,821] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-06-10 11:33:41,821] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,821] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,822] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,822] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,822] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,822] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 11:33:41,822] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-06-10 11:33:41,822] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-06-10 11:33:42,825] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-06-10 12:06:58,003] - 
+  INFO root [2018-06-10 12:06:58,005] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-30 20:05:00,473] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:05:00,473] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:05:00,473] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:05:00,476] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55010 )
-  INFO root [2018-04-30 20:05:00,476] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55010, SOMAXCONN=5.
-  INFO root [2018-04-30 20:05:00,492] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 24678. PID: 11008 ----
-  INFO root [2018-04-30 20:05:00,492] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:05:00,492] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:05:00,492] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:05:00,631] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:05:00,631] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:05:00,631] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:05:00,634] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:05:00,634] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:05:00,635] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:05:00,635] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:05:00,663] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:05:00,691] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:05:00,691] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:05:01,017] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:05:01,018] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:05:01,018] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:05:01,022] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:05:01,023] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:05:01,023] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:05:01,025] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:05:01,026] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:05:01,026] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:05:01,027] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:05:01,027] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:05:01,027] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:05:01,027] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:05:01,028] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:05:01,036] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:05:01,036] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:05:01,336] - ThreadPool::destroy(): waiting for thread(2)[0x4bfb00,0x4bfa98,], try=1
- DEBUG root [2018-04-30 20:05:01,736] - TPThread::~TPThread(): 0x4bfb00
- DEBUG root [2018-04-30 20:05:01,736] - TPThread::~TPThread(): 0x4bfa98
- DEBUG root [2018-04-30 20:05:01,736] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:05:01,756] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:05:01,756] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,757] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,757] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,757] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,757] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,758] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:05:01,758] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:05:01,758] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:05:02,759] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:14:14,484] - 
-  INFO root [2018-04-30 20:14:14,485] - -----------------------------------------------------------------------------------------
+  INFO root [2018-06-10 12:06:58,006] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-06-10 12:06:58,006] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-06-10 12:06:58,006] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-06-10 12:06:58,009] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.103 ( 192.168.0.103:51157 )
+  INFO root [2018-06-10 12:06:58,009] - NetworkInterface::initialize(INTERNAL): address 192.168.0.103:51157, SOMAXCONN=5.
+  INFO root [2018-06-10 12:06:58,013] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 30203. PID: 10716 ----
+  INFO root [2018-06-10 12:06:58,013] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-06-10 12:06:58,013] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-06-10 12:06:58,013] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-06-10 12:06:58,225] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-10 12:06:58,226] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-10 12:06:58,227] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-10 12:06:58,235] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-10 12:06:58,236] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-06-10 12:06:58,236] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-10 12:06:58,237] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-10 12:06:58,276] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-10 12:06:58,304] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-06-10 12:06:58,304] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-06-10 12:06:58,616] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-06-10 12:06:58,617] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-06-10 12:06:58,617] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-06-10 12:06:58,620] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-06-10 12:06:58,622] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-06-10 12:06:58,622] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-06-10 12:06:58,624] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-06-10 12:06:58,625] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-06-10 12:06:58,625] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-06-10 12:06:58,626] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-06-10 12:06:58,627] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-06-10 12:06:58,627] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-06-10 12:06:58,627] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-06-10 12:06:58,628] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-06-10 12:06:58,628] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-06-10 12:06:58,630] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-06-10 12:06:58,630] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-06-10 12:06:58,631] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-06-10 12:06:58,632] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-06-10 12:06:58,633] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-06-10 12:06:58,633] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-06-10 12:06:58,633] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-06-10 12:06:58,633] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-06-10 12:06:58,634] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-06-10 12:06:58,634] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-06-10 12:06:58,634] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-06-10 12:06:58,634] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-06-10 12:06:58,634] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-06-10 12:06:58,643] - Script::uninstall(): is successfully!
+ DEBUG root [2018-06-10 12:06:58,643] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-06-10 12:06:58,943] - ThreadPool::destroy(): waiting for thread(2)[0x4e1a10,0x4e19a8,], try=1
+ DEBUG root [2018-06-10 12:06:59,343] - TPThread::~TPThread(): 0x4e1a10
+ DEBUG root [2018-06-10 12:06:59,343] - TPThread::~TPThread(): 0x4e19a8
+ DEBUG root [2018-06-10 12:06:59,343] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-06-10 12:06:59,362] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-06-10 12:06:59,363] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,363] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,363] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,364] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,364] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,364] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-06-10 12:06:59,364] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-06-10 12:06:59,365] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-06-10 12:07:00,366] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-07-01 12:33:19,529] - 
+  INFO root [2018-07-01 12:33:19,548] - -----------------------------------------------------------------------------------------
 
 
-  INFO root [2018-04-30 20:14:14,485] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:14:14,485] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:14:14,485] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:14:14,488] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55179 )
-  INFO root [2018-04-30 20:14:14,488] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55179, SOMAXCONN=5.
-  INFO root [2018-04-30 20:14:14,492] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 26488. PID: 7384 ----
-  INFO root [2018-04-30 20:14:14,493] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:14:14,493] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:14:14,493] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:14:14,638] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:14:14,638] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:14:14,638] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:14:14,641] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:14:14,642] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:14:14,642] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:14:14,643] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:14:14,671] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:14:14,700] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:14:14,700] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:14:15,007] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:14:15,008] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:14:15,008] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:14:15,012] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:14:15,013] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:14:15,013] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:14:15,014] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:14:15,015] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:14:15,015] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:14:15,016] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:14:15,016] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:14:15,017] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:14:15,025] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:14:15,026] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:14:15,326] - ThreadPool::destroy(): waiting for thread(2)[0x47dbb8,0x47db50,], try=1
- DEBUG root [2018-04-30 20:14:15,727] - TPThread::~TPThread(): 0x47dbb8
- DEBUG root [2018-04-30 20:14:15,727] - TPThread::~TPThread(): 0x47db50
- DEBUG root [2018-04-30 20:14:15,727] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:14:15,742] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:14:15,743] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,743] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,743] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,743] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,743] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,744] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:14:15,744] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:14:15,744] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:14:16,744] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:18:09,058] - 
-  INFO root [2018-04-30 20:18:09,058] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:18:09,058] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:18:09,058] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:18:09,058] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:18:09,061] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55260 )
-  INFO root [2018-04-30 20:18:09,061] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55260, SOMAXCONN=5.
-  INFO root [2018-04-30 20:18:09,065] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 27255. PID: 16748 ----
-  INFO root [2018-04-30 20:18:09,065] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:18:09,066] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:18:09,066] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:18:09,211] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:18:09,211] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:18:09,212] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:18:09,216] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:18:09,217] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:18:09,217] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:18:09,218] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:18:09,249] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:18:09,277] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:18:09,277] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:18:09,577] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:18:09,577] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:18:09,578] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:18:09,581] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:18:09,582] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:18:09,582] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:18:09,583] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:18:09,584] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:18:09,584] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:18:09,585] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:18:09,586] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:18:09,586] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:18:09,597] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:18:09,597] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:18:09,897] - ThreadPool::destroy(): waiting for thread(2)[0x88db80,0x88db18,], try=1
- DEBUG root [2018-04-30 20:18:10,298] - TPThread::~TPThread(): 0x88db80
- DEBUG root [2018-04-30 20:18:10,298] - TPThread::~TPThread(): 0x88db18
- DEBUG root [2018-04-30 20:18:10,298] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:18:10,316] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:18:10,316] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,317] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,317] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,317] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,317] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,318] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:10,318] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:18:10,318] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:18:11,319] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:18:30,955] - 
-  INFO root [2018-04-30 20:18:30,956] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:18:30,956] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:18:30,956] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:18:30,956] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:18:30,960] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55266 )
-  INFO root [2018-04-30 20:18:30,960] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55266, SOMAXCONN=5.
-  INFO root [2018-04-30 20:18:30,965] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 27327. PID: 10096 ----
-  INFO root [2018-04-30 20:18:30,965] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:18:30,965] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:18:30,966] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:18:31,092] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:18:31,093] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:18:31,093] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:18:31,096] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:18:31,096] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:18:31,096] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:18:31,097] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:18:31,122] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:18:31,148] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:18:31,148] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:18:31,448] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:18:31,449] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:18:31,449] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:18:31,453] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:18:31,454] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:18:31,455] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:18:31,456] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:18:31,457] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:18:31,457] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:18:31,458] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:18:31,458] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:18:31,459] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:18:31,466] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:18:31,467] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:18:31,768] - ThreadPool::destroy(): waiting for thread(2)[0x7e0ae0,0x7e0a78,], try=1
- DEBUG root [2018-04-30 20:18:32,168] - TPThread::~TPThread(): 0x7e0ae0
- DEBUG root [2018-04-30 20:18:32,169] - TPThread::~TPThread(): 0x7e0a78
- DEBUG root [2018-04-30 20:18:32,169] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:18:32,202] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:18:32,202] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,203] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,203] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,204] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,204] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,204] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:18:32,205] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:18:32,205] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:18:33,206] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:21:07,879] - 
-  INFO root [2018-04-30 20:21:07,880] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:21:07,881] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:21:07,881] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:21:07,881] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:21:07,888] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55285 )
-  INFO root [2018-04-30 20:21:07,888] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55285, SOMAXCONN=5.
-  INFO root [2018-04-30 20:21:07,896] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 27840. PID: 14276 ----
-  INFO root [2018-04-30 20:21:07,897] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:21:07,897] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:21:07,898] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:21:08,066] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:21:08,066] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:21:08,067] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:21:08,069] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:21:08,070] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:21:08,070] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:21:08,070] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:21:08,097] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:21:08,125] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:21:08,125] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:21:08,424] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:21:08,424] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:21:08,424] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:21:08,428] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:21:08,429] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:21:08,430] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:21:08,431] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:21:08,431] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:21:08,431] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:21:08,432] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:21:08,433] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:21:08,433] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:21:08,434] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:21:08,441] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:21:08,441] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:21:08,741] - ThreadPool::destroy(): waiting for thread(2)[0x18edbb8,0x18edb50,], try=1
- DEBUG root [2018-04-30 20:21:09,143] - TPThread::~TPThread(): 0x18edbb8
- DEBUG root [2018-04-30 20:21:09,143] - TPThread::~TPThread(): 0x18edb50
- DEBUG root [2018-04-30 20:21:09,143] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:21:09,152] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:21:09,152] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,152] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,152] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,152] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,153] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,153] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:09,153] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:21:09,153] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:21:10,154] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:21:48,092] - 
-  INFO root [2018-04-30 20:21:48,092] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:21:48,092] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:21:48,092] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:21:48,093] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:21:48,095] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55291 )
-  INFO root [2018-04-30 20:21:48,095] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55291, SOMAXCONN=5.
-  INFO root [2018-04-30 20:21:48,099] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 27970. PID: 16216 ----
-  INFO root [2018-04-30 20:21:48,099] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:21:48,099] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:21:48,100] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:21:48,227] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:21:48,227] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:21:48,228] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:21:48,230] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:21:48,231] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:21:48,231] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:21:48,231] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:21:48,257] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:21:48,284] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:21:48,284] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:21:48,593] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:21:48,593] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:21:48,594] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:21:48,597] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:21:48,598] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:21:48,599] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:21:48,600] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:21:48,600] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:21:48,601] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:21:48,601] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:21:48,602] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:21:48,602] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:21:48,602] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:21:48,602] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:21:48,603] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:21:48,603] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:21:48,603] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:21:48,603] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:21:48,603] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:21:48,612] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:21:48,612] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:21:48,912] - ThreadPool::destroy(): waiting for thread(2)[0x5fdbb8,0x5fdb50,], try=1
- DEBUG root [2018-04-30 20:21:49,313] - TPThread::~TPThread(): 0x5fdbb8
- DEBUG root [2018-04-30 20:21:49,314] - TPThread::~TPThread(): 0x5fdb50
- DEBUG root [2018-04-30 20:21:49,314] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:21:49,343] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:21:49,343] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:21:49,344] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:21:49,345] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:21:50,346] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:23:23,103] - 
-  INFO root [2018-04-30 20:23:23,103] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:23:23,104] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:23:23,104] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:23:23,104] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:23:23,107] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55299 )
-  INFO root [2018-04-30 20:23:23,107] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55299, SOMAXCONN=5.
-  INFO root [2018-04-30 20:23:23,111] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 28280. PID: 14164 ----
-  INFO root [2018-04-30 20:23:23,111] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:23:23,112] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:23:23,112] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:23:23,274] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:23:23,275] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:23:23,275] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:23:23,280] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:23:23,280] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:23:23,280] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:23:23,281] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:23:23,322] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:23:23,352] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:23:23,352] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:23:23,653] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:23:23,653] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:23:23,654] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:23:23,657] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:23:23,659] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:23:23,660] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:23:23,662] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:23:23,663] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:23:23,663] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:23:23,664] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:23:23,665] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:23:23,665] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:23:23,665] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:23:23,666] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:23:23,675] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:23:23,675] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:23:23,975] - ThreadPool::destroy(): waiting for thread(2)[0x183bb28,0x183bac0,], try=1
- DEBUG root [2018-04-30 20:23:24,376] - TPThread::~TPThread(): 0x183bb28
- DEBUG root [2018-04-30 20:23:24,376] - TPThread::~TPThread(): 0x183bac0
- DEBUG root [2018-04-30 20:23:24,376] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:23:24,390] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:23:24,390] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:24,391] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:23:24,391] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:23:25,393] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-04-30 20:23:57,837] - 
-  INFO root [2018-04-30 20:23:57,838] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-04-30 20:23:57,838] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-04-30 20:23:57,838] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-04-30 20:23:57,838] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-04-30 20:23:57,841] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55300 )
-  INFO root [2018-04-30 20:23:57,842] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55300, SOMAXCONN=5.
-  INFO root [2018-04-30 20:23:57,846] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 28395. PID: 17064 ----
-  INFO root [2018-04-30 20:23:57,846] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-04-30 20:23:57,846] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-04-30 20:23:57,847] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-04-30 20:23:58,012] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:23:58,012] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:23:58,013] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:23:58,015] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:23:58,016] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:23:58,016] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:23:58,016] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:23:58,042] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:23:58,068] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-04-30 20:23:58,069] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-04-30 20:23:58,376] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:23:58,377] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-04-30 20:23:58,377] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-04-30 20:23:58,380] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-04-30 20:23:58,382] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-04-30 20:23:58,382] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-04-30 20:23:58,383] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-04-30 20:23:58,384] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-04-30 20:23:58,384] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-04-30 20:23:58,385] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-04-30 20:23:58,385] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-04-30 20:23:58,386] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-04-30 20:23:58,395] - Script::uninstall(): is successfully!
- DEBUG root [2018-04-30 20:23:58,395] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-04-30 20:23:58,695] - ThreadPool::destroy(): waiting for thread(2)[0x6edc18,0x6edbb0,], try=1
- DEBUG root [2018-04-30 20:23:59,095] - TPThread::~TPThread(): 0x6edc18
- DEBUG root [2018-04-30 20:23:59,096] - TPThread::~TPThread(): 0x6edbb0
- DEBUG root [2018-04-30 20:23:59,096] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-04-30 20:23:59,124] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-04-30 20:23:59,124] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,125] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,125] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,125] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,125] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,125] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-04-30 20:23:59,126] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-04-30 20:23:59,126] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-04-30 20:24:00,126] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-05-01 11:56:22,674] - 
-  INFO root [2018-05-01 11:56:22,686] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-05-01 11:56:22,733] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-05-01 11:56:22,734] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-05-01 11:56:22,734] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-05-01 11:56:22,787] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50490 )
-  INFO root [2018-05-01 11:56:22,792] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50490, SOMAXCONN=5.
-  INFO root [2018-05-01 11:56:22,839] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 14473. PID: 10568 ----
-  INFO root [2018-05-01 11:56:22,840] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-05-01 11:56:22,851] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-05-01 11:56:22,860] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-05-01 11:56:23,416] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-01 11:56:23,423] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-05-01 11:56:23,435] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-01 11:56:23,461] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-01 11:56:23,462] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-05-01 11:56:23,463] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-01 11:56:23,464] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-01 11:56:23,621] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-01 11:56:23,765] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-05-01 11:56:23,766] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-05-01 11:56:24,545] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-05-01 11:56:24,547] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-05-01 11:56:24,548] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-05-01 11:56:24,601] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-05-01 11:56:24,608] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-05-01 11:56:24,608] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-05-01 11:56:24,611] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-05-01 11:56:24,613] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-05-01 11:56:24,613] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-05-01 11:56:24,615] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-05-01 11:56:24,616] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-05-01 11:56:24,665] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-01 11:56:24,666] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-05-01 11:56:24,666] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-01 11:56:24,666] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-01 11:56:24,666] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-05-01 11:56:24,667] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-01 11:56:24,667] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-01 11:56:24,667] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-01 11:56:24,710] - Script::uninstall(): is successfully!
- DEBUG root [2018-05-01 11:56:24,710] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-05-01 11:56:25,011] - ThreadPool::destroy(): waiting for thread(2)[0x52cb50,0x52cae8,], try=1
- DEBUG root [2018-05-01 11:56:25,412] - TPThread::~TPThread(): 0x52cb50
- DEBUG root [2018-05-01 11:56:25,412] - TPThread::~TPThread(): 0x52cae8
- DEBUG root [2018-05-01 11:56:25,413] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-05-01 11:56:25,467] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-05-01 11:56:25,467] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,468] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,469] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,469] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,469] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,470] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:56:25,470] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-05-01 11:56:25,471] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-05-01 11:56:26,498] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-05-01 11:59:21,792] - 
-  INFO root [2018-05-01 11:59:21,792] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-05-01 11:59:21,792] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-05-01 11:59:21,793] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-05-01 11:59:21,793] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-05-01 11:59:21,796] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50549 )
-  INFO root [2018-05-01 11:59:21,796] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50549, SOMAXCONN=5.
-  INFO root [2018-05-01 11:59:21,799] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 15064. PID: 9148 ----
-  INFO root [2018-05-01 11:59:21,799] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-05-01 11:59:21,800] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-05-01 11:59:21,800] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-05-01 11:59:21,949] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-01 11:59:21,949] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-05-01 11:59:21,949] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-01 11:59:21,953] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-01 11:59:21,953] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-05-01 11:59:21,953] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-01 11:59:21,954] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-01 11:59:21,981] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-01 11:59:22,009] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-05-01 11:59:22,009] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-05-01 11:59:22,322] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-05-01 11:59:22,323] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-05-01 11:59:22,323] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-05-01 11:59:22,326] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-05-01 11:59:22,328] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-05-01 11:59:22,328] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-05-01 11:59:22,329] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-05-01 11:59:22,330] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-05-01 11:59:22,330] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-05-01 11:59:22,331] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-05-01 11:59:22,331] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-01 11:59:22,332] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-01 11:59:22,333] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-01 11:59:22,339] - Script::uninstall(): is successfully!
- DEBUG root [2018-05-01 11:59:22,339] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-05-01 11:59:22,639] - ThreadPool::destroy(): waiting for thread(2)[0x84db80,0x84db18,], try=1
- DEBUG root [2018-05-01 11:59:23,040] - TPThread::~TPThread(): 0x84db80
- DEBUG root [2018-05-01 11:59:23,041] - TPThread::~TPThread(): 0x84db18
- DEBUG root [2018-05-01 11:59:23,041] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-05-01 11:59:23,065] - Bundle::destroyObjPool(): size 3.
- DEBUG root [2018-05-01 11:59:23,065] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,066] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,066] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,066] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,066] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,067] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-05-01 11:59:23,067] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-05-01 11:59:23,067] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-05-01 11:59:24,068] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-05-06 13:34:19,105] - 
-  INFO root [2018-05-06 13:34:19,124] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-05-06 13:34:19,126] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-05-06 13:34:19,126] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-05-06 13:34:19,126] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-05-06 13:34:19,166] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50151 )
-  INFO root [2018-05-06 13:34:19,173] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50151, SOMAXCONN=5.
-  INFO root [2018-05-06 13:34:19,206] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 2600. PID: 8056 ----
-  INFO root [2018-05-06 13:34:19,207] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-05-06 13:34:19,207] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-05-06 13:34:19,224] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-05-06 13:34:19,739] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-06 13:34:19,746] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-05-06 13:34:19,758] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-06 13:34:19,786] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-06 13:34:19,788] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-05-06 13:34:19,788] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-06 13:34:19,799] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-06 13:34:19,982] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-06 13:34:20,109] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-05-06 13:34:20,110] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-05-06 13:34:20,872] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-05-06 13:34:20,890] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-05-06 13:34:20,890] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-05-06 13:34:20,915] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-05-06 13:34:20,918] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-05-06 13:34:20,919] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-05-06 13:34:20,921] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-05-06 13:34:20,923] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-05-06 13:34:20,923] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-05-06 13:34:20,925] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-05-06 13:34:20,926] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-05-06 13:34:20,927] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
- DEBUG root [2018-05-06 13:34:20,928] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
- DEBUG root [2018-05-06 13:34:20,929] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-05-06 13:34:20,972] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-06 13:34:20,973] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-06 13:34:20,973] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-06 13:34:20,986] - Script::uninstall(): is successfully!
- DEBUG root [2018-05-06 13:34:20,986] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-05-06 13:34:21,286] - ThreadPool::destroy(): waiting for thread(2)[0x62cb20,0x62cab8,], try=1
- DEBUG root [2018-05-06 13:34:21,686] - TPThread::~TPThread(): 0x62cb20
- DEBUG root [2018-05-06 13:34:21,686] - TPThread::~TPThread(): 0x62cab8
- DEBUG root [2018-05-06 13:34:21,686] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-05-06 13:34:21,696] - Bundle::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:34:21,697] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-05-06 13:34:21,698] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-05-06 13:34:22,721] - EventDispatcher()::~EventDispatcher: Num timers = 2
-  INFO root [2018-05-06 13:58:47,556] - 
-  INFO root [2018-05-06 13:58:47,556] - -----------------------------------------------------------------------------------------
-
-
-  INFO root [2018-05-06 13:58:47,557] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
-  INFO root [2018-05-06 13:58:47,557] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
-  INFO root [2018-05-06 13:58:47,557] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
-  INFO root [2018-05-06 13:58:47,560] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50697 )
-  INFO root [2018-05-06 13:58:47,560] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50697, SOMAXCONN=5.
-  INFO root [2018-05-06 13:58:47,564] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 17:02:37 Apr 30 2018. AppID: 0. UID: 7400. PID: 8120 ----
-  INFO root [2018-05-06 13:58:47,564] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
-  INFO root [2018-05-06 13:58:47,564] - ThreadPool::createThreadPool: creating  threadpool...
-  INFO root [2018-05-06 13:58:47,565] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
- DEBUG root [2018-05-06 13:58:47,702] - Script::install_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-06 13:58:47,703] - Script::install_py_dlls(): PyInit__socket
- DEBUG root [2018-05-06 13:58:47,703] - Script::install_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-06 13:58:47,706] - Script::install_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-06 13:58:47,706] - Script::install_py_dlls(): PyInit_select
- DEBUG root [2018-05-06 13:58:47,707] - Script::install_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-06 13:58:47,707] - Script::install_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-06 13:58:47,733] - Script::install_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-06 13:58:47,759] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 30 2018, 17:02:36) [MSC v.1913 32 bit (Intel)])!
-  INFO root [2018-05-06 13:58:47,760] - Script::install(): KBExtra is successfully!
- DEBUG root [2018-05-06 13:58:48,067] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
- DEBUG root [2018-05-06 13:58:48,068] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
- DEBUG root [2018-05-06 13:58:48,068] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
- DEBUG root [2018-05-06 13:58:48,071] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
- DEBUG root [2018-05-06 13:58:48,072] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
- DEBUG root [2018-05-06 13:58:48,073] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
- DEBUG root [2018-05-06 13:58:48,074] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
- DEBUG root [2018-05-06 13:58:48,077] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
- DEBUG root [2018-05-06 13:58:48,077] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
- DEBUG root [2018-05-06 13:58:48,079] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
- DEBUG root [2018-05-06 13:58:48,080] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
- DEBUG root [2018-05-06 13:58:48,080] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
- DEBUG root [2018-05-06 13:58:48,081] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
- DEBUG root [2018-05-06 13:58:48,082] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
- DEBUG root [2018-05-06 13:58:48,082] - Script::uninstall_py_dlls(): PyInit_pyexpat
- DEBUG root [2018-05-06 13:58:48,082] - Script::uninstall_py_dlls(): PyInit__socket
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit__ssl
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit__hashlib
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit_select
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit__ctypes
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit__elementtree
- DEBUG root [2018-05-06 13:58:48,083] - Script::uninstall_py_dlls(): PyInit_unicodedata
-  INFO root [2018-05-06 13:58:48,091] - Script::uninstall(): is successfully!
- DEBUG root [2018-05-06 13:58:48,092] - ThreadPool::destroy(): starting size 2.
-  WARN root [2018-05-06 13:58:48,392] - ThreadPool::destroy(): waiting for thread(2)[0x80edc0,0x80ed58,], try=1
- DEBUG root [2018-05-06 13:58:48,793] - TPThread::~TPThread(): 0x80edc0
- DEBUG root [2018-05-06 13:58:48,793] - TPThread::~TPThread(): 0x80ed58
- DEBUG root [2018-05-06 13:58:48,794] - ThreadPool::destroy(): successfully!
- DEBUG root [2018-05-06 13:58:48,821] - Bundle::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,822] - Channel::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,823] - TCPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,823] - UDPPacket::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,823] - EndPoint::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,823] - Address::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,824] - TCPPacketReceiver::destroyObjPool(): size 0.
- DEBUG root [2018-05-06 13:58:48,824] - UDPPacketReceiver::destroyObjPool(): size 0.
-  INFO root [2018-05-06 13:58:48,824] - tool(0) has shut down. ClientSDK=1
-  INFO root [2018-05-06 13:58:49,826] - EventDispatcher()::~EventDispatcher: Num timers = 2
+  INFO root [2018-07-01 12:33:19,560] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-07-01 12:33:19,560] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-07-01 12:33:19,560] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-07-01 12:33:19,610] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50531 )
+  INFO root [2018-07-01 12:33:19,615] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50531, SOMAXCONN=5.
+  INFO root [2018-07-01 12:33:19,655] - ---- tool Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F217117F928F68467C45B47BA31B1B8B. Config: Debug X86. Built: 23:53:49 May  8 2018. AppID: 0. UID: 29425. PID: 7788 ----
+  INFO root [2018-07-01 12:33:19,656] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-07-01 12:33:19,656] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-07-01 12:33:19,674] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-07-01 12:33:20,098] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-07-01 12:33:20,112] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-07-01 12:33:20,117] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-07-01 12:33:20,147] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-07-01 12:33:20,149] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-07-01 12:33:20,149] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-07-01 12:33:20,152] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-07-01 12:33:20,370] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-07-01 12:33:20,604] - Script::install(): is successfully, Python=(3.4.2 (default, May  8 2018, 23:53:43) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-07-01 12:33:20,605] - Script::install(): KBExtra is successfully!
+ DEBUG root [2018-07-01 12:33:21,260] - ClientSDK::writeServerErrorDescrsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//ServerErrorDescrs.cs
+ DEBUG root [2018-07-01 12:33:21,261] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/ServerErrorDescrs.cs
+ DEBUG root [2018-07-01 12:33:21,261] - ClientSDK::writeEngineMessagesModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Messages.cs
+ DEBUG root [2018-07-01 12:33:21,276] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/Messages.cs
+ DEBUG root [2018-07-01 12:33:21,278] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/KBETypes.cs
+ DEBUG root [2018-07-01 12:33:21,279] - ClientSDK::writeEntityDefsModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//EntityDef.cs
+ DEBUG root [2018-07-01 12:33:21,282] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityDef.cs
+ DEBUG root [2018-07-01 12:33:21,283] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CustomDataTypes.cs
+ DEBUG root [2018-07-01 12:33:21,283] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Account
+ DEBUG root [2018-07-01 12:33:21,285] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/AccountBase.cs
+ DEBUG root [2018-07-01 12:33:21,286] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallAccountBase.cs
+ DEBUG root [2018-07-01 12:33:21,286] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//CheckName
+ DEBUG root [2018-07-01 12:33:21,287] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/CheckNameBase.cs
+ DEBUG root [2018-07-01 12:33:21,287] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallCheckNameBase.cs
+ DEBUG root [2018-07-01 12:33:21,287] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Halls
+ DEBUG root [2018-07-01 12:33:21,288] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/HallsBase.cs
+ DEBUG root [2018-07-01 12:33:21,289] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallHallsBase.cs
+ DEBUG root [2018-07-01 12:33:21,289] - ClientSDK::writeEntityModule(): D:\MJ_client\MJClient\Assets\Script\usdSDK//Room
+ DEBUG root [2018-07-01 12:33:21,290] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/RoomBase.cs
+ DEBUG root [2018-07-01 12:33:21,291] - ClientSDK::saveFile(): D:\MJ_client\MJClient\Assets\Script\usdSDK/EntityCallRoomBase.cs
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit__socket
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit__ssl
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit_select
+ DEBUG root [2018-07-01 12:33:21,291] - Script::uninstall_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-07-01 12:33:21,292] - Script::uninstall_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-07-01 12:33:21,292] - Script::uninstall_py_dlls(): PyInit_unicodedata
+  INFO root [2018-07-01 12:33:21,305] - Script::uninstall(): is successfully!
+ DEBUG root [2018-07-01 12:33:21,305] - ThreadPool::destroy(): starting size 2.
+  WARN root [2018-07-01 12:33:21,606] - ThreadPool::destroy(): waiting for thread(2)[0x1d1ed28,0x1d1ecc0,], try=1
+ DEBUG root [2018-07-01 12:33:22,006] - TPThread::~TPThread(): 0x1d1ed28
+ DEBUG root [2018-07-01 12:33:22,007] - TPThread::~TPThread(): 0x1d1ecc0
+ DEBUG root [2018-07-01 12:33:22,007] - ThreadPool::destroy(): successfully!
+ DEBUG root [2018-07-01 12:33:22,034] - Bundle::destroyObjPool(): size 10.
+ DEBUG root [2018-07-01 12:33:22,035] - Channel::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,035] - TCPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,035] - UDPPacket::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,035] - EndPoint::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,036] - Address::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,036] - TCPPacketReceiver::destroyObjPool(): size 0.
+ DEBUG root [2018-07-01 12:33:22,036] - UDPPacketReceiver::destroyObjPool(): size 0.
+  INFO root [2018-07-01 12:33:22,036] - tool(0) has shut down. ClientSDK=1
+  INFO root [2018-07-01 12:33:23,063] - EventDispatcher()::~EventDispatcher: Num timers = 2

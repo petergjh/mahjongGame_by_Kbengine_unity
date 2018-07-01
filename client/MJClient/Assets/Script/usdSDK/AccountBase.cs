@@ -29,6 +29,8 @@ namespace KBEngine
 		public virtual void onPlayerNameChanged(string oldValue) {}
 		public string playerName_base = "";
 		public virtual void onPlayerName_baseChanged(string oldValue) {}
+		public Byte roomSeatIndex = 0;
+		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
 		public abstract void playerLevelRoom(); 
@@ -100,11 +102,11 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 9:
+				case 10:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 10:
+				case 11:
 					playerLevelRoom();
 					break;
 				default:
@@ -267,6 +269,22 @@ namespace KBEngine
 						}
 
 						break;
+					case 6:
+						Byte oldval_roomSeatIndex = roomSeatIndex;
+						roomSeatIndex = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onRoomSeatIndexChanged(oldval_roomSeatIndex);
+						}
+						else
+						{
+							if(inWorld)
+								onRoomSeatIndexChanged(oldval_roomSeatIndex);
+						}
+
+						break;
 					case 40002:
 						stream.readUint32();
 						break;
@@ -424,6 +442,27 @@ namespace KBEngine
 					else
 					{
 						onPositionChanged(oldval_position);
+					}
+				}
+			}
+
+			Byte oldval_roomSeatIndex = roomSeatIndex;
+			Property prop_roomSeatIndex = pdatas[9];
+			if(prop_roomSeatIndex.isBase())
+			{
+				if(inited && !inWorld)
+					onRoomSeatIndexChanged(oldval_roomSeatIndex);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_roomSeatIndex.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onRoomSeatIndexChanged(oldval_roomSeatIndex);
 					}
 				}
 			}
