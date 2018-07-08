@@ -1,7 +1,29 @@
 <root>
 	<SPACE_KEY>				UINT64		</SPACE_KEY>
 	<ENTITY_ID>				UINT32		</ENTITY_ID>
+	<BOOL>				UINT8		</BOOL>
 	<ENTITY_LIST>
 		ARRAY<of>ENTITYCALL</of>
 	</ENTITY_LIST>
+	
+	<PLAYER_PUBLIC_INFO>
+		FIXED_DICT
+		<Properties>
+			<userId>
+				<Type>	ENTITY_ID	</Type>
+			</userId>
+		</Properties>
+	</PLAYER_PUBLIC_INFO>
+	
+	<PLAYERINFO_LIST>
+		ARRAY<of>PLAYER_PUBLIC_INFO</of>
+	</PLAYERINFO_LIST>
+	
+	<ROOM_PUBLIC_INFO>
+		FIXED_DICT
+		<Properties>
+			<state><Type>	UNICODE	</Type></state>
+			<playerInfo><Type>	PLAYERINFO_LIST	</Type></playerInfo>
+		</Properties>
+	</ROOM_PUBLIC_INFO>
 </root>

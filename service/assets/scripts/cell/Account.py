@@ -14,3 +14,8 @@ class Account(KBEngine.Entity):
 
 	def changeRoomSeatIndex(self,index):
 		self.roomSeatIndex = index
+
+	def playerReadyStateChange(self,state):
+		self.isReady = state
+		print("cell account")
+		print(self.isReady)

@@ -8,6 +8,7 @@ public class MJpanel : MonoBehaviour {
 	Text roomIdText;
 	public int roomMaxPlayer = 2;
 	public static MJpanel instance;
+	public Room room;
 	List<playerInfo> playerInfoList = new List<playerInfo>();
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,16 @@ public class MJpanel : MonoBehaviour {
 	void installEvents()
 	{
 		KBEngine.Event.registerOut("playerLevelRoom", this, "playerLevelRoom");
-
+		KBEngine.Event.registerOut("set_isReady", this, "set_isReady");
+		
+	}
+	public void set_isReady(Account entity, int state) {
+		print((entity).playerName + "状态改变了");
+		int oldIndex = (entity).roomSeatIndex;
+		print("oldIndex----" + oldIndex);
+		int newIndex = getLocalSeatIndex(oldIndex);
+		print("newIndex----" + newIndex);
+		playerInfoList[newIndex].changeReady(state);
 	}
 	//转换成局部座位
 	public int getLocalSeatIndex(int severSeatIndex)
@@ -77,6 +87,18 @@ public class MJpanel : MonoBehaviour {
 	public void playerLevelRoom() {
 		UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("hall");
 	}
+	public void LeaveWorld(KBEngine.Entity entity) {
+		if (entity.className == "Account")
+		{
+			print(((Account)entity).playerName + "离开房间了");
+			int oldIndex = ((Account)entity).roomSeatIndex;
+			print("oldIndex----" + oldIndex);
+			int newIndex = getLocalSeatIndex(oldIndex);
+			print("newIndex----" + newIndex);
+			playerInfoList[newIndex].leaveRoom();
+
+		}
+	}
 	public void EnterWorld(KBEngine.Entity entity)
 	{
 		if (entity.className == "Account") {
@@ -92,6 +114,7 @@ public class MJpanel : MonoBehaviour {
 		{
 			print("该房间id--" + ((Room)entity).roomKey);
 			roomIdText.text =""+ ((Room)entity).roomKey;
+			room = (Room)entity;
 		}
 	}
 	// Update is called once per frame
@@ -115,9 +138,10 @@ public class MJpanel : MonoBehaviour {
 
 		} else if (tr == readyBtn) {
 			KBEngine.Account acc = (KBEngine.Account)KBEngine.KBEngineApp.app.player();
-			if (acc != null)
+			if (room != null && acc != null)
 			{
-				
+				print(12321);
+				room.cellEntityCall.reqChangeReadyState(acc.isReady);
 			}
 		}
 		

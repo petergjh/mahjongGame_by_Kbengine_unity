@@ -23,6 +23,11 @@ public class playerInfo  {
 		if (talkRoot)
 			talkText = talkRoot.Find("Text").GetComponent<Text>();
 	}
+	public void leaveRoom() {
+		account = null;
+		ServerIndex = 0;
+		playerName.text = "";
+	}
 	public void initPlayer(Account ac) {
 		account = ac;
 		ServerIndex = ac.roomSeatIndex;
@@ -44,6 +49,10 @@ public class playerInfo  {
 		playerName.text = "";
 		PlayerGold.text = "";
 		isRead.gameObject.SetActive(false);
+	}
+	public void changeReady(int state) {
+		bool st = (state == 1 ?true: false);
+		isRead.gameObject.SetActive(st);
 	}
 }
 

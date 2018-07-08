@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 	{
 		KBEngine.Event.registerOut("addSpaceGeometryMapping", this, "addSpaceGeometryMapping");
 		KBEngine.Event.registerOut("onEnterWorld", this, "onEnterWorld");
-		//KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
+		KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
 	}
 	public void onEnterWorld(KBEngine.Entity entity)
 	{
@@ -49,6 +49,19 @@ public class GameManager : MonoBehaviour
 		else {
 			MJpanel.instance.EnterWorld(entity);
 		}
+	}
+	public void onLeaveWorld(KBEngine.Entity entity) {
+		if (MJpanel.instance != null)
+		{
+			MJpanel.instance.LeaveWorld(entity);
+		}
+		else {
+			if (pendingEnterEntityIDs.Contains(entity.id)) {
+				pendingEnterEntityIDs.Remove(entity.id);
+			}
+
+		}	
+
 	}
 	public void gameSceneLoadeOver() {
 		foreach (Int32 id in pendingEnterEntityIDs)

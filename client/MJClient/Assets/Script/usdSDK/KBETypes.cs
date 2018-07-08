@@ -782,8 +782,63 @@ namespace KBEngine
 		}
 	}
 
+	public struct BOOL
+	{
+		Byte value;
+
+		BOOL(Byte value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator Byte(BOOL value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator BOOL(int value)
+		{
+			Byte tvalue = (Byte)value;
+			return new BOOL(tvalue);
+		}
+
+		public static Byte MaxValue
+		{
+			get
+			{
+				return Byte.MaxValue;
+			}
+		}
+
+		public static Byte MinValue
+		{
+			get
+			{
+				return Byte.MinValue;
+			}
+		}
+	}
+
 	public class ENTITY_LIST : List<byte[]>
 	{
+
+	}
+
+	public class PLAYER_PUBLIC_INFO
+	{
+		public UInt32 userId = 0;
+
+	}
+
+	public class PLAYERINFO_LIST : List<PLAYER_PUBLIC_INFO>
+	{
+
+	}
+
+	public class ROOM_PUBLIC_INFO
+	{
+		public string state = "";
+		public PLAYERINFO_LIST playerInfo = new PLAYERINFO_LIST();
 
 	}
 

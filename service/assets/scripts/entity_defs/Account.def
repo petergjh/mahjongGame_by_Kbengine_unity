@@ -30,6 +30,12 @@
 			<Type>	UINT8				</Type>
 			<Flags>	ALL_CLIENTS			</Flags>
 		</roomSeatIndex>
+
+		<isReady>
+			<Type>	BOOL				</Type>
+			<Flags>	ALL_CLIENTS			</Flags>
+		</isReady>
+		
 	</Properties>
 
 	<ClientMethods>
@@ -38,6 +44,11 @@
 		</OnReqCreateAvatar>
 		<playerLevelRoom>
 		</playerLevelRoom>
+
+		<onGetRoomInfo>
+			<Arg>	ROOM_PUBLIC_INFO	</Arg>
+		</onGetRoomInfo>
+		
 	</ClientMethods>
 
 	<BaseMethods>
@@ -80,6 +91,11 @@
 			<Arg>		UINT8		</Arg>
 			<!-- 座位号 -->
 		</changeRoomSeatIndex>
+		
+		<playerReadyStateChange>
+			<Arg>		BOOL		</Arg>
+		</playerReadyStateChange>
+		
 	</CellMethods>
 
 </root>

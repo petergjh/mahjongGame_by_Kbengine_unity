@@ -137,11 +137,26 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(isNewPlayer / 5).");
 
+			Property pAccount_isReady = new Property();
+			pAccount_isReady.name = "isReady";
+			pAccount_isReady.properUtype = 7;
+			pAccount_isReady.properFlags = 4;
+			pAccount_isReady.aliasID = 5;
+			Byte Account_isReady_defval;
+			Byte.TryParse("", out Account_isReady_defval);
+			pAccount_isReady.defaultVal = Account_isReady_defval;
+			pAccountModule.propertys["isReady"] = pAccount_isReady; 
+
+			pAccountModule.usePropertyDescrAlias = true;
+			pAccountModule.idpropertys[(UInt16)pAccount_isReady.aliasID] = pAccount_isReady;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(isReady / 7).");
+
 			Property pAccount_playerID = new Property();
 			pAccount_playerID.name = "playerID";
 			pAccount_playerID.properUtype = 4;
 			pAccount_playerID.properFlags = 4;
-			pAccount_playerID.aliasID = 5;
+			pAccount_playerID.aliasID = 6;
 			UInt16 Account_playerID_defval;
 			UInt16.TryParse("", out Account_playerID_defval);
 			pAccount_playerID.defaultVal = Account_playerID_defval;
@@ -156,7 +171,7 @@ namespace KBEngine
 			pAccount_playerID_base.name = "playerID_base";
 			pAccount_playerID_base.properUtype = 2;
 			pAccount_playerID_base.properFlags = 32;
-			pAccount_playerID_base.aliasID = 6;
+			pAccount_playerID_base.aliasID = 7;
 			UInt16 Account_playerID_base_defval;
 			UInt16.TryParse("", out Account_playerID_base_defval);
 			pAccount_playerID_base.defaultVal = Account_playerID_base_defval;
@@ -171,7 +186,7 @@ namespace KBEngine
 			pAccount_playerName.name = "playerName";
 			pAccount_playerName.properUtype = 3;
 			pAccount_playerName.properFlags = 4;
-			pAccount_playerName.aliasID = 7;
+			pAccount_playerName.aliasID = 8;
 			string Account_playerName_defval = "";
 			pAccount_playerName.defaultVal = Account_playerName_defval;
 			pAccountModule.propertys["playerName"] = pAccount_playerName; 
@@ -185,7 +200,7 @@ namespace KBEngine
 			pAccount_playerName_base.name = "playerName_base";
 			pAccount_playerName_base.properUtype = 1;
 			pAccount_playerName_base.properFlags = 32;
-			pAccount_playerName_base.aliasID = 8;
+			pAccount_playerName_base.aliasID = 9;
 			string Account_playerName_base_defval = "";
 			pAccount_playerName_base.defaultVal = Account_playerName_base_defval;
 			pAccountModule.propertys["playerName_base"] = pAccount_playerName_base; 
@@ -199,7 +214,7 @@ namespace KBEngine
 			pAccount_roomSeatIndex.name = "roomSeatIndex";
 			pAccount_roomSeatIndex.properUtype = 6;
 			pAccount_roomSeatIndex.properFlags = 4;
-			pAccount_roomSeatIndex.aliasID = 9;
+			pAccount_roomSeatIndex.aliasID = 10;
 			Byte Account_roomSeatIndex_defval;
 			Byte.TryParse("", out Account_roomSeatIndex_defval);
 			pAccount_roomSeatIndex.defaultVal = Account_roomSeatIndex_defval;
@@ -215,7 +230,7 @@ namespace KBEngine
 
 			Method pAccount_OnReqCreateAvatar = new Method();
 			pAccount_OnReqCreateAvatar.name = "OnReqCreateAvatar";
-			pAccount_OnReqCreateAvatar.methodUtype = 10;
+			pAccount_OnReqCreateAvatar.methodUtype = 12;
 			pAccount_OnReqCreateAvatar.aliasID = 1;
 			pAccount_OnReqCreateAvatar.args = pAccount_OnReqCreateAvatar_args;
 
@@ -223,27 +238,42 @@ namespace KBEngine
 			pAccountModule.useMethodDescrAlias = true;
 			pAccountModule.idmethods[(UInt16)pAccount_OnReqCreateAvatar.aliasID] = pAccount_OnReqCreateAvatar;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 10).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 12).");
+
+			List<DATATYPE_BASE> pAccount_onGetRoomInfo_args = new List<DATATYPE_BASE>();
+			pAccount_onGetRoomInfo_args.Add(EntityDef.id2datatypes[25]);
+
+			Method pAccount_onGetRoomInfo = new Method();
+			pAccount_onGetRoomInfo.name = "onGetRoomInfo";
+			pAccount_onGetRoomInfo.methodUtype = 14;
+			pAccount_onGetRoomInfo.aliasID = 2;
+			pAccount_onGetRoomInfo.args = pAccount_onGetRoomInfo_args;
+
+			pAccountModule.methods["onGetRoomInfo"] = pAccount_onGetRoomInfo; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_onGetRoomInfo.aliasID] = pAccount_onGetRoomInfo;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(onGetRoomInfo / 14).");
 
 			List<DATATYPE_BASE> pAccount_playerLevelRoom_args = new List<DATATYPE_BASE>();
 
 			Method pAccount_playerLevelRoom = new Method();
 			pAccount_playerLevelRoom.name = "playerLevelRoom";
-			pAccount_playerLevelRoom.methodUtype = 11;
-			pAccount_playerLevelRoom.aliasID = 2;
+			pAccount_playerLevelRoom.methodUtype = 13;
+			pAccount_playerLevelRoom.aliasID = 3;
 			pAccount_playerLevelRoom.args = pAccount_playerLevelRoom_args;
 
 			pAccountModule.methods["playerLevelRoom"] = pAccount_playerLevelRoom; 
 			pAccountModule.useMethodDescrAlias = true;
 			pAccountModule.idmethods[(UInt16)pAccount_playerLevelRoom.aliasID] = pAccount_playerLevelRoom;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(playerLevelRoom / 11).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(playerLevelRoom / 13).");
 
 			List<DATATYPE_BASE> pAccount_EnterMatchesMatch_args = new List<DATATYPE_BASE>();
 
 			Method pAccount_EnterMatchesMatch = new Method();
 			pAccount_EnterMatchesMatch.name = "EnterMatchesMatch";
-			pAccount_EnterMatchesMatch.methodUtype = 5;
+			pAccount_EnterMatchesMatch.methodUtype = 6;
 			pAccount_EnterMatchesMatch.aliasID = -1;
 			pAccount_EnterMatchesMatch.args = pAccount_EnterMatchesMatch_args;
 
@@ -252,13 +282,13 @@ namespace KBEngine
 
 			pAccountModule.idbase_methods[pAccount_EnterMatchesMatch.methodUtype] = pAccount_EnterMatchesMatch;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(EnterMatchesMatch / 5).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(EnterMatchesMatch / 6).");
 
 			List<DATATYPE_BASE> pAccount_reqChangeRoom_args = new List<DATATYPE_BASE>();
 
 			Method pAccount_reqChangeRoom = new Method();
 			pAccount_reqChangeRoom.name = "reqChangeRoom";
-			pAccount_reqChangeRoom.methodUtype = 7;
+			pAccount_reqChangeRoom.methodUtype = 8;
 			pAccount_reqChangeRoom.aliasID = -1;
 			pAccount_reqChangeRoom.args = pAccount_reqChangeRoom_args;
 
@@ -267,14 +297,14 @@ namespace KBEngine
 
 			pAccountModule.idbase_methods[pAccount_reqChangeRoom.methodUtype] = pAccount_reqChangeRoom;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqChangeRoom / 7).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqChangeRoom / 8).");
 
 			List<DATATYPE_BASE> pAccount_reqCreateAvatar_args = new List<DATATYPE_BASE>();
 			pAccount_reqCreateAvatar_args.Add(EntityDef.id2datatypes[12]);
 
 			Method pAccount_reqCreateAvatar = new Method();
 			pAccount_reqCreateAvatar.name = "reqCreateAvatar";
-			pAccount_reqCreateAvatar.methodUtype = 3;
+			pAccount_reqCreateAvatar.methodUtype = 4;
 			pAccount_reqCreateAvatar.aliasID = -1;
 			pAccount_reqCreateAvatar.args = pAccount_reqCreateAvatar_args;
 
@@ -283,7 +313,7 @@ namespace KBEngine
 
 			pAccountModule.idbase_methods[pAccount_reqCreateAvatar.methodUtype] = pAccount_reqCreateAvatar;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 3).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqCreateAvatar / 4).");
 
 			List<DATATYPE_BASE> pAccount_LeaveRoom_args = new List<DATATYPE_BASE>();
 
@@ -349,7 +379,7 @@ namespace KBEngine
 
 			Property pRoom_RoomType = new Property();
 			pRoom_RoomType.name = "RoomType";
-			pRoom_RoomType.properUtype = 9;
+			pRoom_RoomType.properUtype = 10;
 			pRoom_RoomType.properFlags = 4;
 			pRoom_RoomType.aliasID = 4;
 			Byte Room_RoomType_defval;
@@ -360,11 +390,11 @@ namespace KBEngine
 			pRoomModule.usePropertyDescrAlias = true;
 			pRoomModule.idpropertys[(UInt16)pRoom_RoomType.aliasID] = pRoom_RoomType;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(RoomType / 9).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(RoomType / 10).");
 
 			Property pRoom_playerMaxCount = new Property();
 			pRoom_playerMaxCount.name = "playerMaxCount";
-			pRoom_playerMaxCount.properUtype = 11;
+			pRoom_playerMaxCount.properUtype = 12;
 			pRoom_playerMaxCount.properFlags = 4;
 			pRoom_playerMaxCount.aliasID = 5;
 			Byte Room_playerMaxCount_defval;
@@ -375,11 +405,11 @@ namespace KBEngine
 			pRoomModule.usePropertyDescrAlias = true;
 			pRoomModule.idpropertys[(UInt16)pRoom_playerMaxCount.aliasID] = pRoom_playerMaxCount;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(playerMaxCount / 11).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(playerMaxCount / 12).");
 
 			Property pRoom_roomKey = new Property();
 			pRoom_roomKey.name = "roomKey";
-			pRoom_roomKey.properUtype = 8;
+			pRoom_roomKey.properUtype = 9;
 			pRoom_roomKey.properFlags = 4;
 			pRoom_roomKey.aliasID = 6;
 			UInt64 Room_roomKey_defval;
@@ -390,7 +420,38 @@ namespace KBEngine
 			pRoomModule.usePropertyDescrAlias = true;
 			pRoomModule.idpropertys[(UInt16)pRoom_roomKey.aliasID] = pRoom_roomKey;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(roomKey / 8).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(roomKey / 9).");
+
+			List<DATATYPE_BASE> pRoom_reqChangeReadyState_args = new List<DATATYPE_BASE>();
+			pRoom_reqChangeReadyState_args.Add(EntityDef.id2datatypes[2]);
+
+			Method pRoom_reqChangeReadyState = new Method();
+			pRoom_reqChangeReadyState.name = "reqChangeReadyState";
+			pRoom_reqChangeReadyState.methodUtype = 24;
+			pRoom_reqChangeReadyState.aliasID = -1;
+			pRoom_reqChangeReadyState.args = pRoom_reqChangeReadyState_args;
+
+			pRoomModule.methods["reqChangeReadyState"] = pRoom_reqChangeReadyState; 
+			pRoomModule.cell_methods["reqChangeReadyState"] = pRoom_reqChangeReadyState;
+
+			pRoomModule.idcell_methods[pRoom_reqChangeReadyState.methodUtype] = pRoom_reqChangeReadyState;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqChangeReadyState / 24).");
+
+			List<DATATYPE_BASE> pRoom_reqGetRoomInfo_args = new List<DATATYPE_BASE>();
+
+			Method pRoom_reqGetRoomInfo = new Method();
+			pRoom_reqGetRoomInfo.name = "reqGetRoomInfo";
+			pRoom_reqGetRoomInfo.methodUtype = 23;
+			pRoom_reqGetRoomInfo.aliasID = -1;
+			pRoom_reqGetRoomInfo.args = pRoom_reqGetRoomInfo_args;
+
+			pRoomModule.methods["reqGetRoomInfo"] = pRoom_reqGetRoomInfo; 
+			pRoomModule.cell_methods["reqGetRoomInfo"] = pRoom_reqGetRoomInfo;
+
+			pRoomModule.idcell_methods[pRoom_reqGetRoomInfo.methodUtype] = pRoom_reqGetRoomInfo;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGetRoomInfo / 23).");
 
 		}
 
@@ -398,7 +459,7 @@ namespace KBEngine
 		{
 			{
 				UInt16 utype = 2;
-				string typeName = "UINT8";
+				string typeName = "BOOL";
 				string name = "UINT8";
 				DATATYPE_BASE val = null;
 				EntityDef.datatypes.TryGetValue(name, out val);
@@ -631,6 +692,33 @@ namespace KBEngine
 				UInt16 utype = 22;
 				string typeName = "ENTITY_LIST";
 				DATATYPE_ENTITY_LIST datatype = new DATATYPE_ENTITY_LIST();
+				EntityDef.datatypes[typeName] = datatype;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 23;
+				string typeName = "PLAYER_PUBLIC_INFO";
+				DATATYPE_PLAYER_PUBLIC_INFO datatype = new DATATYPE_PLAYER_PUBLIC_INFO();
+				EntityDef.datatypes[typeName] = datatype;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 24;
+				string typeName = "PLAYERINFO_LIST";
+				DATATYPE_PLAYERINFO_LIST datatype = new DATATYPE_PLAYERINFO_LIST();
+				EntityDef.datatypes[typeName] = datatype;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 25;
+				string typeName = "ROOM_PUBLIC_INFO";
+				DATATYPE_ROOM_PUBLIC_INFO datatype = new DATATYPE_ROOM_PUBLIC_INFO();
 				EntityDef.datatypes[typeName] = datatype;
 				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
 				EntityDef.datatype2id[typeName] = utype;

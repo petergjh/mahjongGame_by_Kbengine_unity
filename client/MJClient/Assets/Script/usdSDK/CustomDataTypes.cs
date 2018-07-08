@@ -40,4 +40,72 @@ namespace KBEngine
 	}
 
 
+
+	public class DATATYPE_PLAYER_PUBLIC_INFO : DATATYPE_BASE
+	{
+		public PLAYER_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
+		{
+			PLAYER_PUBLIC_INFO datas = new PLAYER_PUBLIC_INFO();
+			datas.userId = stream.readUint32();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYER_PUBLIC_INFO v)
+		{
+			stream.writeUint32(v.userId);
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYERINFO_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYER_PUBLIC_INFO itemType = new DATATYPE_PLAYER_PUBLIC_INFO();
+
+		public PLAYERINFO_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			PLAYERINFO_LIST datas = new PLAYERINFO_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYERINFO_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_ROOM_PUBLIC_INFO : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYERINFO_LIST playerInfo_DataType = new DATATYPE_PLAYERINFO_LIST();
+
+		public ROOM_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
+		{
+			ROOM_PUBLIC_INFO datas = new ROOM_PUBLIC_INFO();
+			datas.state = stream.readUnicode();
+			datas.playerInfo = playerInfo_DataType.createFromStreamEx(stream);
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, ROOM_PUBLIC_INFO v)
+		{
+			stream.writeUnicode(v.state);
+			playerInfo_DataType.addToStreamEx(stream, v.playerInfo);
+		}
+	}
+
+
 }

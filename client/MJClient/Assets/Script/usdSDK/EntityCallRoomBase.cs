@@ -31,5 +31,24 @@ namespace KBEngine
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
 		}
 
+		public void reqChangeReadyState(Byte arg1)
+		{
+			Bundle pBundle = newCall("reqChangeReadyState", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeUint8(arg1);
+			sendCall(null);
+		}
+
+		public void reqGetRoomInfo()
+		{
+			Bundle pBundle = newCall("reqGetRoomInfo", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
 	}
 	}
