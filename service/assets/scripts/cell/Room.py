@@ -1,5 +1,7 @@
 import KBEngine
 from KBEDebug import *
+import random
+
 class Room(KBEngine.Entity):
 	def __init__(self):
 		KBEngine.Entity.__init__(self)
@@ -40,12 +42,15 @@ class Room(KBEngine.Entity):
 		for i in range(self.playerMaxCount):
 			seatData =self.game.gameSeats[i]
 			d={
-				"userId":seatData.userId
+				"userId":seatData.userId,
+				"holdsCount":len(seatData.holds)
 				}
 			playerList.append(d)
 		data = {
 			"state" :self.game.state,
 			"playerInfo":playerList,
+			"button":game.button,
+			"turn": game.turn,
 			}
 		self.public_roomInfo = data
 
@@ -54,12 +59,15 @@ class Room(KBEngine.Entity):
 		playerList = []
 		for i in range(self.playerMaxCount):
 			d={
-				"userId":0
+				"userId":0,
+				"holdsCount":0,
 				}
 			playerList.append(d)
 		data = {
 			"state" :"idel",
 			"playerInfo":playerList,
+			"button":-1,
+			"turn": -1,
 			}
 		self.public_roomInfo = data
 
@@ -79,12 +87,99 @@ class Room(KBEngine.Entity):
 				seat.ready = not STATE
 				seat.entity.cell.playerReadyStateChange(seat.ready)
 				print(seat.ready)
+				break
+		for i in range(len(self.roomInfo.seats)):
+			seat = self.roomInfo.seats[i];
+			if seat.ready  == False:
+				return
+
+		self.begin()
+
+	def begin(self):
+		self.clearPublicRoomInfo()
+		self.game = MJData(self.roomInfo,self.playerMaxCount)
+		self.shuffle(self.game)
+		self.deal(self.game)
+		self.numOfMJ = len(self.game.mahjongs) - self.game.currentIndex;
+		self.cur_turn = self.game.button
+		self.game.state = "playing";
+		self.setPublicRoomInfo(self.game)
+		seats = self.roomInfo.seats
+		for i in range(len(seats)):
+			if seats[i].entity.client:
+				seats[i].entity.cell.game_holds_push(self.game.gameSeats[i].holds)
+				seats[i].entity.client.upDataClientRoomInfo(self.public_roomInfo)
+				seats[i].entity.client.game_begin_push()
+
+
+		
+	#洗牌
+	def shuffle(self,game):
+		mahjongs = game.mahjongs
+		#筒 (0 ~ 8 表示筒子)
+		for i in range(9):
+			for c in range(4):
+				mahjongs.append(i)
+		#条 9 ~ 17表示条子
+		# for i in range(9,18):
+		# 	for c in range(4):
+		# 		mahjongs.append(i)
+
+
+		#万 18 ~ 26表示万
+		for i in range(18,27):
+			for c in range(4):
+				mahjongs.append(i)
+
+		random.shuffle(mahjongs)		#随机打乱牌  洗牌
+
+	#发牌
+	def deal(self,game):
+		game.currentIndex = 0	#强制清0
+		#每人13张 一共 13*人数  庄家多一张 
+		seatIndex = game.button;
+		allFPCount = 13*self.playerMaxCount;
+		for i in range(allFPCount):
+			self.mopai(game,seatIndex);
+			seatIndex +=1
+			seatIndex = seatIndex%self.maxPlayerCount;
+
+		#庄家多摸最后一张
+		self.mopai(game,game.button)
+		#当前轮设置为庄家
+		game.turn = game.button
+
+
+	#摸牌
+	def mopai(self,game,seatIndex):
+		pai = game.mahjongs[game.currentIndex]
+		game.gameSeats[seatIndex].holds.append(pai)
+		game.currentIndex +=1
 #----------------------------------------------------------------------------
 #麻将信息类
 class MJData:
 	def __init__(self,roomInfo,maxPlayerCount):
 		self.state = "idle"
 		self.seatList = roomInfo.seats
+		self.mahjongs = []
+		self.currentIndex = 0  #当前发的牌在所有牌中的索引
+		self.button = 1 #庄家位置
+		self.turn = 0  #记录该谁出牌
+		self.chuPai = -1
+		self.gameSeats = []
+		for i in range(maxPlayerCount):	
+			seat = seatData(self,i,self.seatList[i].userId)
+			self.gameSeats.append(seat)
+
+
+#所有玩家的牌类信息
+class seatData:
+	def __init__(self,game,index,userId):
+		self.game = game   #游戏对象
+		self.seatIndex = index   #玩家座位索引
+		self.userId = userId		#玩家id
+		self.holds = []  #持有的牌
+		#self.folds = []  #打出的牌
 
 
 #房间信息

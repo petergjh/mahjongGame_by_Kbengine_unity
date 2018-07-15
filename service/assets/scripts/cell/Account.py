@@ -19,3 +19,6 @@ class Account(KBEngine.Entity):
 		self.isReady = state
 		print("cell account")
 		print(self.isReady)
+
+	def game_holds_push(self,holds):
+		self.holds = holds

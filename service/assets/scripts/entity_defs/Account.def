@@ -35,7 +35,10 @@
 			<Type>	BOOL				</Type>
 			<Flags>	ALL_CLIENTS			</Flags>
 		</isReady>
-		
+		<holds>
+			<Type>	MJ_LIST				</Type>
+			<Flags>	OWN_CLIENT			</Flags>
+		</holds>
 	</Properties>
 
 	<ClientMethods>
@@ -48,7 +51,11 @@
 		<onGetRoomInfo>
 			<Arg>	ROOM_PUBLIC_INFO	</Arg>
 		</onGetRoomInfo>
-		
+		<game_begin_push>
+		</game_begin_push>
+		<upDataClientRoomInfo>
+			<Arg>	ROOM_PUBLIC_INFO	</Arg>
+		</upDataClientRoomInfo>
 	</ClientMethods>
 
 	<BaseMethods>
@@ -95,7 +102,9 @@
 		<playerReadyStateChange>
 			<Arg>		BOOL		</Arg>
 		</playerReadyStateChange>
-		
+		<game_holds_push>
+			<Arg>		MJ_LIST		</Arg>			
+		</game_holds_push>
 	</CellMethods>
 
 </root>
