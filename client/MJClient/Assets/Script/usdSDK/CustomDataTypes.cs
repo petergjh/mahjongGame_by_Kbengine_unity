@@ -13,6 +13,34 @@ namespace KBEngine
 
 
 
+	public class DATATYPE_MJ_LIST : DATATYPE_BASE
+	{
+		public MJ_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			MJ_LIST datas = new MJ_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(stream.readInt8());
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MJ_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				stream.writeInt8(v[i]);
+			};
+		}
+	}
+
+
+
 	public class DATATYPE_ENTITY_LIST : DATATYPE_BASE
 	{
 		public ENTITY_LIST createFromStreamEx(MemoryStream stream)
@@ -47,12 +75,14 @@ namespace KBEngine
 		{
 			PLAYER_PUBLIC_INFO datas = new PLAYER_PUBLIC_INFO();
 			datas.userId = stream.readUint32();
+			datas.holdsCount = stream.readInt8();
 			return datas;
 		}
 
 		public void addToStreamEx(Bundle stream, PLAYER_PUBLIC_INFO v)
 		{
 			stream.writeUint32(v.userId);
+			stream.writeInt8(v.holdsCount);
 		}
 	}
 
@@ -97,6 +127,8 @@ namespace KBEngine
 			ROOM_PUBLIC_INFO datas = new ROOM_PUBLIC_INFO();
 			datas.state = stream.readUnicode();
 			datas.playerInfo = playerInfo_DataType.createFromStreamEx(stream);
+			datas.button = stream.readInt8();
+			datas.turn = stream.readInt8();
 			return datas;
 		}
 
@@ -104,6 +136,8 @@ namespace KBEngine
 		{
 			stream.writeUnicode(v.state);
 			playerInfo_DataType.addToStreamEx(stream, v.playerInfo);
+			stream.writeInt8(v.button);
+			stream.writeInt8(v.turn);
 		}
 	}
 

@@ -49,8 +49,8 @@ class Room(KBEngine.Entity):
 		data = {
 			"state" :self.game.state,
 			"playerInfo":playerList,
-			"button":game.button,
-			"turn": game.turn,
+			"button":self.game.button,
+			"turn": self.game.turn,
 			}
 		self.public_roomInfo = data
 
@@ -96,6 +96,7 @@ class Room(KBEngine.Entity):
 		self.begin()
 
 	def begin(self):
+		print("全部就位---开始处理！");
 		self.clearPublicRoomInfo()
 		self.game = MJData(self.roomInfo,self.playerMaxCount)
 		self.shuffle(self.game)
@@ -103,13 +104,15 @@ class Room(KBEngine.Entity):
 		self.numOfMJ = len(self.game.mahjongs) - self.game.currentIndex;
 		self.cur_turn = self.game.button
 		self.game.state = "playing";
-		self.setPublicRoomInfo(self.game)
+		self.setPublicRoomInfo()
 		seats = self.roomInfo.seats
 		for i in range(len(seats)):
 			if seats[i].entity.client:
 				seats[i].entity.cell.game_holds_push(self.game.gameSeats[i].holds)
 				seats[i].entity.client.upDataClientRoomInfo(self.public_roomInfo)
 				seats[i].entity.client.game_begin_push()
+
+		print("游戏开始！");
 
 
 		
@@ -142,7 +145,7 @@ class Room(KBEngine.Entity):
 		for i in range(allFPCount):
 			self.mopai(game,seatIndex);
 			seatIndex +=1
-			seatIndex = seatIndex%self.maxPlayerCount;
+			seatIndex = seatIndex%self.playerMaxCount;
 
 		#庄家多摸最后一张
 		self.mopai(game,game.button)

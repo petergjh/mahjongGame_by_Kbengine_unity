@@ -99,6 +99,15 @@ public class MJpanel : MonoBehaviour {
 
 		}
 	}
+	string GetPaiString(int pai) {
+		if (pai < 9) {
+			return (pai+1)+"筒";
+		} else if (pai < 18) {
+			return ( pai-8) + "条";
+		} else {
+			return ( pai-17)+ "万";
+		}
+	}
 	public void EnterWorld(KBEngine.Entity entity)
 	{
 		if (entity.className == "Account") {
@@ -108,6 +117,13 @@ public class MJpanel : MonoBehaviour {
 			int newIndex = getLocalSeatIndex(oldIndex);
 			print("newIndex----" + newIndex);
 			playerInfoList[newIndex].initPlayer((Account)entity);
+			if (entity.isPlayer()) {
+				((Account)entity).holds.Sort();
+				for (int i = 0; i < ((Account)entity).holds.Count; i++)
+				{
+					MonoBehaviour.print("第" + i + "张手牌为 ---" + GetPaiString(((Account)entity).holds[i]));
+				}
+			}
 
 		}
 		else if (entity.className == "Room")

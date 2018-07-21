@@ -819,6 +819,48 @@ namespace KBEngine
 		}
 	}
 
+	public struct MJPAI
+	{
+		SByte value;
+
+		MJPAI(SByte value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator SByte(MJPAI value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator MJPAI(int value)
+		{
+			SByte tvalue = (SByte)value;
+			return new MJPAI(tvalue);
+		}
+
+		public static SByte MaxValue
+		{
+			get
+			{
+				return SByte.MaxValue;
+			}
+		}
+
+		public static SByte MinValue
+		{
+			get
+			{
+				return SByte.MinValue;
+			}
+		}
+	}
+
+	public class MJ_LIST : List<SByte>
+	{
+
+	}
+
 	public class ENTITY_LIST : List<byte[]>
 	{
 
@@ -827,6 +869,7 @@ namespace KBEngine
 	public class PLAYER_PUBLIC_INFO
 	{
 		public UInt32 userId = 0;
+		public SByte holdsCount = 0;
 
 	}
 
@@ -839,6 +882,8 @@ namespace KBEngine
 	{
 		public string state = "";
 		public PLAYERINFO_LIST playerInfo = new PLAYERINFO_LIST();
+		public SByte button = 0;
+		public SByte turn = 0;
 
 	}
 

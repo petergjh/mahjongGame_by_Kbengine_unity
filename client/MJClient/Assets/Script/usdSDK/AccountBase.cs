@@ -19,6 +19,8 @@ namespace KBEngine
 		public EntityBaseEntityCall_AccountBase baseEntityCall = null;
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
+		public MJ_LIST holds = new MJ_LIST();
+		public virtual void onHoldsChanged(MJ_LIST oldValue) {}
 		public Byte isNewPlayer = 1;
 		public virtual void onIsNewPlayerChanged(Byte oldValue) {}
 		public Byte isReady = 0;
@@ -35,8 +37,10 @@ namespace KBEngine
 		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void game_begin_push(); 
 		public abstract void onGetRoomInfo(ROOM_PUBLIC_INFO arg1); 
 		public abstract void playerLevelRoom(); 
+		public abstract void upDataClientRoomInfo(ROOM_PUBLIC_INFO arg1); 
 
 		public AccountBase()
 		{
@@ -105,16 +109,23 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 12:
+				case 13:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 14:
+				case 16:
+					game_begin_push();
+					break;
+				case 15:
 					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					onGetRoomInfo(onGetRoomInfo_arg1);
 					break;
-				case 13:
+				case 14:
 					playerLevelRoom();
+					break;
+				case 17:
+					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
+					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
 				default:
 					break;
@@ -177,6 +188,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onDirectionChanged(oldval_direction);
+						}
+
+						break;
+					case 8:
+						MJ_LIST oldval_holds = holds;
+						holds = ((DATATYPE_MJ_LIST)EntityDef.id2datatypes[22]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onHoldsChanged(oldval_holds);
+						}
+						else
+						{
+							if(inWorld)
+								onHoldsChanged(oldval_holds);
 						}
 
 						break;
@@ -343,8 +370,29 @@ namespace KBEngine
 				}
 			}
 
+			MJ_LIST oldval_holds = holds;
+			Property prop_holds = pdatas[4];
+			if(prop_holds.isBase())
+			{
+				if(inited && !inWorld)
+					onHoldsChanged(oldval_holds);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_holds.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onHoldsChanged(oldval_holds);
+					}
+				}
+			}
+
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[4];
+			Property prop_isNewPlayer = pdatas[5];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -365,7 +413,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isReady = isReady;
-			Property prop_isReady = pdatas[5];
+			Property prop_isReady = pdatas[6];
 			if(prop_isReady.isBase())
 			{
 				if(inited && !inWorld)
@@ -386,7 +434,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[6];
+			Property prop_playerID = pdatas[7];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -407,7 +455,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[7];
+			Property prop_playerID_base = pdatas[8];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -428,7 +476,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[8];
+			Property prop_playerName = pdatas[9];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -449,7 +497,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[9];
+			Property prop_playerName_base = pdatas[10];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -491,7 +539,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[10];
+			Property prop_roomSeatIndex = pdatas[11];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)

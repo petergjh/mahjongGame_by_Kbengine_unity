@@ -21,6 +21,10 @@ namespace KBEngine
 
 		public Byte RoomType = 0;
 		public virtual void onRoomTypeChanged(Byte oldValue) {}
+		public Byte cur_turn = 0;
+		public virtual void onCur_turnChanged(Byte oldValue) {}
+		public Byte numOfMJ = 0;
+		public virtual void onNumOfMJChanged(Byte oldValue) {}
 		public Byte playerMaxCount = 0;
 		public virtual void onPlayerMaxCountChanged(Byte oldValue) {}
 		public UInt64 roomKey = 0;
@@ -142,7 +146,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 10:
+					case 11:
 						Byte oldval_RoomType = RoomType;
 						RoomType = stream.readUint8();
 
@@ -155,6 +159,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onRoomTypeChanged(oldval_RoomType);
+						}
+
+						break;
+					case 15:
+						Byte oldval_cur_turn = cur_turn;
+						cur_turn = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onCur_turnChanged(oldval_cur_turn);
+						}
+						else
+						{
+							if(inWorld)
+								onCur_turnChanged(oldval_cur_turn);
 						}
 
 						break;
@@ -174,7 +194,23 @@ namespace KBEngine
 						}
 
 						break;
-					case 12:
+					case 14:
+						Byte oldval_numOfMJ = numOfMJ;
+						numOfMJ = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onNumOfMJChanged(oldval_numOfMJ);
+						}
+						else
+						{
+							if(inWorld)
+								onNumOfMJChanged(oldval_numOfMJ);
+						}
+
+						break;
+					case 13:
 						Byte oldval_playerMaxCount = playerMaxCount;
 						playerMaxCount = stream.readUint8();
 
@@ -206,7 +242,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 9:
+					case 10:
 						UInt64 oldval_roomKey = roomKey;
 						roomKey = stream.readUint64();
 
@@ -257,6 +293,27 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_cur_turn = cur_turn;
+			Property prop_cur_turn = pdatas[5];
+			if(prop_cur_turn.isBase())
+			{
+				if(inited && !inWorld)
+					onCur_turnChanged(oldval_cur_turn);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_cur_turn.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onCur_turnChanged(oldval_cur_turn);
+					}
+				}
+			}
+
 			Vector3 oldval_direction = direction;
 			Property prop_direction = pdatas[2];
 			if(prop_direction.isBase())
@@ -278,8 +335,29 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_numOfMJ = numOfMJ;
+			Property prop_numOfMJ = pdatas[6];
+			if(prop_numOfMJ.isBase())
+			{
+				if(inited && !inWorld)
+					onNumOfMJChanged(oldval_numOfMJ);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_numOfMJ.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onNumOfMJChanged(oldval_numOfMJ);
+					}
+				}
+			}
+
 			Byte oldval_playerMaxCount = playerMaxCount;
-			Property prop_playerMaxCount = pdatas[5];
+			Property prop_playerMaxCount = pdatas[7];
 			if(prop_playerMaxCount.isBase())
 			{
 				if(inited && !inWorld)
@@ -321,7 +399,7 @@ namespace KBEngine
 			}
 
 			UInt64 oldval_roomKey = roomKey;
-			Property prop_roomKey = pdatas[6];
+			Property prop_roomKey = pdatas[8];
 			if(prop_roomKey.isBase())
 			{
 				if(inited && !inWorld)
