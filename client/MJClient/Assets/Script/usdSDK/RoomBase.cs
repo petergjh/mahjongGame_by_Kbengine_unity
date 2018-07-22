@@ -27,6 +27,8 @@ namespace KBEngine
 		public virtual void onNumOfMJChanged(Byte oldValue) {}
 		public Byte playerMaxCount = 0;
 		public virtual void onPlayerMaxCountChanged(Byte oldValue) {}
+		public ROOM_PUBLIC_INFO public_roomInfo = new ROOM_PUBLIC_INFO();
+		public virtual void onPublic_roomInfoChanged(ROOM_PUBLIC_INFO oldValue) {}
 		public UInt64 roomKey = 0;
 		public virtual void onRoomKeyChanged(UInt64 oldValue) {}
 
@@ -242,6 +244,22 @@ namespace KBEngine
 						}
 
 						break;
+					case 16:
+						ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
+						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[26]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPublic_roomInfoChanged(oldval_public_roomInfo);
+						}
+						else
+						{
+							if(inWorld)
+								onPublic_roomInfoChanged(oldval_public_roomInfo);
+						}
+
+						break;
 					case 10:
 						UInt64 oldval_roomKey = roomKey;
 						roomKey = stream.readUint64();
@@ -398,8 +416,29 @@ namespace KBEngine
 				}
 			}
 
+			ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
+			Property prop_public_roomInfo = pdatas[8];
+			if(prop_public_roomInfo.isBase())
+			{
+				if(inited && !inWorld)
+					onPublic_roomInfoChanged(oldval_public_roomInfo);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_public_roomInfo.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPublic_roomInfoChanged(oldval_public_roomInfo);
+					}
+				}
+			}
+
 			UInt64 oldval_roomKey = roomKey;
-			Property prop_roomKey = pdatas[8];
+			Property prop_roomKey = pdatas[9];
 			if(prop_roomKey.isBase())
 			{
 				if(inited && !inWorld)

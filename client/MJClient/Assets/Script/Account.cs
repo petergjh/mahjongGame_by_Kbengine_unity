@@ -36,7 +36,8 @@
 
 		public override void game_begin_push()
 		{
-			MonoBehaviour.print("game_begin_push()");	
+			MonoBehaviour.print("game_begin_push()");
+			Event.fireOut("gameStart");
 		}
 
 		public override void upDataClientRoomInfo(ROOM_PUBLIC_INFO arg1)

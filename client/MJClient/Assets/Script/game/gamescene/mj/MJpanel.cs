@@ -10,6 +10,7 @@ public class MJpanel : MonoBehaviour {
 	public static MJpanel instance;
 	public Room room;
 	List<playerInfo> playerInfoList = new List<playerInfo>();
+	public Transform MyCardlist, holdsCardPrfb, holdsRoot;
 	// Use this for initialization
 	void Start () {
 		instance = this;
@@ -32,7 +33,71 @@ public class MJpanel : MonoBehaviour {
 	{
 		KBEngine.Event.registerOut("playerLevelRoom", this, "playerLevelRoom");
 		KBEngine.Event.registerOut("set_isReady", this, "set_isReady");
-		
+		KBEngine.Event.registerOut("gameStart", this, "gameStart");
+
+	}
+	public string getMJType(int pai)
+	{
+		if (pai >= 0 && pai < 9)
+			return "tong" + (pai + 1); //筒
+		else if (pai >= 9 && pai < 18)
+			return "suo" + (pai - 8);  // 条
+		else if (pai >= 18 && pai < 27)
+			return "wan" + (pai - 17); //万
+
+		return "";
+	}
+	public Sprite getUISprite(string path)
+	{
+		Sprite SpriteLocal = Resources.Load(path, typeof(Sprite)) as Sprite;
+		if (SpriteLocal == null)
+		{
+			print("没有找到资源");
+			return null;
+		}
+		return SpriteLocal;
+	}
+
+	void initMyHandCords(bool isTurn) {
+		Account account = (Account)KBEngineApp.app.player();
+		sbyte pai = account.holds[account.holds.Count - 1];
+		if (isTurn) {
+			account.holds.Remove(pai);
+		}
+		account.holds.Sort();
+		float paiWeight = holdsCardPrfb.GetComponent<RectTransform>().rect.width;
+		for (int i = 0; i < account.holds.Count; i++)
+		{
+			int hs = account.holds[i];
+			print("第" + i + "张手牌为 ---" + GetPaiString(hs));
+			GameObject go = Instantiate(holdsCardPrfb.gameObject);
+			go.name = hs+"";
+			go.transform.Find("hs").GetComponent<Image>().sprite = getUISprite("UI/MJSprite/" + getMJType(hs));
+			go.transform.SetParent(holdsRoot, false);
+			go.transform.localPosition = new Vector3(holdsCardPrfb.localPosition.x- i* paiWeight,holdsCardPrfb.localPosition.y,0);
+			go.SetActive(true);
+		}
+		if (isTurn)
+		{
+			GameObject go = Instantiate(holdsCardPrfb.gameObject);
+			go.name = pai + "";
+			go.transform.Find("hs").GetComponent<Image>().sprite = getUISprite("UI/MJSprite/" + getMJType(pai));
+			go.transform.SetParent(holdsRoot, false);
+			go.transform.localPosition = new Vector3(holdsCardPrfb.localPosition.x+ 2* paiWeight, holdsCardPrfb.localPosition.y, 0);
+			go.SetActive(true);
+		}
+	}
+	public void gameStart() {
+		print("庄家索引是"+room.public_roomInfo.button);
+		print(room.public_roomInfo.playerInfo[1].userId+" 玩家手牌数量==" +room.public_roomInfo.playerInfo[1].holdsCount);
+		Account account = (Account)KBEngineApp.app.player();
+		if (account.roomSeatIndex == room.public_roomInfo.turn)
+		{
+			initMyHandCords(true);
+		}
+		else {
+			initMyHandCords(false);
+		}
 	}
 	public void set_isReady(Account entity, int state) {
 		print((entity).playerName + "状态改变了");
@@ -117,13 +182,7 @@ public class MJpanel : MonoBehaviour {
 			int newIndex = getLocalSeatIndex(oldIndex);
 			print("newIndex----" + newIndex);
 			playerInfoList[newIndex].initPlayer((Account)entity);
-			if (entity.isPlayer()) {
-				((Account)entity).holds.Sort();
-				for (int i = 0; i < ((Account)entity).holds.Count; i++)
-				{
-					MonoBehaviour.print("第" + i + "张手牌为 ---" + GetPaiString(((Account)entity).holds[i]));
-				}
-			}
+			
 
 		}
 		else if (entity.className == "Room")
@@ -131,6 +190,7 @@ public class MJpanel : MonoBehaviour {
 			print("该房间id--" + ((Room)entity).roomKey);
 			roomIdText.text =""+ ((Room)entity).roomKey;
 			room = (Room)entity;
+			gameStart();
 		}
 	}
 	// Update is called once per frame

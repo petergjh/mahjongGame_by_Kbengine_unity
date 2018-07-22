@@ -109,7 +109,7 @@ class Room(KBEngine.Entity):
 		for i in range(len(seats)):
 			if seats[i].entity.client:
 				seats[i].entity.cell.game_holds_push(self.game.gameSeats[i].holds)
-				seats[i].entity.client.upDataClientRoomInfo(self.public_roomInfo)
+				#seats[i].entity.client.upDataClientRoomInfo(self.public_roomInfo)
 				seats[i].entity.client.game_begin_push()
 
 		print("游戏开始！");

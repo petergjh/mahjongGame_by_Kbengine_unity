@@ -479,11 +479,24 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(playerMaxCount / 13).");
 
+			Property pRoom_public_roomInfo = new Property();
+			pRoom_public_roomInfo.name = "public_roomInfo";
+			pRoom_public_roomInfo.properUtype = 16;
+			pRoom_public_roomInfo.properFlags = 4;
+			pRoom_public_roomInfo.aliasID = 8;
+			pRoom_public_roomInfo.defaultVal = EntityDef.id2datatypes[26].parseDefaultValStr("");
+			pRoomModule.propertys["public_roomInfo"] = pRoom_public_roomInfo; 
+
+			pRoomModule.usePropertyDescrAlias = true;
+			pRoomModule.idpropertys[(UInt16)pRoom_public_roomInfo.aliasID] = pRoom_public_roomInfo;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), property(public_roomInfo / 16).");
+
 			Property pRoom_roomKey = new Property();
 			pRoom_roomKey.name = "roomKey";
 			pRoom_roomKey.properUtype = 10;
 			pRoom_roomKey.properFlags = 4;
-			pRoom_roomKey.aliasID = 8;
+			pRoom_roomKey.aliasID = 9;
 			UInt64 Room_roomKey_defval;
 			UInt64.TryParse("", out Room_roomKey_defval);
 			pRoom_roomKey.defaultVal = Room_roomKey_defval;
