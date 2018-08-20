@@ -39,6 +39,11 @@
 			<Type>	MJ_LIST				</Type>
 			<Flags>	OWN_CLIENT			</Flags>
 		</holds>
+		<actionData>
+			<Type>	PLAYER_ACTION_DIC				</Type>
+			<Flags>	OWN_CLIENT	</Flags>
+		</actionData>
+		
 	</Properties>
 
 	<ClientMethods>
@@ -56,6 +61,8 @@
 		<upDataClientRoomInfo>
 			<Arg>	ROOM_PUBLIC_INFO	</Arg>
 		</upDataClientRoomInfo>
+		<has_action>
+		</has_action>
 	</ClientMethods>
 
 	<BaseMethods>
@@ -105,6 +112,11 @@
 		<game_holds_push>
 			<Arg>		MJ_LIST		</Arg>			
 		</game_holds_push>
+
+		<game_action_push>
+			<Arg>		PLAYER_ACTION_DIC		</Arg>
+		</game_action_push>
+		
 	</CellMethods>
 
 </root>

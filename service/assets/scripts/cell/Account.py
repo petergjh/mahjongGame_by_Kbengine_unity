@@ -22,3 +22,9 @@ class Account(KBEngine.Entity):
 
 	def game_holds_push(self,holds):
 		self.holds = holds
+
+	#麻将逻辑通知你有操作了
+	def game_action_push(self,actionData):
+		self.actionData = actionData
+		if self.client:
+			self.client.has_action()

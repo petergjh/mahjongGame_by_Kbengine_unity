@@ -118,9 +118,78 @@ class Room(KBEngine.Entity):
 
 	def gameStartCheck(self,game):
 		for i in range(len(game.gameSeats)):
+			duoyu = -1
 			gs = game.gameSeats[i]
+			if len(gs.holds) == 14:
+				duoyu = gs.holds.pop()
+				gs.countMap[duoyu] -=1
 			#检查是否有听牌
 			self.checkCanTingPai(game,gs)
+			if duoyu>=0:
+				gs.holds.append(duoyu)
+				gs.countMap[duoyu]+=1
+
+		#检查是否可以暗杠或者胡
+		turnSeat = game.gameSeats[game.turn]
+		turnSeat.canChuPai = True;
+		#暗杠
+		self.checkCanAnGang(game,turnSeat)
+		#检查胡 用最后一张来检查
+		self.Main_checkCanHu(game,turnSeat,turnSeat.holds[len(turnSeat.holds) - 1])
+		#通知前端
+		self.sendOperations(game,turnSeat,game.chuPai)
+	
+	#检测是否有操作了
+	def hasOperations(self,seatData):
+		if seatData.canGang or seatData.canHu or seatData.canPeng:
+			return True
+		return False
+
+	#通知有操作的前端
+	def sendOperations(self,game,seatData,pai):
+		if self.hasOperations(seatData):
+			if pai ==-1:
+				pai = seatData.holds[len(seatData.holds)-1]
+			data = {
+					"pai":pai,
+					"hu":seatData.canHu,
+					"gang":seatData.canGang,
+					"peng":seatData.canPeng,
+					"gangpai":seatData.gangPai				
+				}
+			#如果可以有操作，则进行操作
+			self.avatars[seatData.userId].game_action_push(data)
+		else:
+			data = {
+				"pai":-1,
+				"hu":False,
+	            "peng":False,
+				"gang":False,
+				"gangpai":[]
+			}
+			self.avatars[seatData.userId].game_action_push(data)
+
+
+	#检测是否可以胡牌
+	def Main_checkCanHu(self,game,seatData,targetPai):
+		if self.getMJType(targetPai) == seatData.que:
+			return
+		seatData.canHu = False
+		for k in seatData.tingMap:
+			if targetPai == k:
+				seatData.canHu = True
+
+	#检查是否可以暗杠
+	def checkCanAnGang(self,game,seatData):
+		if len(game.mahjongs) <= game.currentIndex:
+			return
+		for key in seatData.countMap:
+			pai = int(key)
+			if self.getMJType(pai) != seatData.que:
+				if c !=None and c == 4:
+					seatData.canGang = True
+					seatData.gangPai.append(pai)
+
 
 	#检查是否有听牌
 	def checkCanTingPai(self,game,seatData):
@@ -188,9 +257,9 @@ class Room(KBEngine.Entity):
 		#检查筒
 		if seatData.que !=0:
 			self.checkTingPai(seatData,0,9)
-		elif seatData.que !=1:
+		if seatData.que !=1:
 			self.checkTingPai(seatData,9,18)
-		elif seatData.que !=2:
+		if seatData.que !=2:
 			self.checkTingPai(seatData,18,27)
 
 	#检测听牌
@@ -451,6 +520,12 @@ class seatData:
 		self.tingMap = {} #玩家手上的牌的数目，用于快速判定碰杠
 		self.countMap = {}  #玩家手上的牌的数目，用于快速判定碰杠
 		self.que = -1 #缺一门
+		self.canChuPai = False #是否可以出牌
+		self.canGang = False #是否可以杠
+		self.gangPai = [] #用于记录玩家可以杠的牌
+		self.canHu = False #是否可以胡
+		self.canPeng = False #是否可以碰
+
 #房间信息
 class roomInfo:
 	def __init__(self,roomKey,maxPlayerCount):
