@@ -496,6 +496,8 @@ class Room(KBEngine.Entity):
 
 	#摸牌
 	def mopai(self,game,seatIndex):
+		if game.currentIndex == len(game.mahjongs):
+			return -1;
 		pai = game.mahjongs[game.currentIndex]
 		game.gameSeats[seatIndex].holds.append(pai)
 		game.currentIndex +=1
@@ -505,6 +507,8 @@ class Room(KBEngine.Entity):
 		if c== None:
 			c=0
 		data.countMap[pai] = c + 1;
+
+		return pai
 
 
 	#玩家请求出牌
@@ -601,7 +605,61 @@ class Room(KBEngine.Entity):
 		seatData.folds.append(game.chuPai)
 		game.chuPai = -1;
 		#把游戏操作索引指向下家
+		self.moveToNextUser(game)
 		#给下家发牌
+		self.doUserMoPai(game)
+
+	#切换出牌玩家
+	def moveToNextUser(self,game,nextSeat=None):
+		if nextSeat == None:
+			game.turn+=1
+			game.turn = game.turn%self.playerMaxCount
+		else:
+			game.turn = nextSeat
+
+	#玩家摸牌	
+	def doUserMoPai(self,game):
+		game.chuPai = -1
+		turnSeat = game.gameSeats[game.turn]
+		pai = self.mopai(game,game.turn)
+		#牌摸完了，结束
+		if pai == -1:
+			print("游戏结束---TODO")
+			return
+		#通知前端新摸的牌
+		turnSeat.entity.client.game_mopai_push(pai)
+		#检查是否可以暗杠或者胡
+		#检查胡，直杠，弯杠
+		if not turnSeat.hued:
+			self.checkCanAnGang(game,turnSeat)
+		
+		#如果未胡牌，或者摸起来的牌可以杠，才检查弯杠
+		if not turnSeat.hued or turnSeat.holds[len(turnSeat.holds)-1] == pai:
+			self.checkCanWanGang(game,turnSeat)
+
+		#检查看是否可以和
+		self.Main_checkCanHu(game,turnSeat,pai)
+		#广播通知玩家出牌方
+		turnSeat.canChuPai = True
+		self.notif_chupai(game,turnSeat)
+		#通知玩家做对应操作
+		self.sendOperations(game,turnSeat,game.chuPai)
+		
+
+
+
+	#检查是否可以弯杠(自己摸起来的时候)
+	def checkCanWanGang(self,game,seatData):
+		#如果没有牌了，则不能再杠
+		if len(game.mahjongs)<= game.currentIndex:
+			return
+
+		#从碰过的牌中选
+		for i in range(len(seatData.pengs)):
+			pai = seatData.pengs[i]
+			if seatData.countMap[pai] == 1:
+				seatData.canGang = True
+				seatData.gangPai.append(pai)
 
 #--------------------------------------------------------------------------------------------
 #                              Callbacks
@@ -648,6 +706,8 @@ class seatData:
 		self.canHu = False #是否可以胡
 		self.canPeng = False #是否可以碰
 		self.hued = False
+		self.pengs = [] #碰了的牌
+
 
 #房间信息
 class roomInfo:
