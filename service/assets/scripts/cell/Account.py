@@ -26,5 +26,6 @@ class Account(KBEngine.Entity):
 	#麻将逻辑通知你有操作了
 	def game_action_push(self,actionData):
 		self.actionData = actionData
-		if self.client:
-			self.client.has_action()
+		if actionData.get("pai")!=-1:
+			if self.client:
+				self.client.has_action()

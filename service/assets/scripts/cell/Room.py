@@ -2,6 +2,8 @@ import KBEngine
 from KBEDebug import *
 import random
 
+TIMER_HAS_NO_OP_CB = 1
+
 class Room(KBEngine.Entity):
 	def __init__(self):
 		KBEngine.Entity.__init__(self)
@@ -9,6 +11,7 @@ class Room(KBEngine.Entity):
 		KBEngine.globalData["Room_%i" % self.spaceID] = self
 		self.roomInfo = roomInfo(self.roomKey,self.playerMaxCount)
 		self.game = None
+		self.noOpData={}
 		self.clearPublicRoomInfo()
 		
 
@@ -132,13 +135,24 @@ class Room(KBEngine.Entity):
 		#检查是否可以暗杠或者胡
 		turnSeat = game.gameSeats[game.turn]
 		turnSeat.canChuPai = True;
+		self.setCurPlayerIndex(game.turn)
+		self.notif_chupai(game,turnSeat)
 		#暗杠
 		self.checkCanAnGang(game,turnSeat)
 		#检查胡 用最后一张来检查
 		self.Main_checkCanHu(game,turnSeat,turnSeat.holds[len(turnSeat.holds) - 1])
 		#通知前端
 		self.sendOperations(game,turnSeat,game.chuPai)
-	
+
+	def notif_chupai(self,game,seatData):
+		#self.avatars[seatData.userId].game_chupai_push()
+		if seatData.entity.client:
+			seatData.entity.client.game_chupai_push()
+
+
+	def setCurPlayerIndex(self,count):
+		self.cur_turn = count	
+
 	#检测是否有操作了
 	def hasOperations(self,seatData):
 		if seatData.canGang or seatData.canHu or seatData.canPeng:
@@ -158,7 +172,8 @@ class Room(KBEngine.Entity):
 					"gangpai":seatData.gangPai				
 				}
 			#如果可以有操作，则进行操作
-			self.avatars[seatData.userId].game_action_push(data)
+			#self.avatars[seatData.userId].game_action_push(data)
+			seatData.entity.cell.game_action_push(data)
 		else:
 			data = {
 				"pai":-1,
@@ -167,7 +182,8 @@ class Room(KBEngine.Entity):
 				"gang":False,
 				"gangpai":[]
 			}
-			self.avatars[seatData.userId].game_action_push(data)
+			#self.avatars[seatData.userId].game_action_push(data)
+			seatData.entity.cell.game_action_push(data)
 
 
 	#检测是否可以胡牌
@@ -491,7 +507,112 @@ class Room(KBEngine.Entity):
 		data.countMap[pai] = c + 1;
 
 
+	#玩家请求出牌
+	def chuPai(self,callerEntityID,pai):
+		seatData = self.GetSeatDataByUseId(callerEntityID)
+		if seatData == None:
+			print("没有找到该玩家")
+			return
 
+		game = seatData.game
+		if game.turn != seatData.seatIndex:
+			#如果不该他出，则忽略
+			print("不该你出牌")
+			return
+		if seatData.canChuPai == False:
+			print("不需要出牌")
+			return
+		if self.hasOperations(seatData):
+			print("有操作呀，想出牌就过了吧")
+			return
+		#如果是胡了的人，则只能打最后一张牌
+		if seatData.hued:
+			if seatData.holds[len(seatData.holds) - 1] != pai:
+				print("只能打最后一张牌")
+				return
+		#从此人牌中扣除
+		index = seatData.holds.count(pai)
+		if index == 0:
+			print(seatData.holds)
+			print("没有找到这张牌 ---"+str(pai))
+			return
+		seatData.canChuPai = False;
+		seatData.holds.remove(pai)
+		seatData.countMap[pai] -=1
+		game.chuPai = pai
+		seatData.entity.allClients.onPlayCard(callerEntityID,pai)
+
+		#检查是否有人要胡，要碰 要杠
+		hasActions = False;
+		for i in range( len(game.gameSeats)):
+			#玩家自己不检查
+			if game.turn == i:
+				continue
+			ddd = game.gameSeats[i]
+			#未胡牌的才检查杠和碰
+			if not ddd.hued:
+				self.checkCanPeng(game,ddd,pai)
+				self.checkCanDianGang(game,ddd,pai)
+			#检测胡牌
+			self.Main_checkCanHu(game,ddd,pai)
+			if self.hasOperations(ddd):
+				hasActions = True;
+				self.sendOperations(game,ddd,game.chuPai)
+
+		#如果没有人有操作，则向下一家发牌，并通知他出牌
+		if hasActions == False:
+			self.noOpData["seatData"] =seatData
+			self.noOpData["game"] =game
+			self.noOpData["pai"] =pai
+			self.addTimer(0.5,0,TIMER_HAS_NO_OP_CB)
+
+	#检查是否可以碰
+	def checkCanPeng(self,game,seatData,targetPai):
+		if self.getMJType(targetPai) == seatData.que:
+			return
+		count = seatData.countMap.get(targetPai,None)
+		if count !=None and count >=2:
+			seatData.canPeng = True
+
+	#检查是否可以点杠
+	def checkCanDianGang(self,game,seatData,targetPai):
+		#检查玩家手上的牌
+		#如果没有牌了，则不能再杠
+		if len(game.mahjongs)<=game.currentIndex:
+			return
+		if self.getMJType(targetPai) == seatData.que:
+			return
+		count = seatData.countMap.get(targetPai,None)
+		if count!=None and count >=3:
+			seatData.canGang = True	
+			seatData.gangPai.append(targetPai)
+			return
+
+	#通过userId获取seatData
+	def GetSeatDataByUseId(self,userId):
+		for seatData in self.game.gameSeats:
+			if seatData.userId == userId:
+				return seatData
+
+		return None
+
+	#没有玩家有操作，就下一家发牌
+	def noPlayerOP_letNextFapai(self,game,seatData,pai):
+		seatData.folds.append(game.chuPai)
+		game.chuPai = -1;
+		#把游戏操作索引指向下家
+		#给下家发牌
+
+#--------------------------------------------------------------------------------------------
+#                              Callbacks
+#--------------------------------------------------------------------------------------------
+	def onTimer(self, tid, userArg):
+		"""
+		KBEngine method.
+		引擎回调timer触发
+		"""
+		if TIMER_HAS_NO_OP_CB == userArg:
+			self.noPlayerOP_letNextFapai(self.noOpData["game"],self.noOpData["seatData"],self.noOpData["pai"]);
 #----------------------------------------------------------------------------
 #麻将信息类
 class MJData:
@@ -505,18 +626,19 @@ class MJData:
 		self.chuPai = -1
 		self.gameSeats = []
 		for i in range(maxPlayerCount):	
-			seat = seatData(self,i,self.seatList[i].userId)
+			seat = seatData(self,i,self.seatList[i])
 			self.gameSeats.append(seat)
 
 
 #所有玩家的牌类信息
 class seatData:
-	def __init__(self,game,index,userId):
+	def __init__(self,game,index,seat):
+		self.entity = seat.entity; #玩家实体
 		self.game = game   #游戏对象
 		self.seatIndex = index   #玩家座位索引
-		self.userId = userId		#玩家id
+		self.userId =seat.userId		#玩家id
 		self.holds = []  #持有的牌
-		#self.folds = []  #打出的牌
+		self.folds = []  #打出的牌
 		self.tingMap = {} #玩家手上的牌的数目，用于快速判定碰杠
 		self.countMap = {}  #玩家手上的牌的数目，用于快速判定碰杠
 		self.que = -1 #缺一门
@@ -525,6 +647,7 @@ class seatData:
 		self.gangPai = [] #用于记录玩家可以杠的牌
 		self.canHu = False #是否可以胡
 		self.canPeng = False #是否可以碰
+		self.hued = False
 
 #房间信息
 class roomInfo:
