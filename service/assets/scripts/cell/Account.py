@@ -29,3 +29,22 @@ class Account(KBEngine.Entity):
 		if actionData.get("pai")!=-1:
 			if self.client:
 				self.client.has_action()
+
+	def gang_notify_push(self,pai,gangtype):
+		if gangtype == "angang":
+			for i in range(4):
+				self.holds.remove(pai)
+			
+		elif gangtype == "diangang":
+			for i in range(3):
+				self.holds.remove(pai)
+		elif gangtype == "wangang":
+			self.holds.remove(pai)
+
+		self.allClients.onGang(self.id,pai,gangtype)
+
+	#麻将逻辑通知你胡牌成功
+	def hu_push(self,isZimo,hupai):
+		if iszimo:
+			self.holds.remove(hupai)
+		self.allClients.onHu(self.id,iszimo,hupai)

@@ -661,6 +661,201 @@ class Room(KBEngine.Entity):
 				seatData.canGang = True
 				seatData.gangPai.append(pai)
 
+	#玩家请求碰操作
+	def reqPeng(self,callerEntityID):
+		seatData = self.GetSeatDataByUseId(callerEntityID)
+		if seatData == None:
+			print("没有找到数据")
+			return
+		game = seatData.game
+		#如果是他出的牌，则忽略
+		if game.turn == seatData.seatIndex:
+			print("是你自己出牌")
+			return
+		#如果没有碰的机会，则不能再碰
+		if seatData.canPeng == False:
+			print("没有碰的机会呀")
+			return
+		#和的了，就不要再来了
+		if seatData.hued:
+			print("你已经胡牌了")
+			return
+		#如果有人可以胡牌，则需要等待
+		i = game.turn
+		while True:
+			i =(i+1)%self.playerMaxCount
+			if i == game.turn:
+				break
+			else:
+				ddd = game.gameSeats[i]
+				if ddd.canHu and i !=seatData.seatIndex:
+					return
+		#验证手上的牌的数目
+		pai = game.chuPai;
+		c = seatData.countMap[pai];
+		if c==None or c<2:
+			return
+		#进行碰牌处理
+		#扣掉手上的牌
+		#从此人牌中扣除
+		for i in range(2):
+			index = seatData.holds.count(pai)
+			if index == 0:
+				print("没有找到这张牌 ---"+str(pai))
+				return
+			seatData.holds.remove(pai)
+			seatData.countMap[pai] -=1
+
+		seatData.pengs.append(pai)
+		game.chuPai = -1
+		#广播通知其它玩家
+		seatData.entity.allClients.peng_notify_push(pai)
+		#碰的玩家打牌
+		self.moveToNextUser(game,seatData.seatIndex);
+		seatData.canChuPai = True;
+		#通知玩家出牌方
+		self.notif_chupai(game,seatData)
+		#保存数据
+		self.setPublicRoomInfo();
+
+	def reqGang(self,callerEntityID,pai):
+		seatData = self.GetSeatDataByUseId(callerEntityID)
+		if seatData == None:
+			print("没有找到数据")
+			return
+		game = seatData.game
+		#如果没有杠的机会，则不能再杠
+		if seatData.canGang == False:
+			return
+		numOfCnt = seatData.countMap.get(pai,0)
+		if numOfCnt != 1 and seatData.hued:
+			print("胡了的，只能直杠")
+			return
+		if seatData.gangPai.count(pai) == 0:
+			print("提供的牌不能杆")
+			return
+		#如果有人可以胡牌，则需要等待
+		i = game.turn
+		while True:
+			i =(i+1)%self.playerMaxCount
+			if i == game.turn:
+				break
+			else:
+				ddd = game.gameSeats[i]
+				if ddd.canHu and i !=seatData.seatIndex:
+					return
+		gangtype = ""
+		if numOfCnt == 1:
+			gangtype = "wangang"
+		elif numOfCnt == 3:
+			gangtype = "diangang"
+		elif numOfCnt == 4:
+			gangtype = "angang"
+
+		game.chuPai = -1
+		seatData.canChuPai = False
+		self.doGang(game,seatData,gangtype,numOfCnt,pai)
+		#保存数据
+		self.setPublicRoomInfo();
+
+	def doGang(self,game,seatData,gangtype,numOfCnt,pai):
+		if gangtype == "wangang":
+			idx = seatData.pengs.count(pai)
+			if idx !=0:
+				seatData.pengs.remove(pai)
+
+		#进行碰牌处理
+		#扣掉手上的牌
+		#从此人牌中扣除
+		for i in range(numOfCnt):
+			index =  seatData.holds.count(pai)
+			if index == 0:
+				print(seatData.holds)
+				print("没有找到这张牌")
+				return
+			seatData.holds.remove(pai)
+			seatData.countMap[pai] -=1
+		#记录下玩家的杠牌
+		if gangtype == "angang":
+			seatData.angangs.append(pai)
+		elif gangtype == "diangang":
+			seatData.diangangs.append(pai)
+		elif gangtype == "wangang":
+			seatData.wangangs.append(pai)
+
+		seatData.entity.cell.gang_notify_push(pai,gangtype)
+		#变成自己的轮子
+		self.moveToNextUser(game,seatIndex)
+		#再次摸牌
+		self.doUserMoPai(game)
+
+	#客户端请求胡操作
+	def reqHu(self,callerEntityID,pai):
+		seatData = self.GetSeatDataByUseId(callerEntityID)
+		if seatData == None:
+			print("没有找到数据")
+			return
+		seatIndex = seatData.seatIndex
+		game = seatData.game
+		#如果他不能和牌，那和个啥啊
+		if seatData.canHu == False:
+			print("不能胡牌呀")
+			return
+		#标记为和牌
+		seatData.hued = True
+		hupai = game.chuPai
+		isZimo = False
+		if game.chuPai == -1:
+			#自摸胡
+			isZimo=True
+			hupai = seatData.holds.pop()
+			seatData.countMap[hupai] -=1
+		seatData.hus.append(hupai)
+		game.chuPai = -1
+		seatData.entity.cell.hu_push(isZimo,hupai)
+		#如果还有人可以胡牌，则等待
+		for i in range(len(game.gameSeats)):
+			ddd = game.gameSeats[i]
+			if ddd.canHu:
+				return
+		#和牌的下家继续打
+		self.moveToNextUser(game)
+		self.doUserMoPai(game)
+		#保存共享数据
+		self.setPublicRoomInfo()
+
+	def reqGuo(self,callerEntityID):
+		seatData = self.GetSeatDataByUseId(callerEntityID)
+		if seatData == None:
+			print("没有找到数据")
+			return
+		game = seatData.game
+		#如果玩家没有对应的操作，则也认为是非法消息
+		if (seatData.canGang or seatData.canPeng or seatData.canHu)==False:
+			print("没有操作呀")
+			return
+		#如果是玩家自己的轮子，不是接牌，则不需要额外操作
+		doNothing = (game.chuPai == -1 and game.turn == seatData.seatIndex)
+		if doNothing:
+			return
+		#如果还有人可以操作，则等待
+		for i in range(len(game.gameSeats)):
+			ddd = game.gameSeats[i]
+			if self.hasOperations(ddd):
+				return
+		#如果是已打出的牌，则需要通知。
+		if game.chuPai >= 0:
+			uid = game.gameSeats[game.turn].userId
+			Turn_seatData = self.GetSeatDataByUseId(uid)
+			Turn_seatData.folds.append(game.chuPai)
+			seatData.entity.allClients.onPlayCardOver(uid,game.chuPai)
+			game.chuPai = -1
+
+		self.moveToNextUser(game)
+		self.doUserMoPai(game)
+		#保存共享数据
+		self.setPublicRoomInfo()
+
 #--------------------------------------------------------------------------------------------
 #                              Callbacks
 #--------------------------------------------------------------------------------------------
@@ -707,7 +902,10 @@ class seatData:
 		self.canPeng = False #是否可以碰
 		self.hued = False
 		self.pengs = [] #碰了的牌
-
+		self.angangs = [] #暗杠的牌
+		self.diangangs = [] #点杠的牌
+		self.wangangs = [] #弯杠的牌
+		self.hus = [] #胡了的牌
 
 #房间信息
 class roomInfo:
