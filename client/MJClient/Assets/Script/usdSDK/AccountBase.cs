@@ -19,6 +19,8 @@ namespace KBEngine
 		public EntityBaseEntityCall_AccountBase baseEntityCall = null;
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
+		public PLAYER_ACTION_DIC actionData = new PLAYER_ACTION_DIC();
+		public virtual void onActionDataChanged(PLAYER_ACTION_DIC oldValue) {}
 		public MJ_LIST holds = new MJ_LIST();
 		public virtual void onHoldsChanged(MJ_LIST oldValue) {}
 		public Byte isNewPlayer = 1;
@@ -38,7 +40,16 @@ namespace KBEngine
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
 		public abstract void game_begin_push(); 
+		public abstract void game_chupai_push(); 
+		public abstract void game_mopai_push(SByte arg1); 
+		public abstract void has_action(); 
+		public abstract void onGang(UInt32 arg1, SByte arg2, string arg3); 
 		public abstract void onGetRoomInfo(ROOM_PUBLIC_INFO arg1); 
+		public abstract void onHu(UInt32 arg1, Byte arg2, SByte arg3); 
+		public abstract void onPlayCard(UInt32 arg1, SByte arg2); 
+		public abstract void onPlayCardOver(UInt32 arg1, SByte arg2); 
+		public abstract void otherPlayerMopai(UInt32 arg1); 
+		public abstract void peng_notify_push(UInt32 arg1, SByte arg2); 
 		public abstract void playerLevelRoom(); 
 		public abstract void upDataClientRoomInfo(ROOM_PUBLIC_INFO arg1); 
 
@@ -109,21 +120,62 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 13:
+				case 18:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 16:
+				case 21:
 					game_begin_push();
 					break;
-				case 15:
+				case 24:
+					game_chupai_push();
+					break;
+				case 26:
+					SByte game_mopai_push_arg1 = stream.readInt8();
+					game_mopai_push(game_mopai_push_arg1);
+					break;
+				case 23:
+					has_action();
+					break;
+				case 29:
+					UInt32 onGang_arg1 = stream.readUint32();
+					SByte onGang_arg2 = stream.readInt8();
+					string onGang_arg3 = stream.readUnicode();
+					onGang(onGang_arg1, onGang_arg2, onGang_arg3);
+					break;
+				case 20:
 					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					onGetRoomInfo(onGetRoomInfo_arg1);
 					break;
-				case 14:
+				case 30:
+					UInt32 onHu_arg1 = stream.readUint32();
+					Byte onHu_arg2 = stream.readUint8();
+					SByte onHu_arg3 = stream.readInt8();
+					onHu(onHu_arg1, onHu_arg2, onHu_arg3);
+					break;
+				case 25:
+					UInt32 onPlayCard_arg1 = stream.readUint32();
+					SByte onPlayCard_arg2 = stream.readInt8();
+					onPlayCard(onPlayCard_arg1, onPlayCard_arg2);
+					break;
+				case 31:
+					UInt32 onPlayCardOver_arg1 = stream.readUint32();
+					SByte onPlayCardOver_arg2 = stream.readInt8();
+					onPlayCardOver(onPlayCardOver_arg1, onPlayCardOver_arg2);
+					break;
+				case 27:
+					UInt32 otherPlayerMopai_arg1 = stream.readUint32();
+					otherPlayerMopai(otherPlayerMopai_arg1);
+					break;
+				case 28:
+					UInt32 peng_notify_push_arg1 = stream.readUint32();
+					SByte peng_notify_push_arg2 = stream.readInt8();
+					peng_notify_push(peng_notify_push_arg1, peng_notify_push_arg2);
+					break;
+				case 19:
 					playerLevelRoom();
 					break;
-				case 17:
+				case 22:
 					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
@@ -175,6 +227,22 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
+					case 9:
+						PLAYER_ACTION_DIC oldval_actionData = actionData;
+						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[27]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onActionDataChanged(oldval_actionData);
+						}
+						else
+						{
+							if(inWorld)
+								onActionDataChanged(oldval_actionData);
+						}
+
+						break;
 					case 40001:
 						Vector3 oldval_direction = direction;
 						direction = stream.readVector3();
@@ -349,6 +417,27 @@ namespace KBEngine
 			ScriptModule sm = EntityDef.moduledefs["Account"];
 			Dictionary<UInt16, Property> pdatas = sm.idpropertys;
 
+			PLAYER_ACTION_DIC oldval_actionData = actionData;
+			Property prop_actionData = pdatas[4];
+			if(prop_actionData.isBase())
+			{
+				if(inited && !inWorld)
+					onActionDataChanged(oldval_actionData);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_actionData.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onActionDataChanged(oldval_actionData);
+					}
+				}
+			}
+
 			Vector3 oldval_direction = direction;
 			Property prop_direction = pdatas[2];
 			if(prop_direction.isBase())
@@ -371,7 +460,7 @@ namespace KBEngine
 			}
 
 			MJ_LIST oldval_holds = holds;
-			Property prop_holds = pdatas[4];
+			Property prop_holds = pdatas[5];
 			if(prop_holds.isBase())
 			{
 				if(inited && !inWorld)
@@ -392,7 +481,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[5];
+			Property prop_isNewPlayer = pdatas[6];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -413,7 +502,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isReady = isReady;
-			Property prop_isReady = pdatas[6];
+			Property prop_isReady = pdatas[7];
 			if(prop_isReady.isBase())
 			{
 				if(inited && !inWorld)
@@ -434,7 +523,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[7];
+			Property prop_playerID = pdatas[8];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -455,7 +544,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[8];
+			Property prop_playerID_base = pdatas[9];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -476,7 +565,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[9];
+			Property prop_playerName = pdatas[10];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -497,7 +586,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[10];
+			Property prop_playerName_base = pdatas[11];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -539,7 +628,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[11];
+			Property prop_roomSeatIndex = pdatas[12];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)

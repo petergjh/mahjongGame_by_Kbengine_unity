@@ -31,6 +31,16 @@ namespace KBEngine
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
 		}
 
+		public void chuPai(SByte arg1)
+		{
+			Bundle pBundle = newCall("chuPai", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeInt8(arg1);
+			sendCall(null);
+		}
+
 		public void reqChangeReadyState(Byte arg1)
 		{
 			Bundle pBundle = newCall("reqChangeReadyState", 0);
@@ -41,9 +51,46 @@ namespace KBEngine
 			sendCall(null);
 		}
 
+		public void reqGang(SByte arg1)
+		{
+			Bundle pBundle = newCall("reqGang", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeInt8(arg1);
+			sendCall(null);
+		}
+
 		public void reqGetRoomInfo()
 		{
 			Bundle pBundle = newCall("reqGetRoomInfo", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
+		public void reqGuo()
+		{
+			Bundle pBundle = newCall("reqGuo", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
+		public void reqHu()
+		{
+			Bundle pBundle = newCall("reqHu", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
+		public void reqPeng()
+		{
+			Bundle pBundle = newCall("reqPeng", 0);
 			if(pBundle == null)
 				return;
 

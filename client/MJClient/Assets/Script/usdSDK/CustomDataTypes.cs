@@ -142,4 +142,31 @@ namespace KBEngine
 	}
 
 
+
+	public class DATATYPE_PLAYER_ACTION_DIC : DATATYPE_BASE
+	{
+		private DATATYPE_MJ_LIST gangpai_DataType = new DATATYPE_MJ_LIST();
+
+		public PLAYER_ACTION_DIC createFromStreamEx(MemoryStream stream)
+		{
+			PLAYER_ACTION_DIC datas = new PLAYER_ACTION_DIC();
+			datas.pai = stream.readInt8();
+			datas.hu = stream.readUint8();
+			datas.peng = stream.readUint8();
+			datas.gang = stream.readUint8();
+			datas.gangpai = gangpai_DataType.createFromStreamEx(stream);
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYER_ACTION_DIC v)
+		{
+			stream.writeInt8(v.pai);
+			stream.writeUint8(v.hu);
+			stream.writeUint8(v.peng);
+			stream.writeUint8(v.gang);
+			gangpai_DataType.addToStreamEx(stream, v.gangpai);
+		}
+	}
+
+
 }

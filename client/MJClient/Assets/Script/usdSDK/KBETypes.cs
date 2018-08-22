@@ -887,5 +887,15 @@ namespace KBEngine
 
 	}
 
+	public class PLAYER_ACTION_DIC
+	{
+		public SByte pai = 0;
+		public Byte hu = 0;
+		public Byte peng = 0;
+		public Byte gang = 0;
+		public MJ_LIST gangpai = new MJ_LIST();
+
+	}
+
 
 }

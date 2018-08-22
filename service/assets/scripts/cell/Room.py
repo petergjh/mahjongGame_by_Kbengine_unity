@@ -202,6 +202,7 @@ class Room(KBEngine.Entity):
 		for key in seatData.countMap:
 			pai = int(key)
 			if self.getMJType(pai) != seatData.que:
+				c = seatData.countMap.get(key)
 				if c !=None and c == 4:
 					seatData.canGang = True
 					seatData.gangPai.append(pai)
@@ -510,7 +511,6 @@ class Room(KBEngine.Entity):
 
 		return pai
 
-
 	#玩家请求出牌
 	def chuPai(self,callerEntityID,pai):
 		seatData = self.GetSeatDataByUseId(callerEntityID)
@@ -544,8 +544,8 @@ class Room(KBEngine.Entity):
 		seatData.holds.remove(pai)
 		seatData.countMap[pai] -=1
 		game.chuPai = pai
-		seatData.entity.allClients.onPlayCard(callerEntityID,pai)
-
+		seatData.entity.cell.game_chupai_notify_push(pai)
+		
 		#检查是否有人要胡，要碰 要杠
 		hasActions = False;
 		for i in range( len(game.gameSeats)):
@@ -569,6 +569,9 @@ class Room(KBEngine.Entity):
 			self.noOpData["game"] =game
 			self.noOpData["pai"] =pai
 			self.addTimer(0.5,0,TIMER_HAS_NO_OP_CB)
+		
+		#操作结束后重新赋值下
+		self.setPublicRoomInfo()
 
 	#检查是否可以碰
 	def checkCanPeng(self,game,seatData,targetPai):
@@ -608,6 +611,8 @@ class Room(KBEngine.Entity):
 		self.moveToNextUser(game)
 		#给下家发牌
 		self.doUserMoPai(game)
+		#保存数据
+		self.setPublicRoomInfo();
 
 	#切换出牌玩家
 	def moveToNextUser(self,game,nextSeat=None):
@@ -627,7 +632,7 @@ class Room(KBEngine.Entity):
 			print("游戏结束---TODO")
 			return
 		#通知前端新摸的牌
-		turnSeat.entity.client.game_mopai_push(pai)
+		turnSeat.entity.cell.game_mopai_push(pai)
 		#检查是否可以暗杠或者胡
 		#检查胡，直杠，弯杠
 		if not turnSeat.hued:
@@ -661,6 +666,19 @@ class Room(KBEngine.Entity):
 				seatData.canGang = True
 				seatData.gangPai.append(pai)
 
+	def csd(self,seatData):
+		seatData.canPeng = False;
+		seatData.canGang = False;
+		seatData.gangPai = [];
+		seatData.canHu = False;
+
+	def clearAllOptions(self,game,seatData=None):
+		if seatData !=None:
+			self.csd(seatData)
+		else:
+			for seatData in self.game.gameSeats:
+				self.csd(seatData)
+
 	#玩家请求碰操作
 	def reqPeng(self,callerEntityID):
 		seatData = self.GetSeatDataByUseId(callerEntityID)
@@ -690,6 +708,8 @@ class Room(KBEngine.Entity):
 				ddd = game.gameSeats[i]
 				if ddd.canHu and i !=seatData.seatIndex:
 					return
+		#清除标记
+		self.clearAllOptions(game)
 		#验证手上的牌的数目
 		pai = game.chuPai;
 		c = seatData.countMap[pai];
@@ -709,7 +729,9 @@ class Room(KBEngine.Entity):
 		seatData.pengs.append(pai)
 		game.chuPai = -1
 		#广播通知其它玩家
-		seatData.entity.allClients.peng_notify_push(pai)
+		seatData.entity.cell.peng_notify_push(pai)
+		#for i in range( len(game.gameSeats)):
+		#	game.gameSeats[i].entity.client.peng_notify_push(seatData.userId,pai)
 		#碰的玩家打牌
 		self.moveToNextUser(game,seatData.seatIndex);
 		seatData.canChuPai = True;
@@ -744,6 +766,10 @@ class Room(KBEngine.Entity):
 				ddd = game.gameSeats[i]
 				if ddd.canHu and i !=seatData.seatIndex:
 					return
+
+		#清除标记
+		self.clearAllOptions(game)
+
 		gangtype = ""
 		if numOfCnt == 1:
 			gangtype = "wangang"
@@ -801,6 +827,10 @@ class Room(KBEngine.Entity):
 		if seatData.canHu == False:
 			print("不能胡牌呀")
 			return
+
+		#清除标记
+		self.clearAllOptions(game)
+
 		#标记为和牌
 		seatData.hued = True
 		hupai = game.chuPai
@@ -836,6 +866,9 @@ class Room(KBEngine.Entity):
 			return
 		#如果是玩家自己的轮子，不是接牌，则不需要额外操作
 		doNothing = (game.chuPai == -1 and game.turn == seatData.seatIndex)
+		#清除标记
+		self.clearAllOptions(game)
+
 		if doNothing:
 			return
 		#如果还有人可以操作，则等待
@@ -848,7 +881,9 @@ class Room(KBEngine.Entity):
 			uid = game.gameSeats[game.turn].userId
 			Turn_seatData = self.GetSeatDataByUseId(uid)
 			Turn_seatData.folds.append(game.chuPai)
-			seatData.entity.allClients.onPlayCardOver(uid,game.chuPai)
+			#seatData.entity.allClients.onPlayCardOver(uid,game.chuPai)
+			for i in range( len(game.gameSeats)):
+				game.gameSeats[i].entity.client.onPlayCardOver(uid,game.chuPai)
 			game.chuPai = -1
 
 		self.moveToNextUser(game)

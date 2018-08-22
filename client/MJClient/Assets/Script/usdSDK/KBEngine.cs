@@ -81,7 +81,7 @@
 		public string serverScriptVersion = "";
 		public string clientScriptVersion = "0.1.0";
 		public string serverProtocolMD5 = "F217117F928F68467C45B47BA31B1B8B";
-		public string serverEntitydefMD5 = "F547257E65B19568C42912D2DC30BA6C";
+		public string serverEntitydefMD5 = "E849F1E88188D914A42EB1FEF6D89D34";
 		
 		// 当前玩家的实体id与实体类别
 		public UInt64 entity_uuid = 0;
