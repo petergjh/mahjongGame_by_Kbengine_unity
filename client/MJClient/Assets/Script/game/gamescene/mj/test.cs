@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using KBEngine;
 public class test : MonoBehaviour {
 	public InputField input,gangInput;
-	public Transform sendPaiBtn,showActionDataBtn,pengBtn,gangBtn, huBtn, guoBtn, showPublicInfoBtn;
+	public Transform sendPaiBtn,showActionDataBtn,pengBtn,gangBtn, huBtn, guoBtn, showPublicInfoBtn, showTingPaiInfoBtn;
 	// Use this for initialization
 	void Start () {
 		EventInterface.AddOnEvent(sendPaiBtn, Click);
@@ -15,6 +15,7 @@ public class test : MonoBehaviour {
 		EventInterface.AddOnEvent(huBtn, Click);
 		EventInterface.AddOnEvent(guoBtn, Click);
 		EventInterface.AddOnEvent(showPublicInfoBtn, Click);
+		EventInterface.AddOnEvent(showTingPaiInfoBtn, Click);
 	}
 	
 	// Update is called once per frame
@@ -62,7 +63,7 @@ public class test : MonoBehaviour {
 				huBtn.gameObject.SetActive(false);
 			}
 
-				if (ac.actionData.hu == 1 || ac.actionData.peng == 1 || ac.actionData.gang == 1)
+			if (ac.actionData.hu == 1 || ac.actionData.peng == 1 || ac.actionData.gang == 1)
 			{
 				guoBtn.gameObject.SetActive(true);
 			}
@@ -86,7 +87,7 @@ public class test : MonoBehaviour {
 				rm.cellEntityCall.reqGang((sbyte)int.Parse(gangInput.text));
 			}
 
-			
+
 		}
 		else if (tr == huBtn)
 		{
@@ -117,6 +118,13 @@ public class test : MonoBehaviour {
 				print("手牌数量--  " + _playerinfo.holdsCount);
 				print("--展示结束-------");
 			}
+		} else if (tr == showTingPaiInfoBtn) {
+			if (ac.TingPaiList.Count == 0) {
+				print("没有听牌啊！！！");
+				return;
+			}
+			ac.showTingPaiInfo();
+
 		}
 
 

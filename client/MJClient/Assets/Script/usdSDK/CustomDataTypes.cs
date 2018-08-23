@@ -203,4 +203,55 @@ namespace KBEngine
 	}
 
 
+
+	public class DATATYPE_TING_PAI_DIC : DATATYPE_BASE
+	{
+		public TING_PAI_DIC createFromStreamEx(MemoryStream stream)
+		{
+			TING_PAI_DIC datas = new TING_PAI_DIC();
+			datas.nousepai = stream.readUnicode();
+			datas.pai = stream.readUnicode();
+			datas.fan = stream.readUnicode();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, TING_PAI_DIC v)
+		{
+			stream.writeUnicode(v.nousepai);
+			stream.writeUnicode(v.pai);
+			stream.writeUnicode(v.fan);
+		}
+	}
+
+
+
+	public class DATATYPE_TING_PAI_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_TING_PAI_DIC itemType = new DATATYPE_TING_PAI_DIC();
+
+		public TING_PAI_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			TING_PAI_LIST datas = new TING_PAI_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, TING_PAI_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
 }

@@ -43,6 +43,12 @@
 			<Type>	PLAYER_ACTION_DIC				</Type>
 			<Flags>	OWN_CLIENT	</Flags>
 		</actionData>
+
+		<TingPaiList>
+			<Type>TING_PAI_LIST</Type>
+			<Flags>	OWN_CLIENT					</Flags>
+		</TingPaiList>
+		
 		
 	</Properties>
 
@@ -93,6 +99,11 @@
 			<Arg>	ENTITY_ID	</Arg>
 			<Arg>	MJPAI	</Arg>
 		</onPlayCardOver>
+
+		<hasTing>
+			<Arg>	TING_PAI_LIST	</Arg>
+		</hasTing>
+		
 	</ClientMethods>
 
 	<BaseMethods>
@@ -163,6 +174,12 @@
 		<peng_notify_push>
 			<Arg>		MJPAI		</Arg>
 		</peng_notify_push>
+
+		<has_ting>
+			<Arg>TING_PAI_LIST</Arg>
+		</has_ting>
+		
+		
 	</CellMethods>
 
 </root>

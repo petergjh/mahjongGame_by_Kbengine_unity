@@ -65,3 +65,8 @@ class Account(KBEngine.Entity):
 		self.holds.remove(pai)
 		self.holds.remove(pai)
 		self.allClients.peng_notify_push(self.id,pai)
+
+	def has_ting(self,tingList):
+		self.TingPaiList = tingList;
+		if len(self.TingPaiList)>0 and self.client:
+			self.client.hasTing(tingList)

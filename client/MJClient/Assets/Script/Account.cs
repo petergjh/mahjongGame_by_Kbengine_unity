@@ -107,5 +107,19 @@
 			
 
 		}
+
+		public override void hasTing(TING_PAI_LIST arg1)
+		{
+			MonoBehaviour.print("有听牌信息了");
+			showTingPaiInfo();
+		}
+		public void showTingPaiInfo() {
+			foreach (TING_PAI_DIC td in TingPaiList) {
+				MonoBehaviour.print("----------------------  ");
+				MonoBehaviour.print("打掉它就可以胡了---  "+ td.nousepai);
+				MonoBehaviour.print("正在听的牌 ---  " + td.pai);
+				MonoBehaviour.print("番数 ---  " + td.fan);
+			}
+		}
 	}
 }

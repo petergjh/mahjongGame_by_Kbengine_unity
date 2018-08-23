@@ -908,5 +908,18 @@ namespace KBEngine
 
 	}
 
+	public class TING_PAI_DIC
+	{
+		public string nousepai = "";
+		public string pai = "";
+		public string fan = "";
+
+	}
+
+	public class TING_PAI_LIST : List<TING_PAI_DIC>
+	{
+
+	}
+
 
 }

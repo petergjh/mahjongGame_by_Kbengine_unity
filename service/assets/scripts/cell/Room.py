@@ -1,6 +1,7 @@
 import KBEngine
 from KBEDebug import *
 import random
+import copy
 
 TIMER_HAS_NO_OP_CB = 1
 
@@ -120,6 +121,27 @@ class Room(KBEngine.Entity):
 
 		self.begin()
 
+	#检测玩家是否听牌，并把听牌信息告诉他
+	def checkHasTingPai(self,game,seatData):
+		#已经胡牌的就不检测了
+		if seatData.hued:
+			return 
+		#去掉一张牌看能不能胡牌
+		tingList = []
+		for pai in seatData.holds:
+			newSeatData = copy.deepcopy(seatData)
+			newSeatData.holds.remove(pai);
+			newSeatData.countMap[pai] -=1
+			self.checkCanTingPai(game,newSeatData)
+			for dd in newSeatData.tingMap.keys():
+				data = {
+					"nousepai" : str(pai),
+					"pai":str(dd),
+					"fan" : newSeatData.tingMap[dd]["fan"]
+					}
+				tingList.append(data)
+		seatData.entity.cell.has_ting(tingList)
+
 	def begin(self):
 		print("全部就位---开始处理！");
 		self.clearPublicRoomInfo()
@@ -159,6 +181,7 @@ class Room(KBEngine.Entity):
 		turnSeat.canChuPai = True;
 		self.setCurPlayerIndex(game.turn)
 		self.notif_chupai(game,turnSeat)
+		self.checkHasTingPai(game,turnSeat)
 		#暗杠
 		self.checkCanAnGang(game,turnSeat)
 		#检查胡 用最后一张来检查
@@ -660,6 +683,7 @@ class Room(KBEngine.Entity):
 		#广播通知玩家出牌方
 		turnSeat.canChuPai = True
 		self.notif_chupai(game,turnSeat)
+		self.checkHasTingPai(game,turnSeat)
 		#通知玩家做对应操作
 		self.sendOperations(game,turnSeat,game.chuPai)
 		
