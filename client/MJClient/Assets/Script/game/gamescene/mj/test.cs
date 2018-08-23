@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using KBEngine;
 public class test : MonoBehaviour {
 	public InputField input,gangInput;
-	public Transform sendPaiBtn,showActionDataBtn,pengBtn,gangBtn, huBtn, guoBtn;
+	public Transform sendPaiBtn,showActionDataBtn,pengBtn,gangBtn, huBtn, guoBtn, showPublicInfoBtn;
 	// Use this for initialization
 	void Start () {
 		EventInterface.AddOnEvent(sendPaiBtn, Click);
@@ -14,6 +14,7 @@ public class test : MonoBehaviour {
 		EventInterface.AddOnEvent(gangBtn, Click);
 		EventInterface.AddOnEvent(huBtn, Click);
 		EventInterface.AddOnEvent(guoBtn, Click);
+		EventInterface.AddOnEvent(showPublicInfoBtn, Click);
 	}
 	
 	// Update is called once per frame
@@ -95,7 +96,39 @@ public class test : MonoBehaviour {
 		{
 			rm.cellEntityCall.reqGuo();
 		}
+		else if (tr == showPublicInfoBtn)
+		{
+			print("房间最大人数--  " + rm.public_roomInfo.playerMaxCount);
+			print("当前还剩于麻将牌--  " + rm.public_roomInfo.numOfMJ);
+			print("当前游戏状态--  " + rm.public_roomInfo.state);
+			print("当前庄家索引--  " + rm.public_roomInfo.button);
+			print("当前操作玩家索引---  " + rm.public_roomInfo.turn);
+			print("当前正在打出的牌为--  " + rm.public_roomInfo.chuPai);
+			print("当前房间类型为--  " + rm.public_roomInfo.RoomType);
+			print("-------开始展示玩家信息----------");
+			foreach (PLAYER_PUBLIC_INFO _playerinfo in rm.public_roomInfo.playerInfo) {
+				print("--开始展示玩家，id为--  " + _playerinfo.userId);
+				print("打出的牌--" + showListToString(_playerinfo.folds));
+				print("暗杠的牌--" + showListToString(_playerinfo.angangs));
+				print("点杠的牌--" + showListToString(_playerinfo.diangangs));
+				print("弯杠的牌--" + showListToString(_playerinfo.wangangs));
+				print("碰的牌--" + showListToString(_playerinfo.pengs));
+				print("胡的牌--  " + showListToString(_playerinfo.hus));
+				print("手牌数量--  " + _playerinfo.holdsCount);
+				print("--展示结束-------");
+			}
+		}
 
 
+	}
+	string showListToString(MJ_LIST arr) {
+		string info = "(";
+		foreach (sbyte pai in arr) {
+			if (info != "(")
+				info = info + "," + pai.ToString();
+			else
+				info = info + pai + "";
+		}
+		return info+")";
 	}
 }

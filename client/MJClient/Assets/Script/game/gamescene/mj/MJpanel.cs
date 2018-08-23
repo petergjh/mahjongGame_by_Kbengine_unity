@@ -9,6 +9,7 @@ public class MJpanel : MonoBehaviour {
 	public int roomMaxPlayer = 2;
 	public static MJpanel instance;
 	public Room room;
+	public static bool roomIsIn;
 	List<playerInfo> playerInfoList = new List<playerInfo>();
 	public Transform MyCardlist, holdsCardPrfb, holdsRoot;
 	// Use this for initialization
@@ -25,10 +26,26 @@ public class MJpanel : MonoBehaviour {
 		EventInterface.AddOnEvent(leaveBtn, Click);
 		EventInterface.AddOnEvent(changeRoomBtn, Click);
 		EventInterface.AddOnEvent(readyBtn, Click);
-		print("进入麻将房间成功");
-		GameManager.GetInstance().gameSceneLoadeOver();
 		installEvents();
+		print("开始进入房间");
+		if (GameManager.GetInstance().gameSceneLoadeOver())
+		{
+			print("进入麻将房间成功");
+			roomIsIn = true;
+		}
+		else {
+			timerManager.GetInstance().addTimer(0.1f, 0.1f, (timerID,userData) =>
+			{
+				if (GameManager.GetInstance().gameSceneLoadeOver()) {
+					print("进入麻将房间成功222");
+					timerManager.GetInstance().cancelTimer(timerID);
+					roomIsIn = true;
+				}
+			});
+		}
+		
 	}
+	
 	void installEvents()
 	{
 		KBEngine.Event.registerOut("playerLevelRoom", this, "playerLevelRoom");
@@ -87,17 +104,30 @@ public class MJpanel : MonoBehaviour {
 			go.SetActive(true);
 		}
 	}
-	public void gameStart() {
-		print("庄家索引是"+room.public_roomInfo.button);
-		print(room.public_roomInfo.playerInfo[1].userId+" 玩家手牌数量==" +room.public_roomInfo.playerInfo[1].holdsCount);
+	void initGameState_Playing() {
+		print("庄家索引是" + room.public_roomInfo.button);
+		print(room.public_roomInfo.playerInfo[1].userId + " 玩家手牌数量==" + room.public_roomInfo.playerInfo[1].holdsCount);
 		Account account = (Account)KBEngineApp.app.player();
 		if (account.roomSeatIndex == room.public_roomInfo.turn)
 		{
 			initMyHandCords(true);
 		}
-		else {
+		else
+		{
 			initMyHandCords(false);
 		}
+	}
+	public void gameStart() {
+		//判断游戏状态
+		switch (room.public_roomInfo.state) {
+			case "idel":
+				break;
+			case "playing":
+				initGameState_Playing();
+				break;
+		}
+		
+		
 	}
 	public void set_isReady(Account entity, int state) {
 		print((entity).playerName + "状态改变了");
@@ -161,6 +191,7 @@ public class MJpanel : MonoBehaviour {
 			int newIndex = getLocalSeatIndex(oldIndex);
 			print("newIndex----" + newIndex);
 			playerInfoList[newIndex].leaveRoom();
+			
 
 		}
 	}
@@ -182,7 +213,14 @@ public class MJpanel : MonoBehaviour {
 			int newIndex = getLocalSeatIndex(oldIndex);
 			print("newIndex----" + newIndex);
 			playerInfoList[newIndex].initPlayer((Account)entity);
-			
+			//就位状态只有在idel状态才出现
+			if (room.public_roomInfo.state == "idel")
+			{
+				playerInfoList[newIndex].changeReady(((Account)entity).isReady);
+			}
+			else {
+				playerInfoList[newIndex].changeReady(0);
+			}
 
 		}
 		else if (entity.className == "Room")
@@ -225,6 +263,7 @@ public class MJpanel : MonoBehaviour {
 	void OnDestroy()
 	{
 		instance = null;
+		roomIsIn = false;
 		KBEngine.Event.deregisterOut(this);
 	}
 }

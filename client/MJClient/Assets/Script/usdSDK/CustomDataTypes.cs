@@ -71,10 +71,29 @@ namespace KBEngine
 
 	public class DATATYPE_PLAYER_PUBLIC_INFO : DATATYPE_BASE
 	{
+		private DATATYPE_MJ_LIST folds_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST angangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST diangangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST wangangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST pengs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST hus_DataType = new DATATYPE_MJ_LIST();
+
 		public PLAYER_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
 		{
 			PLAYER_PUBLIC_INFO datas = new PLAYER_PUBLIC_INFO();
 			datas.userId = stream.readUint32();
+			datas.folds = folds_DataType.createFromStreamEx(stream);
+			datas.angangs = angangs_DataType.createFromStreamEx(stream);
+			datas.diangangs = diangangs_DataType.createFromStreamEx(stream);
+			datas.wangangs = wangangs_DataType.createFromStreamEx(stream);
+			datas.pengs = pengs_DataType.createFromStreamEx(stream);
+			datas.hus = hus_DataType.createFromStreamEx(stream);
+			datas.que = stream.readInt8();
 			datas.holdsCount = stream.readInt8();
 			return datas;
 		}
@@ -82,6 +101,13 @@ namespace KBEngine
 		public void addToStreamEx(Bundle stream, PLAYER_PUBLIC_INFO v)
 		{
 			stream.writeUint32(v.userId);
+			folds_DataType.addToStreamEx(stream, v.folds);
+			angangs_DataType.addToStreamEx(stream, v.angangs);
+			diangangs_DataType.addToStreamEx(stream, v.diangangs);
+			wangangs_DataType.addToStreamEx(stream, v.wangangs);
+			pengs_DataType.addToStreamEx(stream, v.pengs);
+			hus_DataType.addToStreamEx(stream, v.hus);
+			stream.writeInt8(v.que);
 			stream.writeInt8(v.holdsCount);
 		}
 	}
@@ -125,19 +151,27 @@ namespace KBEngine
 		public ROOM_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
 		{
 			ROOM_PUBLIC_INFO datas = new ROOM_PUBLIC_INFO();
+			datas.RoomType = stream.readUint8();
+			datas.playerMaxCount = stream.readUint8();
 			datas.state = stream.readUnicode();
-			datas.playerInfo = playerInfo_DataType.createFromStreamEx(stream);
-			datas.button = stream.readInt8();
 			datas.turn = stream.readInt8();
+			datas.numOfMJ = stream.readUint8();
+			datas.button = stream.readInt8();
+			datas.playerInfo = playerInfo_DataType.createFromStreamEx(stream);
+			datas.chuPai = stream.readInt8();
 			return datas;
 		}
 
 		public void addToStreamEx(Bundle stream, ROOM_PUBLIC_INFO v)
 		{
+			stream.writeUint8(v.RoomType);
+			stream.writeUint8(v.playerMaxCount);
 			stream.writeUnicode(v.state);
-			playerInfo_DataType.addToStreamEx(stream, v.playerInfo);
-			stream.writeInt8(v.button);
 			stream.writeInt8(v.turn);
+			stream.writeUint8(v.numOfMJ);
+			stream.writeInt8(v.button);
+			playerInfo_DataType.addToStreamEx(stream, v.playerInfo);
+			stream.writeInt8(v.chuPai);
 		}
 	}
 

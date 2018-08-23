@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void onEnterWorld(KBEngine.Entity entity)
 	{
-		if (MJpanel.instance == null)
+		if (MJpanel.roomIsIn == false)
 		{
 			pendingEnterEntityIDs.Add(entity.id);
 		}
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 	public void onLeaveWorld(KBEngine.Entity entity) {
-		if (MJpanel.instance != null)
+		if (MJpanel.roomIsIn)
 		{
 			MJpanel.instance.LeaveWorld(entity);
 		}
@@ -63,7 +63,28 @@ public class GameManager : MonoBehaviour
 		}	
 
 	}
-	public void gameSceneLoadeOver() {
+	public bool gameSceneLoadeOver() {
+		//无论如何先让房间先进场
+		bool hasRoom = false;
+		List<int> newEntityIDS = new List<int>();
+		newEntityIDS.Add(0);
+		foreach (Int32 id in pendingEnterEntityIDs)
+		{
+			KBEngine.Entity entity = KBEngineApp.app.findEntity(id);
+			if (entity.className == "Room")
+			{
+				newEntityIDS[0] = id;
+				hasRoom = true;
+			}
+			else {
+				newEntityIDS.Add(id);
+			}
+			
+		}
+		if (!hasRoom)
+			return false;
+
+		pendingEnterEntityIDs = newEntityIDS;
 		foreach (Int32 id in pendingEnterEntityIDs)
 		{
 			print(id);
@@ -75,6 +96,7 @@ public class GameManager : MonoBehaviour
 		}
 		pendingEnterEntityIDs.Clear();
 
+		return true;
 	}
 	void OnDestroy()
     {

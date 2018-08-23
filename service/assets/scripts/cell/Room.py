@@ -46,14 +46,25 @@ class Room(KBEngine.Entity):
 			seatData =self.game.gameSeats[i]
 			d={
 				"userId":seatData.userId,
-				"holdsCount":len(seatData.holds)
+				"holdsCount":len(seatData.holds),
+				"folds":seatData.folds,
+				"angangs":seatData.angangs,
+				"diangangs":seatData.diangangs,
+				"wangangs":seatData.wangangs,
+				"pengs":seatData.pengs,
+				"hus":seatData.hus,
+				"que":seatData.que,
 				}
 			playerList.append(d)
 		data = {
+			"playerMaxCount" : self.playerMaxCount,
+			"RoomType" : self.RoomType,
 			"state" :self.game.state,
 			"playerInfo":playerList,
 			"button":self.game.button,
 			"turn": self.game.turn,
+			"numOfMJ":len(self.game.mahjongs) - self.game.currentIndex,
+			"chuPai":self.game.chuPai
 			}
 		self.public_roomInfo = data
 
@@ -61,16 +72,27 @@ class Room(KBEngine.Entity):
 	def clearPublicRoomInfo(self):
 		playerList = []
 		for i in range(self.playerMaxCount):
-			d={
+			d = {
 				"userId":0,
-				"holdsCount":0,
-				}
+				"folds":[],
+				"angangs":[],
+				"diangangs":[],
+				"wangangs":[],
+				"pengs":[],
+				"que":-1,
+				"hus":[],
+				"holdsCount":0
+			}
 			playerList.append(d)
 		data = {
-			"state" :"idel",
-			"playerInfo":playerList,
+			"RoomType" : self.RoomType,
+			"playerMaxCount" : self.playerMaxCount,
+			"state" : "idle",
+			"turn": 0,
+			"numOfMJ":0,
 			"button":-1,
-			"turn": -1,
+			"playerInfo":playerList,
+			"chuPai":-1
 			}
 		self.public_roomInfo = data
 

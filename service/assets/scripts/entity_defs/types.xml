@@ -9,13 +9,34 @@
 	<ENTITY_LIST>
 		ARRAY<of>ENTITYCALL</of>
 	</ENTITY_LIST>
-	
+
 	<PLAYER_PUBLIC_INFO>
 		FIXED_DICT
 		<Properties>
 			<userId>
 				<Type>	ENTITY_ID	</Type>
 			</userId>
+			<folds>
+				<Type>	MJ_LIST	</Type>
+			</folds>
+			<angangs>
+				<Type>	MJ_LIST	</Type>
+			</angangs>
+			<diangangs>
+				<Type>	MJ_LIST	</Type>
+			</diangangs>
+			<wangangs>
+				<Type>	MJ_LIST	</Type>
+			</wangangs>
+			<pengs>
+				<Type>	MJ_LIST	</Type>
+			</pengs>
+			<hus>
+				<Type>	MJ_LIST	</Type>
+			</hus>
+			<que>
+				<Type>	MJPAI	</Type>
+			</que>
 			<holdsCount>
 				<Type>	MJPAI	</Type>
 			</holdsCount>
@@ -29,14 +50,30 @@
 	<ROOM_PUBLIC_INFO>
 		FIXED_DICT
 		<Properties>
-			<state><Type>	UNICODE	</Type></state>
-			<playerInfo><Type>	PLAYERINFO_LIST	</Type></playerInfo>
-			<button>
-				<Type>	INT8	</Type>
-			</button>
+			<RoomType>
+				<Type> UINT8 </Type>
+			</RoomType>
+			<playerMaxCount>
+				<Type> UINT8 </Type>
+			</playerMaxCount>
+			<state>
+				<Type>	UNICODE	</Type>
+			</state>
 			<turn>
 				<Type>	INT8	</Type>
 			</turn>
+			<numOfMJ>
+				<Type>	UINT8	</Type>
+			</numOfMJ>
+			<button>
+				<Type>	INT8	</Type>
+			</button>
+			<playerInfo>
+				<Type>	PLAYERINFO_LIST	</Type>
+			</playerInfo>
+			<chuPai>
+				<Type>	INT8	</Type>
+			</chuPai>
 		</Properties>
 	</ROOM_PUBLIC_INFO>
 

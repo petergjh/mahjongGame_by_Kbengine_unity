@@ -869,6 +869,13 @@ namespace KBEngine
 	public class PLAYER_PUBLIC_INFO
 	{
 		public UInt32 userId = 0;
+		public MJ_LIST folds = new MJ_LIST();
+		public MJ_LIST angangs = new MJ_LIST();
+		public MJ_LIST diangangs = new MJ_LIST();
+		public MJ_LIST wangangs = new MJ_LIST();
+		public MJ_LIST pengs = new MJ_LIST();
+		public MJ_LIST hus = new MJ_LIST();
+		public SByte que = 0;
 		public SByte holdsCount = 0;
 
 	}
@@ -880,10 +887,14 @@ namespace KBEngine
 
 	public class ROOM_PUBLIC_INFO
 	{
+		public Byte RoomType = 0;
+		public Byte playerMaxCount = 0;
 		public string state = "";
-		public PLAYERINFO_LIST playerInfo = new PLAYERINFO_LIST();
-		public SByte button = 0;
 		public SByte turn = 0;
+		public Byte numOfMJ = 0;
+		public SByte button = 0;
+		public PLAYERINFO_LIST playerInfo = new PLAYERINFO_LIST();
+		public SByte chuPai = 0;
 
 	}
 
