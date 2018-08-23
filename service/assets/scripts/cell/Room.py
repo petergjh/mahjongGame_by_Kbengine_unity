@@ -174,16 +174,6 @@ class Room(KBEngine.Entity):
 			#如果可以有操作，则进行操作
 			#self.avatars[seatData.userId].game_action_push(data)
 			seatData.entity.cell.game_action_push(data)
-		else:
-			data = {
-				"pai":-1,
-				"hu":False,
-	            "peng":False,
-				"gang":False,
-				"gangpai":[]
-			}
-			#self.avatars[seatData.userId].game_action_push(data)
-			seatData.entity.cell.game_action_push(data)
 
 
 	#检测是否可以胡牌
@@ -544,6 +534,7 @@ class Room(KBEngine.Entity):
 		seatData.holds.remove(pai)
 		seatData.countMap[pai] -=1
 		game.chuPai = pai
+		self.checkCanTingPai(game,seatData)  #每次出完牌后重新计算听牌
 		seatData.entity.cell.game_chupai_notify_push(pai)
 		
 		#检查是否有人要胡，要碰 要杠
@@ -671,6 +662,14 @@ class Room(KBEngine.Entity):
 		seatData.canGang = False;
 		seatData.gangPai = [];
 		seatData.canHu = False;
+		data = {
+			"pai":-1,
+			"hu":False,
+			"peng":False,
+			"gang":False,
+			"gangpai":[]
+		}
+		seatData.entity.cell.game_action_push(data)
 
 	def clearAllOptions(self,game,seatData=None):
 		if seatData !=None:
@@ -811,12 +810,12 @@ class Room(KBEngine.Entity):
 
 		seatData.entity.cell.gang_notify_push(pai,gangtype)
 		#变成自己的轮子
-		self.moveToNextUser(game,seatIndex)
+		self.moveToNextUser(game,seatData.seatIndex)
 		#再次摸牌
 		self.doUserMoPai(game)
 
 	#客户端请求胡操作
-	def reqHu(self,callerEntityID,pai):
+	def reqHu(self,callerEntityID):
 		seatData = self.GetSeatDataByUseId(callerEntityID)
 		if seatData == None:
 			print("没有找到数据")

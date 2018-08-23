@@ -120,62 +120,62 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 18:
+				case 19:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 21:
+				case 22:
 					game_begin_push();
 					break;
-				case 24:
+				case 25:
 					game_chupai_push();
 					break;
-				case 26:
+				case 27:
 					SByte game_mopai_push_arg1 = stream.readInt8();
 					game_mopai_push(game_mopai_push_arg1);
 					break;
-				case 23:
+				case 24:
 					has_action();
 					break;
-				case 29:
+				case 30:
 					UInt32 onGang_arg1 = stream.readUint32();
 					SByte onGang_arg2 = stream.readInt8();
 					string onGang_arg3 = stream.readUnicode();
 					onGang(onGang_arg1, onGang_arg2, onGang_arg3);
 					break;
-				case 20:
+				case 21:
 					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					onGetRoomInfo(onGetRoomInfo_arg1);
 					break;
-				case 30:
+				case 31:
 					UInt32 onHu_arg1 = stream.readUint32();
 					Byte onHu_arg2 = stream.readUint8();
 					SByte onHu_arg3 = stream.readInt8();
 					onHu(onHu_arg1, onHu_arg2, onHu_arg3);
 					break;
-				case 25:
+				case 26:
 					UInt32 onPlayCard_arg1 = stream.readUint32();
 					SByte onPlayCard_arg2 = stream.readInt8();
 					onPlayCard(onPlayCard_arg1, onPlayCard_arg2);
 					break;
-				case 31:
+				case 32:
 					UInt32 onPlayCardOver_arg1 = stream.readUint32();
 					SByte onPlayCardOver_arg2 = stream.readInt8();
 					onPlayCardOver(onPlayCardOver_arg1, onPlayCardOver_arg2);
 					break;
-				case 27:
+				case 28:
 					UInt32 otherPlayerMopai_arg1 = stream.readUint32();
 					otherPlayerMopai(otherPlayerMopai_arg1);
 					break;
-				case 28:
+				case 29:
 					UInt32 peng_notify_push_arg1 = stream.readUint32();
 					SByte peng_notify_push_arg2 = stream.readInt8();
 					peng_notify_push(peng_notify_push_arg1, peng_notify_push_arg2);
 					break;
-				case 19:
+				case 20:
 					playerLevelRoom();
 					break;
-				case 22:
+				case 23:
 					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
