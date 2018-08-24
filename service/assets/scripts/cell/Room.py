@@ -151,13 +151,12 @@ class Room(KBEngine.Entity):
 		self.numOfMJ = len(self.game.mahjongs) - self.game.currentIndex;
 		self.cur_turn = self.game.button
 		self.game.state = "playing";
-		self.setPublicRoomInfo()
 		seats = self.roomInfo.seats
 		for i in range(len(seats)):
 			if seats[i].entity.client:
 				seats[i].entity.cell.game_holds_push(self.game.gameSeats[i].holds)
 				#seats[i].entity.client.upDataClientRoomInfo(self.public_roomInfo)
-				seats[i].entity.client.game_begin_push()
+				#seats[i].entity.client.game_begin_push()
 
 		print("游戏开始！");
 		##游戏开始检测
@@ -187,6 +186,8 @@ class Room(KBEngine.Entity):
 		#检查胡 用最后一张来检查
 		self.Main_checkCanHu(game,turnSeat,turnSeat.holds[len(turnSeat.holds) - 1])
 		#通知前端
+		self.setPublicRoomInfo()
+
 		self.sendOperations(game,turnSeat,game.chuPai)
 
 	def notif_chupai(self,game,seatData):
@@ -580,7 +581,7 @@ class Room(KBEngine.Entity):
 		seatData.countMap[pai] -=1
 		game.chuPai = pai
 		self.checkCanTingPai(game,seatData)  #每次出完牌后重新计算听牌
-		seatData.entity.cell.game_chupai_notify_push(pai)
+		
 		
 		#检查是否有人要胡，要碰 要杠
 		hasActions = False;
@@ -608,6 +609,8 @@ class Room(KBEngine.Entity):
 		
 		#操作结束后重新赋值下
 		self.setPublicRoomInfo()
+		#通知客户端打出牌
+		seatData.entity.cell.game_chupai_notify_push(pai)
 
 	#检查是否可以碰
 	def checkCanPeng(self,game,seatData,targetPai):
@@ -643,12 +646,14 @@ class Room(KBEngine.Entity):
 	def noPlayerOP_letNextFapai(self,game,seatData,pai):
 		seatData.folds.append(game.chuPai)
 		game.chuPai = -1;
+		self.setPublicRoomInfo();
+		#通知所有客户端出牌成功
+		for i in range( len(game.gameSeats)):
+			game.gameSeats[i].entity.client.onPlayCardOver(seatData.userId,pai)
 		#把游戏操作索引指向下家
 		self.moveToNextUser(game)
 		#给下家发牌
-		self.doUserMoPai(game)
-		#保存数据
-		self.setPublicRoomInfo();
+		self.doUserMoPai(game)		
 
 	#切换出牌玩家
 	def moveToNextUser(self,game,nextSeat=None):
@@ -667,8 +672,7 @@ class Room(KBEngine.Entity):
 		if pai == -1:
 			print("游戏结束---TODO")
 			return
-		#通知前端新摸的牌
-		turnSeat.entity.cell.game_mopai_push(pai)
+		
 		#检查是否可以暗杠或者胡
 		#检查胡，直杠，弯杠
 		if not turnSeat.hued:
@@ -684,9 +688,11 @@ class Room(KBEngine.Entity):
 		turnSeat.canChuPai = True
 		self.notif_chupai(game,turnSeat)
 		self.checkHasTingPai(game,turnSeat)
+		self.setPublicRoomInfo()
 		#通知玩家做对应操作
 		self.sendOperations(game,turnSeat,game.chuPai)
-		
+		#通知前端新摸的牌
+		turnSeat.entity.cell.game_mopai_push(pai)
 
 
 
@@ -773,6 +779,8 @@ class Room(KBEngine.Entity):
 
 		seatData.pengs.append(pai)
 		game.chuPai = -1
+		#保存数据
+		self.setPublicRoomInfo();
 		#广播通知其它玩家
 		seatData.entity.cell.peng_notify_push(pai)
 		#for i in range( len(game.gameSeats)):
@@ -780,10 +788,11 @@ class Room(KBEngine.Entity):
 		#碰的玩家打牌
 		self.moveToNextUser(game,seatData.seatIndex);
 		seatData.canChuPai = True;
+		#保存数据
+		self.setPublicRoomInfo();		
 		#通知玩家出牌方
 		self.notif_chupai(game,seatData)
-		#保存数据
-		self.setPublicRoomInfo();
+		
 
 	def reqGang(self,callerEntityID,pai):
 		seatData = self.GetSeatDataByUseId(callerEntityID)
@@ -826,8 +835,7 @@ class Room(KBEngine.Entity):
 		game.chuPai = -1
 		seatData.canChuPai = False
 		self.doGang(game,seatData,gangtype,numOfCnt,pai)
-		#保存数据
-		self.setPublicRoomInfo();
+		
 
 	def doGang(self,game,seatData,gangtype,numOfCnt,pai):
 		if gangtype == "wangang":
@@ -853,7 +861,9 @@ class Room(KBEngine.Entity):
 			seatData.diangangs.append(pai)
 		elif gangtype == "wangang":
 			seatData.wangangs.append(pai)
-
+		
+		#保存数据
+		self.setPublicRoomInfo();
 		seatData.entity.cell.gang_notify_push(pai,gangtype)
 		#变成自己的轮子
 		self.moveToNextUser(game,seatData.seatIndex)
@@ -896,8 +906,6 @@ class Room(KBEngine.Entity):
 		#和牌的下家继续打
 		self.moveToNextUser(game)
 		self.doUserMoPai(game)
-		#保存共享数据
-		self.setPublicRoomInfo()
 
 	def reqGuo(self,callerEntityID):
 		seatData = self.GetSeatDataByUseId(callerEntityID)
@@ -926,15 +934,15 @@ class Room(KBEngine.Entity):
 			uid = game.gameSeats[game.turn].userId
 			Turn_seatData = self.GetSeatDataByUseId(uid)
 			Turn_seatData.folds.append(game.chuPai)
-			#seatData.entity.allClients.onPlayCardOver(uid,game.chuPai)
+			#保存共享数据
+			self.setPublicRoomInfo()
 			for i in range( len(game.gameSeats)):
 				game.gameSeats[i].entity.client.onPlayCardOver(uid,game.chuPai)
 			game.chuPai = -1
 
 		self.moveToNextUser(game)
 		self.doUserMoPai(game)
-		#保存共享数据
-		self.setPublicRoomInfo()
+		
 
 #--------------------------------------------------------------------------------------------
 #                              Callbacks

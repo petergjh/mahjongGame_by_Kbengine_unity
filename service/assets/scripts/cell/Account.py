@@ -22,6 +22,8 @@ class Account(KBEngine.Entity):
 
 	def game_holds_push(self,holds):
 		self.holds = holds
+		if self.client:
+			self.client.game_begin_push()
 
 	#麻将逻辑通知你有操作了
 	def game_action_push(self,actionData):
@@ -49,7 +51,7 @@ class Account(KBEngine.Entity):
 			self.holds.remove(hupai)
 		self.allClients.onHu(self.id,isZimo,hupai)
 
-	#麻将逻辑通知出牌成功了
+	#麻将逻辑通知出牌了
 	def game_chupai_notify_push(self,pai):
 		self.holds.remove(pai)
 		self.allClients.onPlayCard(self.id,pai)
