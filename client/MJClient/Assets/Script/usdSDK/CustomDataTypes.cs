@@ -13,6 +13,34 @@ namespace KBEngine
 
 
 
+	public class DATATYPE_MJ_LIST : DATATYPE_BASE
+	{
+		public MJ_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			MJ_LIST datas = new MJ_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(stream.readInt8());
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MJ_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				stream.writeInt8(v[i]);
+			};
+		}
+	}
+
+
+
 	public class DATATYPE_ENTITY_LIST : DATATYPE_BASE
 	{
 		public ENTITY_LIST createFromStreamEx(MemoryStream stream)
@@ -35,6 +63,192 @@ namespace KBEngine
 			for(int i=0; i<v.Count; ++i)
 			{
 				stream.writePython(v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYER_PUBLIC_INFO : DATATYPE_BASE
+	{
+		private DATATYPE_MJ_LIST folds_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST angangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST diangangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST wangangs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST pengs_DataType = new DATATYPE_MJ_LIST();
+
+		private DATATYPE_MJ_LIST hus_DataType = new DATATYPE_MJ_LIST();
+
+		public PLAYER_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
+		{
+			PLAYER_PUBLIC_INFO datas = new PLAYER_PUBLIC_INFO();
+			datas.userId = stream.readUint32();
+			datas.folds = folds_DataType.createFromStreamEx(stream);
+			datas.angangs = angangs_DataType.createFromStreamEx(stream);
+			datas.diangangs = diangangs_DataType.createFromStreamEx(stream);
+			datas.wangangs = wangangs_DataType.createFromStreamEx(stream);
+			datas.pengs = pengs_DataType.createFromStreamEx(stream);
+			datas.hus = hus_DataType.createFromStreamEx(stream);
+			datas.que = stream.readInt8();
+			datas.holdsCount = stream.readInt8();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYER_PUBLIC_INFO v)
+		{
+			stream.writeUint32(v.userId);
+			folds_DataType.addToStreamEx(stream, v.folds);
+			angangs_DataType.addToStreamEx(stream, v.angangs);
+			diangangs_DataType.addToStreamEx(stream, v.diangangs);
+			wangangs_DataType.addToStreamEx(stream, v.wangangs);
+			pengs_DataType.addToStreamEx(stream, v.pengs);
+			hus_DataType.addToStreamEx(stream, v.hus);
+			stream.writeInt8(v.que);
+			stream.writeInt8(v.holdsCount);
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYERINFO_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYER_PUBLIC_INFO itemType = new DATATYPE_PLAYER_PUBLIC_INFO();
+
+		public PLAYERINFO_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			PLAYERINFO_LIST datas = new PLAYERINFO_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYERINFO_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_ROOM_PUBLIC_INFO : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYERINFO_LIST playerInfo_DataType = new DATATYPE_PLAYERINFO_LIST();
+
+		public ROOM_PUBLIC_INFO createFromStreamEx(MemoryStream stream)
+		{
+			ROOM_PUBLIC_INFO datas = new ROOM_PUBLIC_INFO();
+			datas.RoomType = stream.readUint8();
+			datas.playerMaxCount = stream.readUint8();
+			datas.state = stream.readUnicode();
+			datas.turn = stream.readInt8();
+			datas.numOfMJ = stream.readUint8();
+			datas.button = stream.readInt8();
+			datas.playerInfo = playerInfo_DataType.createFromStreamEx(stream);
+			datas.chuPai = stream.readInt8();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, ROOM_PUBLIC_INFO v)
+		{
+			stream.writeUint8(v.RoomType);
+			stream.writeUint8(v.playerMaxCount);
+			stream.writeUnicode(v.state);
+			stream.writeInt8(v.turn);
+			stream.writeUint8(v.numOfMJ);
+			stream.writeInt8(v.button);
+			playerInfo_DataType.addToStreamEx(stream, v.playerInfo);
+			stream.writeInt8(v.chuPai);
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYER_ACTION_DIC : DATATYPE_BASE
+	{
+		private DATATYPE_MJ_LIST gangpai_DataType = new DATATYPE_MJ_LIST();
+
+		public PLAYER_ACTION_DIC createFromStreamEx(MemoryStream stream)
+		{
+			PLAYER_ACTION_DIC datas = new PLAYER_ACTION_DIC();
+			datas.pai = stream.readInt8();
+			datas.hu = stream.readUint8();
+			datas.peng = stream.readUint8();
+			datas.gang = stream.readUint8();
+			datas.gangpai = gangpai_DataType.createFromStreamEx(stream);
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYER_ACTION_DIC v)
+		{
+			stream.writeInt8(v.pai);
+			stream.writeUint8(v.hu);
+			stream.writeUint8(v.peng);
+			stream.writeUint8(v.gang);
+			gangpai_DataType.addToStreamEx(stream, v.gangpai);
+		}
+	}
+
+
+
+	public class DATATYPE_TING_PAI_DIC : DATATYPE_BASE
+	{
+		public TING_PAI_DIC createFromStreamEx(MemoryStream stream)
+		{
+			TING_PAI_DIC datas = new TING_PAI_DIC();
+			datas.nousepai = stream.readUnicode();
+			datas.pai = stream.readUnicode();
+			datas.fan = stream.readUnicode();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, TING_PAI_DIC v)
+		{
+			stream.writeUnicode(v.nousepai);
+			stream.writeUnicode(v.pai);
+			stream.writeUnicode(v.fan);
+		}
+	}
+
+
+
+	public class DATATYPE_TING_PAI_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_TING_PAI_DIC itemType = new DATATYPE_TING_PAI_DIC();
+
+		public TING_PAI_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			TING_PAI_LIST datas = new TING_PAI_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, TING_PAI_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
 			};
 		}
 	}

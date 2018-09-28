@@ -21,8 +21,14 @@ namespace KBEngine
 
 		public Byte RoomType = 0;
 		public virtual void onRoomTypeChanged(Byte oldValue) {}
+		public Byte cur_turn = 0;
+		public virtual void onCur_turnChanged(Byte oldValue) {}
+		public Byte numOfMJ = 0;
+		public virtual void onNumOfMJChanged(Byte oldValue) {}
 		public Byte playerMaxCount = 0;
 		public virtual void onPlayerMaxCountChanged(Byte oldValue) {}
+		public ROOM_PUBLIC_INFO public_roomInfo = new ROOM_PUBLIC_INFO();
+		public virtual void onPublic_roomInfoChanged(ROOM_PUBLIC_INFO oldValue) {}
 		public UInt64 roomKey = 0;
 		public virtual void onRoomKeyChanged(UInt64 oldValue) {}
 
@@ -142,7 +148,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 9:
+					case 13:
 						Byte oldval_RoomType = RoomType;
 						RoomType = stream.readUint8();
 
@@ -155,6 +161,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onRoomTypeChanged(oldval_RoomType);
+						}
+
+						break;
+					case 18:
+						Byte oldval_cur_turn = cur_turn;
+						cur_turn = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onCur_turnChanged(oldval_cur_turn);
+						}
+						else
+						{
+							if(inWorld)
+								onCur_turnChanged(oldval_cur_turn);
 						}
 
 						break;
@@ -174,7 +196,23 @@ namespace KBEngine
 						}
 
 						break;
-					case 11:
+					case 16:
+						Byte oldval_numOfMJ = numOfMJ;
+						numOfMJ = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onNumOfMJChanged(oldval_numOfMJ);
+						}
+						else
+						{
+							if(inWorld)
+								onNumOfMJChanged(oldval_numOfMJ);
+						}
+
+						break;
+					case 15:
 						Byte oldval_playerMaxCount = playerMaxCount;
 						playerMaxCount = stream.readUint8();
 
@@ -206,7 +244,23 @@ namespace KBEngine
 						}
 
 						break;
-					case 8:
+					case 17:
+						ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
+						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[26]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPublic_roomInfoChanged(oldval_public_roomInfo);
+						}
+						else
+						{
+							if(inWorld)
+								onPublic_roomInfoChanged(oldval_public_roomInfo);
+						}
+
+						break;
+					case 12:
 						UInt64 oldval_roomKey = roomKey;
 						roomKey = stream.readUint64();
 
@@ -257,6 +311,27 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_cur_turn = cur_turn;
+			Property prop_cur_turn = pdatas[5];
+			if(prop_cur_turn.isBase())
+			{
+				if(inited && !inWorld)
+					onCur_turnChanged(oldval_cur_turn);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_cur_turn.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onCur_turnChanged(oldval_cur_turn);
+					}
+				}
+			}
+
 			Vector3 oldval_direction = direction;
 			Property prop_direction = pdatas[2];
 			if(prop_direction.isBase())
@@ -278,8 +353,29 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_numOfMJ = numOfMJ;
+			Property prop_numOfMJ = pdatas[6];
+			if(prop_numOfMJ.isBase())
+			{
+				if(inited && !inWorld)
+					onNumOfMJChanged(oldval_numOfMJ);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_numOfMJ.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onNumOfMJChanged(oldval_numOfMJ);
+					}
+				}
+			}
+
 			Byte oldval_playerMaxCount = playerMaxCount;
-			Property prop_playerMaxCount = pdatas[5];
+			Property prop_playerMaxCount = pdatas[7];
 			if(prop_playerMaxCount.isBase())
 			{
 				if(inited && !inWorld)
@@ -320,8 +416,29 @@ namespace KBEngine
 				}
 			}
 
+			ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
+			Property prop_public_roomInfo = pdatas[8];
+			if(prop_public_roomInfo.isBase())
+			{
+				if(inited && !inWorld)
+					onPublic_roomInfoChanged(oldval_public_roomInfo);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_public_roomInfo.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPublic_roomInfoChanged(oldval_public_roomInfo);
+					}
+				}
+			}
+
 			UInt64 oldval_roomKey = roomKey;
-			Property prop_roomKey = pdatas[6];
+			Property prop_roomKey = pdatas[9];
 			if(prop_roomKey.isBase())
 			{
 				if(inited && !inWorld)

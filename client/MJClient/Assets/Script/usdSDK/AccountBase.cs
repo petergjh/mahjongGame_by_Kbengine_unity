@@ -19,8 +19,16 @@ namespace KBEngine
 		public EntityBaseEntityCall_AccountBase baseEntityCall = null;
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
+		public TING_PAI_LIST TingPaiList = new TING_PAI_LIST();
+		public virtual void onTingPaiListChanged(TING_PAI_LIST oldValue) {}
+		public PLAYER_ACTION_DIC actionData = new PLAYER_ACTION_DIC();
+		public virtual void onActionDataChanged(PLAYER_ACTION_DIC oldValue) {}
+		public MJ_LIST holds = new MJ_LIST();
+		public virtual void onHoldsChanged(MJ_LIST oldValue) {}
 		public Byte isNewPlayer = 1;
 		public virtual void onIsNewPlayerChanged(Byte oldValue) {}
+		public Byte isReady = 0;
+		public virtual void onIsReadyChanged(Byte oldValue) {}
 		public UInt16 playerID = 0;
 		public virtual void onPlayerIDChanged(UInt16 oldValue) {}
 		public UInt16 playerID_base = 0;
@@ -33,7 +41,20 @@ namespace KBEngine
 		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void game_begin_push(); 
+		public abstract void game_chupai_push(); 
+		public abstract void game_mopai_push(SByte arg1); 
+		public abstract void hasTing(TING_PAI_LIST arg1); 
+		public abstract void has_action(); 
+		public abstract void onGang(UInt32 arg1, SByte arg2, string arg3); 
+		public abstract void onGetRoomInfo(ROOM_PUBLIC_INFO arg1); 
+		public abstract void onHu(UInt32 arg1, Byte arg2, SByte arg3); 
+		public abstract void onPlayCard(UInt32 arg1, SByte arg2); 
+		public abstract void onPlayCardOver(UInt32 arg1, SByte arg2); 
+		public abstract void otherPlayerMopai(UInt32 arg1); 
+		public abstract void peng_notify_push(UInt32 arg1, SByte arg2); 
 		public abstract void playerLevelRoom(); 
+		public abstract void upDataClientRoomInfo(ROOM_PUBLIC_INFO arg1); 
 
 		public AccountBase()
 		{
@@ -102,12 +123,68 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 10:
+				case 20:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 11:
+				case 23:
+					game_begin_push();
+					break;
+				case 26:
+					game_chupai_push();
+					break;
+				case 28:
+					SByte game_mopai_push_arg1 = stream.readInt8();
+					game_mopai_push(game_mopai_push_arg1);
+					break;
+				case 34:
+					TING_PAI_LIST hasTing_arg1 = ((DATATYPE_TING_PAI_LIST)method.args[0]).createFromStreamEx(stream);
+					hasTing(hasTing_arg1);
+					break;
+				case 25:
+					has_action();
+					break;
+				case 31:
+					UInt32 onGang_arg1 = stream.readUint32();
+					SByte onGang_arg2 = stream.readInt8();
+					string onGang_arg3 = stream.readUnicode();
+					onGang(onGang_arg1, onGang_arg2, onGang_arg3);
+					break;
+				case 22:
+					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
+					onGetRoomInfo(onGetRoomInfo_arg1);
+					break;
+				case 32:
+					UInt32 onHu_arg1 = stream.readUint32();
+					Byte onHu_arg2 = stream.readUint8();
+					SByte onHu_arg3 = stream.readInt8();
+					onHu(onHu_arg1, onHu_arg2, onHu_arg3);
+					break;
+				case 27:
+					UInt32 onPlayCard_arg1 = stream.readUint32();
+					SByte onPlayCard_arg2 = stream.readInt8();
+					onPlayCard(onPlayCard_arg1, onPlayCard_arg2);
+					break;
+				case 33:
+					UInt32 onPlayCardOver_arg1 = stream.readUint32();
+					SByte onPlayCardOver_arg2 = stream.readInt8();
+					onPlayCardOver(onPlayCardOver_arg1, onPlayCardOver_arg2);
+					break;
+				case 29:
+					UInt32 otherPlayerMopai_arg1 = stream.readUint32();
+					otherPlayerMopai(otherPlayerMopai_arg1);
+					break;
+				case 30:
+					UInt32 peng_notify_push_arg1 = stream.readUint32();
+					SByte peng_notify_push_arg2 = stream.readInt8();
+					peng_notify_push(peng_notify_push_arg1, peng_notify_push_arg2);
+					break;
+				case 21:
 					playerLevelRoom();
+					break;
+				case 24:
+					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
+					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
 				default:
 					break;
@@ -157,6 +234,38 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
+					case 10:
+						TING_PAI_LIST oldval_TingPaiList = TingPaiList;
+						TingPaiList = ((DATATYPE_TING_PAI_LIST)EntityDef.id2datatypes[29]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onTingPaiListChanged(oldval_TingPaiList);
+						}
+						else
+						{
+							if(inWorld)
+								onTingPaiListChanged(oldval_TingPaiList);
+						}
+
+						break;
+					case 9:
+						PLAYER_ACTION_DIC oldval_actionData = actionData;
+						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[27]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onActionDataChanged(oldval_actionData);
+						}
+						else
+						{
+							if(inWorld)
+								onActionDataChanged(oldval_actionData);
+						}
+
+						break;
 					case 40001:
 						Vector3 oldval_direction = direction;
 						direction = stream.readVector3();
@@ -173,6 +282,22 @@ namespace KBEngine
 						}
 
 						break;
+					case 8:
+						MJ_LIST oldval_holds = holds;
+						holds = ((DATATYPE_MJ_LIST)EntityDef.id2datatypes[22]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onHoldsChanged(oldval_holds);
+						}
+						else
+						{
+							if(inWorld)
+								onHoldsChanged(oldval_holds);
+						}
+
+						break;
 					case 5:
 						Byte oldval_isNewPlayer = isNewPlayer;
 						isNewPlayer = stream.readUint8();
@@ -186,6 +311,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onIsNewPlayerChanged(oldval_isNewPlayer);
+						}
+
+						break;
+					case 7:
+						Byte oldval_isReady = isReady;
+						isReady = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onIsReadyChanged(oldval_isReady);
+						}
+						else
+						{
+							if(inWorld)
+								onIsReadyChanged(oldval_isReady);
 						}
 
 						break;
@@ -299,6 +440,48 @@ namespace KBEngine
 			ScriptModule sm = EntityDef.moduledefs["Account"];
 			Dictionary<UInt16, Property> pdatas = sm.idpropertys;
 
+			TING_PAI_LIST oldval_TingPaiList = TingPaiList;
+			Property prop_TingPaiList = pdatas[4];
+			if(prop_TingPaiList.isBase())
+			{
+				if(inited && !inWorld)
+					onTingPaiListChanged(oldval_TingPaiList);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_TingPaiList.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onTingPaiListChanged(oldval_TingPaiList);
+					}
+				}
+			}
+
+			PLAYER_ACTION_DIC oldval_actionData = actionData;
+			Property prop_actionData = pdatas[5];
+			if(prop_actionData.isBase())
+			{
+				if(inited && !inWorld)
+					onActionDataChanged(oldval_actionData);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_actionData.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onActionDataChanged(oldval_actionData);
+					}
+				}
+			}
+
 			Vector3 oldval_direction = direction;
 			Property prop_direction = pdatas[2];
 			if(prop_direction.isBase())
@@ -320,8 +503,29 @@ namespace KBEngine
 				}
 			}
 
+			MJ_LIST oldval_holds = holds;
+			Property prop_holds = pdatas[6];
+			if(prop_holds.isBase())
+			{
+				if(inited && !inWorld)
+					onHoldsChanged(oldval_holds);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_holds.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onHoldsChanged(oldval_holds);
+					}
+				}
+			}
+
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[4];
+			Property prop_isNewPlayer = pdatas[7];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -341,8 +545,29 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_isReady = isReady;
+			Property prop_isReady = pdatas[8];
+			if(prop_isReady.isBase())
+			{
+				if(inited && !inWorld)
+					onIsReadyChanged(oldval_isReady);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_isReady.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onIsReadyChanged(oldval_isReady);
+					}
+				}
+			}
+
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[5];
+			Property prop_playerID = pdatas[9];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -363,7 +588,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[6];
+			Property prop_playerID_base = pdatas[10];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -384,7 +609,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[7];
+			Property prop_playerName = pdatas[11];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -405,7 +630,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[8];
+			Property prop_playerName_base = pdatas[12];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -447,7 +672,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[9];
+			Property prop_roomSeatIndex = pdatas[13];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)

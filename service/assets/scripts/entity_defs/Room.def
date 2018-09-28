@@ -16,6 +16,21 @@
 			<Type>			UINT8			</Type>
 			<Flags>			ALL_CLIENTS			</Flags>
 		</playerMaxCount>
+		<!-- 还剩多少张麻将 -->
+		<numOfMJ>
+			<Type>			UINT8			</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+		</numOfMJ>
+		<public_roomInfo>
+			<Type>			ROOM_PUBLIC_INFO			</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+		</public_roomInfo>
+		<!-- 当前出牌玩家的索引 -->
+		<cur_turn>
+			<Type>			UINT8			</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+		</cur_turn>
+		
 	</Properties>
 
 	<ClientMethods>		
@@ -47,6 +62,32 @@
 		<changeRoomSuccess>
 			<Arg>		ENTITY_ID		</Arg>
 		</changeRoomSuccess>
+
+		<reqGetRoomInfo>
+			<Exposed/>
+		</reqGetRoomInfo>
+
+		<reqChangeReadyState>
+			<Exposed/>
+			<Arg>		BOOL				</Arg>
+		</reqChangeReadyState>
+		<chuPai>
+			<Exposed/>
+			<Arg>		MJPAI				</Arg>
+		</chuPai>
+		<reqPeng>
+			<Exposed/>
+		</reqPeng>
+		<reqGang>
+			<Exposed/>
+			<Arg>		MJPAI		</Arg>
+		</reqGang>
+		<reqHu>
+			<Exposed/>
+		</reqHu>
+		<reqGuo>
+			<Exposed/>
+		</reqGuo>
 	</CellMethods>
 
 </root>

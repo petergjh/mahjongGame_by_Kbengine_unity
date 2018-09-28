@@ -30,6 +30,26 @@
 			<Type>	UINT8				</Type>
 			<Flags>	ALL_CLIENTS			</Flags>
 		</roomSeatIndex>
+
+		<isReady>
+			<Type>	BOOL				</Type>
+			<Flags>	ALL_CLIENTS			</Flags>
+		</isReady>
+		<holds>
+			<Type>	MJ_LIST				</Type>
+			<Flags>	OWN_CLIENT			</Flags>
+		</holds>
+		<actionData>
+			<Type>	PLAYER_ACTION_DIC				</Type>
+			<Flags>	OWN_CLIENT	</Flags>
+		</actionData>
+
+		<TingPaiList>
+			<Type>TING_PAI_LIST</Type>
+			<Flags>	OWN_CLIENT					</Flags>
+		</TingPaiList>
+		
+		
 	</Properties>
 
 	<ClientMethods>
@@ -38,6 +58,52 @@
 		</OnReqCreateAvatar>
 		<playerLevelRoom>
 		</playerLevelRoom>
+
+		<onGetRoomInfo>
+			<Arg>	ROOM_PUBLIC_INFO	</Arg>
+		</onGetRoomInfo>
+		<game_begin_push>
+		</game_begin_push>
+		<upDataClientRoomInfo>
+			<Arg>	ROOM_PUBLIC_INFO	</Arg>
+		</upDataClientRoomInfo>
+		<has_action>
+		</has_action>
+		<game_chupai_push>
+		</game_chupai_push>
+		<onPlayCard>
+			<Arg>	ENTITY_ID	</Arg>
+			<Arg>	MJPAI	</Arg>
+		</onPlayCard>
+		<game_mopai_push>
+			<Arg>		MJPAI		</Arg>
+		</game_mopai_push>
+		<otherPlayerMopai>
+			<Arg>	ENTITY_ID	</Arg>
+		</otherPlayerMopai>
+		<peng_notify_push>
+			<Arg>	ENTITY_ID	</Arg>
+			<Arg>		MJPAI		</Arg>
+		</peng_notify_push>
+		<onGang>
+			<Arg>	ENTITY_ID	</Arg>
+			<Arg>	MJPAI	</Arg>
+			<Arg>		UNICODE		</Arg>
+		</onGang>
+		<onHu>
+			<Arg>	ENTITY_ID	</Arg>
+			<Arg>	BOOL	</Arg>
+			<Arg>	MJPAI	</Arg>
+		</onHu>
+		<onPlayCardOver>
+			<Arg>	ENTITY_ID	</Arg>
+			<Arg>	MJPAI	</Arg>
+		</onPlayCardOver>
+
+		<hasTing>
+			<Arg>	TING_PAI_LIST	</Arg>
+		</hasTing>
+		
 	</ClientMethods>
 
 	<BaseMethods>
@@ -80,6 +146,40 @@
 			<Arg>		UINT8		</Arg>
 			<!-- 座位号 -->
 		</changeRoomSeatIndex>
+		
+		<playerReadyStateChange>
+			<Arg>		BOOL		</Arg>
+		</playerReadyStateChange>
+		<game_holds_push>
+			<Arg>		MJ_LIST		</Arg>			
+		</game_holds_push>
+
+		<game_action_push>
+			<Arg>		PLAYER_ACTION_DIC		</Arg>
+		</game_action_push>
+		<gang_notify_push>
+			<Arg>		MJPAI		</Arg>
+			<Arg>		UNICODE		</Arg>
+		</gang_notify_push>
+		<hu_push>
+			<Arg>		BOOL		</Arg>
+			<Arg>		MJPAI		</Arg>
+		</hu_push>
+		<game_chupai_notify_push>
+			<Arg>		MJPAI		</Arg>
+		</game_chupai_notify_push>
+		<game_mopai_push>
+			<Arg>		MJPAI		</Arg>
+		</game_mopai_push>
+		<peng_notify_push>
+			<Arg>		MJPAI		</Arg>
+		</peng_notify_push>
+
+		<has_ting>
+			<Arg>TING_PAI_LIST</Arg>
+		</has_ting>
+		
+		
 	</CellMethods>
 
 </root>

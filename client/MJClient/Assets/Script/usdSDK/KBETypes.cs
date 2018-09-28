@@ -782,7 +782,141 @@ namespace KBEngine
 		}
 	}
 
+	public struct BOOL
+	{
+		Byte value;
+
+		BOOL(Byte value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator Byte(BOOL value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator BOOL(int value)
+		{
+			Byte tvalue = (Byte)value;
+			return new BOOL(tvalue);
+		}
+
+		public static Byte MaxValue
+		{
+			get
+			{
+				return Byte.MaxValue;
+			}
+		}
+
+		public static Byte MinValue
+		{
+			get
+			{
+				return Byte.MinValue;
+			}
+		}
+	}
+
+	public struct MJPAI
+	{
+		SByte value;
+
+		MJPAI(SByte value)
+		{
+			this.value = value;
+		}
+
+		public static implicit operator SByte(MJPAI value)
+		{
+			return value.value;
+		}
+
+		public static implicit operator MJPAI(int value)
+		{
+			SByte tvalue = (SByte)value;
+			return new MJPAI(tvalue);
+		}
+
+		public static SByte MaxValue
+		{
+			get
+			{
+				return SByte.MaxValue;
+			}
+		}
+
+		public static SByte MinValue
+		{
+			get
+			{
+				return SByte.MinValue;
+			}
+		}
+	}
+
+	public class MJ_LIST : List<SByte>
+	{
+
+	}
+
 	public class ENTITY_LIST : List<byte[]>
+	{
+
+	}
+
+	public class PLAYER_PUBLIC_INFO
+	{
+		public UInt32 userId = 0;
+		public MJ_LIST folds = new MJ_LIST();
+		public MJ_LIST angangs = new MJ_LIST();
+		public MJ_LIST diangangs = new MJ_LIST();
+		public MJ_LIST wangangs = new MJ_LIST();
+		public MJ_LIST pengs = new MJ_LIST();
+		public MJ_LIST hus = new MJ_LIST();
+		public SByte que = 0;
+		public SByte holdsCount = 0;
+
+	}
+
+	public class PLAYERINFO_LIST : List<PLAYER_PUBLIC_INFO>
+	{
+
+	}
+
+	public class ROOM_PUBLIC_INFO
+	{
+		public Byte RoomType = 0;
+		public Byte playerMaxCount = 0;
+		public string state = "";
+		public SByte turn = 0;
+		public Byte numOfMJ = 0;
+		public SByte button = 0;
+		public PLAYERINFO_LIST playerInfo = new PLAYERINFO_LIST();
+		public SByte chuPai = 0;
+
+	}
+
+	public class PLAYER_ACTION_DIC
+	{
+		public SByte pai = 0;
+		public Byte hu = 0;
+		public Byte peng = 0;
+		public Byte gang = 0;
+		public MJ_LIST gangpai = new MJ_LIST();
+
+	}
+
+	public class TING_PAI_DIC
+	{
+		public string nousepai = "";
+		public string pai = "";
+		public string fan = "";
+
+	}
+
+	public class TING_PAI_LIST : List<TING_PAI_DIC>
 	{
 
 	}

@@ -38,11 +38,11 @@ public class GameManager : MonoBehaviour
 	{
 		KBEngine.Event.registerOut("addSpaceGeometryMapping", this, "addSpaceGeometryMapping");
 		KBEngine.Event.registerOut("onEnterWorld", this, "onEnterWorld");
-		//KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
+		KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
 	}
 	public void onEnterWorld(KBEngine.Entity entity)
 	{
-		if (MJpanel.instance == null)
+		if (MJpanel.roomIsIn == false)
 		{
 			pendingEnterEntityIDs.Add(entity.id);
 		}
@@ -50,7 +50,41 @@ public class GameManager : MonoBehaviour
 			MJpanel.instance.EnterWorld(entity);
 		}
 	}
-	public void gameSceneLoadeOver() {
+	public void onLeaveWorld(KBEngine.Entity entity) {
+		if (MJpanel.roomIsIn)
+		{
+			MJpanel.instance.LeaveWorld(entity);
+		}
+		else {
+			if (pendingEnterEntityIDs.Contains(entity.id)) {
+				pendingEnterEntityIDs.Remove(entity.id);
+			}
+
+		}	
+
+	}
+	public bool gameSceneLoadeOver() {
+		//无论如何先让房间先进场
+		bool hasRoom = false;
+		List<int> newEntityIDS = new List<int>();
+		newEntityIDS.Add(0);
+		foreach (Int32 id in pendingEnterEntityIDs)
+		{
+			KBEngine.Entity entity = KBEngineApp.app.findEntity(id);
+			if (entity.className == "Room")
+			{
+				newEntityIDS[0] = id;
+				hasRoom = true;
+			}
+			else {
+				newEntityIDS.Add(id);
+			}
+			
+		}
+		if (!hasRoom)
+			return false;
+
+		pendingEnterEntityIDs = newEntityIDS;
 		foreach (Int32 id in pendingEnterEntityIDs)
 		{
 			print(id);
@@ -62,6 +96,7 @@ public class GameManager : MonoBehaviour
 		}
 		pendingEnterEntityIDs.Clear();
 
+		return true;
 	}
 	void OnDestroy()
     {
