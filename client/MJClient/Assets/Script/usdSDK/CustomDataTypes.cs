@@ -51,7 +51,7 @@ namespace KBEngine
 			while(size > 0)
 			{
 				--size;
-				datas.Add(stream.readPython());
+				datas.Add(stream.readEntitycall());
 			};
 
 			return datas;
@@ -62,7 +62,88 @@ namespace KBEngine
 			stream.writeUint32((UInt32)v.Count);
 			for(int i=0; i<v.Count; ++i)
 			{
-				stream.writePython(v[i]);
+				stream.writeEntitycall(v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_FRIENDS_LIST : DATATYPE_BASE
+	{
+		public FRIENDS_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			FRIENDS_LIST datas = new FRIENDS_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(stream.readUint64());
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, FRIENDS_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				stream.writeUint64(v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYRE_DATA : DATATYPE_BASE
+	{
+		public PLAYRE_DATA createFromStreamEx(MemoryStream stream)
+		{
+			PLAYRE_DATA datas = new PLAYRE_DATA();
+			datas.playerName = stream.readUnicode();
+			datas.playerDBID = stream.readUint64();
+			datas.playerGold = stream.readUint32();
+			datas.isOnLine = stream.readUint8();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYRE_DATA v)
+		{
+			stream.writeUnicode(v.playerName);
+			stream.writeUint64(v.playerDBID);
+			stream.writeUint32(v.playerGold);
+			stream.writeUint8(v.isOnLine);
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYRE_DATA_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYRE_DATA itemType = new DATATYPE_PLAYRE_DATA();
+
+		public PLAYRE_DATA_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			PLAYRE_DATA_LIST datas = new PLAYRE_DATA_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYRE_DATA_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
 			};
 		}
 	}

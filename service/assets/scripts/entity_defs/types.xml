@@ -9,7 +9,33 @@
 	<ENTITY_LIST>
 		ARRAY<of>ENTITYCALL</of>
 	</ENTITY_LIST>
+	
+	<FRIENDS_LIST>
+		ARRAY<of>UINT64</of>
+	</FRIENDS_LIST>
+	
+	<PLAYRE_DATA>
+		FIXED_DICT
+		<Properties>
+			<playerName>
+				<Type>	UNICODE	</Type>
+			</playerName>
+			<playerDBID>
+				<Type>	UINT64	</Type>
+			</playerDBID>
+			<playerGold>
+				<Type>	UINT32	</Type>
+			</playerGold>
+			<isOnLine>
+				<Type>	BOOL	</Type>
+			</isOnLine>
+		</Properties>
+	</PLAYRE_DATA>
 
+	<PLAYRE_DATA_LIST>
+		ARRAY<of>PLAYRE_DATA</of>
+	</PLAYRE_DATA_LIST>
+	
 	<PLAYER_PUBLIC_INFO>
 		FIXED_DICT
 		<Properties>

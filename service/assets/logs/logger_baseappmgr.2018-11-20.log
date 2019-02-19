@@ -1,0 +1,63 @@
+ WARNING baseappmgr-1 28786 5000  [2018-11-20 00:46:14 172] - TCPPacketReceiver::processPendingEvents(192.168.0.107:50062): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   ERROR baseappmgr-1 28786 5000  [2018-11-20 00:46:14 195] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ WARNING baseappmgr-1 28786 5000  [2018-11-20 00:46:14 267] - TCPPacketReceiver::processPendingEvents(192.168.0.107:50066): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   ERROR baseappmgr-1 28786 5000  [2018-11-20 00:46:14 375] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:51 946] - -----------------------------------------------------------------------------------------
+
+
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:53 816] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:53 817] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:53 817] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:54 276] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:52696 )
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:54 316] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:52696, SOMAXCONN=5.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:54 316] - server-configs:
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:54 316] - 	internalAddr : 192.168.0.107:52696
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:54 317] - 	componentID : 5000
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:56 225] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 882. PID: 7500 ----
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:56 225] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:56 288] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:56 307] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:48:57 126] - ---- baseappmgr is running ----
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 13:48:57 330] - Components::process(): Request for the process of identity...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:04 748] - Components::findComponents: find logger(1)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:04 833] - Components::findComponents: found logger, addr:192.168.0.107:52693
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:04 834] - Components::addComponent: reset orderLog, uid=882!
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:04 834] - Components::addComponent[logger], uid=882, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:05 003] - Components::findComponents: find dbmgr(2)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:07 048] - Components::findComponents: find dbmgr(3)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:09 168] - Components::findComponents: find dbmgr(4)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:11 268] - Components::findComponents: find dbmgr(5)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:11 364] - Components::findComponents: found dbmgr, addr:192.168.0.107:52695
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:11 364] - Components::addComponent: reset orderLog, uid=882!
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:11 364] - Components::addComponent[dbmgr], uid=882, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:11 365] - Components::findComponents: found dbmgr, addr:192.168.0.107:52695
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:13 368] - Components::findComponents: find cellappmgr(1)...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:13 380] - Components::findComponents: found cellappmgr, addr:192.168.0.107:52694
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:13 380] - Components::addComponent[cellappmgr], uid=882, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:13 380] - Components::findComponents: found cellappmgr, addr:192.168.0.107:52694
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:15 408] - Components::findComponents: register self to dbmgr...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:15 488] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52694, extaddr:nonsupport, extport:0,  from 192.168.0.107:52712/0/0/0.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:15 489] - Components::findComponents: register self to cellappmgr...
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:15 507] - Components::process(): Found all the components!
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:26 408] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:loginapp, componentID:9000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52699, extaddr:192.168.0.107, extport:20013,  from 192.168.0.107:52724/0/0/0.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:26 408] - Components::addComponent[loginapp], uid=882, componentID=9000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:27 268] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52698, extaddr:nonsupport, extport:0,  from 192.168.0.107:52727/0/0/0.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:27 268] - Components::addComponent[cellapp], uid=882, componentID=8001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:35 148] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52709, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:52731/0/0/0.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:35 148] - Components::addComponent[baseapp], uid=882, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:40 537] - Baseappmgr::onBaseappInitProgress: cid=7001, progress=1.
+    INFO baseappmgr-1 882 5000  [2018-11-20 13:49:40 537] - Baseappmgr::onBaseappInitProgress: all completed!
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 13:56:08 551] - Baseappmgr::registerPendingAccountToBaseapp:1. allocBaseapp=7001, numEntities=1.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 13:56:37 771] - Baseappmgr::registerPendingAccountToBaseapp:2. allocBaseapp=7001, numEntities=3.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 13:58:32 771] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 13:58:47 492] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:09:06 576] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:13:29 877] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:18:05 879] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:21:00 441] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:26:46 283] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:26:59 963] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:29:39 924] - Baseappmgr::registerPendingAccountToBaseapp:22. allocBaseapp=7001, numEntities=4.
+   DEBUG baseappmgr-1 882 5000  [2018-11-20 14:29:45 064] - Baseappmgr::registerPendingAccountToBaseapp:11. allocBaseapp=7001, numEntities=5.
+ WARNING baseappmgr-1 882 5000  [2018-11-20 14:34:39 792] - TCPPacketReceiver::processPendingEvents(192.168.0.107:52724): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+   ERROR baseappmgr-1 882 5000  [2018-11-20 14:34:39 802] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054

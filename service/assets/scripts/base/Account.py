@@ -12,6 +12,14 @@ class Account(KBEngine.Proxy):
 		self.roomKey = 0;
 
 
+
+	def GetPlayerInfo(self):
+		_data={
+			"playerName":self.cellData["playerName"],
+			"playerDBID":self.databaseID,
+			"playerGold":self.cellData["playerGold"],
+			}
+		return _data;
 	def onTimer(self, id, userArg):
 		"""
 		KBEngine method.
@@ -29,6 +37,7 @@ class Account(KBEngine.Proxy):
 		cell部分。
 		"""
 		INFO_MSG("account[%i] entities enable. entityCall:%s" % (self.id, self.client))
+		KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
 			
 	def onLogOnAttempt(self, ip, port, password):
 		"""
@@ -44,6 +53,7 @@ class Account(KBEngine.Proxy):
 		客户端对应实体已经销毁
 		"""
 		DEBUG_MSG("Account[%i].onClientDeath:" % self.id)
+		KBEngine.globalData["AllPlayerPublicInfo"].deregister(self, self.databaseID)
 		#self.destroy()
 
 	def reqCreateAvatar(self,name):
@@ -92,11 +102,13 @@ class Account(KBEngine.Proxy):
 
 	def onLoseCell(self):
 		self.MainState = MAIN_STATE_IDEL
+		self.inRoom = False
 		if self.client:
 			self.client.playerLevelRoom()
 
 	def enterRoomSuccess(self,roomKey):
 		self.roomKey = roomKey
+		self.inRoom = True
 
 	def reqChangeRoom(self):
 		KBEngine.globalData["Halls"].changeRoom(self,self.roomKey)

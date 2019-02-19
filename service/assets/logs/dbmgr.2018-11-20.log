@@ -1,0 +1,100 @@
+ ERROR root [2018-11-20 00:46:14,195] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ ERROR root [2018-11-20 00:46:14,375] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+ ERROR root [2018-11-20 00:46:14,495] - Components::removeComponentByChannel: baseapp : 7001, Abnormal exit! errorno=10054
+  INFO root [2018-11-20 13:48:51,687] - 
+  INFO root [2018-11-20 13:48:51,814] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-20 13:48:52,669] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-20 13:48:52,670] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-20 13:48:52,670] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-20 13:48:53,298] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:52695 )
+  INFO root [2018-11-20 13:48:53,299] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:52695, SOMAXCONN=5.
+  INFO root [2018-11-20 13:48:53,330] - server-configs:
+  INFO root [2018-11-20 13:48:53,331] - 	internalAddr : 192.168.0.107:52695
+  INFO root [2018-11-20 13:48:53,332] - 	componentID : 4000
+  INFO root [2018-11-20 13:48:55,061] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 882. PID: 6464 ----
+  INFO root [2018-11-20 13:48:55,062] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-20 13:48:55,070] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-20 13:48:55,071] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-11-20 13:48:58,782] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-11-20 13:48:58,849] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-11-20 13:48:58,921] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-11-20 13:48:59,407] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-11-20 13:48:59,434] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-11-20 13:48:59,436] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-11-20 13:48:59,503] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-11-20 13:49:00,410] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-11-20 13:49:02,240] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-11-20 13:49:02,241] - Script::install(): KBExtra is successfully!
+  INFO root [2018-11-20 13:49:03,860] - Dbmgr::initializeEnd: digest(E3D4DB2FF7FE39CDDA547CF06250D868)
+S_INFO root [2018-11-20 13:49:03,861] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-11-20 13:49:03,950] - TelnetServer server is running on port 32000
+  INFO root [2018-11-20 13:49:03,985] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+  WARN root [2018-11-20 13:49:04,452] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+A2ADE2880076397046A96AF847AF3BC070F7E37430BCC3B08B5177E8335CE4D5A75A1D03082777FDAF24C715D3A915D2402690E05B0A98FC7511159BFF567E39DA4B4C5FCB4FC1C2EF6FD9E7C1AF212D472CC9B2346E5A1916C63CD65ADE5F3D016B8CBB603242D3C507A658E7A3EA7796AD564837F38A9B613F6D76C8B99DF3
+ DEBUG root [2018-11-20 13:49:05,235] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-20 13:49:06,838] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+  INFO root [2018-11-20 13:49:06,839] - DBUtil::createInterface[0x2cf204]: interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=yes.
+
+  INFO root [2018-11-20 13:49:06,865] - ThreadPool::createThreadPool: creating  threadpool...
+ DEBUG root [2018-11-20 13:49:06,867] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-20 13:49:06,868] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+  INFO root [2018-11-20 13:49:06,869] - ThreadPool::createThreadPool: successfully(5), newThreadCount=5, normalMaxThreadCount=5, maxThreadCount=5
+ DEBUG root [2018-11-20 13:49:06,870] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-20 13:49:06,871] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-20 13:49:06,871] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-20 13:49:06,873] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-20 13:49:06,874] - DBThread::onStart(): 0x6d6b78!
+ DEBUG root [2018-11-20 13:49:06,875] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-20 13:49:06,876] - DBThread::onStart(): 0x6d6c00!
+ DEBUG root [2018-11-20 13:49:06,878] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-20 13:49:06,878] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-20 13:49:06,879] - DBThread::onStart(): 0x6d6d10!
+ DEBUG root [2018-11-20 13:49:06,879] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-20 13:49:06,880] - DBThread::onStart(): 0x6d6d98!
+ DEBUG root [2018-11-20 13:49:06,880] - DBThread::onStart(): 0x6d6c88!
+  INFO root [2018-11-20 13:49:07,205] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:07,210] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:07,585] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:07,586] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-20 13:49:07,620] - DBTask::process(): took 0.27 seconds
+sql:(CREATE TABLE IF NOT EXISTS kbe_accountinfos (`accountName` varchar(128) not null, PRIMARY KEY idKey (`accountName`),`password` varchar(255),`bindata` blob,`email` varchar(191) not null, UNIQUE KEY `email` (`email`),`entityDBID` bigint(20) unsigned not null DEFAULT 0, UNIQUE KEY `entityDBID` (`entityDBID`),`flags` int unsigned not null DEFAULT 0,`deadline` bigint(20) not null DEFAULT 0,`regtime` bigint(20) not null DEFAULT 0,`lasttime` bigint(20) not null DEFAULT 0,`numlogin` int unsigned not null DEFAULT 0)ENGINE=InnoDB)
+  WARN root [2018-11-20 13:49:07,643] - DBTask::process(): took 0.33 seconds
+sql:(show index from tbl_CheckName)
+  INFO root [2018-11-20 13:49:07,653] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:07,944] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:08,352] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:08,354] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-20 13:49:08,356] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-20 13:49:08,357] - DBTask::process(): took 1.04 seconds
+sql:(delete from kbe_email_verification where logtime<1542689348 and type=3)
+  WARN root [2018-11-20 13:49:08,358] - DBTask::process(): took 0.74 seconds
+sql:(show index from tbl_Account)
+  WARN root [2018-11-20 13:49:08,663] - DBTask::process(): took 1.35 seconds
+sql:(insert into kbe_serverlog (heartbeatTime, logger) values(1542692947,4000) ON DUPLICATE KEY UPDATE heartbeatTime=1542692947)
+  WARN root [2018-11-20 13:49:08,716] - DBTask::process(): took 1.07 seconds
+sql:(show index from tbl_Halls)
+  WARN root [2018-11-20 13:49:08,717] - DBTask::process(): delay 1.15 seconds, try adjusting the kbengine[_defs].xml(numConnections) and MySQL(my.cnf->max_connections or innodb_flush_log_at_trx_commit)!
+sql:(show index from tbl_Room)
+  WARN root [2018-11-20 13:49:08,718] - DBTask::process(): took 0.36 seconds
+sql:(show index from tbl_Room)
+  INFO root [2018-11-20 13:49:08,789] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-20 13:49:08,789] - DBTask::process(): took 1.47 seconds
+sql:(delete from kbe_entitylog where logger in (4000))
+  WARN root [2018-11-20 13:49:08,802] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 4.94 seconds
+  INFO root [2018-11-20 13:49:09,379] - ---- dbmgr is running ----
+ DEBUG root [2018-11-20 13:49:09,379] - Components::process(): Request for the process of identity...
+  INFO root [2018-11-20 13:49:15,801] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52694, extaddr:nonsupport, extport:0,  from 192.168.0.107:52711/0/0/0.
+  INFO root [2018-11-20 13:49:15,802] - Components::addComponent: reset orderLog, uid=882!
+  INFO root [2018-11-20 13:49:15,803] - Components::addComponent[cellappmgr], uid=882, componentID=6000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:49:15,804] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52696, extaddr:nonsupport, extport:0,  from 192.168.0.107:52713/0/0/0.
+  INFO root [2018-11-20 13:49:15,805] - Components::addComponent[baseappmgr], uid=882, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:49:16,760] - Components::findComponents: find logger(1)...
+  INFO root [2018-11-20 13:49:16,794] - Components::findComponents: found logger, addr:192.168.0.107:52693
+  INFO root [2018-11-20 13:49:16,794] - Components::addComponent[logger], uid=882, componentID=2000, globalorderid=3, grouporderid=1, totalcount=1
+  WARN root [2018-11-20 13:49:16,835] - Forwarding logs to logger[192.168.0.107:52693/0/0/0]...
+ ERROR root [2018-11-20 14:34:39,802] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ ERROR root [2018-11-20 14:34:39,879] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+ ERROR root [2018-11-20 14:34:39,955] - Components::removeComponentByChannel: baseapp : 7001, Abnormal exit! errorno=10054

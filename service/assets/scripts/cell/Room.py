@@ -122,12 +122,13 @@ class Room(KBEngine.Entity):
 		self.begin()
 
 	#检测玩家是否听牌，并把听牌信息告诉他
-	def checkHasTingPai(self,game,seatData):
-		#已经胡牌的就不检测了
-		if seatData.hued:
-			return 
+	def checkHasTingPai(self,game,seatData):		
 		#去掉一张牌看能不能胡牌
 		tingList = []
+		#已经胡牌的就不检测了
+		if seatData.hued:
+			seatData.entity.cell.has_ting(tingList)
+			return 
 		for pai in seatData.holds:
 			newSeatData = copy.deepcopy(seatData)
 			newSeatData.holds.remove(pai);
@@ -179,8 +180,8 @@ class Room(KBEngine.Entity):
 		turnSeat = game.gameSeats[game.turn]
 		turnSeat.canChuPai = True;
 		self.setCurPlayerIndex(game.turn)
-		self.notif_chupai(game,turnSeat)
 		self.checkHasTingPai(game,turnSeat)
+		self.notif_chupai(game,turnSeat)
 		#暗杠
 		self.checkCanAnGang(game,turnSeat)
 		#检查胡 用最后一张来检查
@@ -663,6 +664,18 @@ class Room(KBEngine.Entity):
 		else:
 			game.turn = nextSeat
 
+	#游戏结束处理
+	def doGameOver(self,game):
+		game.state = "idle";
+		game.turn = -1
+		game.button = -1
+		self.clearPublicRoomInfo()
+		for i in range(len(game.seatList)):
+			seat = self.game.seatList[i];
+			seat.entity.cell.playerReadyStateChange(False)
+		for i in range( len(game.gameSeats)):
+			game.gameSeats[i].entity.client.onGameOver()
+
 	#玩家摸牌	
 	def doUserMoPai(self,game):
 		game.chuPai = -1
@@ -671,6 +684,7 @@ class Room(KBEngine.Entity):
 		#牌摸完了，结束
 		if pai == -1:
 			print("游戏结束---TODO")
+			self.doGameOver(game)
 			return
 		
 		#检查是否可以暗杠或者胡
@@ -686,8 +700,8 @@ class Room(KBEngine.Entity):
 		self.Main_checkCanHu(game,turnSeat,pai)
 		#广播通知玩家出牌方
 		turnSeat.canChuPai = True
-		self.notif_chupai(game,turnSeat)
 		self.checkHasTingPai(game,turnSeat)
+		self.notif_chupai(game,turnSeat)
 		self.setPublicRoomInfo()
 		#通知玩家做对应操作
 		self.sendOperations(game,turnSeat,game.chuPai)

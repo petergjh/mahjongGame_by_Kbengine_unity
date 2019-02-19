@@ -62,6 +62,14 @@ namespace KBEngine
 			return cellEntityCall;
 		}
 
+		public override void attachComponents()
+		{
+		}
+
+		public override void detachComponents()
+		{
+		}
+
 		public override void onRemoteMethodCall(MemoryStream stream)
 		{
 			ScriptModule sm = EntityDef.moduledefs["Room"];
@@ -69,14 +77,21 @@ namespace KBEngine
 			UInt16 methodUtype = 0;
 			UInt16 componentPropertyUType = 0;
 
-			if(sm.useMethodDescrAlias)
+			if(sm.usePropertyDescrAlias)
 			{
 				componentPropertyUType = stream.readUint8();
-				methodUtype = stream.readUint8();
 			}
 			else
 			{
 				componentPropertyUType = stream.readUint16();
+			}
+
+			if(sm.useMethodDescrAlias)
+			{
+				methodUtype = stream.readUint8();
+			}
+			else
+			{
 				methodUtype = stream.readUint16();
 			}
 
@@ -148,7 +163,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 13:
+					case 17:
 						Byte oldval_RoomType = RoomType;
 						RoomType = stream.readUint8();
 
@@ -164,7 +179,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 18:
+					case 22:
 						Byte oldval_cur_turn = cur_turn;
 						cur_turn = stream.readUint8();
 
@@ -196,7 +211,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 16:
+					case 20:
 						Byte oldval_numOfMJ = numOfMJ;
 						numOfMJ = stream.readUint8();
 
@@ -212,7 +227,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 15:
+					case 19:
 						Byte oldval_playerMaxCount = playerMaxCount;
 						playerMaxCount = stream.readUint8();
 
@@ -244,9 +259,9 @@ namespace KBEngine
 						}
 
 						break;
-					case 17:
+					case 21:
 						ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
-						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[26]).createFromStreamEx(stream);
+						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[29]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -260,7 +275,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 12:
+					case 16:
 						UInt64 oldval_roomKey = roomKey;
 						roomKey = stream.readUint64();
 

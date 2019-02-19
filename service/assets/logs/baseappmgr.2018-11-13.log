@@ -1,0 +1,121 @@
+ ERROR root [2018-11-13 00:27:13,762] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ ERROR root [2018-11-13 00:27:13,966] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+  INFO root [2018-11-13 10:22:18,660] - 
+  INFO root [2018-11-13 10:22:18,763] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-13 10:22:21,609] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-13 10:22:21,610] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-13 10:22:21,610] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-13 10:22:23,136] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:50392 )
+  INFO root [2018-11-13 10:22:23,366] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:50392, SOMAXCONN=5.
+  INFO root [2018-11-13 10:22:23,367] - server-configs:
+  INFO root [2018-11-13 10:22:23,367] - 	internalAddr : 192.168.0.107:50392
+  INFO root [2018-11-13 10:22:23,367] - 	componentID : 5000
+  INFO root [2018-11-13 10:22:23,584] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 16999. PID: 5220 ----
+  INFO root [2018-11-13 10:22:23,584] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-13 10:22:23,630] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-13 10:22:23,666] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-11-13 10:22:24,401] - ---- baseappmgr is running ----
+ DEBUG root [2018-11-13 10:22:25,148] - Components::process(): Request for the process of identity...
+  WARN root [2018-11-13 10:22:31,730] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.14 seconds
+  INFO root [2018-11-13 10:22:32,747] - Components::findComponents: find logger(1)...
+  INFO root [2018-11-13 10:22:32,816] - Components::findComponents: found logger, addr:192.168.0.107:50386
+  INFO root [2018-11-13 10:22:32,817] - Components::addComponent: reset orderLog, uid=16999!
+  INFO root [2018-11-13 10:22:32,817] - Components::addComponent[logger], uid=16999, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 10:22:33,029] - Components::findComponents: find dbmgr(2)...
+  WARN root [2018-11-13 10:22:34,120] - Forwarding logs to logger[192.168.0.107:50386/0/0/0]...
+ ERROR root [2018-11-13 13:58:57,029] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-11-13 13:58:57,052] - The following logs sent to logger failed:
+  WARN root [2018-11-13 13:58:57,052] - ==> [2018-11-13 13:58:57 021] TCPPacketReceiver::processPendingEvents(192.168.0.107:50386): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-11-13 13:58:57,052] - ==> [2018-11-13 13:58:57 029] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-11-13 13:58:57,110] - TCPPacketReceiver::processPendingEvents(192.168.0.107:50390): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-11-13 13:58:57,118] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-11-13 13:58:57,139] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-11-13 13:58:57,152] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-11-13 13:58:57,152] - Shutdowner::onShutdownEnd: shutting down
+  INFO root [2018-11-13 13:58:58,664] - 
+  INFO root [2018-11-13 13:58:58,673] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-13 13:58:58,674] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-13 13:58:58,674] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-13 13:58:58,674] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-13 13:58:58,676] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:51933 )
+  INFO root [2018-11-13 13:58:58,676] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:51933, SOMAXCONN=5.
+  INFO root [2018-11-13 13:58:58,677] - server-configs:
+  INFO root [2018-11-13 13:58:58,677] - 	internalAddr : 192.168.0.107:51933
+  INFO root [2018-11-13 13:58:58,677] - 	componentID : 5000
+  INFO root [2018-11-13 13:59:00,192] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 26735. PID: 9288 ----
+  INFO root [2018-11-13 13:59:00,193] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-13 13:59:00,194] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-13 13:59:00,196] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-11-13 13:59:00,553] - ---- baseappmgr is running ----
+ DEBUG root [2018-11-13 13:59:00,553] - Components::process(): Request for the process of identity...
+  INFO root [2018-11-13 13:59:07,676] - Components::findComponents: find logger(1)...
+  INFO root [2018-11-13 13:59:07,766] - Components::findComponents: found logger, addr:192.168.0.107:51935
+  INFO root [2018-11-13 13:59:07,766] - Components::addComponent: reset orderLog, uid=26735!
+  INFO root [2018-11-13 13:59:07,767] - Components::addComponent[logger], uid=26735, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 13:59:07,767] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-11-13 13:59:07,867] - Components::findComponents: found dbmgr, addr:192.168.0.107:51937
+  INFO root [2018-11-13 13:59:07,867] - Components::addComponent: reset orderLog, uid=26735!
+  INFO root [2018-11-13 13:59:07,867] - Components::addComponent[dbmgr], uid=26735, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 13:59:07,868] - Components::findComponents: found dbmgr, addr:192.168.0.107:51937
+  WARN root [2018-11-13 13:59:08,868] - Forwarding logs to logger[192.168.0.107:51935/0/0/0]...
+ ERROR root [2018-11-13 14:55:56,593] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ ERROR root [2018-11-13 14:55:56,708] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+  INFO root [2018-11-13 22:25:50,725] - 
+  INFO root [2018-11-13 22:25:50,920] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-13 22:25:52,669] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-13 22:25:52,670] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-13 22:25:52,670] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-13 22:25:53,306] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:49766 )
+  INFO root [2018-11-13 22:25:53,317] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:49766, SOMAXCONN=5.
+  INFO root [2018-11-13 22:25:53,318] - server-configs:
+  INFO root [2018-11-13 22:25:53,318] - 	internalAddr : 192.168.0.107:49766
+  INFO root [2018-11-13 22:25:53,318] - 	componentID : 5000
+  INFO root [2018-11-13 22:25:53,519] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 27620. PID: 8040 ----
+  INFO root [2018-11-13 22:25:53,520] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-13 22:25:53,573] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-13 22:25:53,575] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-11-13 22:25:54,204] - ---- baseappmgr is running ----
+ DEBUG root [2018-11-13 22:25:54,282] - Components::process(): Request for the process of identity...
+  INFO root [2018-11-13 22:26:01,616] - Components::findComponents: find logger(1)...
+  WARN root [2018-11-13 22:26:02,829] - Components::findComponents: not found logger!
+  INFO root [2018-11-13 22:26:03,836] - Components::findComponents: find dbmgr(1)...
+  INFO root [2018-11-13 22:26:05,928] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-11-13 22:26:08,028] - Components::findComponents: find dbmgr(3)...
+  INFO root [2018-11-13 22:26:10,136] - Components::findComponents: find dbmgr(4)...
+  INFO root [2018-11-13 22:26:12,257] - Components::findComponents: find dbmgr(5)...
+  INFO root [2018-11-13 22:26:14,356] - Components::findComponents: find dbmgr(6)...
+  INFO root [2018-11-13 22:26:14,444] - Components::findComponents: found dbmgr, addr:192.168.0.107:49765
+  INFO root [2018-11-13 22:26:14,444] - Components::addComponent: reset orderLog, uid=27620!
+  INFO root [2018-11-13 22:26:14,445] - Components::addComponent[dbmgr], uid=27620, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 22:26:14,445] - Components::findComponents: found dbmgr, addr:192.168.0.107:49765
+  INFO root [2018-11-13 22:26:16,456] - Components::findComponents: find cellappmgr(1)...
+  INFO root [2018-11-13 22:26:16,552] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49764
+  INFO root [2018-11-13 22:26:16,553] - Components::addComponent[cellappmgr], uid=27620, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 22:26:16,555] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49764
+  INFO root [2018-11-13 22:26:18,583] - ServerApp::onRegisterNewApp: uid:27620, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49764, extaddr:nonsupport, extport:0,  from 192.168.0.107:49784/0/0/0.
+  WARN root [2018-11-13 22:26:18,614] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+  INFO root [2018-11-13 22:26:18,629] - Components::findComponents: register self to dbmgr...
+  INFO root [2018-11-13 22:26:18,635] - Components::findComponents: register self to cellappmgr...
+  INFO root [2018-11-13 22:26:18,636] - Components::process(): Found all the components!
+  INFO root [2018-11-13 22:26:24,536] - ServerApp::onRegisterNewApp: uid:27620, username:, componentType:loginapp, componentID:9000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49767, extaddr:192.168.0.107, extport:20013,  from 192.168.0.107:49791/0/0/0.
+  INFO root [2018-11-13 22:26:24,537] - Components::addComponent[loginapp], uid=27620, componentID=9000, globalorderid=3, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 22:26:35,536] - ServerApp::onRegisterNewApp: uid:27620, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49768, extaddr:nonsupport, extport:0,  from 192.168.0.107:49804/0/0/0.
+  INFO root [2018-11-13 22:26:35,536] - Components::addComponent[cellapp], uid=27620, componentID=8001, globalorderid=4, grouporderid=1, totalcount=1
+  INFO root [2018-11-13 22:27:36,176] - ServerApp::onRegisterNewApp: uid:27620, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49789, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:49833/0/0/0.
+  INFO root [2018-11-13 22:27:36,177] - Components::addComponent[baseapp], uid=27620, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+  WARN root [2018-11-13 22:27:36,673] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.50 seconds
+  INFO root [2018-11-13 22:27:43,117] - Baseappmgr::onBaseappInitProgress: cid=7001, progress=1.
+  INFO root [2018-11-13 22:27:43,117] - Baseappmgr::onBaseappInitProgress: all completed!
+ DEBUG root [2018-11-13 23:15:34,856] - Baseappmgr::registerPendingAccountToBaseapp:1. allocBaseapp=7001, numEntities=1.
+ DEBUG root [2018-11-13 23:19:04,738] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+ DEBUG root [2018-11-13 23:19:26,458] - Baseappmgr::registerPendingAccountToBaseapp:2. allocBaseapp=7001, numEntities=3.
+ DEBUG root [2018-11-13 23:21:05,139] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+ DEBUG root [2018-11-13 23:50:32,171] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+ DEBUG root [2018-11-13 23:55:21,372] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+ DEBUG root [2018-11-13 23:55:33,492] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.

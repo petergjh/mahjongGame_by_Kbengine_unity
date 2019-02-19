@@ -1,0 +1,564 @@
+  INFO root [2018-08-23 10:59:02,042] - 
+  INFO root [2018-08-23 10:59:02,238] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 10:59:03,967] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 10:59:03,967] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 10:59:03,968] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 10:59:04,288] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50032 )
+  INFO root [2018-08-23 10:59:04,541] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50032, SOMAXCONN=5.
+  INFO root [2018-08-23 10:59:04,541] - server-configs:
+  INFO root [2018-08-23 10:59:04,541] - 	internalAddr : 192.168.0.106:50032
+  INFO root [2018-08-23 10:59:04,541] - 	componentID : 5000
+  INFO root [2018-08-23 10:59:05,092] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 22428. PID: 7248 ----
+  INFO root [2018-08-23 10:59:05,093] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 10:59:05,172] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 10:59:05,191] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 10:59:05,774] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 10:59:05,798] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 10:59:13,391] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 10:59:13,431] - Components::findComponents: found logger, addr:192.168.0.106:50029
+  INFO root [2018-08-23 10:59:13,431] - Components::addComponent: reset orderLog, uid=22428!
+  INFO root [2018-08-23 10:59:13,432] - Components::addComponent[logger], uid=22428, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 10:59:14,010] - Components::findComponents: find dbmgr(2)...
+  WARN root [2018-08-23 10:59:15,040] - Forwarding logs to logger[192.168.0.106:50029/0/0/0]...
+ ERROR root [2018-08-23 11:21:07,033] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:21:07,035] - The following logs sent to logger failed:
+  WARN root [2018-08-23 11:21:07,035] - ==> [2018-08-23 11:21:07 031] TCPPacketReceiver::processPendingEvents(192.168.0.106:50029): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:21:07,035] - ==> [2018-08-23 11:21:07 033] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 11:21:07,084] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50031): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:21:07,086] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:21:07,089] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 11:21:07,090] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 11:21:07,090] - Shutdowner::onShutdownEnd: shutting down
+  INFO root [2018-08-23 11:21:08,265] - 
+  INFO root [2018-08-23 11:21:08,267] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 11:21:08,268] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 11:21:08,268] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 11:21:08,268] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 11:21:08,271] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50302 )
+  INFO root [2018-08-23 11:21:08,272] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50302, SOMAXCONN=5.
+  INFO root [2018-08-23 11:21:08,272] - server-configs:
+  INFO root [2018-08-23 11:21:08,272] - 	internalAddr : 192.168.0.106:50302
+  INFO root [2018-08-23 11:21:08,272] - 	componentID : 5000
+  WARN root [2018-08-23 11:21:08,595] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20512, errorno=10048
+  INFO root [2018-08-23 11:21:08,598] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 26811. PID: 9732 ----
+  INFO root [2018-08-23 11:21:08,599] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 11:21:08,599] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 11:21:08,599] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 11:21:08,910] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 11:21:08,910] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 11:21:16,000] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 11:21:16,019] - Components::findComponents: found logger, addr:192.168.0.106:50298
+  INFO root [2018-08-23 11:21:16,019] - Components::addComponent: reset orderLog, uid=26811!
+  INFO root [2018-08-23 11:21:16,020] - Components::addComponent[logger], uid=26811, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:21:16,022] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 11:21:16,122] - Components::findComponents: found dbmgr, addr:192.168.0.106:50296
+  INFO root [2018-08-23 11:21:16,122] - Components::addComponent: reset orderLog, uid=26811!
+  INFO root [2018-08-23 11:21:16,122] - Components::addComponent[dbmgr], uid=26811, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:21:16,122] - Components::findComponents: found dbmgr, addr:192.168.0.106:50296
+  WARN root [2018-08-23 11:21:17,122] - Forwarding logs to logger[192.168.0.106:50298/0/0/0]...
+ ERROR root [2018-08-23 11:35:16,757] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:35:16,759] - The following logs sent to logger failed:
+  WARN root [2018-08-23 11:35:16,760] - ==> [2018-08-23 11:35:16 755] TCPPacketReceiver::processPendingEvents(192.168.0.106:50298): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:35:16,760] - ==> [2018-08-23 11:35:16 757] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 11:35:16,808] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50296): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:35:16,812] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:35:16,816] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 11:35:16,825] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 11:35:16,825] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 11:35:16,825] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 11:35:17,967] - 
+  INFO root [2018-08-23 11:35:17,967] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 11:35:17,968] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 11:35:17,968] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 11:35:17,968] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 11:35:17,975] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50477 )
+  INFO root [2018-08-23 11:35:17,975] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50477, SOMAXCONN=5.
+  INFO root [2018-08-23 11:35:17,975] - server-configs:
+  INFO root [2018-08-23 11:35:17,976] - 	internalAddr : 192.168.0.106:50477
+  INFO root [2018-08-23 11:35:17,976] - 	componentID : 5000
+  INFO root [2018-08-23 11:35:19,480] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 29586. PID: 6108 ----
+  INFO root [2018-08-23 11:35:19,481] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 11:35:19,481] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 11:35:19,481] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 11:35:19,834] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 11:35:19,834] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 11:35:26,962] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 11:35:26,990] - Components::findComponents: found logger, addr:192.168.0.106:50475
+  INFO root [2018-08-23 11:35:26,990] - Components::addComponent: reset orderLog, uid=29586!
+  INFO root [2018-08-23 11:35:26,990] - Components::addComponent[logger], uid=29586, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:35:26,991] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 11:35:27,094] - Components::findComponents: found dbmgr, addr:192.168.0.106:50469
+  INFO root [2018-08-23 11:35:27,095] - Components::addComponent: reset orderLog, uid=29586!
+  INFO root [2018-08-23 11:35:27,096] - Components::addComponent[dbmgr], uid=29586, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:35:27,096] - Components::findComponents: found dbmgr, addr:192.168.0.106:50469
+  WARN root [2018-08-23 11:35:28,097] - Forwarding logs to logger[192.168.0.106:50475/0/0/0]...
+ ERROR root [2018-08-23 11:52:27,155] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:52:27,160] - The following logs sent to logger failed:
+  WARN root [2018-08-23 11:52:27,160] - ==> [2018-08-23 11:52:27 152] TCPPacketReceiver::processPendingEvents(192.168.0.106:50475): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:52:27,160] - ==> [2018-08-23 11:52:27 155] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 11:52:27,208] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50469): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:52:27,209] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:52:27,214] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 11:52:27,215] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 11:52:27,215] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 11:52:27,215] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 11:52:28,306] - 
+  INFO root [2018-08-23 11:52:28,306] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 11:52:28,307] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 11:52:28,307] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 11:52:28,307] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 11:52:28,320] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50692 )
+  INFO root [2018-08-23 11:52:28,320] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50692, SOMAXCONN=5.
+  INFO root [2018-08-23 11:52:28,320] - server-configs:
+  INFO root [2018-08-23 11:52:28,320] - 	internalAddr : 192.168.0.106:50692
+  INFO root [2018-08-23 11:52:28,320] - 	componentID : 5000
+  INFO root [2018-08-23 11:52:29,832] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 185. PID: 9956 ----
+  INFO root [2018-08-23 11:52:29,833] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 11:52:29,833] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 11:52:29,833] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 11:52:30,171] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 11:52:30,172] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 11:52:37,293] - Components::findComponents: find logger(1)...
+  WARN root [2018-08-23 11:52:37,604] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20094, errorno=10048
+  INFO root [2018-08-23 11:52:38,614] - Components::findComponents: find logger(2)...
+  INFO root [2018-08-23 11:52:38,623] - Components::findComponents: found logger, addr:192.168.0.106:50695
+  INFO root [2018-08-23 11:52:38,624] - Components::addComponent: reset orderLog, uid=185!
+  INFO root [2018-08-23 11:52:38,625] - Components::addComponent[logger], uid=185, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:52:38,626] - Components::findComponents: find dbmgr(3)...
+  INFO root [2018-08-23 11:52:38,728] - Components::findComponents: found dbmgr, addr:192.168.0.106:50694
+  INFO root [2018-08-23 11:52:38,729] - Components::addComponent: reset orderLog, uid=185!
+  INFO root [2018-08-23 11:52:38,730] - Components::addComponent[dbmgr], uid=185, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:52:38,730] - Components::findComponents: found dbmgr, addr:192.168.0.106:50694
+  WARN root [2018-08-23 11:52:39,731] - Forwarding logs to logger[192.168.0.106:50695/0/0/0]...
+ ERROR root [2018-08-23 11:58:23,498] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:58:23,503] - The following logs sent to logger failed:
+  WARN root [2018-08-23 11:58:23,503] - ==> [2018-08-23 11:58:23 496] TCPPacketReceiver::processPendingEvents(192.168.0.106:50695): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:58:23,503] - ==> [2018-08-23 11:58:23 498] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 11:58:23,550] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50694): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 11:58:23,551] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 11:58:23,556] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 11:58:23,557] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 11:58:23,557] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 11:58:23,557] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 11:58:24,649] - 
+  INFO root [2018-08-23 11:58:24,651] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 11:58:24,651] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 11:58:24,652] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 11:58:24,652] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 11:58:24,667] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50823 )
+  INFO root [2018-08-23 11:58:24,668] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50823, SOMAXCONN=5.
+  INFO root [2018-08-23 11:58:24,668] - server-configs:
+  INFO root [2018-08-23 11:58:24,668] - 	internalAddr : 192.168.0.106:50823
+  INFO root [2018-08-23 11:58:24,668] - 	componentID : 5000
+  INFO root [2018-08-23 11:58:26,192] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 1348. PID: 11960 ----
+  INFO root [2018-08-23 11:58:26,193] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 11:58:26,194] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 11:58:26,195] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 11:58:26,600] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 11:58:26,600] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 11:58:33,676] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 11:58:33,782] - Components::findComponents: found logger, addr:192.168.0.106:50826
+  INFO root [2018-08-23 11:58:33,782] - Components::addComponent: reset orderLog, uid=1348!
+  INFO root [2018-08-23 11:58:33,783] - Components::addComponent[logger], uid=1348, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:58:33,785] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 11:58:33,885] - Components::findComponents: found dbmgr, addr:192.168.0.106:50831
+  INFO root [2018-08-23 11:58:33,885] - Components::addComponent: reset orderLog, uid=1348!
+  INFO root [2018-08-23 11:58:33,885] - Components::addComponent[dbmgr], uid=1348, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 11:58:33,885] - Components::findComponents: found dbmgr, addr:192.168.0.106:50831
+  WARN root [2018-08-23 11:58:34,886] - Forwarding logs to logger[192.168.0.106:50826/0/0/0]...
+ ERROR root [2018-08-23 12:04:45,712] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 12:04:45,716] - The following logs sent to logger failed:
+  WARN root [2018-08-23 12:04:45,717] - ==> [2018-08-23 12:04:45 711] TCPPacketReceiver::processPendingEvents(192.168.0.106:50826): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 12:04:45,717] - ==> [2018-08-23 12:04:45 712] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 12:04:45,769] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50831): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 12:04:45,770] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 12:04:45,777] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 12:04:45,778] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 12:04:45,778] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 12:04:45,779] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 12:04:46,876] - 
+  INFO root [2018-08-23 12:04:46,879] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 12:04:46,879] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 12:04:46,879] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 12:04:46,880] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 12:04:46,883] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:50928 )
+  INFO root [2018-08-23 12:04:46,884] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:50928, SOMAXCONN=5.
+  INFO root [2018-08-23 12:04:46,884] - server-configs:
+  INFO root [2018-08-23 12:04:46,884] - 	internalAddr : 192.168.0.106:50928
+  INFO root [2018-08-23 12:04:46,884] - 	componentID : 5000
+  INFO root [2018-08-23 12:04:48,399] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 2595. PID: 13164 ----
+  INFO root [2018-08-23 12:04:48,400] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 12:04:48,401] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 12:04:48,401] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 12:04:48,783] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 12:04:48,783] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 12:04:55,902] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 12:04:55,948] - Components::findComponents: found logger, addr:192.168.0.106:50936
+  INFO root [2018-08-23 12:04:55,949] - Components::addComponent: reset orderLog, uid=2595!
+  INFO root [2018-08-23 12:04:55,949] - Components::addComponent[logger], uid=2595, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 12:04:55,950] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 12:04:56,053] - Components::findComponents: found dbmgr, addr:192.168.0.106:50931
+  INFO root [2018-08-23 12:04:56,054] - Components::addComponent: reset orderLog, uid=2595!
+  INFO root [2018-08-23 12:04:56,055] - Components::addComponent[dbmgr], uid=2595, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 12:04:56,055] - Components::findComponents: found dbmgr, addr:192.168.0.106:50931
+  WARN root [2018-08-23 12:04:57,056] - Forwarding logs to logger[192.168.0.106:50936/0/0/0]...
+ ERROR root [2018-08-23 15:18:30,560] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 15:18:30,570] - The following logs sent to logger failed:
+  WARN root [2018-08-23 15:18:30,571] - ==> [2018-08-23 15:18:30 557] TCPPacketReceiver::processPendingEvents(192.168.0.106:50936): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 15:18:30,571] - ==> [2018-08-23 15:18:30 560] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 15:18:30,629] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50931): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 15:18:30,633] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 15:18:30,647] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 15:18:30,652] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 15:18:30,652] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 15:18:30,652] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 15:18:31,954] - 
+  INFO root [2018-08-23 15:18:31,956] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 15:18:31,956] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 15:18:31,956] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 15:18:31,957] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 15:18:31,966] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:55508 )
+  INFO root [2018-08-23 15:18:31,966] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:55508, SOMAXCONN=5.
+  INFO root [2018-08-23 15:18:31,966] - server-configs:
+  INFO root [2018-08-23 15:18:31,967] - 	internalAddr : 192.168.0.106:55508
+  INFO root [2018-08-23 15:18:31,967] - 	componentID : 5000
+  WARN root [2018-08-23 15:18:32,277] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20840, errorno=10048
+  INFO root [2018-08-23 15:18:32,280] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 7790. PID: 15956 ----
+  INFO root [2018-08-23 15:18:32,281] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 15:18:32,281] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 15:18:32,281] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 15:18:32,601] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 15:18:32,601] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 15:18:39,702] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 15:18:39,728] - Components::findComponents: found logger, addr:192.168.0.106:55503
+  INFO root [2018-08-23 15:18:39,728] - Components::addComponent: reset orderLog, uid=7790!
+  INFO root [2018-08-23 15:18:39,729] - Components::addComponent[logger], uid=7790, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 15:18:39,730] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 15:18:39,833] - Components::findComponents: found dbmgr, addr:192.168.0.106:55505
+  INFO root [2018-08-23 15:18:39,833] - Components::addComponent: reset orderLog, uid=7790!
+  INFO root [2018-08-23 15:18:39,834] - Components::addComponent[dbmgr], uid=7790, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 15:18:39,834] - Components::findComponents: found dbmgr, addr:192.168.0.106:55505
+  WARN root [2018-08-23 15:18:40,835] - Forwarding logs to logger[192.168.0.106:55503/0/0/0]...
+ ERROR root [2018-08-23 16:12:55,978] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:12:55,988] - The following logs sent to logger failed:
+  WARN root [2018-08-23 16:12:55,988] - ==> [2018-08-23 16:12:55 975] TCPPacketReceiver::processPendingEvents(192.168.0.106:55503): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:12:55,988] - ==> [2018-08-23 16:12:55 979] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 16:12:56,042] - TCPPacketReceiver::processPendingEvents(192.168.0.106:55505): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:12:56,046] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:12:56,062] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 16:12:56,073] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 16:12:56,074] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 16:12:56,074] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 16:12:57,335] - 
+  INFO root [2018-08-23 16:12:57,336] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 16:12:57,337] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 16:12:57,337] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 16:12:57,337] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 16:12:57,341] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:56175 )
+  INFO root [2018-08-23 16:12:57,342] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:56175, SOMAXCONN=5.
+  INFO root [2018-08-23 16:12:57,342] - server-configs:
+  INFO root [2018-08-23 16:12:57,342] - 	internalAddr : 192.168.0.106:56175
+  INFO root [2018-08-23 16:12:57,342] - 	componentID : 5000
+  INFO root [2018-08-23 16:12:58,846] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 18452. PID: 15812 ----
+  INFO root [2018-08-23 16:12:58,846] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 16:12:58,847] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 16:12:58,847] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 16:12:59,189] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 16:12:59,189] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 16:13:06,287] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 16:13:06,370] - Components::findComponents: found logger, addr:192.168.0.106:56181
+  INFO root [2018-08-23 16:13:06,372] - Components::addComponent: reset orderLog, uid=18452!
+  INFO root [2018-08-23 16:13:06,372] - Components::addComponent[logger], uid=18452, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:13:06,377] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 16:13:06,477] - Components::findComponents: found dbmgr, addr:192.168.0.106:56182
+  INFO root [2018-08-23 16:13:06,477] - Components::addComponent: reset orderLog, uid=18452!
+  INFO root [2018-08-23 16:13:06,478] - Components::addComponent[dbmgr], uid=18452, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:13:06,478] - Components::findComponents: found dbmgr, addr:192.168.0.106:56182
+  WARN root [2018-08-23 16:13:07,478] - Forwarding logs to logger[192.168.0.106:56181/0/0/0]...
+ ERROR root [2018-08-23 16:14:07,282] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:14:07,299] - The following logs sent to logger failed:
+  WARN root [2018-08-23 16:14:07,300] - ==> [2018-08-23 16:14:07 278] TCPPacketReceiver::processPendingEvents(192.168.0.106:56181): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:14:07,300] - ==> [2018-08-23 16:14:07 282] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 16:14:07,352] - TCPPacketReceiver::processPendingEvents(192.168.0.106:56182): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:14:07,356] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:14:07,373] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 16:14:07,374] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 16:14:07,374] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 16:14:07,374] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 16:14:08,644] - 
+  INFO root [2018-08-23 16:14:08,645] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 16:14:08,646] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 16:14:08,646] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 16:14:08,647] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 16:14:08,651] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:56222 )
+  INFO root [2018-08-23 16:14:08,651] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:56222, SOMAXCONN=5.
+  INFO root [2018-08-23 16:14:08,652] - server-configs:
+  INFO root [2018-08-23 16:14:08,652] - 	internalAddr : 192.168.0.106:56222
+  INFO root [2018-08-23 16:14:08,652] - 	componentID : 5000
+  INFO root [2018-08-23 16:14:10,158] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 18687. PID: 14248 ----
+  INFO root [2018-08-23 16:14:10,159] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 16:14:10,159] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 16:14:10,159] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 16:14:10,508] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 16:14:10,509] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 16:14:17,620] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 16:14:17,712] - Components::findComponents: found logger, addr:192.168.0.106:56221
+  INFO root [2018-08-23 16:14:17,712] - Components::addComponent: reset orderLog, uid=18687!
+  INFO root [2018-08-23 16:14:17,712] - Components::addComponent[logger], uid=18687, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:14:17,713] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 16:14:17,713] - Components::findComponents: found logger, addr:192.168.0.106:56221
+  INFO root [2018-08-23 16:14:17,814] - Components::findComponents: found dbmgr, addr:192.168.0.106:56219
+  INFO root [2018-08-23 16:14:17,815] - Components::addComponent: reset orderLog, uid=18687!
+  INFO root [2018-08-23 16:14:17,815] - Components::addComponent[dbmgr], uid=18687, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:14:17,815] - Components::findComponents: found dbmgr, addr:192.168.0.106:56219
+  WARN root [2018-08-23 16:14:18,815] - Forwarding logs to logger[192.168.0.106:56221/0/0/0]...
+ ERROR root [2018-08-23 16:18:16,576] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:18:16,587] - The following logs sent to logger failed:
+  WARN root [2018-08-23 16:18:16,587] - ==> [2018-08-23 16:18:16 573] TCPPacketReceiver::processPendingEvents(192.168.0.106:56221): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:18:16,588] - ==> [2018-08-23 16:18:16 576] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 16:18:16,647] - TCPPacketReceiver::processPendingEvents(192.168.0.106:56219): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:18:16,660] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:18:16,666] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 16:18:16,667] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 16:18:16,667] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 16:18:16,667] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 16:18:17,939] - 
+  INFO root [2018-08-23 16:18:17,940] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 16:18:17,940] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 16:18:17,941] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 16:18:17,941] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 16:18:17,946] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:56302 )
+  INFO root [2018-08-23 16:18:17,946] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:56302, SOMAXCONN=5.
+  INFO root [2018-08-23 16:18:17,946] - server-configs:
+  INFO root [2018-08-23 16:18:17,946] - 	internalAddr : 192.168.0.106:56302
+  INFO root [2018-08-23 16:18:17,946] - 	componentID : 5000
+  WARN root [2018-08-23 16:18:18,257] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20966, errorno=10048
+  INFO root [2018-08-23 16:18:18,261] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 19500. PID: 14528 ----
+  INFO root [2018-08-23 16:18:18,261] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 16:18:18,261] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 16:18:18,262] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 16:18:18,612] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 16:18:18,612] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 16:18:25,723] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 16:18:25,751] - Components::findComponents: found logger, addr:192.168.0.106:56297
+  INFO root [2018-08-23 16:18:25,751] - Components::addComponent: reset orderLog, uid=19500!
+  INFO root [2018-08-23 16:18:25,752] - Components::addComponent[logger], uid=19500, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:18:25,754] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 16:18:25,854] - Components::findComponents: found dbmgr, addr:192.168.0.106:56300
+  INFO root [2018-08-23 16:18:25,854] - Components::addComponent: reset orderLog, uid=19500!
+  INFO root [2018-08-23 16:18:25,854] - Components::addComponent[dbmgr], uid=19500, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:18:25,855] - Components::findComponents: found dbmgr, addr:192.168.0.106:56300
+  WARN root [2018-08-23 16:18:26,855] - Forwarding logs to logger[192.168.0.106:56297/0/0/0]...
+ ERROR root [2018-08-23 16:21:56,311] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:21:56,326] - The following logs sent to logger failed:
+  WARN root [2018-08-23 16:21:56,326] - ==> [2018-08-23 16:21:56 306] TCPPacketReceiver::processPendingEvents(192.168.0.106:56297): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:21:56,326] - ==> [2018-08-23 16:21:56 311] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 16:21:56,381] - TCPPacketReceiver::processPendingEvents(192.168.0.106:56300): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:21:56,385] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:21:56,401] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 16:21:56,403] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 16:21:56,403] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 16:21:56,403] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 16:21:57,687] - 
+  INFO root [2018-08-23 16:21:57,688] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 16:21:57,688] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 16:21:57,688] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 16:21:57,688] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 16:21:57,697] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:56361 )
+  INFO root [2018-08-23 16:21:57,698] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:56361, SOMAXCONN=5.
+  INFO root [2018-08-23 16:21:57,698] - server-configs:
+  INFO root [2018-08-23 16:21:57,698] - 	internalAddr : 192.168.0.106:56361
+  INFO root [2018-08-23 16:21:57,698] - 	componentID : 5000
+  INFO root [2018-08-23 16:21:59,213] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 20218. PID: 18044 ----
+  INFO root [2018-08-23 16:21:59,214] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 16:21:59,215] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 16:21:59,216] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 16:21:59,554] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 16:21:59,554] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 16:22:06,696] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 16:22:06,717] - Components::findComponents: found logger, addr:192.168.0.106:56357
+  INFO root [2018-08-23 16:22:06,718] - Components::addComponent: reset orderLog, uid=20218!
+  INFO root [2018-08-23 16:22:06,718] - Components::addComponent[logger], uid=20218, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:22:06,718] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 16:22:06,822] - Components::findComponents: found dbmgr, addr:192.168.0.106:56363
+  INFO root [2018-08-23 16:22:06,822] - Components::addComponent: reset orderLog, uid=20218!
+  INFO root [2018-08-23 16:22:06,823] - Components::addComponent[dbmgr], uid=20218, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:22:06,823] - Components::findComponents: found dbmgr, addr:192.168.0.106:56363
+  WARN root [2018-08-23 16:22:07,824] - Forwarding logs to logger[192.168.0.106:56357/0/0/0]...
+ ERROR root [2018-08-23 16:37:35,282] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:37:35,295] - The following logs sent to logger failed:
+  WARN root [2018-08-23 16:37:35,295] - ==> [2018-08-23 16:37:35 272] TCPPacketReceiver::processPendingEvents(192.168.0.106:56357): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:37:35,295] - ==> [2018-08-23 16:37:35 283] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 16:37:35,349] - TCPPacketReceiver::processPendingEvents(192.168.0.106:56363): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 16:37:35,353] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 16:37:35,369] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 16:37:35,377] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 16:37:35,377] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 16:37:35,377] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 16:37:36,687] - 
+  INFO root [2018-08-23 16:37:36,687] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 16:37:36,688] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 16:37:36,688] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 16:37:36,688] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 16:37:36,690] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:60628 )
+  INFO root [2018-08-23 16:37:36,690] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:60628, SOMAXCONN=5.
+  INFO root [2018-08-23 16:37:36,690] - server-configs:
+  INFO root [2018-08-23 16:37:36,690] - 	internalAddr : 192.168.0.106:60628
+  INFO root [2018-08-23 16:37:36,691] - 	componentID : 5000
+  INFO root [2018-08-23 16:37:38,205] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 23285. PID: 14852 ----
+  INFO root [2018-08-23 16:37:38,206] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 16:37:38,207] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 16:37:38,208] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 16:37:38,586] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 16:37:38,586] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 16:37:45,689] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 16:37:45,737] - Components::findComponents: found logger, addr:192.168.0.106:60629
+  INFO root [2018-08-23 16:37:45,738] - Components::addComponent: reset orderLog, uid=23285!
+  INFO root [2018-08-23 16:37:45,739] - Components::addComponent[logger], uid=23285, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:37:45,741] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 16:37:45,843] - Components::findComponents: found dbmgr, addr:192.168.0.106:60626
+  INFO root [2018-08-23 16:37:45,844] - Components::addComponent: reset orderLog, uid=23285!
+  INFO root [2018-08-23 16:37:45,844] - Components::addComponent[dbmgr], uid=23285, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 16:37:45,844] - Components::findComponents: found dbmgr, addr:192.168.0.106:60626
+  WARN root [2018-08-23 16:37:46,844] - Forwarding logs to logger[192.168.0.106:60629/0/0/0]...
+ ERROR root [2018-08-23 17:33:50,829] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:33:50,843] - The following logs sent to logger failed:
+  WARN root [2018-08-23 17:33:50,844] - ==> [2018-08-23 17:33:50 825] TCPPacketReceiver::processPendingEvents(192.168.0.106:60629): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:33:50,844] - ==> [2018-08-23 17:33:50 829] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 17:33:50,904] - TCPPacketReceiver::processPendingEvents(192.168.0.106:60626): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:33:50,922] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:33:50,933] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 17:33:50,934] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 17:33:50,934] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 17:33:50,935] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 17:33:52,217] - 
+  INFO root [2018-08-23 17:33:52,218] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 17:33:52,219] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 17:33:52,219] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 17:33:52,219] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 17:33:52,239] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:63987 )
+  INFO root [2018-08-23 17:33:52,240] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:63987, SOMAXCONN=5.
+  INFO root [2018-08-23 17:33:52,240] - server-configs:
+  INFO root [2018-08-23 17:33:52,240] - 	internalAddr : 192.168.0.106:63987
+  INFO root [2018-08-23 17:33:52,240] - 	componentID : 5000
+  INFO root [2018-08-23 17:33:53,755] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 1538. PID: 11936 ----
+  INFO root [2018-08-23 17:33:53,757] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 17:33:53,758] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 17:33:53,759] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 17:33:54,193] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 17:33:54,193] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 17:34:01,320] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 17:34:01,397] - Components::findComponents: found logger, addr:192.168.0.106:63991
+  INFO root [2018-08-23 17:34:01,398] - Components::addComponent: reset orderLog, uid=1538!
+  INFO root [2018-08-23 17:34:01,399] - Components::addComponent[logger], uid=1538, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:34:01,401] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 17:34:01,502] - Components::findComponents: found dbmgr, addr:192.168.0.106:63990
+  INFO root [2018-08-23 17:34:01,502] - Components::addComponent: reset orderLog, uid=1538!
+  INFO root [2018-08-23 17:34:01,503] - Components::addComponent[dbmgr], uid=1538, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:34:01,503] - Components::findComponents: found dbmgr, addr:192.168.0.106:63990
+  WARN root [2018-08-23 17:34:02,503] - Forwarding logs to logger[192.168.0.106:63991/0/0/0]...
+ ERROR root [2018-08-23 17:43:09,349] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:43:09,369] - The following logs sent to logger failed:
+  WARN root [2018-08-23 17:43:09,370] - ==> [2018-08-23 17:43:09 344] TCPPacketReceiver::processPendingEvents(192.168.0.106:63991): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:43:09,370] - ==> [2018-08-23 17:43:09 350] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 17:43:09,429] - TCPPacketReceiver::processPendingEvents(192.168.0.106:63990): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:43:09,434] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:43:09,456] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 17:43:09,458] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 17:43:09,458] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 17:43:09,459] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 17:43:10,804] - 
+  INFO root [2018-08-23 17:43:10,808] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 17:43:10,809] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 17:43:10,809] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 17:43:10,809] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 17:43:10,821] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:64119 )
+  INFO root [2018-08-23 17:43:10,822] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:64119, SOMAXCONN=5.
+  INFO root [2018-08-23 17:43:10,822] - server-configs:
+  INFO root [2018-08-23 17:43:10,822] - 	internalAddr : 192.168.0.106:64119
+  INFO root [2018-08-23 17:43:10,822] - 	componentID : 5000
+  INFO root [2018-08-23 17:43:12,327] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 3364. PID: 11776 ----
+  INFO root [2018-08-23 17:43:12,328] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 17:43:12,328] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 17:43:12,328] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 17:43:12,693] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 17:43:12,693] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 17:43:19,812] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 17:43:19,857] - Components::findComponents: found logger, addr:192.168.0.106:64124
+  INFO root [2018-08-23 17:43:19,858] - Components::addComponent: reset orderLog, uid=3364!
+  INFO root [2018-08-23 17:43:19,858] - Components::addComponent[logger], uid=3364, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:43:19,861] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 17:43:19,960] - Components::findComponents: found dbmgr, addr:192.168.0.106:64123
+  INFO root [2018-08-23 17:43:19,960] - Components::addComponent: reset orderLog, uid=3364!
+  INFO root [2018-08-23 17:43:19,960] - Components::addComponent[dbmgr], uid=3364, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:43:19,960] - Components::findComponents: found dbmgr, addr:192.168.0.106:64123
+  WARN root [2018-08-23 17:43:20,960] - Forwarding logs to logger[192.168.0.106:64124/0/0/0]...
+ ERROR root [2018-08-23 17:45:28,115] - Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:45:28,130] - The following logs sent to logger failed:
+  WARN root [2018-08-23 17:45:28,130] - ==> [2018-08-23 17:45:28 110] TCPPacketReceiver::processPendingEvents(192.168.0.106:64124): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:45:28,130] - ==> [2018-08-23 17:45:28 115] Components::removeComponentByChannel: logger : 2000, Abnormal exit! errorno=10054
+  WARN root [2018-08-23 17:45:28,194] - TCPPacketReceiver::processPendingEvents(192.168.0.106:64123): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+ ERROR root [2018-08-23 17:45:28,200] - Components::removeComponentByChannel: dbmgr : 4000, Abnormal exit! errorno=10054
+  INFO root [2018-08-23 17:45:28,220] - Shutdowner::onShutdownBegin: shutting down(period=0, tickPeriod=1)
+  INFO root [2018-08-23 17:45:28,222] - Shutdowner::onShutdown: shutting down
+  INFO root [2018-08-23 17:45:28,222] - Shutdowner::onShutdownEnd: shutting down
+ DEBUG root [2018-08-23 17:45:28,222] - ThreadPool::destroy(): starting size 2.
+  INFO root [2018-08-23 17:45:29,578] - 
+  INFO root [2018-08-23 17:45:29,578] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-08-23 17:45:29,578] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-08-23 17:45:29,579] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-08-23 17:45:29,579] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-08-23 17:45:29,583] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:64191 )
+  INFO root [2018-08-23 17:45:29,583] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:64191, SOMAXCONN=5.
+  INFO root [2018-08-23 17:45:29,584] - server-configs:
+  INFO root [2018-08-23 17:45:29,584] - 	internalAddr : 192.168.0.106:64191
+  INFO root [2018-08-23 17:45:29,584] - 	componentID : 5000
+  WARN root [2018-08-23 17:45:29,900] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20153, errorno=10048
+  INFO root [2018-08-23 17:45:29,903] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 3814. PID: 15920 ----
+  INFO root [2018-08-23 17:45:29,904] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-08-23 17:45:29,904] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-08-23 17:45:29,904] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-08-23 17:45:30,229] - ---- baseappmgr is running ----
+ DEBUG root [2018-08-23 17:45:30,230] - Components::process(): Request for the process of identity...
+  INFO root [2018-08-23 17:45:37,305] - Components::findComponents: find logger(1)...
+  INFO root [2018-08-23 17:45:37,363] - Components::findComponents: found logger, addr:192.168.0.106:64189
+  INFO root [2018-08-23 17:45:37,363] - Components::addComponent: reset orderLog, uid=3814!
+  INFO root [2018-08-23 17:45:37,364] - Components::addComponent[logger], uid=3814, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:45:37,365] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-08-23 17:45:37,469] - Components::findComponents: found dbmgr, addr:192.168.0.106:64186
+  INFO root [2018-08-23 17:45:37,470] - Components::addComponent: reset orderLog, uid=3814!
+  INFO root [2018-08-23 17:45:37,470] - Components::addComponent[dbmgr], uid=3814, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-08-23 17:45:37,471] - Components::findComponents: found dbmgr, addr:192.168.0.106:64186
+  WARN root [2018-08-23 17:45:38,471] - Forwarding logs to logger[192.168.0.106:64189/0/0/0]...
+ ERROR root [2018-08-23 23:05:43,251] - Components::removeComponentByChannel: loginapp : 9000, Abnormal exit! errorno=10054
+ ERROR root [2018-08-23 23:05:43,318] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054

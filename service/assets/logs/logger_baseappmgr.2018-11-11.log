@@ -1,0 +1,93 @@
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:09 256] - -----------------------------------------------------------------------------------------
+
+
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:10 786] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:10 786] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:10 787] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 240] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:50716 )
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 284] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:50716, SOMAXCONN=5.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 284] - server-configs:
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 284] - 	internalAddr : 192.168.0.107:50716
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 284] - 	componentID : 5000
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 560] - ---- baseappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: EE09E8FDB2CCFCF3A31D35776E8954CE. Config: Debug X86. Built: 15:53:05 Apr 29 2018. AppID: 5000. UID: 22461. PID: 9652 ----
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 561] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 582] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:11 583] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:12 040] - ---- baseappmgr is running ----
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 00:18:12 091] - Components::process(): Request for the process of identity...
+ WARNING baseappmgr-1 22461 5000  [2018-11-11 00:18:18 849] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.45 seconds
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:19 865] - Components::findComponents: find logger(1)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:19 950] - Components::findComponents: found logger, addr:192.168.0.107:50713
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:19 951] - Components::addComponent: reset orderLog, uid=22461!
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:19 951] - Components::addComponent[logger], uid=22461, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:20 047] - Components::findComponents: find dbmgr(2)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:22 064] - Components::findComponents: find dbmgr(3)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:24 164] - Components::findComponents: find dbmgr(4)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:26 183] - Components::findComponents: find dbmgr(5)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:26 272] - Components::findComponents: found dbmgr, addr:192.168.0.107:50715
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:26 272] - Components::addComponent: reset orderLog, uid=22461!
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:26 272] - Components::addComponent[dbmgr], uid=22461, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:26 272] - Components::findComponents: found dbmgr, addr:192.168.0.107:50715
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:28 283] - Components::findComponents: find cellappmgr(1)...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:28 381] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50714
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:28 381] - Components::addComponent[cellappmgr], uid=22461, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:28 382] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50714
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:30 423] - Components::findComponents: register self to dbmgr...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:30 428] - Components::findComponents: register self to cellappmgr...
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:30 429] - Components::process(): Found all the components!
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:31 474] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:50714, extaddr:nonsupport, extport:0,  from 192.168.0.107:50737/0/0/0.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:40 864] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:loginapp, componentID:9000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:50720, extaddr:192.168.0.107, extport:20013,  from 192.168.0.107:50742/0/0/0.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:40 864] - Components::addComponent[loginapp], uid=22461, componentID=9000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:45 023] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:50724, extaddr:nonsupport, extport:0,  from 192.168.0.107:50745/0/0/0.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:45 023] - Components::addComponent[cellapp], uid=22461, componentID=8001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:51 864] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:50738, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:50748/0/0/0.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:51 864] - Components::addComponent[baseapp], uid=22461, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:56 783] - Baseappmgr::onBaseappInitProgress: cid=7001, progress=1.
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:18:56 783] - Baseappmgr::onBaseappInitProgress: all completed!
+    INFO baseappmgr-1 22461 5000  [2018-11-11 00:19:30 430] - ServerApp::onChannelTimeOut: Channel 192.168.0.107:50714/0/0/0 timed out.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 16:55:30 482] - Baseappmgr::registerPendingAccountToBaseapp:1. allocBaseapp=7001, numEntities=1.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 19:51:47 809] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 19:51:50 509] - Baseappmgr::registerPendingAccountToBaseapp:2. allocBaseapp=7001, numEntities=3.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 19:58:12 186] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 19:59:20 465] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:00:36 764] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:03:02 263] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:05:19 162] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:08:34 420] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:09:36 320] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:10:10 719] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:18:06 995] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:18:21 015] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:19:05 315] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:25:40 671] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:25:51 991] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 20:47:30 880] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:24:05 829] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:24:18 049] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:33:06 105] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:34:36 604] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:36:42 902] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:37:28 102] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:39:56 341] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:43:54 519] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:45:01 718] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:50:32 835] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:51:39 615] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 22:52:28 214] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:03:21 328] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:03:30 448] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:10:54 844] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:14:57 522] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:15:23 042] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:18:46 920] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:22:39 378] - Baseappmgr::registerPendingAccountToBaseapp:11. allocBaseapp=7001, numEntities=4.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:23:02 978] - Baseappmgr::registerPendingAccountToBaseapp:22. allocBaseapp=7001, numEntities=6.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:23:41 738] - Baseappmgr::registerPendingAccountToBaseappAddr:11, componentID=7001, entityID=2005.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:28:55 835] - Baseappmgr::registerPendingAccountToBaseappAddr:2, componentID=7001, entityID=2004.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:29:10 935] - Baseappmgr::registerPendingAccountToBaseappAddr:22, componentID=7001, entityID=2007.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:49:46 244] - Baseappmgr::registerPendingAccountToBaseapp:222. allocBaseapp=7001, numEntities=8.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:49:51 244] - Baseappmgr::registerPendingAccountToBaseapp:111. allocBaseapp=7001, numEntities=8.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:50:06 064] - Baseappmgr::registerPendingAccountToBaseapp:222. allocBaseapp=7001, numEntities=11.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:54:19 262] - Baseappmgr::registerPendingAccountToBaseappAddr:111, componentID=7001, entityID=2009.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:57:02 740] - Baseappmgr::registerPendingAccountToBaseappAddr:111, componentID=7001, entityID=2009.
+   DEBUG baseappmgr-1 22461 5000  [2018-11-11 23:57:42 420] - Baseappmgr::registerPendingAccountToBaseappAddr:111, componentID=7001, entityID=2009.

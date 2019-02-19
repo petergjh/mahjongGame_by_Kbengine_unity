@@ -1,0 +1,617 @@
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:02 905] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:03 705] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:03 705] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:03 706] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:03 956] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:58549 )
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 003] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:58549, SOMAXCONN=5.
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 003] - server-configs:
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 004] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 187] - 	defaultViewRadius : 80
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 187] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 188] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 188] - 	internalAddr : 192.168.0.107:58549
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 189] - 	componentID : 8001
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 809] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 11340. PID: 12372 ----
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 810] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 862] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:04 880] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:09 014] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:09 162] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:09 259] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:11 387] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:11 751] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:11 790] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:11 848] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:13 240] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:14 237] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:14 237] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:15 648] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:15 971] - loaded entity-script:Room(4).
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:16 086] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:17 226] - ---- cellapp is running ----
+   DEBUG    cellapp-1 11340 8001  [2018-11-18 12:32:17 342] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:23 769] - EntityApp::checkTickPeriod: tick took 6542% (6.54 seconds)!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:23 871] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:24 926] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:25 003] - Components::findComponents: found logger, addr:192.168.0.107:58544
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:25 003] - Components::addComponent: reset orderLog, uid=11340!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:25 004] - Components::addComponent[logger], uid=11340, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:25 061] - Components::findComponents: find dbmgr(2)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:26 105] - EntityApp::checkTickPeriod: tick took 1279% (1.28 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:27 126] - Components::findComponents: find dbmgr(3)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:28 217] - EntityApp::checkTickPeriod: tick took 1191% (1.19 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:29 226] - Components::findComponents: find dbmgr(4)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:30 229] - EntityApp::checkTickPeriod: tick took 1103% (1.10 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:31 237] - Components::findComponents: find dbmgr(5)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:32 270] - EntityApp::checkTickPeriod: tick took 1043% (1.04 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:33 327] - Components::findComponents: find dbmgr(6)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:34 382] - EntityApp::checkTickPeriod: tick took 1155% (1.15 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:35 427] - Components::findComponents: find dbmgr(7)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:36 507] - EntityApp::checkTickPeriod: tick took 1180% (1.18 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:37 527] - Components::findComponents: find dbmgr(8)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:38 630] - EntityApp::checkTickPeriod: tick took 1203% (1.20 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:39 637] - Components::findComponents: find dbmgr(9)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:40 654] - EntityApp::checkTickPeriod: tick took 1027% (1.03 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:41 726] - Components::findComponents: find dbmgr(10)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:42 773] - EntityApp::checkTickPeriod: tick took 1147% (1.15 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:43 826] - Components::findComponents: find dbmgr(11)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:44 894] - EntityApp::checkTickPeriod: tick took 1168% (1.17 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:45 926] - Components::findComponents: find dbmgr(12)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:47 016] - EntityApp::checkTickPeriod: tick took 1190% (1.19 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:48 026] - Components::findComponents: find dbmgr(13)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:49 029] - EntityApp::checkTickPeriod: tick took 1103% (1.10 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:50 038] - Components::findComponents: find dbmgr(14)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:51 057] - EntityApp::checkTickPeriod: tick took 1030% (1.03 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:52 127] - Components::findComponents: find dbmgr(15)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:53 174] - EntityApp::checkTickPeriod: tick took 1147% (1.15 seconds)!
+    INFO    cellapp-1 11340 8001  [2018-11-18 12:32:54 227] - Components::findComponents: find dbmgr(16)...
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:55 294] - EntityApp::checkTickPeriod: tick took 1167% (1.17 seconds)!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:56 327] - Components::findComponents: find dbmgr(17)...
+delay time is too long, please check the dbmgr logs!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:57 415] - EntityApp::checkTickPeriod: tick took 1188% (1.19 seconds)!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:58 427] - Components::findComponents: find dbmgr(18)...
+delay time is too long, please check the dbmgr logs!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:32:59 566] - EntityApp::checkTickPeriod: tick took 1239% (1.24 seconds)!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:33:00 626] - Components::findComponents: find dbmgr(19)...
+delay time is too long, please check the dbmgr logs!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:33:01 704] - EntityApp::checkTickPeriod: tick took 1178% (1.18 seconds)!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:33:02 726] - Components::findComponents: find dbmgr(20)...
+delay time is too long, please check the dbmgr logs!
+ WARNING    cellapp-1 11340 8001  [2018-11-18 12:33:03 743] - EntityApp::checkTickPeriod: tick took 1117% (1.12 seconds)!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 657] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 657] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 658] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 658] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 670] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:58596 )
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 670] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:58596, SOMAXCONN=5.
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - server-configs:
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	defaultViewRadius : 80
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	internalAddr : 192.168.0.107:58596
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:25 671] - 	componentID : 8001
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 179] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 11679. PID: 7436 ----
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 180] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 180] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 180] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 315] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 315] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 315] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 318] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 318] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 319] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 319] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 349] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 381] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 382] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 406] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 414] - loaded entity-script:Room(4).
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 414] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:27 775] - ---- cellapp is running ----
+   DEBUG    cellapp-1 11679 8001  [2018-11-18 12:33:27 776] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 11679 8001  [2018-11-18 12:33:33 870] - EntityApp::checkTickPeriod: tick took 6093% (6.09 seconds)!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:34 959] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 035] - Components::findComponents: found logger, addr:192.168.0.107:58590
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 035] - Components::addComponent: reset orderLog, uid=11679!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 036] - Components::addComponent[logger], uid=11679, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 037] - Components::findComponents: find dbmgr(2)...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 141] - Components::findComponents: found dbmgr, addr:192.168.0.107:58591
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 141] - Components::addComponent: reset orderLog, uid=11679!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 142] - Components::addComponent[dbmgr], uid=11679, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:35 142] - Components::findComponents: found dbmgr, addr:192.168.0.107:58591
+ WARNING    cellapp-1 11679 8001  [2018-11-18 12:33:36 143] - EntityApp::checkTickPeriod: tick took 1267% (1.27 seconds)!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:37 159] - Components::findComponents: find cellappmgr(1)...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:37 168] - Components::findComponents: found cellappmgr, addr:192.168.0.107:58595
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:37 168] - Components::addComponent[cellappmgr], uid=11679, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:37 169] - Components::findComponents: found cellappmgr, addr:192.168.0.107:58595
+ WARNING    cellapp-1 11679 8001  [2018-11-18 12:33:38 169] - EntityApp::checkTickPeriod: tick took 1093% (1.09 seconds)!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:39 176] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:39 273] - Components::findComponents: found baseappmgr, addr:192.168.0.107:58594
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:39 273] - Components::addComponent[baseappmgr], uid=11679, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:39 274] - Components::findComponents: found baseappmgr, addr:192.168.0.107:58594
+ WARNING    cellapp-1 11679 8001  [2018-11-18 12:33:40 274] - EntityApp::checkTickPeriod: tick took 1198% (1.20 seconds)!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 358] - Components::findComponents: register self to dbmgr...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 376] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 377] - Components::findComponents: register self to baseappmgr...
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 458] - Components::process(): Found all the components!
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 476] - ServerApp::onRegisterNewApp: uid:11679, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:58593, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:58624/0/0/0.
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 476] - Components::addComponent[baseapp], uid=11679, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:41 476] - ServerApp::onRegisterNewApp: uid:11679, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:58593, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:58624/0/0/0.
+    INFO    cellapp-1 11679 8001  [2018-11-18 12:33:44 476] - EntityApp::onDbmgrInitCompleted: entityID alloc(2001-4001), startGlobalOrder=5, startGroupOrder=1, digest=7F4FC8296AD553545CD95B23EFF6238F.
+    INFO    cellapp01 11679 8001  [2018-11-18 12:33:44 476] - IDClient::onAddRange: number of ids increased from 2001 to 4001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 12:33:45 679] - onInit::isReload:0
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:45 680] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.20 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:45 680] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 1.20 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:45 680] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.20 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:45 681] - EntityApp::checkTickPeriod: tick took 1205% (1.21 seconds)!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:33:45 768] - InitProgressHandler::~InitProgressHandler()
+   S_DBG    cellapp01 11679 8001  [2018-11-18 12:33:47 000] - onGlobalData: Halls
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:33:59 122] - Spaces::createNewSpace: new space(Room) 1.
+    INFO    cellapp01 11679 8001  [2018-11-18 12:33:59 148] - EntityApp::createEntity: new Room 3
+    INFO    cellapp01 11679 8001  [2018-11-18 12:33:59 190] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:59 210] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.13 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:59 210] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 12:33:59 211] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+    INFO    cellapp01 11679 8001  [2018-11-18 12:33:59 276] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
+   S_DBG    cellapp01 11679 8001  [2018-11-18 12:33:59 376] - 玩家进来了---2 座位号为 0
+    INFO    cellapp01 11679 8001  [2018-11-18 12:33:59 477] - EntityApp::createEntity: new Account 2
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:43:26 680] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:48:26 682] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:53:26 688] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 12:58:26 686] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:03:26 689] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:08:26 691] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:13:26 692] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:18:26 694] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:23:26 696] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:28:26 698] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:33:26 701] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:38:26 703] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:43:26 705] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:48:26 707] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:53:26 708] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 13:58:26 710] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:03:26 712] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:08:26 715] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:13:26 717] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:18:26 719] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:23:26 721] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:28:26 723] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:33:26 725] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:38:26 727] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:43:26 729] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:48:26 731] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:53:26 733] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 14:58:26 735] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:03:26 737] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:08:26 740] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:13:26 742] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:18:26 744] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:23:26 745] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:28:26 747] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:33:26 749] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:38:26 752] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:43:26 754] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:48:26 756] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:53:26 758] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 15:58:26 760] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:03:26 761] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:08:26 763] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:13:26 766] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:18:26 768] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:23:26 770] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:28:26 772] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:33:26 774] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:38:26 776] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:43:26 779] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:48:26 680] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:53:26 682] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 16:58:26 684] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:03:26 686] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:08:26 688] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:13:26 691] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:18:26 693] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:23:26 695] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:28:26 697] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:33:26 698] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:38:26 700] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:43:26 702] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:48:26 705] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:50:28 606] - Spaces::createNewSpace: new space(Room) 2.
+    INFO    cellapp01 11679 8001  [2018-11-18 17:50:28 607] - EntityApp::createEntity: new Room 4
+    INFO    cellapp01 11679 8001  [2018-11-18 17:50:28 609] - KBEngine::addSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 11679 8001  [2018-11-18 17:50:28 706] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom!
+   S_DBG    cellapp01 11679 8001  [2018-11-18 17:50:28 706] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:50:28 807] - Account::teleportFromBaseapp: 2, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:50:43 807] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:53:26 707] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 17:58:26 709] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:03:26 711] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:08:26 713] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:13:26 715] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:18:26 717] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:23:26 719] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:28:26 721] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:33:26 723] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:38:26 725] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:43:26 727] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:48:26 730] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:53:26 732] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:58:26 733] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 18:58:47 933] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:58:48 034] - Account::teleportFromBaseapp: 2, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 18:59:03 035] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:03:26 735] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 19:07:05 237] - 玩家进来了---5 座位号为 1
+    INFO    cellapp01 11679 8001  [2018-11-18 19:07:05 338] - EntityApp::createEntity: new Account 5
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:08:26 737] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:10:56 739] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:13:26 739] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:15:56 741] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:18:26 741] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:20:56 742] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:23:26 743] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:25:56 743] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:28:26 744] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:31:46 745] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:33:26 746] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:35:06 746] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:38:26 748] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:41:46 750] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:43:26 750] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:44:32 353] - Account::~Account(): 2
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:44:47 352] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:48:26 752] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:50:06 753] - Account::onWriteToDB(): 5.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 19:50:11 453] - 玩家进来了---2 座位号为 0
+    INFO    cellapp01 11679 8001  [2018-11-18 19:50:11 553] - EntityApp::createEntity: new Account 2
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:51:46 753] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:56:46 756] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 19:58:26 756] - Account::onWriteToDB(): 5.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:15 658] - 玩家进来了---5 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:01:15 786] - Account::teleportFromBaseapp: 5, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:19 958] - 玩家进来了---5 座位号为 1
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:01:20 058] - Account::teleportFromBaseapp: 5, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:21 957] - 5
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:21 957] - True
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:22 058] - cell account
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:22 058] - 1
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 558] - 2
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 558] - True
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 558] - 全部就位---开始处理！
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 566] - 游戏开始！
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:23 691] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.13 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:23 691] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.13 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:23 692] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:23 692] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 692] - cell account
+   S_DBG    cellapp01 11679 8001  [2018-11-18 20:01:23 692] - 1
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:01:30 787] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:32 506] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.15 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:32 506] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.15 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:32 506] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.15 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:32 507] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:44 574] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.12 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:44 574] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.12 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:44 574] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.12 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:44 574] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.12 seconds
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:01:46 757] - Account::onWriteToDB(): 5.
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:47 660] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.10 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:47 661] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.10 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:47 661] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.10 seconds
+ WARNING    cellapp01 11679 8001  [2018-11-18 20:01:47 661] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.10 seconds
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:03:26 758] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:05:06 759] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:08:26 760] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:10:06 761] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:13:26 763] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:16:46 763] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:18:26 764] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:20:06 765] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:21:46 766] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:25:06 767] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:26:46 768] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:30:06 769] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:33:26 771] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:36:46 772] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:38:26 773] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:40:06 773] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:43:26 774] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:45:06 775] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:46:46 776] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:50:06 777] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:51:46 778] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:56:46 780] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 20:58:26 780] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:00:06 782] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:01:46 782] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:05:06 783] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:08:26 785] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:10:06 785] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:11:46 786] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:16:46 688] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:18:26 689] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:20:06 689] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:23:26 690] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:25:06 691] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:26:46 692] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:30:06 693] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:33:26 695] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:35:06 695] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:38:26 697] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:40:06 697] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:43:26 699] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:45:06 699] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:46:46 700] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:50:06 702] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:53:26 703] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:55:06 704] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 21:56:46 704] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:00:06 705] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:03:26 707] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:05:06 707] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:06:46 708] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:10:06 709] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:13:26 711] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:16:46 712] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:18:26 713] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:20:06 714] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:23:26 715] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:25:06 716] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:26:46 716] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:30:06 718] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:31:46 719] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:35:06 720] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:36:46 721] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:40:06 721] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:41:46 722] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:42:33 423] - 玩家进来了---7 座位号为 0
+    INFO    cellapp01 11679 8001  [2018-11-18 22:42:33 523] - EntityApp::createEntity: new Account 7
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:42:37 823] - Spaces::createNewSpace: new space(Room) 3.
+    INFO    cellapp01 11679 8001  [2018-11-18 22:42:37 824] - EntityApp::createEntity: new Room 9
+    INFO    cellapp01 11679 8001  [2018-11-18 22:42:37 825] - KBEngine::addSpaceGeometryMapping: spaceID=3, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 11679 8001  [2018-11-18 22:42:37 923] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=3, respath=spaces/mjRoom!
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:42:37 924] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:42:38 024] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:42:41 423] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:42:41 524] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:42:43 523] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:42:43 623] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:42:58 024] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:27 123] - 玩家进来了---10 座位号为 1
+    INFO    cellapp01 11679 8001  [2018-11-18 22:43:27 224] - EntityApp::createEntity: new Account 10
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:31 123] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:31 224] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:38 623] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:38 723] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:42 323] - 玩家进来了---10 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:42 424] - Account::teleportFromBaseapp: 10, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:49 624] - 7
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:49 624] - True
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:49 724] - cell account
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:49 724] - 1
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:51 423] - 玩家进来了---10 座位号为 1
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:51 524] - Account::teleportFromBaseapp: 10, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:55 023] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:55 124] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:43:58 924] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:43:59 024] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:44:01 024] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:44:01 124] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:44:11 225] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:44:16 723] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:06 724] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:19 224] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:19 324] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:21 324] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:21 425] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:23 624] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:23 725] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:25 824] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:25 925] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:28 524] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:28 625] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:30 625] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:30 725] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:33 524] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:33 625] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:35 524] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:35 625] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:38 125] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:38 225] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:40 524] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:40 625] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:42 125] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:42 225] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:44 024] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:44 125] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:45 625] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:45 725] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:47 225] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:47 325] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:48 824] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:48 924] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:50 325] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:50 425] - Account::teleportFromBaseapp: 7, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:45:52 224] - 玩家进来了---7 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:45:52 325] - Account::teleportFromBaseapp: 7, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:46:04 325] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:46:46 724] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:48:26 725] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:49:16 725] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:50:06 726] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:50:56 726] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:53:26 728] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:55:06 728] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:55:56 728] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:56:46 728] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:57:36 729] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:58:21 430] - 玩家进来了---10 座位号为 0
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:58:21 530] - Account::teleportFromBaseapp: 10, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 11679 8001  [2018-11-18 22:58:23 630] - 玩家进来了---10 座位号为 1
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:58:23 730] - Account::teleportFromBaseapp: 10, targetEntityID=9, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 22:58:36 530] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:00:06 730] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:00:56 730] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:01:46 731] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:02:36 731] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:04:16 732] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:05:56 732] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:07:36 734] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:08:26 734] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:10:06 735] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:11:46 735] - Account::onWriteToDB(): 7.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:12:36 735] - Account::onWriteToDB(): 10.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:13:26 735] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 11679 8001  [2018-11-18 23:14:16 736] - Account::onWriteToDB(): 5.
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 727] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 728] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 728] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 728] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 734] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:49850 )
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 734] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:49850, SOMAXCONN=5.
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 734] - server-configs:
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	defaultViewRadius : 80
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	internalAddr : 192.168.0.107:49850
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:31 735] - 	componentID : 8001
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 246] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 6215. PID: 9140 ----
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 247] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 247] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 248] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 382] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 382] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 382] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 386] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 386] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 387] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 387] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 428] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 462] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 462] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 488] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 496] - loaded entity-script:Room(4).
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 496] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:33 848] - ---- cellapp is running ----
+   DEBUG    cellapp-1 6215 8001  [2018-11-18 23:14:33 849] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 6215 8001  [2018-11-18 23:14:39 954] - EntityApp::checkTickPeriod: tick took 6103% (6.10 seconds)!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 032] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 062] - Components::findComponents: found logger, addr:192.168.0.107:49846
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 063] - Components::addComponent: reset orderLog, uid=6215!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 063] - Components::addComponent[logger], uid=6215, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 107] - Components::findComponents: find dbmgr(2)...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 166] - Components::findComponents: found dbmgr, addr:192.168.0.107:49843
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 166] - Components::addComponent: reset orderLog, uid=6215!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 167] - Components::addComponent[dbmgr], uid=6215, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:41 167] - Components::findComponents: found dbmgr, addr:192.168.0.107:49843
+ WARNING    cellapp-1 6215 8001  [2018-11-18 23:14:42 168] - EntityApp::checkTickPeriod: tick took 1219% (1.22 seconds)!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:43 231] - Components::findComponents: find cellappmgr(1)...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:43 297] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49847
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:43 298] - Components::addComponent[cellappmgr], uid=6215, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:43 298] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49847
+ WARNING    cellapp-1 6215 8001  [2018-11-18 23:14:44 299] - EntityApp::checkTickPeriod: tick took 1149% (1.15 seconds)!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:45 331] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:45 406] - Components::findComponents: found baseappmgr, addr:192.168.0.107:49848
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:45 407] - Components::addComponent[baseappmgr], uid=6215, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:45 407] - Components::findComponents: found baseappmgr, addr:192.168.0.107:49848
+ WARNING    cellapp-1 6215 8001  [2018-11-18 23:14:46 408] - EntityApp::checkTickPeriod: tick took 1158% (1.16 seconds)!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 449] - Components::findComponents: register self to dbmgr...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 504] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 505] - Components::findComponents: register self to baseappmgr...
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 531] - Components::process(): Found all the components!
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 549] - ServerApp::onRegisterNewApp: uid:6215, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49851, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:49877/0/0/0.
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 549] - Components::addComponent[baseapp], uid=6215, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:47 549] - ServerApp::onRegisterNewApp: uid:6215, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:49851, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:49877/0/0/0.
+    INFO    cellapp-1 6215 8001  [2018-11-18 23:14:50 549] - EntityApp::onDbmgrInitCompleted: entityID alloc(2001-4001), startGlobalOrder=5, startGroupOrder=1, digest=E3D4DB2FF7FE39CDDA547CF06250D868.
+    INFO    cellapp01 6215 8001  [2018-11-18 23:14:50 549] - IDClient::onAddRange: number of ids increased from 2001 to 4001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:14:51 755] - onInit::isReload:0
+ WARNING    cellapp01 6215 8001  [2018-11-18 23:14:51 755] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.21 seconds
+ WARNING    cellapp01 6215 8001  [2018-11-18 23:14:51 756] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 1.21 seconds
+ WARNING    cellapp01 6215 8001  [2018-11-18 23:14:51 756] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.21 seconds
+ WARNING    cellapp01 6215 8001  [2018-11-18 23:14:51 803] - EntityApp::checkTickPeriod: tick took 1254% (1.25 seconds)!
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:14:51 831] - InitProgressHandler::~InitProgressHandler()
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:14:52 449] - onGlobalData: Halls
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:34:47 858] - Spaces::createNewSpace: new space(Room) 1.
+    INFO    cellapp01 6215 8001  [2018-11-18 23:34:47 858] - EntityApp::createEntity: new Room 3
+    INFO    cellapp01 6215 8001  [2018-11-18 23:34:47 861] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 6215 8001  [2018-11-18 23:34:47 958] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:34:47 959] - 玩家进来了---2 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:34:48 058] - EntityApp::createEntity: new Account 2
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:19 260] - Spaces::createNewSpace: new space(Room) 2.
+    INFO    cellapp01 6215 8001  [2018-11-18 23:42:19 261] - EntityApp::createEntity: new Room 4
+    INFO    cellapp01 6215 8001  [2018-11-18 23:42:19 262] - KBEngine::addSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 6215 8001  [2018-11-18 23:42:19 360] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom!
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:42:19 361] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:19 461] - Account::teleportFromBaseapp: 2, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:42:21 961] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:22 061] - Account::teleportFromBaseapp: 2, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:42:23 861] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:23 961] - Account::teleportFromBaseapp: 2, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:42:25 561] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:25 661] - Account::teleportFromBaseapp: 2, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:42:27 861] - 玩家进来了---2 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:27 960] - Account::teleportFromBaseapp: 2, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:42:39 462] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:00 061] - 玩家进来了---5 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:43:00 161] - EntityApp::createEntity: new Account 5
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:10 061] - 玩家进来了---5 座位号为 1
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:43:10 161] - Account::teleportFromBaseapp: 5, targetEntityID=4, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:13 161] - 2
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:13 161] - True
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:13 262] - cell account
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:13 262] - 1
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 161] - 5
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 161] - True
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 161] - 全部就位---开始处理！
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 163] - 游戏开始！
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 261] - cell account
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:43:15 261] - 1
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:43:25 162] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:44:32 761] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:46:57 562] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:46:57 663] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:47:02 762] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:48:55 465] - Account::~Account(): 6
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:48:57 764] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:48:57 864] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:49:00 069] - Account::~Account(): 6
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:49:03 563] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:49:03 664] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:49:05 465] - Account::~Account(): 6
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:49:07 163] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:49:07 264] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:49:10 465] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:49:32 764] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:51:12 764] - Account::onWriteToDB(): 5.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:43 466] - Account::~Account(): 6
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:45 265] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:52:45 365] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:48 466] - Account::~Account(): 6
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:50 365] - 玩家进来了---6 座位号为 0
+    INFO    cellapp01 6215 8001  [2018-11-18 23:52:50 465] - EntityApp::createEntity: new Account 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:51 965] - Spaces::createNewSpace: new space(Room) 3.
+    INFO    cellapp01 6215 8001  [2018-11-18 23:52:51 965] - EntityApp::createEntity: new Room 7
+    INFO    cellapp01 6215 8001  [2018-11-18 23:52:51 967] - KBEngine::addSpaceGeometryMapping: spaceID=3, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 6215 8001  [2018-11-18 23:52:52 065] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=3, respath=spaces/mjRoom!
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:52 066] - 玩家进来了---6 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:52 165] - Account::teleportFromBaseapp: 6, targetEntityID=7, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:52 765] - Account::onWriteToDB(): 2.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:53 465] - 玩家进来了---6 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:53 566] - Account::teleportFromBaseapp: 6, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:55 465] - 玩家进来了---6 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:55 565] - Account::teleportFromBaseapp: 6, targetEntityID=7, cell=8001, sourceBaseAppID=7001.
+   S_DBG    cellapp01 6215 8001  [2018-11-18 23:52:57 565] - 玩家进来了---6 座位号为 0
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:57 666] - Account::teleportFromBaseapp: 6, targetEntityID=3, cell=8001, sourceBaseAppID=7001.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:52:59 566] - Account::~Account(): 6
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:53:13 466] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:56:12 766] - Account::onWriteToDB(): 2.
+   DEBUG    cellapp01 6215 8001  [2018-11-18 23:57:52 767] - Account::onWriteToDB(): 5.

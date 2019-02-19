@@ -1,0 +1,216 @@
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:08 445] - -----------------------------------------------------------------------------------------
+
+
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:08 908] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:08 909] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:08 909] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:09 598] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.106 ( 192.168.0.106:49647 )
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:09 599] - NetworkInterface::initialize(INTERNAL): address 192.168.0.106:49647, SOMAXCONN=5.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:09 647] - server-configs:
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:09 647] - 	internalAddr : 192.168.0.106:49647
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:09 648] - 	componentID : 4000
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:11 395] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 20621. PID: 11168 ----
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:11 396] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:11 453] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:11 479] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 074] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 176] - Script::install_py_dlls(): PyInit__socket
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 313] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 799] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 848] - Script::install_py_dlls(): PyInit_select
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 910] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:15 961] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:16 694] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:17 798] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:17 799] - Script::install(): KBExtra is successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:19 704] - Dbmgr::initializeEnd: digest(F547257E65B19568C42912D2DC30BA6C)
+  S_INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:19 705] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:19 783] - TelnetServer server is running on port 32000
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:19 844] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:20 427] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+B45F81EE825085ED7EC18E3D24AFDC6559F6765DE17D91C50C672777373F5BA05ADB16A062900849E1471D7ACD89EF73230A0B2EEAC70E738C7E03DC43D0B19CF4A4A2E2F0EA0EF4748AFFDD4CB85A59AFF9C58737F9CA954A4B82BE97067A5947F68232C1AE9C9C7D6D0F046D7AC36AB0E835A30FDDA055F338C35FF5BE9AF9
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:23 636] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 565] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:25 566] - DBUtil::createInterface[0x45f258]: interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=yes.
+
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:25 598] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:25 602] - ThreadPool::createThreadPool: successfully(5), newThreadCount=5, normalMaxThreadCount=5, maxThreadCount=5
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:25 839] - DBInterfaceMysql::query: successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:25 844] - DBInterfaceMysql::query: successfully!
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:27 095] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 7.39 seconds
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:27 808] - ---- dbmgr is running ----
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:27 809] - Components::process(): Request for the process of identity...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 600] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 601] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 601] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 603] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 603] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 606] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 606] - DBThread::onStart(): 0x803958!
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 607] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 607] - DBThread::onStart(): 0x803a68!
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 608] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 609] - DBThread::onStart(): 0x8039e0!
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 610] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 610] - DBThread::onStart(): 0x803b78!
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 611] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:25 612] - DBThread::onStart(): 0x803af0!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 102] - DBInterfaceMysql::query: successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 162] - DBInterfaceMysql::query: successfully!
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 227] - DBTask::process(): took 0.36 seconds
+sql:(show index from tbl_CheckName)
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 236] - DBInterfaceMysql::query: successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 287] - DBInterfaceMysql::query: successfully!
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 288] - DBTask::process(): took 0.44 seconds
+sql:(CREATE TABLE IF NOT EXISTS kbe_accountinfos (`accountName` varchar(128) not null, PRIMARY KEY idKey (`accountName`),`password` varchar(255),`bindata` blob,`email` varchar(191) not null, UNIQUE KEY `email` (`email`),`entityDBID` bigint(20) unsigned not null DEFAULT 0, UNIQUE KEY `entityDBID` (`entityDBID`),`flags` int unsigned not null DEFAULT 0,`deadline` bigint(20) not null DEFAULT 0,`regtime` bigint(20) not null DEFAULT 0,`lasttime` bigint(20) not null DEFAULT 0,`numlogin` int unsigned not null DEFAULT 0)ENGINE=InnoDB)
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 326] - DBInterfaceMysql::query: successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 327] - DBInterfaceMysql::query: successfully!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 327] - DBInterfaceMysql::query: successfully!
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 328] - DBTask::process(): took 0.48 seconds
+sql:(delete from kbe_email_verification where logtime<1534667906 and type=3)
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 585] - DBTask::process(): took 0.74 seconds
+sql:(insert into kbe_serverlog (heartbeatTime, logger) values(1534671506,4000) ON DUPLICATE KEY UPDATE heartbeatTime=1534671506)
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 589] - DBTask::process(): took 0.36 seconds
+sql:(show index from tbl_Account)
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:26 687] - DBInterfaceMysql::query: successfully!
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:26 687] - DBTask::process(): took 0.84 seconds
+sql:(delete from kbe_entitylog where logger in (4000))
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:27 038] - DBTask::process(): took 0.75 seconds
+sql:(show index from tbl_Halls)
+ WARNING      dbmgr-1 20621 4000  [2018-08-19 17:38:27 075] - DBTask::process(): took 0.75 seconds
+sql:(show index from tbl_Room)
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:34 293] - ServerApp::onRegisterNewApp: uid:20621, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:49646, extaddr:nonsupport, extport:0,  from 192.168.0.106:49667/0/0/0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:34 294] - Components::addComponent: reset orderLog, uid=20621!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:34 295] - Components::addComponent[cellappmgr], uid=20621, componentID=6000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:34 296] - ServerApp::onRegisterNewApp: uid:20621, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:49648, extaddr:nonsupport, extport:0,  from 192.168.0.106:49669/0/0/0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:34 297] - Components::addComponent[baseappmgr], uid=20621, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:35 263] - Components::findComponents: find logger(1)...
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:35 338] - Components::findComponents: found logger, addr:192.168.0.106:49645
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:35 339] - Components::addComponent[logger], uid=20621, componentID=2000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:35 484] - Components::process(): Found all the components!
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:42 004] - ServerApp::onRegisterNewApp: uid:20621, username:, componentType:loginapp, componentID:9000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:49649, extaddr:192.168.0.106, extport:20013,  from 192.168.0.106:49672/0/0/0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:42 004] - Components::addComponent[loginapp], uid=20621, componentID=9000, globalorderid=4, grouporderid=1, totalcount=1
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:45 041] - SyncAppDatasHandler::~SyncAppDatasHandler()
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:45 044] - ServerApp::onRegisterNewApp: uid:20621, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:49652, extaddr:nonsupport, extport:0,  from 192.168.0.106:49674/0/0/0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:45 044] - Components::addComponent[cellapp], uid=20621, componentID=8001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:48 063] - IDServer::allocRange: 1-2001.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:48 063] - SyncAppDatasHandler::~SyncAppDatasHandler()
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:51 523] - ServerApp::onRegisterNewApp: uid:20621, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.106, intport:49665, extaddr:192.168.0.106, extport:20015,  from 192.168.0.106:49677/0/0/0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:51 523] - Components::addComponent[baseapp], uid=20621, componentID=7001, globalorderid=6, grouporderid=1, totalcount=1
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:54 544] - IDServer::allocRange: 2001-4001.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:38:54 544] - SyncAppDatasHandler::~SyncAppDatasHandler()
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:38:56 544] - GlobalDataServer::broadcastDataChanged: writer(baseapp, addr=192.168.0.106:49677/0/0/0), keySize=11, valSize=52, isDelete=0
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:40:58 323] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=0, componentID=0, entityID=0, dbid=3, flags=0, deadline=0.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:40:58 743] - Dbmgr::queryAccount: 1, success=1, flags=0, deadline=0.
+    INFO      dbmgr-1 20621 4000  [2018-08-19 17:41:01 622] - GlobalDataServer::broadcastDataChanged: writer(cellapp, addr=192.168.0.106:49674/0/0/0), keySize=12, valSize=52, isDelete=0
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:43:00 662] - Dbmgr::onAccountLogin:loginName=2, accountName=2, success=0, componentID=0, entityID=0, dbid=6, flags=0, deadline=0.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:43:01 142] - Dbmgr::queryAccount: 2, success=1, flags=0, deadline=0.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:43:12 481] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=10, componentID=7001, entityID=2002, dbid=3, flags=0, deadline=0.
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:46:08 180] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:48:38 139] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:51:08 138] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:53:38 136] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:56:08 135] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 17:58:38 133] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:01:08 132] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:03:38 130] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:06:08 130] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:08:38 149] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:11:08 147] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:13:38 146] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:16:08 144] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:18:38 143] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:21:08 142] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:23:38 140] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:26:08 159] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:28:38 138] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:31:08 137] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:33:38 135] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:36:08 134] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:38:27 133] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:38:38 133] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:41:08 131] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:43:38 130] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:46:08 128] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:48:38 127] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:51:08 126] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:53:38 125] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:56:08 124] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 18:58:38 122] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:01:08 121] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:03:38 139] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:06:08 138] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:08:38 117] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:11:08 135] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:13:38 135] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:16:08 133] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:18:38 152] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:21:08 130] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:23:38 129] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:26:08 148] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:28:38 126] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:31:08 125] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:33:38 123] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:36:08 123] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:38:27 121] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:38:38 121] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:41:08 220] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:43:38 119] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:46:08 117] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:48:38 116] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:51:08 134] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:53:38 113] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:56:08 132] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 19:58:38 131] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:01:08 130] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:03:38 128] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:06:08 127] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:08:38 125] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:11:08 124] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:13:38 123] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:16:08 121] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:18:38 141] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:21:08 139] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:23:38 118] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:26:08 116] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:28:38 135] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:31:08 114] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:33:38 112] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:36:08 111] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:38:27 110] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:38:38 109] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:41:08 109] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:43:38 108] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:46:08 106] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:48:38 105] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:51:08 123] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:53:38 122] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:56:08 120] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 20:58:38 119] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:01:08 118] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:03:38 117] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:06:08 116] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:08:38 114] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:11:08 113] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:13:38 111] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:16:08 130] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:18:38 109] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:21:08 107] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:23:38 106] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:26:08 125] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:28:38 104] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:31:08 103] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:33:38 101] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:36:08 100] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:38:27 099] - Dbmgr::DBTaskServerLog()
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:38:38 098] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:41:08 077] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:43:38 115] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:46:08 114] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:48:38 114] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:51:08 112] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:53:38 111] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:56:08 109] - Dbmgr::writeEntity: Account(3).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 21:58:38 108] - Dbmgr::writeEntity: Account(6).
+   DEBUG      dbmgr-1 20621 4000  [2018-08-19 22:01:08 107] - Dbmgr::writeEntity: Account(3).

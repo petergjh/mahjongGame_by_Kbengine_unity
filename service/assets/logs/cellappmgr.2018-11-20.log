@@ -1,0 +1,52 @@
+ ERROR root [2018-11-20 00:46:14,372] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+  INFO root [2018-11-20 13:48:51,013] - 
+  INFO root [2018-11-20 13:48:51,014] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-20 13:48:52,448] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-20 13:48:52,449] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-20 13:48:52,450] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-20 13:48:52,850] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:52694 )
+  INFO root [2018-11-20 13:48:52,865] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:52694, SOMAXCONN=5.
+  INFO root [2018-11-20 13:48:52,865] - server-configs:
+  INFO root [2018-11-20 13:48:52,865] - 	internalAddr : 192.168.0.107:52694
+  INFO root [2018-11-20 13:48:52,866] - 	componentID : 6000
+  INFO root [2018-11-20 13:48:54,752] - ---- cellappmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 52E8E19C86891AC3218081DFAA2FD187. Config: Debug X86. Built: 15:52:42 Apr 29 2018. AppID: 6000. UID: 882. PID: 6924 ----
+  INFO root [2018-11-20 13:48:54,754] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-20 13:48:54,828] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-20 13:48:54,830] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+  INFO root [2018-11-20 13:48:55,347] - ---- cellappmgr is running ----
+ DEBUG root [2018-11-20 13:48:55,471] - Components::process(): Request for the process of identity...
+  WARN root [2018-11-20 13:49:01,881] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+  INFO root [2018-11-20 13:49:02,886] - Components::findComponents: find logger(1)...
+  WARN root [2018-11-20 13:49:03,928] - Components::findComponents: not found logger!
+  INFO root [2018-11-20 13:49:04,931] - Components::findComponents: find dbmgr(1)...
+  INFO root [2018-11-20 13:49:06,951] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-11-20 13:49:09,051] - Components::findComponents: find dbmgr(3)...
+  INFO root [2018-11-20 13:49:11,071] - Components::findComponents: find dbmgr(4)...
+  INFO root [2018-11-20 13:49:11,161] - Components::findComponents: found dbmgr, addr:192.168.0.107:52695
+  INFO root [2018-11-20 13:49:11,162] - Components::addComponent: reset orderLog, uid=882!
+  INFO root [2018-11-20 13:49:11,162] - Components::addComponent[dbmgr], uid=882, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:49:11,163] - Components::findComponents: found dbmgr, addr:192.168.0.107:52695
+  INFO root [2018-11-20 13:49:13,170] - Components::findComponents: find baseappmgr(1)...
+  INFO root [2018-11-20 13:49:13,272] - Components::findComponents: found baseappmgr, addr:192.168.0.107:52696
+  INFO root [2018-11-20 13:49:13,273] - Components::addComponent[baseappmgr], uid=882, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:49:13,274] - Components::findComponents: found baseappmgr, addr:192.168.0.107:52696
+  INFO root [2018-11-20 13:49:15,310] - Components::findComponents: register self to dbmgr...
+  INFO root [2018-11-20 13:49:15,350] - Components::findComponents: register self to baseappmgr...
+  INFO root [2018-11-20 13:49:15,370] - Components::process(): Found all the components!
+  INFO root [2018-11-20 13:49:15,647] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52696, extaddr:nonsupport, extport:0,  from 192.168.0.107:52714/0/0/0.
+  WARN root [2018-11-20 13:49:15,682] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+  INFO root [2018-11-20 13:49:27,231] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52698, extaddr:nonsupport, extport:0,  from 192.168.0.107:52726/0/0/0.
+  INFO root [2018-11-20 13:49:27,233] - Components::addComponent[cellapp], uid=882, componentID=8001, globalorderid=3, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:49:27,285] - Cellappmgr::getCellapp: added new cellapp(8001).
+  INFO root [2018-11-20 13:49:31,551] - Cellappmgr::onCellappInitProgress: cid=8001, progress=1.
+ DEBUG root [2018-11-20 13:49:31,552] - Cellappmgr::addCellappComponentID: cellapp component id 8001, group order id 1
+  INFO root [2018-11-20 13:49:35,170] - ServerApp::onRegisterNewApp: uid:882, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52709, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:52733/0/0/0.
+  INFO root [2018-11-20 13:49:35,172] - Components::addComponent[baseapp], uid=882, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+  INFO root [2018-11-20 13:50:15,353] - ServerApp::onChannelTimeOut: Channel 192.168.0.107:52696/0/0/0 timed out.
+ DEBUG root [2018-11-20 13:56:23,154] - Cellappmgr::reqCreateCellEntityInNewSpace: entityType=Room, entityID=2003, componentID=7001, cellapp(cid=8001, load=0.00498338, numEntities=0).
+ DEBUG root [2018-11-20 14:29:48,427] - Cellappmgr::reqCreateCellEntityInNewSpace: entityType=Room, entityID=2007, componentID=7001, cellapp(cid=8001, load=0.00692983, numEntities=3).
+  WARN root [2018-11-20 14:34:39,832] - TCPPacketReceiver::processPendingEvents(192.168.0.107:52726): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  WARN root [2018-11-20 14:34:39,845] - Cellappmgr::removeCellapp: erase cellapp[8001], currsize=0
+ ERROR root [2018-11-20 14:34:39,873] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054

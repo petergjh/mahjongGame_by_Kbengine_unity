@@ -52,6 +52,7 @@
 		public override void game_chupai_push()
 		{
 			MonoBehaviour.print(playerName+"--到你出牌了");
+			Event.fireOut("chupai");
 		}
 
 		public override void game_mopai_push(sbyte arg1)
@@ -64,6 +65,7 @@
 		public override void has_action()
 		{
 			MonoBehaviour.print(playerName + "--有操作了");
+			Event.fireOut("has_action");
 		}
 
 		public override void onGang(uint arg1, sbyte arg2, string arg3)
@@ -157,6 +159,12 @@
 				MonoBehaviour.print("正在听的牌 ---  " + td.pai);
 				MonoBehaviour.print("番数 ---  " + td.fan);
 			}
+		}
+
+		public override void onGameOver()
+		{
+			MonoBehaviour.print("游戏结束！！！");
+			Event.fireOut("GameOver");
 		}
 	}
 }

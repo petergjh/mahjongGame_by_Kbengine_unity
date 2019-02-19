@@ -90,9 +90,17 @@ public class LoginPanel : MonoBehaviour {
         //自定义方法
     public void onLoginSuccessfully(UInt64 rndUUID, Int32 eid, KBEngine.Account accountEntity)
     {
-        
-        GameManager.GetInstance().showWaiting("登陆成功!", 1);
-		Application.LoadLevel("hall");
+		print(KBEngineApp.app.player().id +"--------"+accountEntity.id);
+		if (KBEngineApp.app.player().id != accountEntity.id)
+			return;
+		if (accountEntity.inRoom == 1)
+		{
+			GameManager.GetInstance().showWaiting("正在断线重连中!", 1);
+		}
+		else {
+			GameManager.GetInstance().showWaiting("登陆成功!", 1);
+			Application.LoadLevel("hall");
+		}
 	}
 	
 	public void Loginapp_importClientMessages()
