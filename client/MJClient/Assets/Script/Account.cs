@@ -166,5 +166,16 @@
 			MonoBehaviour.print("游戏结束！！！");
 			Event.fireOut("GameOver");
 		}
+
+		public override void initFriendsListOK(PLAYRE_DATA_LIST arg1)
+		{
+			Event.fireOut("initFriendsListOK", arg1);
+			
+		}
+
+		public override void callClientMsg(string arg1)
+		{
+			Event.fireOut("callClientMsg", arg1);
+		}
 	}
 }

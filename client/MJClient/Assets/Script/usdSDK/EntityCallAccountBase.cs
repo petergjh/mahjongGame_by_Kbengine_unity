@@ -30,6 +30,16 @@ namespace KBEngine
 			sendCall(null);
 		}
 
+		public void reqAddFriend(UInt64 arg1)
+		{
+			Bundle pBundle = newCall("reqAddFriend", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeUint64(arg1);
+			sendCall(null);
+		}
+
 		public void reqChangeRoom()
 		{
 			Bundle pBundle = newCall("reqChangeRoom", 0);
@@ -46,6 +56,15 @@ namespace KBEngine
 				return;
 
 			bundle.writeUnicode(arg1);
+			sendCall(null);
+		}
+
+		public void reqFriendsList()
+		{
+			Bundle pBundle = newCall("reqFriendsList", 0);
+			if(pBundle == null)
+				return;
+
 			sendCall(null);
 		}
 

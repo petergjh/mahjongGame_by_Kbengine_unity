@@ -16,6 +16,7 @@ public class hallPanel : MonoBehaviour {
 	Transform Friends_Content,Friend_item;
 	Transform mailBtn;
 	string _name,_id;
+	public Transform noFriendsTr;
 	// Use this for initialization
 	void init(){
 		topRoot = transform.Find ("top");
@@ -45,8 +46,38 @@ public class hallPanel : MonoBehaviour {
 		bottomRoot = transform.Find ("bottom");
 		mailBtn = bottomRoot.Find ("message_btn");
 		EventInterface.AddOnEvent (mailBtn, Click);
+		account = (Account)KBEngineApp.app.player();
+		account.baseEntityCall.reqFriendsList();
+	}
+	public void initFriendsListOK(PLAYRE_DATA_LIST arg1)
+	{
+		if (arg1.Count == 0)
+		{
+			MonoBehaviour.print("没有好友！！！");
+			noFriendsTr.gameObject.SetActive(true);
+		}
+		else
+		{
+			noFriendsTr.gameObject.SetActive(false);
+			foreach (Transform item in Friends_Content)
+			{
+				Destroy(item.gameObject);
+			}
+			MonoBehaviour.print("有好友---！" + arg1.Count);
+			foreach (var item in arg1)
+			{
+				MonoBehaviour.print(item.playerName + "---" + item.playerDBID + "---" + item.playerGold + "---" + item.isOnLine);
+				Transform tr = Instantiate(Friend_item);
+				tr.SetParent(Friends_Content,false);
+				tr.gameObject.SetActive(true);
+				tr.Find("name").GetComponent<Text>().text = item.playerName;
+				tr.Find("goldText").GetComponent<Text>().text = item.playerGold+"";
+				tr.Find("active").GetComponent<Text>().text = item.isOnLine==0?"离线":"在线";
+			}
+		}
 
 	}
+
 	void Click(Transform tr){
 		if (tr == xzddBtn) {
 			Account acc = (Account)KBEngineApp.app.player();
@@ -105,9 +136,10 @@ public class hallPanel : MonoBehaviour {
 	void installEvents()
 	{
 		KBEngine.Event.registerOut("OnReqCreateAvatar", this, "OnReqCreateAvatar");
-
+		KBEngine.Event.registerOut("initFriendsListOK", this, "initFriendsListOK");
+		
 	}
-
+	
 	public void OnReqCreateAvatar(int code)
 	{
 		if (code == 0)

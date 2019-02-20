@@ -39,10 +39,15 @@ public class GameManager : MonoBehaviour
 		KBEngine.Event.registerOut("addSpaceGeometryMapping", this, "addSpaceGeometryMapping");
 		KBEngine.Event.registerOut("onEnterWorld", this, "onEnterWorld");
 		KBEngine.Event.registerOut("onLeaveWorld", this, "onLeaveWorld");
+		KBEngine.Event.registerOut("callClientMsg", this, "callClientMsg");
+		
+	}
+	public void callClientMsg(string msg) {
+		GameManager.GetInstance().showMessagePanel(msg);
 	}
 	public void onEnterWorld(KBEngine.Entity entity)
 	{
-		if (MJpanel.roomIsIn == false)
+		if (MJpanel.instance == null||MJpanel.roomIsIn == false)
 		{
 			pendingEnterEntityIDs.Add(entity.id);
 		}
@@ -51,7 +56,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 	public void onLeaveWorld(KBEngine.Entity entity) {
-		if (MJpanel.roomIsIn)
+		if (MJpanel.instance!=null &&  MJpanel.roomIsIn )
 		{
 			MJpanel.instance.LeaveWorld(entity);
 		}

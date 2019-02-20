@@ -49,7 +49,7 @@ class AllPlayerPublicInfo(BaseGlobalEntity):
 		self.upDataInfo(ent_base, dbid,False)
 		print(self.allPlayers_dir)
 
-	def GetPlayersInfo(self,friendList):
+	def GetPlayersInfo(self,_friendList):
 		infoList = []
 		for i in range(len(_friendList)):
 			if _friendList[i] in self.allPlayers_dir:

@@ -12,7 +12,12 @@ class Account(KBEngine.Proxy):
 		self.roomKey = 0;
 
 
-
+	def reqAddFriend(self,dbid):
+		if dbid not in self.friendsList:
+			self.friendsList.append(dbid);
+			self.client.callClientMsg("添加成功")
+		else:
+			self.client.callClientMsg("你们已经是好友了")
 	def GetPlayerInfo(self):
 		_data={
 			"playerName":self.cellData["playerName"],
@@ -38,7 +43,16 @@ class Account(KBEngine.Proxy):
 		"""
 		INFO_MSG("account[%i] entities enable. entityCall:%s" % (self.id, self.client))
 		KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
-			
+		#self.initFriendsList()
+		
+	def initFriendsList(self):
+		infoList = KBEngine.globalData["AllPlayerPublicInfo"].GetPlayersInfo(self.friendsList)
+		if self.client:
+			self.client.initFriendsListOK(infoList)
+
+	def reqFriendsList(self):
+		self.initFriendsList()
+
 	def onLogOnAttempt(self, ip, port, password):
 		"""
 		KBEngine method.
@@ -83,6 +97,7 @@ class Account(KBEngine.Proxy):
 			self.playerID_base = self.databaseID+10000
 			self.cellData["playerName"] = name
 			self.cellData["playerID"] = self.playerID_base
+			KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
 			if self.client:
 				self.client.OnReqCreateAvatar(0)
 		else:

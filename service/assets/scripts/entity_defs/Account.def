@@ -3,7 +3,7 @@
 		
 		<friendsList>
 			<Type>		FRIENDS_LIST			</Type>
-			<Flags>		BASE				</Flags>
+			<Flags>		BASE_AND_CLIENT				</Flags>
 			<Persistent>		true				</Persistent>
 			<Default>		[]				</Default>
 		</friendsList>
@@ -126,6 +126,12 @@
 		</hasTing>
 		<onGameOver>
 		</onGameOver>
+		<initFriendsListOK>
+			<Arg>	PLAYRE_DATA_LIST	</Arg>
+		</initFriendsListOK>
+		<callClientMsg>
+			<Arg>	UNICODE	</Arg>
+		</callClientMsg>
 	</ClientMethods>
 
 	<BaseMethods>
@@ -135,6 +141,13 @@
 			<Exposed/>
 			<Arg>	UNICODE	</Arg>
 		</reqCreateAvatar>
+		<reqAddFriend>
+			<Exposed/>
+			<Arg>	UINT64	</Arg>
+		</reqAddFriend>
+		<reqFriendsList>
+			<Exposed/>
+		</reqFriendsList>
 
 		<onLeaveRoom>
 		</onLeaveRoom>

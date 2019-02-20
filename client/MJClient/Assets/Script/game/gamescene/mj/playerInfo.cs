@@ -15,6 +15,7 @@ public class playerInfo  {
 	Text talkText;
 	public bool isPlayer;
 	public Account account;
+	public Transform iconBG;
 	//牌类信息
 	public Transform MyCardlist, holdsCardPrfb, holdsRoot;
 	Transform tingPaiInfo, tingPaiPrfb, tingPaiInfoRoot;
@@ -42,6 +43,7 @@ public class playerInfo  {
 		ServerIndex = serverSeatIndex;
 		//0号位玩家的手牌单独操作
 		MonoBehaviour.print("索引为--" + localIndex);
+		iconBG = root.Find("iconBG");
 		if (localIndex == 0)
 		{
 			isPlayer = true;
@@ -54,6 +56,7 @@ public class playerInfo  {
 		{
 			MyCardlist = root.Find("MycardList");
 			holdsStartPos = MyCardlist.Find("holdCardStart").localPosition;
+			EventInterface.AddOnEvent(iconBG, iconBGClick);
 		}
 		holdsCardPrfb = MyCardlist.Find("HoldsCard");
 		holdsRoot = MyCardlist.Find("holdsRoot");
@@ -81,6 +84,15 @@ public class playerInfo  {
 		flodsCardHeight = flodsCardPrfb.GetComponent<RectTransform>().rect.height;
 		pengRootWeight = pengPrfb.GetComponent<RectTransform>().rect.width;
 	}
+
+	private void iconBGClick(Transform tr)
+	{
+		if (account == null)
+			return;
+		GameObject go = GameManager.GetInstance().LoadPanel("Prefabs/PlayerInfoShowPanel", GameObject.Find("Canvas/Root").transform);
+		go.GetComponent<PlayerInfoShowPanel>().showPanel(account);
+	}
+
 	//获取一张要实例化的麻将牌，用于展示
 	/// <summary>
 	/// Gets the MJ prfb.

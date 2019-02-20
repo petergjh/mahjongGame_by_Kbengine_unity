@@ -23,6 +23,8 @@ namespace KBEngine
 		public virtual void onTingPaiListChanged(TING_PAI_LIST oldValue) {}
 		public PLAYER_ACTION_DIC actionData = new PLAYER_ACTION_DIC();
 		public virtual void onActionDataChanged(PLAYER_ACTION_DIC oldValue) {}
+		public FRIENDS_LIST friendsList = new FRIENDS_LIST();
+		public virtual void onFriendsListChanged(FRIENDS_LIST oldValue) {}
 		public MJ_LIST holds = new MJ_LIST();
 		public virtual void onHoldsChanged(MJ_LIST oldValue) {}
 		public Byte inRoom = 0;
@@ -45,11 +47,13 @@ namespace KBEngine
 		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void callClientMsg(string arg1); 
 		public abstract void game_begin_push(); 
 		public abstract void game_chupai_push(); 
 		public abstract void game_mopai_push(SByte arg1); 
 		public abstract void hasTing(TING_PAI_LIST arg1); 
 		public abstract void has_action(); 
+		public abstract void initFriendsListOK(PLAYRE_DATA_LIST arg1); 
 		public abstract void onGameOver(); 
 		public abstract void onGang(UInt32 arg1, SByte arg2, string arg3); 
 		public abstract void onGetRoomInfo(ROOM_PUBLIC_INFO arg1); 
@@ -143,69 +147,77 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 21:
+				case 23:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 24:
+				case 40:
+					string callClientMsg_arg1 = stream.readUnicode();
+					callClientMsg(callClientMsg_arg1);
+					break;
+				case 26:
 					game_begin_push();
 					break;
-				case 27:
+				case 29:
 					game_chupai_push();
 					break;
-				case 29:
+				case 31:
 					SByte game_mopai_push_arg1 = stream.readInt8();
 					game_mopai_push(game_mopai_push_arg1);
 					break;
-				case 35:
+				case 37:
 					TING_PAI_LIST hasTing_arg1 = ((DATATYPE_TING_PAI_LIST)method.args[0]).createFromStreamEx(stream);
 					hasTing(hasTing_arg1);
 					break;
-				case 26:
+				case 28:
 					has_action();
 					break;
-				case 36:
+				case 39:
+					PLAYRE_DATA_LIST initFriendsListOK_arg1 = ((DATATYPE_PLAYRE_DATA_LIST)method.args[0]).createFromStreamEx(stream);
+					initFriendsListOK(initFriendsListOK_arg1);
+					break;
+				case 38:
 					onGameOver();
 					break;
-				case 32:
+				case 34:
 					UInt32 onGang_arg1 = stream.readUint32();
 					SByte onGang_arg2 = stream.readInt8();
 					string onGang_arg3 = stream.readUnicode();
 					onGang(onGang_arg1, onGang_arg2, onGang_arg3);
 					break;
-				case 23:
+				case 25:
 					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					onGetRoomInfo(onGetRoomInfo_arg1);
 					break;
-				case 33:
+				case 35:
 					UInt32 onHu_arg1 = stream.readUint32();
 					Byte onHu_arg2 = stream.readUint8();
 					SByte onHu_arg3 = stream.readInt8();
 					onHu(onHu_arg1, onHu_arg2, onHu_arg3);
 					break;
-				case 28:
+				case 30:
 					UInt32 onPlayCard_arg1 = stream.readUint32();
 					SByte onPlayCard_arg2 = stream.readInt8();
 					onPlayCard(onPlayCard_arg1, onPlayCard_arg2);
 					break;
-				case 34:
+				case 36:
 					UInt32 onPlayCardOver_arg1 = stream.readUint32();
 					SByte onPlayCardOver_arg2 = stream.readInt8();
 					onPlayCardOver(onPlayCardOver_arg1, onPlayCardOver_arg2);
 					break;
-				case 30:
+				case 32:
 					UInt32 otherPlayerMopai_arg1 = stream.readUint32();
 					otherPlayerMopai(otherPlayerMopai_arg1);
 					break;
-				case 31:
+				case 33:
 					UInt32 peng_notify_push_arg1 = stream.readUint32();
 					SByte peng_notify_push_arg2 = stream.readInt8();
 					peng_notify_push(peng_notify_push_arg1, peng_notify_push_arg2);
 					break;
-				case 22:
+				case 24:
 					playerLevelRoom();
 					break;
-				case 25:
+				case 27:
 					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
@@ -302,6 +314,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onDirectionChanged(oldval_direction);
+						}
+
+						break;
+					case 1:
+						FRIENDS_LIST oldval_friendsList = friendsList;
+						friendsList = ((DATATYPE_FRIENDS_LIST)EntityDef.id2datatypes[24]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onFriendsListChanged(oldval_friendsList);
+						}
+						else
+						{
+							if(inWorld)
+								onFriendsListChanged(oldval_friendsList);
 						}
 
 						break;
@@ -558,8 +586,29 @@ namespace KBEngine
 				}
 			}
 
+			FRIENDS_LIST oldval_friendsList = friendsList;
+			Property prop_friendsList = pdatas[6];
+			if(prop_friendsList.isBase())
+			{
+				if(inited && !inWorld)
+					onFriendsListChanged(oldval_friendsList);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_friendsList.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onFriendsListChanged(oldval_friendsList);
+					}
+				}
+			}
+
 			MJ_LIST oldval_holds = holds;
-			Property prop_holds = pdatas[6];
+			Property prop_holds = pdatas[7];
 			if(prop_holds.isBase())
 			{
 				if(inited && !inWorld)
@@ -580,7 +629,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_inRoom = inRoom;
-			Property prop_inRoom = pdatas[7];
+			Property prop_inRoom = pdatas[8];
 			if(prop_inRoom.isBase())
 			{
 				if(inited && !inWorld)
@@ -601,7 +650,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[8];
+			Property prop_isNewPlayer = pdatas[9];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -622,7 +671,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isReady = isReady;
-			Property prop_isReady = pdatas[9];
+			Property prop_isReady = pdatas[10];
 			if(prop_isReady.isBase())
 			{
 				if(inited && !inWorld)
@@ -643,7 +692,7 @@ namespace KBEngine
 			}
 
 			UInt32 oldval_playerGold = playerGold;
-			Property prop_playerGold = pdatas[10];
+			Property prop_playerGold = pdatas[11];
 			if(prop_playerGold.isBase())
 			{
 				if(inited && !inWorld)
@@ -664,7 +713,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[11];
+			Property prop_playerID = pdatas[12];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -685,7 +734,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[12];
+			Property prop_playerID_base = pdatas[13];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -706,7 +755,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[13];
+			Property prop_playerName = pdatas[14];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -727,7 +776,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[14];
+			Property prop_playerName_base = pdatas[15];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -769,7 +818,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[15];
+			Property prop_roomSeatIndex = pdatas[16];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)
