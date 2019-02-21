@@ -2,15 +2,18 @@
 import KBEngine
 from KBEDebug import *
 import Functor
+from interfaces.MailSystem import MailSystem
+
 MAIN_STATE_IDEL = 1
 MAIN_STATE_MATCH = 2
 MAIN_STATE_INGAME = 3
-class Account(KBEngine.Proxy):
+class Account(KBEngine.Proxy,MailSystem):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
+		MailSystem.__init__(self)
 		self.MainState = MAIN_STATE_IDEL
 		self.roomKey = 0;
-
+		self.playerName = self.cellData["playerName"]
 
 	def reqAddFriend(self,dbid):
 		if dbid not in self.friendsList:
@@ -43,6 +46,7 @@ class Account(KBEngine.Proxy):
 		"""
 		INFO_MSG("account[%i] entities enable. entityCall:%s" % (self.id, self.client))
 		KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
+		KBEngine.globalData["OfflineMessage"].register(self, self.databaseID)
 		#self.initFriendsList()
 		
 	def initFriendsList(self):

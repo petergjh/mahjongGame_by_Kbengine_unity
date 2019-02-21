@@ -9,6 +9,39 @@
 	<ENTITY_LIST>
 		ARRAY<of>ENTITYCALL</of>
 	</ENTITY_LIST>
+	<MAIL>
+		FIXED_DICT
+		<Properties>
+			<senderDBID>
+				<Type>	UINT64	</Type>
+			</senderDBID>
+			<senderName>
+				<Type>	UNICODE	</Type>
+			</senderName>
+			<targetDBID>
+				<Type>	UINT64	</Type>
+			</targetDBID>
+			<targetName>
+				<Type>	UNICODE	</Type>
+			</targetName>
+			<lookOver>
+				<Type>	BOOL	</Type>
+			</lookOver>
+			<mailType>
+				<Type>	UINT8	</Type>
+			</mailType>
+			<mailInfo>
+				<Type>	UNICODE	</Type>
+			</mailInfo>
+			<mailID>
+				<Type>	INT32	</Type>
+			</mailID>
+		</Properties>
+	</MAIL>
+
+	<MAIL_LIST>
+		ARRAY<of>MAIL</of>
+	</MAIL_LIST>
 	
 	<FRIENDS_LIST>
 		ARRAY<of>UINT64</of>
@@ -29,6 +62,9 @@
 			<isOnLine>
 				<Type>	BOOL	</Type>
 			</isOnLine>
+			<entity>
+				<Type>	ENTITYCALL	</Type>
+			</entity>
 		</Properties>
 	</PLAYRE_DATA>
 

@@ -48,6 +48,28 @@ public class hallPanel : MonoBehaviour {
 		EventInterface.AddOnEvent (mailBtn, Click);
 		account = (Account)KBEngineApp.app.player();
 		account.baseEntityCall.reqFriendsList();
+		showMailInfo(account);
+	}
+
+	public void showMailInfo(Account ac) {
+		print("有邮件----"+account.mailList.Count);
+		bool hasNew = false;
+		if (account.mailList.Count > 0) {
+			
+			foreach (var item in account.mailList)
+			{
+				if (item.lookOver == 0)
+					hasNew = true;
+				break;
+			}
+		}
+		if (hasNew)
+		{
+			mailBtn.GetChild(0).gameObject.SetActive(true);
+		}
+		else {
+			mailBtn.GetChild(0).gameObject.SetActive(false);
+		}
 	}
 	public void initFriendsListOK(PLAYRE_DATA_LIST arg1)
 	{
@@ -95,7 +117,9 @@ public class hallPanel : MonoBehaviour {
 		}else if(tr == CreatRoomBtn){
 			
 		}else if(tr == mailBtn){
-			
+			//account.baseEntityCall.reqSendMail(2, "xfsaf",3,account.playerName);
+			GameManager.GetInstance().LoadPanel("Prefabs/MailPanel", GameObject.Find("Canvas/Root").transform);
+
 		}
 	}
 	void initPlayerData() {

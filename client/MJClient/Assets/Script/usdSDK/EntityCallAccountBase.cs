@@ -59,12 +59,45 @@ namespace KBEngine
 			sendCall(null);
 		}
 
+		public void reqDeleMail(Int32 arg1)
+		{
+			Bundle pBundle = newCall("reqDeleMail", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeInt32(arg1);
+			sendCall(null);
+		}
+
 		public void reqFriendsList()
 		{
 			Bundle pBundle = newCall("reqFriendsList", 0);
 			if(pBundle == null)
 				return;
 
+			sendCall(null);
+		}
+
+		public void reqLookMail(Int32 arg1)
+		{
+			Bundle pBundle = newCall("reqLookMail", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeInt32(arg1);
+			sendCall(null);
+		}
+
+		public void reqSendMail(UInt64 arg1, string arg2, Byte arg3, string arg4)
+		{
+			Bundle pBundle = newCall("reqSendMail", 0);
+			if(pBundle == null)
+				return;
+
+			bundle.writeUint64(arg1);
+			bundle.writeUnicode(arg2);
+			bundle.writeUint8(arg3);
+			bundle.writeUnicode(arg4);
 			sendCall(null);
 		}
 

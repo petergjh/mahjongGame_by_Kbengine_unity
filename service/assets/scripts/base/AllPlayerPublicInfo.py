@@ -32,12 +32,14 @@ class AllPlayerPublicInfo(BaseGlobalEntity):
 			self.allPlayers_dir[dbid]["isOnLine"] = isOnLine
 			self.allPlayers_dir[dbid]["playerName"] = info["playerName"]
 			self.allPlayers_dir[dbid]["playerGold"] =info["playerGold"]
+			self.allPlayers_dir[dbid]["entity"] =ent_base
 		else:
 			_data = {
 			"isOnLine" : isOnLine,
 			"playerGold" : info["playerGold"],
 			"playerName" : info["playerName"],
-			"playerDBID" : info["playerDBID"]
+			"playerDBID" : info["playerDBID"],
+			"entity" : ent_base
 			}
 			self.allPlayers_dir[dbid] = _data
 

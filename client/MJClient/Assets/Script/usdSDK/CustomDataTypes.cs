@@ -69,6 +69,67 @@ namespace KBEngine
 
 
 
+	public class DATATYPE_MAIL : DATATYPE_BASE
+	{
+		public MAIL createFromStreamEx(MemoryStream stream)
+		{
+			MAIL datas = new MAIL();
+			datas.senderDBID = stream.readUint64();
+			datas.senderName = stream.readUnicode();
+			datas.targetDBID = stream.readUint64();
+			datas.targetName = stream.readUnicode();
+			datas.lookOver = stream.readUint8();
+			datas.mailType = stream.readUint8();
+			datas.mailInfo = stream.readUnicode();
+			datas.mailID = stream.readInt32();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MAIL v)
+		{
+			stream.writeUint64(v.senderDBID);
+			stream.writeUnicode(v.senderName);
+			stream.writeUint64(v.targetDBID);
+			stream.writeUnicode(v.targetName);
+			stream.writeUint8(v.lookOver);
+			stream.writeUint8(v.mailType);
+			stream.writeUnicode(v.mailInfo);
+			stream.writeInt32(v.mailID);
+		}
+	}
+
+
+
+	public class DATATYPE_MAIL_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_MAIL itemType = new DATATYPE_MAIL();
+
+		public MAIL_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			MAIL_LIST datas = new MAIL_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MAIL_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
+
 	public class DATATYPE_FRIENDS_LIST : DATATYPE_BASE
 	{
 		public FRIENDS_LIST createFromStreamEx(MemoryStream stream)
@@ -106,6 +167,7 @@ namespace KBEngine
 			datas.playerDBID = stream.readUint64();
 			datas.playerGold = stream.readUint32();
 			datas.isOnLine = stream.readUint8();
+			datas.entity = stream.readEntitycall();
 			return datas;
 		}
 
@@ -115,6 +177,7 @@ namespace KBEngine
 			stream.writeUint64(v.playerDBID);
 			stream.writeUint32(v.playerGold);
 			stream.writeUint8(v.isOnLine);
+			stream.writeEntitycall(v.entity);
 		}
 	}
 

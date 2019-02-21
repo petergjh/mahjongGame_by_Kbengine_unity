@@ -21,6 +21,8 @@ namespace KBEngine
 
 		public TING_PAI_LIST TingPaiList = new TING_PAI_LIST();
 		public virtual void onTingPaiListChanged(TING_PAI_LIST oldValue) {}
+		public Int32 _lastmailID = 0;
+		public virtual void on_lastmailIDChanged(Int32 oldValue) {}
 		public PLAYER_ACTION_DIC actionData = new PLAYER_ACTION_DIC();
 		public virtual void onActionDataChanged(PLAYER_ACTION_DIC oldValue) {}
 		public FRIENDS_LIST friendsList = new FRIENDS_LIST();
@@ -33,6 +35,8 @@ namespace KBEngine
 		public virtual void onIsNewPlayerChanged(Byte oldValue) {}
 		public Byte isReady = 0;
 		public virtual void onIsReadyChanged(Byte oldValue) {}
+		public MAIL_LIST mailList = new MAIL_LIST();
+		public virtual void onMailListChanged(MAIL_LIST oldValue) {}
 		public UInt32 playerGold = 1000;
 		public virtual void onPlayerGoldChanged(UInt32 oldValue) {}
 		public UInt16 playerID = 0;
@@ -271,7 +275,7 @@ namespace KBEngine
 				{
 					case 13:
 						TING_PAI_LIST oldval_TingPaiList = TingPaiList;
-						TingPaiList = ((DATATYPE_TING_PAI_LIST)EntityDef.id2datatypes[32]).createFromStreamEx(stream);
+						TingPaiList = ((DATATYPE_TING_PAI_LIST)EntityDef.id2datatypes[34]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -285,9 +289,25 @@ namespace KBEngine
 						}
 
 						break;
+					case 15:
+						Int32 oldval__lastmailID = _lastmailID;
+						_lastmailID = stream.readInt32();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								on_lastmailIDChanged(oldval__lastmailID);
+						}
+						else
+						{
+							if(inWorld)
+								on_lastmailIDChanged(oldval__lastmailID);
+						}
+
+						break;
 					case 12:
 						PLAYER_ACTION_DIC oldval_actionData = actionData;
-						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[30]).createFromStreamEx(stream);
+						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[32]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -319,7 +339,7 @@ namespace KBEngine
 						break;
 					case 1:
 						FRIENDS_LIST oldval_friendsList = friendsList;
-						friendsList = ((DATATYPE_FRIENDS_LIST)EntityDef.id2datatypes[24]).createFromStreamEx(stream);
+						friendsList = ((DATATYPE_FRIENDS_LIST)EntityDef.id2datatypes[26]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -394,6 +414,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onIsReadyChanged(oldval_isReady);
+						}
+
+						break;
+					case 14:
+						MAIL_LIST oldval_mailList = mailList;
+						mailList = ((DATATYPE_MAIL_LIST)EntityDef.id2datatypes[25]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onMailListChanged(oldval_mailList);
+						}
+						else
+						{
+							if(inWorld)
+								onMailListChanged(oldval_mailList);
 						}
 
 						break;
@@ -544,8 +580,29 @@ namespace KBEngine
 				}
 			}
 
+			Int32 oldval__lastmailID = _lastmailID;
+			Property prop__lastmailID = pdatas[5];
+			if(prop__lastmailID.isBase())
+			{
+				if(inited && !inWorld)
+					on_lastmailIDChanged(oldval__lastmailID);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop__lastmailID.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						on_lastmailIDChanged(oldval__lastmailID);
+					}
+				}
+			}
+
 			PLAYER_ACTION_DIC oldval_actionData = actionData;
-			Property prop_actionData = pdatas[5];
+			Property prop_actionData = pdatas[6];
 			if(prop_actionData.isBase())
 			{
 				if(inited && !inWorld)
@@ -587,7 +644,7 @@ namespace KBEngine
 			}
 
 			FRIENDS_LIST oldval_friendsList = friendsList;
-			Property prop_friendsList = pdatas[6];
+			Property prop_friendsList = pdatas[7];
 			if(prop_friendsList.isBase())
 			{
 				if(inited && !inWorld)
@@ -608,7 +665,7 @@ namespace KBEngine
 			}
 
 			MJ_LIST oldval_holds = holds;
-			Property prop_holds = pdatas[7];
+			Property prop_holds = pdatas[8];
 			if(prop_holds.isBase())
 			{
 				if(inited && !inWorld)
@@ -629,7 +686,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_inRoom = inRoom;
-			Property prop_inRoom = pdatas[8];
+			Property prop_inRoom = pdatas[9];
 			if(prop_inRoom.isBase())
 			{
 				if(inited && !inWorld)
@@ -650,7 +707,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[9];
+			Property prop_isNewPlayer = pdatas[10];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -671,7 +728,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isReady = isReady;
-			Property prop_isReady = pdatas[10];
+			Property prop_isReady = pdatas[11];
 			if(prop_isReady.isBase())
 			{
 				if(inited && !inWorld)
@@ -691,8 +748,29 @@ namespace KBEngine
 				}
 			}
 
+			MAIL_LIST oldval_mailList = mailList;
+			Property prop_mailList = pdatas[12];
+			if(prop_mailList.isBase())
+			{
+				if(inited && !inWorld)
+					onMailListChanged(oldval_mailList);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_mailList.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onMailListChanged(oldval_mailList);
+					}
+				}
+			}
+
 			UInt32 oldval_playerGold = playerGold;
-			Property prop_playerGold = pdatas[11];
+			Property prop_playerGold = pdatas[13];
 			if(prop_playerGold.isBase())
 			{
 				if(inited && !inWorld)
@@ -713,7 +791,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[12];
+			Property prop_playerID = pdatas[14];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -734,7 +812,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[13];
+			Property prop_playerID_base = pdatas[15];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -755,7 +833,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[14];
+			Property prop_playerName = pdatas[16];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -776,7 +854,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[15];
+			Property prop_playerName_base = pdatas[17];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -818,7 +896,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[16];
+			Property prop_roomSeatIndex = pdatas[18];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)

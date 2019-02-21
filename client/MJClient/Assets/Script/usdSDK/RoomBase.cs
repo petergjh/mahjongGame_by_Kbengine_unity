@@ -163,7 +163,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 17:
+					case 19:
 						Byte oldval_RoomType = RoomType;
 						RoomType = stream.readUint8();
 
@@ -179,7 +179,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 22:
+					case 24:
 						Byte oldval_cur_turn = cur_turn;
 						cur_turn = stream.readUint8();
 
@@ -211,7 +211,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 20:
+					case 22:
 						Byte oldval_numOfMJ = numOfMJ;
 						numOfMJ = stream.readUint8();
 
@@ -227,7 +227,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 19:
+					case 21:
 						Byte oldval_playerMaxCount = playerMaxCount;
 						playerMaxCount = stream.readUint8();
 
@@ -259,9 +259,9 @@ namespace KBEngine
 						}
 
 						break;
-					case 21:
+					case 23:
 						ROOM_PUBLIC_INFO oldval_public_roomInfo = public_roomInfo;
-						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[29]).createFromStreamEx(stream);
+						public_roomInfo = ((DATATYPE_ROOM_PUBLIC_INFO)EntityDef.id2datatypes[31]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -275,7 +275,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 16:
+					case 18:
 						UInt64 oldval_roomKey = roomKey;
 						roomKey = stream.readUint64();
 

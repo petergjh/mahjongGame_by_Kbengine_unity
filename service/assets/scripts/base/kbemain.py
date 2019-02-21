@@ -15,6 +15,8 @@ def onBaseAppReady(isBootstrap):
 	if isBootstrap:
 		KBEngine.createEntityLocally("Halls",{})
 		CreateSaveGlobalEntity("AllPlayerPublicInfo")
+		CreateSaveGlobalEntity("OfflineMessage")
+		
 
 def CreateSaveGlobalEntity(entityType):
 	if KBEngine.globalData.has_key(entityType)==False:

@@ -1,0 +1,27 @@
+<root>
+	<Interfaces>
+		<Interface>	BaseGlobalEntity	</Interface>
+	</Interfaces>
+	<Properties>
+		<offline_messages>
+			<Type>      MAIL_LIST        </Type>
+			<Flags>     BASE          </Flags>
+			<Persistent>		true				</Persistent>
+			<Default>    []    </Default>
+		</offline_messages>
+		
+	</Properties>
+
+	<ClientMethods>		
+	</ClientMethods>
+
+	<BaseMethods>
+		<send_message>
+			<Arg>		MAIL				</Arg>
+		</send_message>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>

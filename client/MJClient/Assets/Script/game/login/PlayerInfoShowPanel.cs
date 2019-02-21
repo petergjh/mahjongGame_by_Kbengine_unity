@@ -60,8 +60,8 @@ public class PlayerInfoShowPanel : MonoBehaviour {
 		audioManager.GetInstance().PlaySoundEffect("Music/buttonClick");
 		if (tr == addFriendBtn) {
 			Account player = (Account)KBEngineApp.app.player();
-			
-			player.baseEntityCall.reqAddFriend((ulong)showac.playerID - 10000);
+			player.baseEntityCall.reqSendMail((ulong)showac.playerID-10000, showac.playerName, 3, player.playerName);
+			//player.baseEntityCall.reqAddFriend((ulong)showac.playerID - 10000);
 		}
 		close();
 	}

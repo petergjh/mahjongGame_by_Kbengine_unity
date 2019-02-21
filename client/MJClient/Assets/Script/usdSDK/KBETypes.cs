@@ -866,6 +866,24 @@ namespace KBEngine
 
 	}
 
+	public class MAIL
+	{
+		public UInt64 senderDBID = 0;
+		public string senderName = "";
+		public UInt64 targetDBID = 0;
+		public string targetName = "";
+		public Byte lookOver = 0;
+		public Byte mailType = 0;
+		public string mailInfo = "";
+		public Int32 mailID = 0;
+
+	}
+
+	public class MAIL_LIST : List<MAIL>
+	{
+
+	}
+
 	public class FRIENDS_LIST : List<UInt64>
 	{
 
@@ -877,6 +895,7 @@ namespace KBEngine
 		public UInt64 playerDBID = 0;
 		public UInt32 playerGold = 0;
 		public Byte isOnLine = 0;
+		public byte[] entity = new byte[0];
 
 	}
 
