@@ -350,13 +350,28 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(OnReqCreateAvatar / 23).");
 
+			List<DATATYPE_BASE> pAccount_addMail_args = new List<DATATYPE_BASE>();
+			pAccount_addMail_args.Add(EntityDef.id2datatypes[24]);
+
+			Method pAccount_addMail = new Method();
+			pAccount_addMail.name = "addMail";
+			pAccount_addMail.methodUtype = 48;
+			pAccount_addMail.aliasID = 2;
+			pAccount_addMail.args = pAccount_addMail_args;
+
+			pAccountModule.methods["addMail"] = pAccount_addMail; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_addMail.aliasID] = pAccount_addMail;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(addMail / 48).");
+
 			List<DATATYPE_BASE> pAccount_callClientMsg_args = new List<DATATYPE_BASE>();
 			pAccount_callClientMsg_args.Add(EntityDef.id2datatypes[12]);
 
 			Method pAccount_callClientMsg = new Method();
 			pAccount_callClientMsg.name = "callClientMsg";
 			pAccount_callClientMsg.methodUtype = 40;
-			pAccount_callClientMsg.aliasID = 2;
+			pAccount_callClientMsg.aliasID = 3;
 			pAccount_callClientMsg.args = pAccount_callClientMsg_args;
 
 			pAccountModule.methods["callClientMsg"] = pAccount_callClientMsg; 
@@ -365,12 +380,27 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(callClientMsg / 40).");
 
+			List<DATATYPE_BASE> pAccount_deleMail_args = new List<DATATYPE_BASE>();
+			pAccount_deleMail_args.Add(EntityDef.id2datatypes[8]);
+
+			Method pAccount_deleMail = new Method();
+			pAccount_deleMail.name = "deleMail";
+			pAccount_deleMail.methodUtype = 49;
+			pAccount_deleMail.aliasID = 4;
+			pAccount_deleMail.args = pAccount_deleMail_args;
+
+			pAccountModule.methods["deleMail"] = pAccount_deleMail; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_deleMail.aliasID] = pAccount_deleMail;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(deleMail / 49).");
+
 			List<DATATYPE_BASE> pAccount_game_begin_push_args = new List<DATATYPE_BASE>();
 
 			Method pAccount_game_begin_push = new Method();
 			pAccount_game_begin_push.name = "game_begin_push";
 			pAccount_game_begin_push.methodUtype = 26;
-			pAccount_game_begin_push.aliasID = 3;
+			pAccount_game_begin_push.aliasID = 5;
 			pAccount_game_begin_push.args = pAccount_game_begin_push_args;
 
 			pAccountModule.methods["game_begin_push"] = pAccount_game_begin_push; 
@@ -384,7 +414,7 @@ namespace KBEngine
 			Method pAccount_game_chupai_push = new Method();
 			pAccount_game_chupai_push.name = "game_chupai_push";
 			pAccount_game_chupai_push.methodUtype = 29;
-			pAccount_game_chupai_push.aliasID = 4;
+			pAccount_game_chupai_push.aliasID = 6;
 			pAccount_game_chupai_push.args = pAccount_game_chupai_push_args;
 
 			pAccountModule.methods["game_chupai_push"] = pAccount_game_chupai_push; 
@@ -399,7 +429,7 @@ namespace KBEngine
 			Method pAccount_game_mopai_push = new Method();
 			pAccount_game_mopai_push.name = "game_mopai_push";
 			pAccount_game_mopai_push.methodUtype = 31;
-			pAccount_game_mopai_push.aliasID = 5;
+			pAccount_game_mopai_push.aliasID = 7;
 			pAccount_game_mopai_push.args = pAccount_game_mopai_push_args;
 
 			pAccountModule.methods["game_mopai_push"] = pAccount_game_mopai_push; 
@@ -414,7 +444,7 @@ namespace KBEngine
 			Method pAccount_hasTing = new Method();
 			pAccount_hasTing.name = "hasTing";
 			pAccount_hasTing.methodUtype = 37;
-			pAccount_hasTing.aliasID = 6;
+			pAccount_hasTing.aliasID = 8;
 			pAccount_hasTing.args = pAccount_hasTing_args;
 
 			pAccountModule.methods["hasTing"] = pAccount_hasTing; 
@@ -428,7 +458,7 @@ namespace KBEngine
 			Method pAccount_has_action = new Method();
 			pAccount_has_action.name = "has_action";
 			pAccount_has_action.methodUtype = 28;
-			pAccount_has_action.aliasID = 7;
+			pAccount_has_action.aliasID = 9;
 			pAccount_has_action.args = pAccount_has_action_args;
 
 			pAccountModule.methods["has_action"] = pAccount_has_action; 
@@ -443,7 +473,7 @@ namespace KBEngine
 			Method pAccount_initFriendsListOK = new Method();
 			pAccount_initFriendsListOK.name = "initFriendsListOK";
 			pAccount_initFriendsListOK.methodUtype = 39;
-			pAccount_initFriendsListOK.aliasID = 8;
+			pAccount_initFriendsListOK.aliasID = 10;
 			pAccount_initFriendsListOK.args = pAccount_initFriendsListOK_args;
 
 			pAccountModule.methods["initFriendsListOK"] = pAccount_initFriendsListOK; 
@@ -457,7 +487,7 @@ namespace KBEngine
 			Method pAccount_onGameOver = new Method();
 			pAccount_onGameOver.name = "onGameOver";
 			pAccount_onGameOver.methodUtype = 38;
-			pAccount_onGameOver.aliasID = 9;
+			pAccount_onGameOver.aliasID = 11;
 			pAccount_onGameOver.args = pAccount_onGameOver_args;
 
 			pAccountModule.methods["onGameOver"] = pAccount_onGameOver; 
@@ -474,7 +504,7 @@ namespace KBEngine
 			Method pAccount_onGang = new Method();
 			pAccount_onGang.name = "onGang";
 			pAccount_onGang.methodUtype = 34;
-			pAccount_onGang.aliasID = 10;
+			pAccount_onGang.aliasID = 12;
 			pAccount_onGang.args = pAccount_onGang_args;
 
 			pAccountModule.methods["onGang"] = pAccount_onGang; 
@@ -489,7 +519,7 @@ namespace KBEngine
 			Method pAccount_onGetRoomInfo = new Method();
 			pAccount_onGetRoomInfo.name = "onGetRoomInfo";
 			pAccount_onGetRoomInfo.methodUtype = 25;
-			pAccount_onGetRoomInfo.aliasID = 11;
+			pAccount_onGetRoomInfo.aliasID = 13;
 			pAccount_onGetRoomInfo.args = pAccount_onGetRoomInfo_args;
 
 			pAccountModule.methods["onGetRoomInfo"] = pAccount_onGetRoomInfo; 
@@ -506,7 +536,7 @@ namespace KBEngine
 			Method pAccount_onHu = new Method();
 			pAccount_onHu.name = "onHu";
 			pAccount_onHu.methodUtype = 35;
-			pAccount_onHu.aliasID = 12;
+			pAccount_onHu.aliasID = 14;
 			pAccount_onHu.args = pAccount_onHu_args;
 
 			pAccountModule.methods["onHu"] = pAccount_onHu; 
@@ -522,7 +552,7 @@ namespace KBEngine
 			Method pAccount_onPlayCard = new Method();
 			pAccount_onPlayCard.name = "onPlayCard";
 			pAccount_onPlayCard.methodUtype = 30;
-			pAccount_onPlayCard.aliasID = 13;
+			pAccount_onPlayCard.aliasID = 15;
 			pAccount_onPlayCard.args = pAccount_onPlayCard_args;
 
 			pAccountModule.methods["onPlayCard"] = pAccount_onPlayCard; 
@@ -538,7 +568,7 @@ namespace KBEngine
 			Method pAccount_onPlayCardOver = new Method();
 			pAccount_onPlayCardOver.name = "onPlayCardOver";
 			pAccount_onPlayCardOver.methodUtype = 36;
-			pAccount_onPlayCardOver.aliasID = 14;
+			pAccount_onPlayCardOver.aliasID = 16;
 			pAccount_onPlayCardOver.args = pAccount_onPlayCardOver_args;
 
 			pAccountModule.methods["onPlayCardOver"] = pAccount_onPlayCardOver; 
@@ -553,7 +583,7 @@ namespace KBEngine
 			Method pAccount_otherPlayerMopai = new Method();
 			pAccount_otherPlayerMopai.name = "otherPlayerMopai";
 			pAccount_otherPlayerMopai.methodUtype = 32;
-			pAccount_otherPlayerMopai.aliasID = 15;
+			pAccount_otherPlayerMopai.aliasID = 17;
 			pAccount_otherPlayerMopai.args = pAccount_otherPlayerMopai_args;
 
 			pAccountModule.methods["otherPlayerMopai"] = pAccount_otherPlayerMopai; 
@@ -569,7 +599,7 @@ namespace KBEngine
 			Method pAccount_peng_notify_push = new Method();
 			pAccount_peng_notify_push.name = "peng_notify_push";
 			pAccount_peng_notify_push.methodUtype = 33;
-			pAccount_peng_notify_push.aliasID = 16;
+			pAccount_peng_notify_push.aliasID = 18;
 			pAccount_peng_notify_push.args = pAccount_peng_notify_push_args;
 
 			pAccountModule.methods["peng_notify_push"] = pAccount_peng_notify_push; 
@@ -583,7 +613,7 @@ namespace KBEngine
 			Method pAccount_playerLevelRoom = new Method();
 			pAccount_playerLevelRoom.name = "playerLevelRoom";
 			pAccount_playerLevelRoom.methodUtype = 24;
-			pAccount_playerLevelRoom.aliasID = 17;
+			pAccount_playerLevelRoom.aliasID = 19;
 			pAccount_playerLevelRoom.args = pAccount_playerLevelRoom_args;
 
 			pAccountModule.methods["playerLevelRoom"] = pAccount_playerLevelRoom; 
@@ -598,7 +628,7 @@ namespace KBEngine
 			Method pAccount_upDataClientRoomInfo = new Method();
 			pAccount_upDataClientRoomInfo.name = "upDataClientRoomInfo";
 			pAccount_upDataClientRoomInfo.methodUtype = 27;
-			pAccount_upDataClientRoomInfo.aliasID = 18;
+			pAccount_upDataClientRoomInfo.aliasID = 20;
 			pAccount_upDataClientRoomInfo.args = pAccount_upDataClientRoomInfo_args;
 
 			pAccountModule.methods["upDataClientRoomInfo"] = pAccount_upDataClientRoomInfo; 
@@ -637,6 +667,22 @@ namespace KBEngine
 			pAccountModule.idbase_methods[pAccount_reqAddFriend.methodUtype] = pAccount_reqAddFriend;
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqAddFriend / 14).");
+
+			List<DATATYPE_BASE> pAccount_reqAgreeAddFriendByMail_args = new List<DATATYPE_BASE>();
+			pAccount_reqAgreeAddFriendByMail_args.Add(EntityDef.id2datatypes[8]);
+
+			Method pAccount_reqAgreeAddFriendByMail = new Method();
+			pAccount_reqAgreeAddFriendByMail.name = "reqAgreeAddFriendByMail";
+			pAccount_reqAgreeAddFriendByMail.methodUtype = 45;
+			pAccount_reqAgreeAddFriendByMail.aliasID = -1;
+			pAccount_reqAgreeAddFriendByMail.args = pAccount_reqAgreeAddFriendByMail_args;
+
+			pAccountModule.methods["reqAgreeAddFriendByMail"] = pAccount_reqAgreeAddFriendByMail; 
+			pAccountModule.base_methods["reqAgreeAddFriendByMail"] = pAccount_reqAgreeAddFriendByMail;
+
+			pAccountModule.idbase_methods[pAccount_reqAgreeAddFriendByMail.methodUtype] = pAccount_reqAgreeAddFriendByMail;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqAgreeAddFriendByMail / 45).");
 
 			List<DATATYPE_BASE> pAccount_reqChangeRoom_args = new List<DATATYPE_BASE>();
 
@@ -699,6 +745,39 @@ namespace KBEngine
 			pAccountModule.idbase_methods[pAccount_reqFriendsList.methodUtype] = pAccount_reqFriendsList;
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqFriendsList / 15).");
+
+			List<DATATYPE_BASE> pAccount_reqGetOtherGiveGold_args = new List<DATATYPE_BASE>();
+			pAccount_reqGetOtherGiveGold_args.Add(EntityDef.id2datatypes[8]);
+
+			Method pAccount_reqGetOtherGiveGold = new Method();
+			pAccount_reqGetOtherGiveGold.name = "reqGetOtherGiveGold";
+			pAccount_reqGetOtherGiveGold.methodUtype = 47;
+			pAccount_reqGetOtherGiveGold.aliasID = -1;
+			pAccount_reqGetOtherGiveGold.args = pAccount_reqGetOtherGiveGold_args;
+
+			pAccountModule.methods["reqGetOtherGiveGold"] = pAccount_reqGetOtherGiveGold; 
+			pAccountModule.base_methods["reqGetOtherGiveGold"] = pAccount_reqGetOtherGiveGold;
+
+			pAccountModule.idbase_methods[pAccount_reqGetOtherGiveGold.methodUtype] = pAccount_reqGetOtherGiveGold;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqGetOtherGiveGold / 47).");
+
+			List<DATATYPE_BASE> pAccount_reqGiveGold_args = new List<DATATYPE_BASE>();
+			pAccount_reqGiveGold_args.Add(EntityDef.id2datatypes[5]);
+			pAccount_reqGiveGold_args.Add(EntityDef.id2datatypes[12]);
+
+			Method pAccount_reqGiveGold = new Method();
+			pAccount_reqGiveGold.name = "reqGiveGold";
+			pAccount_reqGiveGold.methodUtype = 46;
+			pAccount_reqGiveGold.aliasID = -1;
+			pAccount_reqGiveGold.args = pAccount_reqGiveGold_args;
+
+			pAccountModule.methods["reqGiveGold"] = pAccount_reqGiveGold; 
+			pAccountModule.base_methods["reqGiveGold"] = pAccount_reqGiveGold;
+
+			pAccountModule.idbase_methods[pAccount_reqGiveGold.methodUtype] = pAccount_reqGiveGold;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(reqGiveGold / 46).");
 
 			List<DATATYPE_BASE> pAccount_reqLookMail_args = new List<DATATYPE_BASE>();
 			pAccount_reqLookMail_args.Add(EntityDef.id2datatypes[8]);
@@ -891,7 +970,7 @@ namespace KBEngine
 
 			Method pRoom_chuPai = new Method();
 			pRoom_chuPai.name = "chuPai";
-			pRoom_chuPai.methodUtype = 55;
+			pRoom_chuPai.methodUtype = 60;
 			pRoom_chuPai.aliasID = -1;
 			pRoom_chuPai.args = pRoom_chuPai_args;
 
@@ -900,14 +979,14 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_chuPai.methodUtype] = pRoom_chuPai;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(chuPai / 55).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(chuPai / 60).");
 
 			List<DATATYPE_BASE> pRoom_reqChangeReadyState_args = new List<DATATYPE_BASE>();
 			pRoom_reqChangeReadyState_args.Add(EntityDef.id2datatypes[2]);
 
 			Method pRoom_reqChangeReadyState = new Method();
 			pRoom_reqChangeReadyState.name = "reqChangeReadyState";
-			pRoom_reqChangeReadyState.methodUtype = 54;
+			pRoom_reqChangeReadyState.methodUtype = 59;
 			pRoom_reqChangeReadyState.aliasID = -1;
 			pRoom_reqChangeReadyState.args = pRoom_reqChangeReadyState_args;
 
@@ -916,14 +995,14 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqChangeReadyState.methodUtype] = pRoom_reqChangeReadyState;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqChangeReadyState / 54).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqChangeReadyState / 59).");
 
 			List<DATATYPE_BASE> pRoom_reqGang_args = new List<DATATYPE_BASE>();
 			pRoom_reqGang_args.Add(EntityDef.id2datatypes[6]);
 
 			Method pRoom_reqGang = new Method();
 			pRoom_reqGang.name = "reqGang";
-			pRoom_reqGang.methodUtype = 57;
+			pRoom_reqGang.methodUtype = 62;
 			pRoom_reqGang.aliasID = -1;
 			pRoom_reqGang.args = pRoom_reqGang_args;
 
@@ -932,13 +1011,13 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqGang.methodUtype] = pRoom_reqGang;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGang / 57).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGang / 62).");
 
 			List<DATATYPE_BASE> pRoom_reqGetRoomInfo_args = new List<DATATYPE_BASE>();
 
 			Method pRoom_reqGetRoomInfo = new Method();
 			pRoom_reqGetRoomInfo.name = "reqGetRoomInfo";
-			pRoom_reqGetRoomInfo.methodUtype = 53;
+			pRoom_reqGetRoomInfo.methodUtype = 58;
 			pRoom_reqGetRoomInfo.aliasID = -1;
 			pRoom_reqGetRoomInfo.args = pRoom_reqGetRoomInfo_args;
 
@@ -947,13 +1026,13 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqGetRoomInfo.methodUtype] = pRoom_reqGetRoomInfo;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGetRoomInfo / 53).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGetRoomInfo / 58).");
 
 			List<DATATYPE_BASE> pRoom_reqGuo_args = new List<DATATYPE_BASE>();
 
 			Method pRoom_reqGuo = new Method();
 			pRoom_reqGuo.name = "reqGuo";
-			pRoom_reqGuo.methodUtype = 59;
+			pRoom_reqGuo.methodUtype = 64;
 			pRoom_reqGuo.aliasID = -1;
 			pRoom_reqGuo.args = pRoom_reqGuo_args;
 
@@ -962,13 +1041,13 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqGuo.methodUtype] = pRoom_reqGuo;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGuo / 59).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqGuo / 64).");
 
 			List<DATATYPE_BASE> pRoom_reqHu_args = new List<DATATYPE_BASE>();
 
 			Method pRoom_reqHu = new Method();
 			pRoom_reqHu.name = "reqHu";
-			pRoom_reqHu.methodUtype = 58;
+			pRoom_reqHu.methodUtype = 63;
 			pRoom_reqHu.aliasID = -1;
 			pRoom_reqHu.args = pRoom_reqHu_args;
 
@@ -977,13 +1056,13 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqHu.methodUtype] = pRoom_reqHu;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqHu / 58).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqHu / 63).");
 
 			List<DATATYPE_BASE> pRoom_reqPeng_args = new List<DATATYPE_BASE>();
 
 			Method pRoom_reqPeng = new Method();
 			pRoom_reqPeng.name = "reqPeng";
-			pRoom_reqPeng.methodUtype = 56;
+			pRoom_reqPeng.methodUtype = 61;
 			pRoom_reqPeng.aliasID = -1;
 			pRoom_reqPeng.args = pRoom_reqPeng_args;
 
@@ -992,7 +1071,7 @@ namespace KBEngine
 
 			pRoomModule.idcell_methods[pRoom_reqPeng.methodUtype] = pRoom_reqPeng;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqPeng / 56).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Room), method(reqPeng / 61).");
 
 		}
 

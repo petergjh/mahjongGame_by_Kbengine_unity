@@ -40,7 +40,7 @@ public class MailPanel : MonoBehaviour {
 			MAIL mail = account.mailList [i];
             Transform tr = Instantiate (mailBase);
 			string info = "";
-			if (mail.mailType == 0) {
+			if (mail.mailType == 1) {
                 info = mail.senderName + " 发了一封邮件给你，请尽快查收吧";
 			} else if (mail.mailType == 3) {
                 info = mail.senderName + " 想要添加你为好友，请尽快处理吧";
@@ -69,14 +69,20 @@ public class MailPanel : MonoBehaviour {
         tr.Find("look").GetComponent<Text>().text = "已读";
         int index = int.Parse(tr.Find("index").GetComponent<Text>().text);
         MAIL mail = account.mailList[index];
-        mail.lookOver = 1;
+       
 		if(mail.lookOver==0)
 			account.baseEntityCall.reqLookMail(mail.mailID);
-        showMailInfoPanel(mail);
+
+		account.mailList[index].lookOver = 1;
+		hallPanel.instance.showMailInfo(account);
+		showMailInfoPanel(mail);
 
     }
     void showMailInfoPanel(MAIL mail){
         GameObject go = GameManager.GetInstance().LoadPanel("Prefabs/mailInfoPanel");
         go.GetComponent<mailInfoPanel>().showMailInfoPanel(mail);
-    }
+		root.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnKill(() => {
+			DestroyObject(gameObject);
+		});
+	}
 }

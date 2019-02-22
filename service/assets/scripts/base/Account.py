@@ -14,7 +14,7 @@ class Account(KBEngine.Proxy,MailSystem):
 		self.MainState = MAIN_STATE_IDEL
 		self.roomKey = 0;
 		self.playerName = self.cellData["playerName"]
-
+		self.playerGold = self.cellData["playerGold"]
 	def reqAddFriend(self,dbid):
 		if dbid not in self.friendsList:
 			self.friendsList.append(dbid);
@@ -23,9 +23,9 @@ class Account(KBEngine.Proxy,MailSystem):
 			self.client.callClientMsg("你们已经是好友了")
 	def GetPlayerInfo(self):
 		_data={
-			"playerName":self.cellData["playerName"],
+			"playerName":self.playerName,
 			"playerDBID":self.databaseID,
-			"playerGold":self.cellData["playerGold"],
+			"playerGold":self.playerGold
 			}
 		return _data;
 	def onTimer(self, id, userArg):
@@ -99,8 +99,10 @@ class Account(KBEngine.Proxy,MailSystem):
 			self.isNewPlayer = 0
 			self.playerName_base = name;
 			self.playerID_base = self.databaseID+10000
+			self.playerName = name
 			self.cellData["playerName"] = name
 			self.cellData["playerID"] = self.playerID_base
+			self.writeToDB()
 			KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
 			if self.client:
 				self.client.OnReqCreateAvatar(0)
@@ -122,6 +124,7 @@ class Account(KBEngine.Proxy,MailSystem):
 	def onLoseCell(self):
 		self.MainState = MAIN_STATE_IDEL
 		self.inRoom = False
+		self.playerGold = self.cellData["playerGold"]
 		if self.client:
 			self.client.playerLevelRoom()
 

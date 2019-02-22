@@ -177,5 +177,24 @@
 		{
 			Event.fireOut("callClientMsg", arg1);
 		}
+
+		public override void addMail(MAIL arg1)
+		{
+			mailList.Add(arg1);
+			Event.fireOut("upDataMailList");
+		}
+
+		public override void deleMail(int arg1)
+		{
+			MonoBehaviour.print("删除！！！");
+			for (int i = 0; i < mailList.Count; i++)
+			{
+				if (mailList[i].mailID == arg1) {
+					mailList.Remove(mailList[i]);
+					break;
+				}
+			}
+			Event.fireOut("upDataMailList");
+		}
 	}
 }

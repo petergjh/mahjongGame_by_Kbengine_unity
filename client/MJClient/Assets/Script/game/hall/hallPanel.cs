@@ -92,12 +92,24 @@ public class hallPanel : MonoBehaviour {
 				Transform tr = Instantiate(Friend_item);
 				tr.SetParent(Friends_Content,false);
 				tr.gameObject.SetActive(true);
-				tr.Find("name").GetComponent<Text>().text = item.playerName;
+				string active = item.isOnLine == 0 ? "离线" : "在线";
+				tr.Find("name").GetComponent<Text>().text = item.playerName+"("+ active + ")";
+				tr.Find("dbid").GetComponent<Text>().text = item.playerDBID+"";
 				tr.Find("goldText").GetComponent<Text>().text = item.playerGold+"";
-				tr.Find("active").GetComponent<Text>().text = item.isOnLine==0?"离线":"在线";
+				Transform btn = tr.Find("Give");
+				EventInterface.AddOnEvent(btn, SendMsg);
 			}
 		}
 
+	}
+
+	private void SendMsg(Transform tr)
+	{
+		//GameObject go = GameManager.GetInstance().LoadPanel("Prefabs/sendMsgPanel", GameObject.Find("Canvas/Root").transform);
+		//go.GetComponent<sendMsgPanel>().showPanel(tr.parent);
+		string d = tr.parent.Find("dbid").GetComponent<Text>().text;
+		string name = tr.parent.Find("name").GetComponent<Text>().text;
+		account.baseEntityCall.reqGiveGold(ulong.Parse(d), name);
 	}
 
 	void Click(Transform tr){
@@ -161,9 +173,12 @@ public class hallPanel : MonoBehaviour {
 	{
 		KBEngine.Event.registerOut("OnReqCreateAvatar", this, "OnReqCreateAvatar");
 		KBEngine.Event.registerOut("initFriendsListOK", this, "initFriendsListOK");
+		KBEngine.Event.registerOut("upDataMailList", this, "upDataMailList");
 		
 	}
-	
+	public void upDataMailList() {
+		showMailInfo(account);
+	}
 	public void OnReqCreateAvatar(int code)
 	{
 		if (code == 0)

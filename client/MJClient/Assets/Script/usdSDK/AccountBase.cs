@@ -51,7 +51,9 @@ namespace KBEngine
 		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void addMail(MAIL arg1); 
 		public abstract void callClientMsg(string arg1); 
+		public abstract void deleMail(Int32 arg1); 
 		public abstract void game_begin_push(); 
 		public abstract void game_chupai_push(); 
 		public abstract void game_mopai_push(SByte arg1); 
@@ -155,9 +157,17 @@ namespace KBEngine
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
+				case 48:
+					MAIL addMail_arg1 = ((DATATYPE_MAIL)method.args[0]).createFromStreamEx(stream);
+					addMail(addMail_arg1);
+					break;
 				case 40:
 					string callClientMsg_arg1 = stream.readUnicode();
 					callClientMsg(callClientMsg_arg1);
+					break;
+				case 49:
+					Int32 deleMail_arg1 = stream.readInt32();
+					deleMail(deleMail_arg1);
 					break;
 				case 26:
 					game_begin_push();

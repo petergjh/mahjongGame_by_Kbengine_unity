@@ -34,7 +34,7 @@ class OfflineMessage(BaseGlobalEntity):
 			data = self.allMails_dir[dbid]
 			for info in range(len(data)):
 				ent_base.Receive_message(data[info]);
-		self.allMails_dir.pop(dbid)
+			self.allMails_dir.pop(dbid)
 
 
 

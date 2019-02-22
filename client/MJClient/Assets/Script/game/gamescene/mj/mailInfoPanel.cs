@@ -29,8 +29,9 @@ public class mailInfoPanel : MonoBehaviour {
 		if(tr == okBtn){
             okAction();
         }else if(tr == deleBtn){
-           
-        }
+			account.baseEntityCall.reqDeleMail(mail.mailID);
+			print(12122);
+		}
         close();
 	}
     void close(){
@@ -42,14 +43,16 @@ public class mailInfoPanel : MonoBehaviour {
         switch (mail.mailType)
         {
             case 0:
-                break;
+				account.baseEntityCall.reqGetOtherGiveGold(mail.mailID);
+				break;
             case 1:
                 break;
             case 2:
-                
-               
-                break;
+
+				
+				break;
             case 3:
+				account.baseEntityCall.reqAgreeAddFriendByMail(mail.mailID);
                 break;
         }
     }
@@ -57,9 +60,13 @@ public class mailInfoPanel : MonoBehaviour {
         mail = _mail;
         switch(mail.mailType){
             case 0:
-                break;
+				showGiveGoldMail();
+
+				break;
             case 1:
-                break;
+				showNormalMail();
+
+				break;
             case 3:
                 showAddFriendMail();
                 break;
@@ -85,4 +92,20 @@ public class mailInfoPanel : MonoBehaviour {
         deleBtn.gameObject.SetActive(true);
         deleBtnText.text = "删除邮件";
     }
+	void showNormalMail()
+	{
+		mailInfotext.text = "玩家《"+mail.senderName+"》给你留言了：  "+ mail.mailInfo;
+		deleBtn.localPosition = new Vector3(0, -161, 0);
+		okBtn.gameObject.SetActive(false);
+		deleBtn.gameObject.SetActive(true);
+		deleBtnText.text = "删除邮件";
+	}
+	void showGiveGoldMail()
+	{
+		mailInfotext.text = "玩家《" + mail.senderName + "》赠送给你100个金币";
+		okBtn.localPosition = new Vector3(0, -161, 0);
+		okBtn.gameObject.SetActive(true);
+		deleBtn.gameObject.SetActive(false);
+		okBtnText.text = "领取并删除邮件";
+	}
 }
