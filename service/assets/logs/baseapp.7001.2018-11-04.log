@@ -1,0 +1,45 @@
+ ERROR root [0x00001eb8] [2018-11-04 01:09:11,880] - Components::removeComponentByChannel: cellapp : 8001, Abnormal exit! errorno=10054
+  INFO root [0x00000c08] [2018-11-04 16:24:20,640] - 
+  INFO root [0x00000c08] [2018-11-04 16:24:20,936] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [0x00000c08] [2018-11-04 16:24:22,748] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [0x00000c08] [2018-11-04 16:24:22,749] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [0x00000c08] [2018-11-04 16:24:22,749] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [0x00000c08] [2018-11-04 16:24:23,209] - NetworkInterface::initialize(EXTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:20015 )
+  INFO root [0x00000c08] [2018-11-04 16:24:23,230] - NetworkInterface::initialize(EXTERNAL): address 192.168.0.107:20015, SOMAXCONN=128.
+  INFO root [0x00000c08] [2018-11-04 16:24:23,233] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:55311 )
+  INFO root [0x00000c08] [2018-11-04 16:24:23,234] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:55311, SOMAXCONN=128.
+  INFO root [0x00000c08] [2018-11-04 16:24:23,234] - server-configs:
+  INFO root [0x00000c08] [2018-11-04 16:24:23,234] - 	gameUpdateHertz : 10
+  INFO root [0x00000c08] [2018-11-04 16:24:23,235] - 	entryScriptFile : kbemain
+  INFO root [0x00000c08] [2018-11-04 16:24:23,235] - 	internalAddr : 192.168.0.107:55311
+  INFO root [0x00000c08] [2018-11-04 16:24:23,235] - 	externalAddr : 192.168.0.107:20015
+  INFO root [0x00000c08] [2018-11-04 16:24:23,235] - 	externalCustomAddr : c.55908.3m.dkys.org
+  INFO root [0x00000c08] [2018-11-04 16:24:23,236] - 	componentID : 7001
+  INFO root [0x00000c08] [2018-11-04 16:24:23,964] - Components::findLogger: found logger, addr:192.168.0.107:55286
+  INFO root [0x00000c08] [2018-11-04 16:24:23,964] - Components::addComponent: reset orderLog, uid=6164!
+  INFO root [0x00000c08] [2018-11-04 16:24:23,965] - Components::addComponent[logger], uid=6164, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [0x00000c08] [2018-11-04 16:24:24,122] - ---- baseapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F9DFFB319FBADF35943ADF4D42C4718C. Config: Debug X86. Built: 15:53:31 Apr 29 2018. AppID: 7001. UID: 6164. PID: 8936 ----
+  INFO root [0x00000c08] [2018-11-04 16:24:24,123] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [0x00000c08] [2018-11-04 16:24:24,199] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [0x00000c08] [2018-11-04 16:24:24,252] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [0x00000c08] [2018-11-04 16:24:27,877] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [0x00000c08] [2018-11-04 16:24:27,944] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [0x00000c08] [2018-11-04 16:24:28,058] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [0x00000c08] [2018-11-04 16:24:28,845] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [0x00000c08] [2018-11-04 16:24:28,941] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [0x00000c08] [2018-11-04 16:24:29,007] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [0x00000c08] [2018-11-04 16:24:29,072] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [0x00000c08] [2018-11-04 16:24:29,478] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [0x00000c08] [2018-11-04 16:24:30,185] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+  INFO root [0x00000c08] [2018-11-04 16:24:30,186] - Script::install(): KBExtra is successfully!
+ DEBUG root [0x00000c08] [2018-11-04 16:24:31,177] - loaded entity-script:Account(1).
+ DEBUG root [0x00000c08] [2018-11-04 16:24:31,179] - loaded entity-script:CheckName(2).
+ DEBUG root [0x00000c08] [2018-11-04 16:24:31,228] - loaded entity-script:Halls(3).
+ DEBUG root [0x00000c08] [2018-11-04 16:24:31,248] - loaded entity-script:Room(4).
+  INFO root [0x00000c08] [2018-11-04 16:24:31,248] - Baseapp::initializeEnd: started resmgr tick(60s)!
+  INFO root [0x00000c08] [2018-11-04 16:24:31,341] - TelnetServer server is running on port 40000
+  INFO root [0x00000c08] [2018-11-04 16:24:31,883] - ---- baseapp is running ----
+ DEBUG root [0x00000c08] [2018-11-04 16:24:31,918] - Components::process(): Request for the process of identity...
+  WARN root [0x00000c08] [2018-11-04 16:24:38,151] - Forwarding logs to logger[192.168.0.107:55286/0/0/0]...

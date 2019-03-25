@@ -1,156 +1,181 @@
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:05 156] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:50880/0/0/0
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:05 156] - Loginapp::onHello: client is not encrypted, addr=127.0.0.1:50880/0/0/0
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:05 257] - onRequestLogin() loginName=1, clientType=7
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:05 257] - PendingLoginMgr::add: 1, size=1.
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:05 257] - Loginapp::login: new client[CLIENT_TYPE_MINI], loginName=1, datas=WindowsEditor.
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:09:05 329] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=0, componentID=0, entityID=0, dbid=3, flags=0, deadline=0.
-   DEBUG baseappmgr-1 3439 5000  [2018-07-01 13:09:05 356] - Baseappmgr::registerPendingAccountToBaseapp:1. allocBaseapp=7001, numEntities=1.
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:05 337] - onLoginCallbackFromDB() loginName=1, accountName=1, errorno=0
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:05 377] - Loginapp::onLoginAccountQueryBaseappAddrFromBaseappmgr:accountName=1, addr=192.168.0.106:20015.
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:05 377] - PendingLoginMgr::remove: 1, size=0.
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:05 370] - PendingLoginMgr::add: 1, size=1.
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:05 439] - TCPPacketReceiver::processPendingEvents(127.0.0.1:50880): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:05 570] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:50881/0/0/0
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:05 570] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:50881/0/0/0
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:05 670] - Baseapp::loginBaseapp: new user[1], channel[192.168.0.106:50881/0/0/0].
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:09:05 729] - Dbmgr::queryAccount: 1, success=1, flags=0, deadline=0.
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:05 770] - PendingLoginMgr::remove: 1, size=0.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:05 770] - EntityApp::createEntity: new Account 2002
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:05 770] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 192.168.0.106:50881.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:05 770] - Baseapp::onQueryAccountCBFromDbmgr: user=1, uuid=6573111343862710272, entityID=2002, flags=0, deadline=0.
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:07 570] - 123123123------
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:07 570] - 结束后长度
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:07 570] - 0
-   DEBUG cellappmgr-1 3439 6000  [2018-07-01 13:09:07 672] - Cellappmgr::reqCreateCellEntityInNewSpace: entityType=Room, entityID=2003, componentID=7001, cellapp(cid=8001, load=0.00528209, numEntities=0).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:07 670] - EntityApp::createEntity: new Room 2003
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:09:07 694] - Spaces::createNewSpace: new space(Room) 1.
-    INFO    cellapp01 3439 8001  [2018-07-01 13:09:07 694] - EntityApp::createEntity: new Room 2003
-    INFO    cellapp01 3439 8001  [2018-07-01 13:09:07 695] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
-    INFO      dbmgr-1 3439 4000  [2018-07-01 13:09:07 709] - GlobalDataServer::broadcastDataChanged: writer(cellapp, addr=192.168.0.106:50865/0/0/0), keySize=12, valSize=52, isDelete=0
-    INFO    cellapp01 3439 8001  [2018-07-01 13:09:07 794] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
-   S_DBG    cellapp01 3439 8001  [2018-07-01 13:09:07 794] - 玩家进来了---2002 座位号为 0
-   S_DBG    baseapp01 3439 7001  [2018-07-01 13:09:07 770] - onGlobalData: Room_1
-   S_DBG    baseapp01 3439 7001  [2018-07-01 13:09:07 871] - 没有cell
-    INFO    cellapp01 3439 8001  [2018-07-01 13:09:07 894] - EntityApp::createEntity: new Account 2002
-    INFO cellappmgr-1 3439 6000  [2018-07-01 13:09:09 872] - ServerApp::onChannelTimeOut: Channel 192.168.0.106:50841/0/0/0 timed out.
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:12 612] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50881): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:12 612] - Account::onClientDeath: 2002.
-   S_DBG    baseapp01 3439 7001  [2018-07-01 13:09:12 613] - Account[2002].onClientDeath:
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:17 616] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:50884/0/0/0
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:17 616] - Loginapp::onHello: client is not encrypted, addr=127.0.0.1:50884/0/0/0
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:17 716] - onRequestLogin() loginName=2, clientType=7
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:17 716] - PendingLoginMgr::add: 2, size=1.
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:17 716] - Loginapp::login: new client[CLIENT_TYPE_MINI], loginName=2, datas=WindowsEditor.
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:09:17 828] - Dbmgr::onAccountLogin:loginName=2, accountName=2, success=0, componentID=0, entityID=0, dbid=6, flags=0, deadline=0.
-   DEBUG baseappmgr-1 3439 5000  [2018-07-01 13:09:17 855] - Baseappmgr::registerPendingAccountToBaseapp:2. allocBaseapp=7001, numEntities=3.
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:17 836] - onLoginCallbackFromDB() loginName=2, accountName=2, errorno=0
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:17 876] - Loginapp::onLoginAccountQueryBaseappAddrFromBaseappmgr:accountName=2, addr=192.168.0.106:20015.
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:17 876] - PendingLoginMgr::remove: 2, size=0.
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:17 899] - TCPPacketReceiver::processPendingEvents(127.0.0.1:50884): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:17 869] - PendingLoginMgr::add: 2, size=1.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:18 069] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:50885/0/0/0
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:18 069] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:50885/0/0/0
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:18 169] - Baseapp::loginBaseapp: new user[2], channel[192.168.0.106:50885/0/0/0].
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:09:18 248] - Dbmgr::queryAccount: 2, success=1, flags=0, deadline=0.
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:18 269] - PendingLoginMgr::remove: 2, size=0.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:18 269] - EntityApp::createEntity: new Account 2004
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:18 269] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 192.168.0.106:50885.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:18 269] - Baseapp::onQueryAccountCBFromDbmgr: user=2, uuid=6573111399697285120, entityID=2004, flags=0, deadline=0.
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:20 469] - 123123123------
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:20 469] - 1
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:20 469] - 872681-需要玩家数量--1
-   S_DBG    cellapp01 3439 8001  [2018-07-01 13:09:20 494] - 玩家进来了---2004 座位号为 1
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:20 569] - 没有cell
-    INFO    cellapp01 3439 8001  [2018-07-01 13:09:20 594] - EntityApp::createEntity: new Account 2004
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:38 984] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50885): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:38 984] - Account::onClientDeath: 2004.
-   S_DBG    baseapp01 3439 7001  [2018-07-01 13:09:38 984] - Account[2004].onClientDeath:
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:43 417] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:50888/0/0/0
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:43 417] - Loginapp::onHello: client is not encrypted, addr=127.0.0.1:50888/0/0/0
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:43 517] - onRequestLogin() loginName=1, clientType=7
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:43 517] - PendingLoginMgr::add: 1, size=1.
-    INFO   loginapp01 3439 9000  [2018-07-01 13:09:43 517] - Loginapp::login: new client[CLIENT_TYPE_MINI], loginName=1, datas=WindowsEditor.
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:09:43 629] - Dbmgr::onAccountLogin:loginName=1, accountName=1, success=10, componentID=7001, entityID=2002, dbid=3, flags=0, deadline=0.
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:43 670] - PendingLoginMgr::add: 1, size=1.
-   DEBUG baseappmgr-1 3439 5000  [2018-07-01 13:09:43 656] - Baseappmgr::registerPendingAccountToBaseappAddr:1, componentID=7001, entityID=2002.
-  S_INFO   loginapp01 3439 9000  [2018-07-01 13:09:43 637] - onLoginCallbackFromDB() loginName=1, accountName=1, errorno=10
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:43 676] - Loginapp::onLoginAccountQueryBaseappAddrFromBaseappmgr:accountName=1, addr=192.168.0.106:20015.
-   DEBUG   loginapp01 3439 9000  [2018-07-01 13:09:43 676] - PendingLoginMgr::remove: 1, size=0.
- WARNING   loginapp01 3439 9000  [2018-07-01 13:09:43 707] - TCPPacketReceiver::processPendingEvents(127.0.0.1:50888): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 870] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:192.168.0.106:50889/0/0/0
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:43 870] - Baseapp::onHello: client is not encrypted, addr=192.168.0.106:50889/0/0/0
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - Baseapp::loginBaseapp: new user[1], channel[192.168.0.106:50889/0/0/0].
-    INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - Baseapp::loginBaseapp: user[1] has entity(2002).
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - 192.168.0.106
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - 50889
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - 1
-  S_INFO    baseapp01 3439 7001  [2018-07-01 13:09:43 970] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 192.168.0.106:50889.
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:44 538] - PendingLoginMgr::process: [1] is timeout, currsize=0.
- WARNING    baseapp01 3439 7001  [2018-07-01 13:09:48 269] - TCPPacketReceiver::processPendingEvents(192.168.0.106:50889): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
-   DEBUG    baseapp01 3439 7001  [2018-07-01 13:09:48 269] - Account::onClientDeath: 2002.
-   S_DBG    baseapp01 3439 7001  [2018-07-01 13:09:48 269] - Account[2002].onClientDeath:
-    INFO    baseapp01 3439 7001  [2018-07-01 13:13:07 268] - Baseapp::onBackupEntityCellData: Account(2002), 56 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:15:28 896] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:15:28 968] - Baseapp::onBackupEntityCellData: Account(2004), 64 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:15:28 968] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:15:29 085] - Dbmgr::writeEntity: Account(6).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:17:17 269] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:17:58 898] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:17:58 968] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:17:58 968] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:17:59 064] - Dbmgr::writeEntity: Account(3).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:19:22 268] - Baseapp::onBackupEntityCellData: Room(2003), 55 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:20:28 899] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:20:28 968] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:20:28 968] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:20:29 023] - Dbmgr::writeEntity: Account(3).
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:22:58 899] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:22:58 967] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:22:58 967] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:22:59 021] - Dbmgr::writeEntity: Account(6).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:23:32 267] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:25:28 901] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:25:28 967] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:25:28 967] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:25:29 040] - Dbmgr::writeEntity: Account(3).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:25:37 267] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:27:42 266] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:27:58 901] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:27:58 966] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:27:58 966] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:27:58 999] - Dbmgr::writeEntity: Account(6).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:29:47 267] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:30:28 903] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:30:28 966] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:30:28 966] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:30:29 018] - Dbmgr::writeEntity: Account(3).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:31:52 266] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:32:58 904] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:32:58 966] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:32:58 966] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:32:59 017] - Dbmgr::writeEntity: Account(6).
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:35:28 905] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:35:28 965] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:35:28 965] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:35:29 015] - Dbmgr::writeEntity: Account(3).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:36:02 265] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:37:58 906] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:37:58 965] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:37:58 965] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:37:59 014] - Dbmgr::writeEntity: Account(6).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:38:07 265] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:40:28 907] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:40:28 964] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:40:28 964] - Baseapp::onCellWriteToDBCompleted: Account(2004).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:40:29 012] - Dbmgr::writeEntity: Account(6).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:42:17 264] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:42:58 908] - Account::onWriteToDB(): 2002.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:42:58 964] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:42:58 964] - Baseapp::onCellWriteToDBCompleted: Account(2002).
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:42:59 011] - Dbmgr::writeEntity: Account(3).
-    INFO    baseapp01 3439 7001  [2018-07-01 13:44:22 265] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
-   DEBUG    cellapp01 3439 8001  [2018-07-01 13:45:28 908] - Account::onWriteToDB(): 2004.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:45:28 964] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
-    INFO    baseapp01 3439 7001  [2018-07-01 13:45:28 964] - Baseapp::onCellWriteToDBCompleted: Account(2004).
- WARNING      dbmgr-1 3439 4000  [2018-07-01 13:45:29 190] - DBTransaction::commit(): took 0.22 seconds
-   DEBUG      dbmgr-1 3439 4000  [2018-07-01 13:45:29 209] - Dbmgr::writeEntity: Account(6).
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:24 140] - Components::findComponents: find baseappmgr(1)...
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:24 230] - Components::findComponents: found baseappmgr, addr:192.168.0.107:56421
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:24 230] - Components::addComponent[baseappmgr], uid=8865, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+ WARNING    baseapp-1 8865 7001  [2019-02-19 22:41:25 230] - EntityApp::checkTickPeriod: tick took 1180% (1.18 seconds)!
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:25 764] - Components::findComponents: register self to dbmgr...
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:25 783] - Components::findComponents: register self to cellappmgr...
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:25 803] - Components::process(): Found all the components!
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:25 765] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56421, extaddr:nonsupport, extport:0,  from 192.168.0.107:56443/0/0/0.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:25 765] - Components::addComponent[baseappmgr], uid=8865, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:24 948] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:25 031] - Components::findComponents: found baseappmgr, addr:192.168.0.107:56421
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:25 031] - Components::addComponent[baseappmgr], uid=8865, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+ WARNING    cellapp-1 8865 8001  [2019-02-19 22:41:26 031] - EntityApp::checkTickPeriod: tick took 1148% (1.15 seconds)!
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:27 148] - Components::findComponents: register self to dbmgr...
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:27 148] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56426, extaddr:nonsupport, extport:0,  from 192.168.0.107:56445/0/0/0.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:27 148] - Components::addComponent[cellapp], uid=8865, componentID=8001, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:27 182] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:27 247] - Components::findComponents: register self to baseappmgr...
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:26 240] - Components::findComponents: find cellappmgr(1)...
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:26 335] - Components::findComponents: found cellappmgr, addr:192.168.0.107:56419
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:26 335] - Components::addComponent[cellappmgr], uid=8865, componentID=6000, globalorderid=3, grouporderid=1, totalcount=1
+ WARNING    baseapp-1 8865 7001  [2019-02-19 22:41:27 335] - EntityApp::checkTickPeriod: tick took 1185% (1.18 seconds)!
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:27 247] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56426, extaddr:nonsupport, extport:0,  from 192.168.0.107:56448/0/0/0.
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:27 247] - Components::addComponent[cellapp], uid=8865, componentID=8001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:27 282] - Components::process(): Found all the components!
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 524] - -----------------------------------------------------------------------------------------
+
+
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 524] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 524] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 524] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 528] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:56419 )
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 529] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.0.107:56419, SOMAXCONN=5.
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 529] - server-configs:
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 529] - 	internalTcpAddr : 192.168.0.107:56419
+    INFO cellappmgr-1 0 6000  [2019-02-19 22:41:12 529] - 	componentID : 6000
+ WARNING cellappmgr-1 8865 6000  [2019-02-19 22:41:12 533] - invalid UID(0) <= 0, please check UID for environment! automatically set to 8865.
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 535] - Attempted to get in MemoryStream (pos:43, size:1, opsize:4)!
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 562] - BundleBroadcast::receive: data wrong. size=44, from 192.168.0.107.
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 564] - Attempted to get in MemoryStream (pos:43, size:1, opsize:4)!
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 564] - BundleBroadcast::receive: data wrong. size=44, from 192.168.0.107.
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 565] - Attempted to get in MemoryStream (pos:43, size:1, opsize:4)!
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 565] - BundleBroadcast::receive: data wrong. size=44, from 192.168.0.107.
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 755] - Attempted to get in MemoryStream (pos:43, size:1, opsize:4)!
+   ERROR cellappmgr-1 8865 6000  [2019-02-19 22:41:12 755] - BundleBroadcast::receive: data wrong. size=44, from 192.168.0.107.
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:19 776] - ---- cellappmgr Version: 2.4.2. ScriptVersion: 0.1.0. Pythoncore: 3.7.2. Protocol: ACC6C099AA23569403DEFB7E57FC06C6. Config: Debug X86. Built: 12:29:09 Feb 18 2019. AppID: 6000. UID: 8865. PID: 15332 ----
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:19 777] - Server Administrator: Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:19 778] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:19 779] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:20 142] - ---- cellappmgr is running ----
+   DEBUG cellappmgr-1 8865 6000  [2019-02-19 22:41:20 142] - Components::process(): Request for the process of identity...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:26 212] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56421, extaddr:nonsupport, extport:0,  from 192.168.0.107:56444/0/0/0.
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:26 212] - Components::addComponent: reset orderLog, uid=8865!
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:26 213] - Components::addComponent[baseappmgr], uid=8865, componentID=5000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 183] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56426, extaddr:nonsupport, extport:0,  from 192.168.0.107:56446/0/0/0.
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 183] - Components::addComponent[cellapp], uid=8865, componentID=8001, globalorderid=2, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 183] - Cellappmgr::getCellapp: added new cellapp(8001).
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 219] - Components::findComponents: find logger(1)...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 237] - Components::findComponents: found logger, addr:192.168.0.107:56423
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 237] - Components::addComponent[logger], uid=8865, componentID=2000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 238] - Components::findComponents: find dbmgr(2)...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 339] - Components::findComponents: found dbmgr, addr:192.168.0.107:56424
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:27 339] - Components::addComponent[dbmgr], uid=8865, componentID=4000, globalorderid=4, grouporderid=1, totalcount=1
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 439] - Components::findComponents: register self to dbmgr...
+   DEBUG    baseapp-1 8865 7001  [2019-02-19 22:41:28 440] - SyncEntityStreamTemplateHandler::~SyncEntityStreamTemplateHandler()
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:28 440] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseapp, componentID:7001, globalorderID=4, grouporderID=1, intaddr:192.168.0.107, intport:56425, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:56424/0/0/0.
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:28 441] - Components::addComponent[baseapp], uid=8865, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:28 443] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56425, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:56452/0/0/0.
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:28 444] - Components::addComponent[baseapp], uid=8865, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:28 442] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56425, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:56451/0/0/0.
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:28 442] - Components::addComponent[baseapp], uid=8865, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 441] - Components::findComponents: register self to baseappmgr...
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 442] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56426, extaddr:nonsupport, extport:0,  from 192.168.0.107:56450/0/0/0.
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 442] - Components::addComponent[cellapp], uid=8865, componentID=8001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 442] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56426, extaddr:nonsupport, extport:0,  from 192.168.0.107:56450/0/0/0.
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 442] - Components::findComponents: register self to cellappmgr...
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:28 449] - Components::process(): Found all the components!
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:28 440] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56425, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:56449/0/0/0.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:28 440] - Components::addComponent[baseapp], uid=8865, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:29 360] - Components::findComponents: find baseappmgr(1)...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:29 443] - Components::findComponents: found baseappmgr, addr:192.168.0.107:56421
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:31 500] - Components::findComponents: register self to dbmgr...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:31 519] - Components::findComponents: register self to baseappmgr...
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:31 527] - Components::process(): Found all the components!
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:31 520] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56419, extaddr:nonsupport, extport:0,  from 192.168.0.107:56454/0/0/0.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:31 460] - IDServer::allocRange: 1-2001.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:31 460] - IDServer::allocRange: 2001-4001.
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:41:31 460] - SyncAppDatasHandler::~SyncAppDatasHandler()
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:31 501] - ServerApp::onRegisterNewApp: uid:8865, username:Administrator, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:56419, extaddr:nonsupport, extport:0,  from 192.168.0.107:56453/0/0/0.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:31 502] - Components::addComponent[cellappmgr], uid=8865, componentID=6000, globalorderid=5, grouporderid=1, totalcount=1
+    INFO   loginapp-1 8865 9000  [2019-02-19 22:41:31 460] - Loginapp::onDbmgrInitCompleted:startGlobalOrder=1, startGroupOrder=1, digest=498B2A87C6A8E0698DEDFCBDF4E1C9FA.
+    INFO   loginapp01 8865 9000  [2019-02-19 22:41:32 663] - HTTPCBHandler::bind: 192.168.0.107:21103
+ WARNING   loginapp01 8865 9000  [2019-02-19 22:41:32 663] - e:\kbengine\kbe\src\lib\network\channel.cpp:1022: Profile processRecvMessages took 1.20 seconds
+    INFO    cellapp-1 8865 8001  [2019-02-19 22:41:31 460] - EntityApp::onDbmgrInitCompleted: entityID alloc(1-2001), startGlobalOrder=3, startGroupOrder=1, digest=498B2A87C6A8E0698DEDFCBDF4E1C9FA.
+    INFO    cellapp01 8865 8001  [2019-02-19 22:41:31 460] - IDClient::onAddRange: number of ids increased from 1 to 2001.
+ WARNING    cellapp01 8865 8001  [2019-02-19 22:41:31 771] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20397, errorno=10048
+   S_DBG    cellapp01 8865 8001  [2019-02-19 22:41:32 986] - onInit::isReload:0
+ WARNING    cellapp01 8865 8001  [2019-02-19 22:41:32 987] - e:\kbengine\kbe\src\lib\network\channel.cpp:1022: Profile processRecvMessages took 1.53 seconds
+ WARNING    cellapp01 8865 8001  [2019-02-19 22:41:32 987] - EntityApp::checkTickPeriod: tick took 1604% (1.60 seconds)!
+   DEBUG    cellapp01 8865 8001  [2019-02-19 22:41:33 049] - InitProgressHandler::~InitProgressHandler()
+    INFO cellappmgr-1 8865 6000  [2019-02-19 22:41:33 049] - Cellappmgr::onCellappInitProgress: cid=8001, progress=1.
+   DEBUG cellappmgr-1 8865 6000  [2019-02-19 22:41:33 049] - Cellappmgr::addCellappComponentID: cellapp component id 8001, group order id 1
+    INFO    baseapp-1 8865 7001  [2019-02-19 22:41:31 461] - EntityApp::onDbmgrInitCompleted: entityID alloc(2001-4001), startGlobalOrder=4, startGroupOrder=1, digest=498B2A87C6A8E0698DEDFCBDF4E1C9FA.
+    INFO    baseapp01 8865 7001  [2019-02-19 22:41:31 461] - IDClient::onAddRange: number of ids increased from 2001 to 4001.
+ WARNING    baseapp01 8865 7001  [2019-02-19 22:41:31 771] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20397, errorno=10048
+ WARNING    baseapp01 8865 7001  [2019-02-19 22:41:32 092] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20415, errorno=10048
+  S_INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 305] - onInit::isReload:0
+ WARNING    baseapp01 8865 7001  [2019-02-19 22:41:33 305] - e:\kbengine\kbe\src\lib\network\channel.cpp:1022: Profile processRecvMessages took 1.84 seconds
+ WARNING    baseapp01 8865 7001  [2019-02-19 22:41:33 305] - EntityApp::checkTickPeriod: tick took 1854% (1.85 seconds)!
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:41:33 440] - Dbmgr::DBTaskEntityAutoLoad: AllPlayerPublicInfo, size(1).
+   S_DBG    cellapp01 8865 8001  [2019-02-19 22:41:33 440] - onGlobalData: AllPlayerPublicInfo
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:33 500] - Baseappmgr::onBaseappInitProgress: cid=7001, progress=1.
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:41:33 500] - Baseappmgr::onBaseappInitProgress: all completed!
+   DEBUG    baseapp01 8865 7001  [2019-02-19 22:41:33 440] - EntityAutoLoader::~EntityAutoLoader()
+  S_INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 451] - onBaseAppReady: isBootstrap=True, appID=7001, bootstrapGroupIndex=1, bootstrapGlobalIndex=4
+  S_INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 451] - 有好友列表个数---0个
+    INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 451] - EntityApp::createEntity: new Halls 2002
+   DEBUG    baseapp01 8865 7001  [2019-02-19 22:41:33 500] - InitProgressHandler::~InitProgressHandler()
+    INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 500] - EntityApp::createEntity: new AllPlayerPublicInfo 2001
+  S_INFO    baseapp01 8865 7001  [2019-02-19 22:41:33 501] - {1: {'playerName': 'sdasdasd', 'playerDBID': 1, 'playerGold': 1000, 'isOnLine': False}, 2: {'playerName': 'sdgsdg', 'playerDBID': 2, 'playerGold': 1000, 'isOnLine': False}, 3: {'playerName': 'cfvgxcsz', 'playerDBID': 3, 'playerGold': 1000, 'isOnLine': False}}
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:33 440] - GlobalDataServer::broadcastDataChanged: writer(baseapp, addr=192.168.0.107:56449/0/0/0), keySize=25, valSize=2, isDelete=0
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:33 451] - GlobalDataServer::broadcastDataChanged: writer(baseapp, addr=192.168.0.107:56449/0/0/0), keySize=11, valSize=48, isDelete=0
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:41:33 500] - Dbmgr::DBTaskQueryEntity: AllPlayerPublicInfo, dbid=1, entityID=2001, wasActive=false, queryMode=1, componentID=7001, success=true.
+    INFO      dbmgr-1 8865 4000  [2019-02-19 22:41:33 501] - GlobalDataServer::broadcastDataChanged: writer(baseapp, addr=192.168.0.107:56449/0/0/0), keySize=25, valSize=48, isDelete=0
+    INFO   loginapp01 8865 9000  [2019-02-19 22:41:33 500] - Loginapp::onBaseappInitProgress: progress=1.
+   S_DBG    cellapp01 8865 8001  [2019-02-19 22:41:33 452] - onGlobalData: Halls
+   S_DBG    cellapp01 8865 8001  [2019-02-19 22:41:33 501] - onGlobalData: AllPlayerPublicInfo
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:41:48 460] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:42:03 458] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:42:18 458] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+    INFO baseappmgr-1 8865 5000  [2019-02-19 22:42:25 785] - ServerApp::onChannelTimeOut: Channel 192.168.0.107:56419/0/0/0 timeout!
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:42:33 478] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:42:48 478] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:43:03 477] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:43:18 477] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:43:33 457] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:43:48 456] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:44:03 456] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:44:18 455] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:44:33 455] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:44:48 455] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:45:03 455] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:45:18 474] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:45:33 474] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:45:48 473] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:46:03 473] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:46:18 473] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:46:33 472] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:46:48 472] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:47:03 472] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:47:18 472] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:47:33 470] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:47:48 470] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:48:03 470] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:48:18 470] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:48:33 470] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:48:48 469] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:49:03 469] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:49:18 468] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:49:33 468] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:49:48 467] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:50:03 467] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:50:18 467] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:50:33 467] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:50:48 467] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:51:03 465] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:51:14 865] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:51:18 465] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:51:33 465] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:51:48 465] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:52:03 464] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:52:18 464] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:52:33 464] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:52:48 463] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:53:03 463] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:53:18 462] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:53:33 462] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:53:48 462] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:54:03 462] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:54:18 461] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).
+   DEBUG      dbmgr-1 8865 4000  [2019-02-19 22:54:33 460] - Dbmgr::writeEntity: AllPlayerPublicInfo(1).

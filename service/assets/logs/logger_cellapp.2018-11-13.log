@@ -1,0 +1,508 @@
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:00:32 113] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:03:02 115] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:05:32 018] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:08:02 019] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:10:32 021] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:13:02 023] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:15:32 025] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:18:02 026] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:20:32 029] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:23:02 031] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 5424 8001  [2018-11-13 00:25:32 033] - Account::onWriteToDB(): 2002.
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:21 570] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:22 446] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:22 446] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:22 446] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 196] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:50391 )
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 242] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:50391, SOMAXCONN=5.
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 242] - server-configs:
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 243] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 276] - 	defaultViewRadius : 80
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 276] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 277] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 277] - 	internalAddr : 192.168.0.107:50391
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 277] - 	componentID : 8001
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 986] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 16999. PID: 5140 ----
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:23 986] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:24 035] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:24 035] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:29 978] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:30 126] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:30 214] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:31 150] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:31 215] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:31 262] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:31 295] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:32 015] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:34 103] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:34 104] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:35 788] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:36 221] - loaded entity-script:Room(4).
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:36 283] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:37 108] - ---- cellapp is running ----
+   DEBUG    cellapp-1 16999 8001  [2018-11-13 10:22:37 166] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 16999 8001  [2018-11-13 10:22:43 651] - EntityApp::checkTickPeriod: tick took 6543% (6.54 seconds)!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 693] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 788] - Components::findComponents: found logger, addr:192.168.0.107:50386
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 788] - Components::addComponent: reset orderLog, uid=16999!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 789] - Components::addComponent[logger], uid=16999, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 847] - Components::findComponents: find dbmgr(2)...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 892] - Components::findComponents: found dbmgr, addr:192.168.0.107:50390
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 892] - Components::addComponent: reset orderLog, uid=16999!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 893] - Components::addComponent[dbmgr], uid=16999, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:44 893] - Components::findComponents: found dbmgr, addr:192.168.0.107:50390
+ WARNING    cellapp-1 16999 8001  [2018-11-13 10:22:45 894] - EntityApp::checkTickPeriod: tick took 1285% (1.28 seconds)!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:46 908] - Components::findComponents: find cellappmgr(1)...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:47 003] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50388
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:47 003] - Components::addComponent[cellappmgr], uid=16999, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:47 004] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50388
+ WARNING    cellapp-1 16999 8001  [2018-11-13 10:22:48 004] - EntityApp::checkTickPeriod: tick took 1196% (1.20 seconds)!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:49 008] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:49 014] - Components::findComponents: found baseappmgr, addr:192.168.0.107:50392
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:49 014] - Components::addComponent[baseappmgr], uid=16999, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:49 015] - Components::findComponents: found baseappmgr, addr:192.168.0.107:50392
+ WARNING    cellapp-1 16999 8001  [2018-11-13 10:22:50 015] - EntityApp::checkTickPeriod: tick took 1107% (1.11 seconds)!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:51 194] - Components::findComponents: register self to dbmgr...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:51 208] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:51 293] - Components::findComponents: register self to baseappmgr...
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:51 308] - Components::process(): Found all the components!
+    INFO    cellapp-1 16999 8001  [2018-11-13 10:22:54 308] - EntityApp::onDbmgrInitCompleted: entityID alloc(1-2001), startGlobalOrder=5, startGroupOrder=1, digest=7F4FC8296AD553545CD95B23EFF6238F.
+    INFO    cellapp01 16999 8001  [2018-11-13 10:22:54 308] - IDClient::onAddRange: number of ids increased from 1 to 2001.
+   S_DBG    cellapp01 16999 8001  [2018-11-13 10:22:55 512] - onInit::isReload:0
+ WARNING    cellapp01 16999 8001  [2018-11-13 10:22:55 513] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.20 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 10:22:55 513] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 1.21 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 10:22:55 513] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.21 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 10:22:55 514] - EntityApp::checkTickPeriod: tick took 1206% (1.21 seconds)!
+   DEBUG    cellapp01 16999 8001  [2018-11-13 10:22:55 599] - InitProgressHandler::~InitProgressHandler()
+    INFO    cellapp01 16999 8001  [2018-11-13 10:23:03 408] - ServerApp::onRegisterNewApp: uid:16999, username:, componentType:baseapp, componentID:7001, globalorderID=6, grouporderID=1, intaddr:192.168.0.107, intport:50415, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:50390/0/0/0.
+    INFO    cellapp01 16999 8001  [2018-11-13 10:23:03 408] - Components::addComponent[baseapp], uid=16999, componentID=7001, globalorderid=6, grouporderid=1, totalcount=1
+   S_DBG    cellapp01 16999 8001  [2018-11-13 10:23:08 832] - onGlobalData: Halls
+   DEBUG    cellapp01 16999 8001  [2018-11-13 13:53:16 132] - Spaces::createNewSpace: new space(Room) 1.
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:16 157] - EntityApp::createEntity: new Room 2004
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:16 200] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:16 228] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:16 228] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:16 229] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:16 229] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:16 394] - 玩家进来了---2002 座位号为 0
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:16 494] - EntityApp::createEntity: new Account 2002
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:19 494] - 玩家进来了---2003 座位号为 1
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:19 595] - EntityApp::createEntity: new Account 2003
+   DEBUG    cellapp01 16999 8001  [2018-11-13 13:53:22 696] - Account::~Account(): 2002
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:27 494] - 2003
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:27 495] - True
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:27 595] - cell account
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:27 595] - 1
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:30 895] - 玩家进来了---2002 座位号为 0
+    INFO    cellapp01 16999 8001  [2018-11-13 13:53:30 994] - EntityApp::createEntity: new Account 2002
+   DEBUG    cellapp01 16999 8001  [2018-11-13 13:53:32 696] - WitnessedTimeoutHandler::handleTimeout: witnesseds is empty, timer is canceled!
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 194] - 2002
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 195] - True
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 195] - 全部就位---开始处理！
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 227] - 游戏开始！
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:33 344] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:33 345] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:33 345] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:33 345] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 346] - cell account
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:53:33 346] - 1
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:44 716] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.12 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:44 716] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.12 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:44 716] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.12 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:44 716] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.12 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:52 369] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:52 369] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:52 370] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:52 370] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:56 326] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:56 327] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:56 327] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:56 327] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:59 919] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:59 919] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:59 920] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:53:59 920] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:03 601] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:03 601] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:03 601] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:03 602] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:09 088] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.19 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:09 088] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.19 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:09 088] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.19 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:09 089] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.19 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:19 574] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:19 574] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:19 574] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:19 575] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.18 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:24 462] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:24 462] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:24 463] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:24 463] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:29 959] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:29 960] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:29 960] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:29 961] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.17 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:45 730] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:45 730] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:45 731] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:45 731] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:51 035] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:51 036] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:51 036] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:51 036] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.14 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:57 144] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:57 145] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:57 145] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:54:57 145] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:09 855] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:09 855] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:09 855] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:09 855] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.16 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:14 902] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:14 902] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:14 902] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:14 903] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:55:26 595] - 不该你出牌
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:29 502] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:29 503] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:29 503] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:29 504] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:40 197] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.10 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:40 197] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.10 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:40 198] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.10 seconds
+ WARNING    cellapp01 16999 8001  [2018-11-13 13:55:40 198] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.10 seconds
+   S_DBG    cellapp01 16999 8001  [2018-11-13 13:55:51 995] - 不需要出牌
+   DEBUG    cellapp01 16999 8001  [2018-11-13 13:57:49 496] - Account::onWriteToDB(): 2002.
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 711] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 711] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 711] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 712] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:51940 )
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:51940, SOMAXCONN=5.
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - server-configs:
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - 	defaultViewRadius : 80
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 716] - 	internalAddr : 192.168.0.107:51940
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:58 717] - 	componentID : 8001
+ WARNING    cellapp-1 26735 8001  [2018-11-13 13:58:59 028] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20856, errorno=10048
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 032] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 26735. PID: 4712 ----
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 032] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 032] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 032] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 159] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 159] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 160] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 163] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 163] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 163] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 163] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 192] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 220] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 220] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 242] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 250] - loaded entity-script:Room(4).
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 250] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:58:59 539] - ---- cellapp is running ----
+   DEBUG    cellapp-1 26735 8001  [2018-11-13 13:58:59 539] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 26735 8001  [2018-11-13 13:59:05 614] - EntityApp::checkTickPeriod: tick took 6073% (6.07 seconds)!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 640] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 660] - Components::findComponents: found logger, addr:192.168.0.107:51935
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 661] - Components::addComponent: reset orderLog, uid=26735!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 661] - Components::addComponent[logger], uid=26735, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 662] - Components::findComponents: find dbmgr(2)...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 762] - Components::findComponents: found dbmgr, addr:192.168.0.107:51937
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 762] - Components::addComponent: reset orderLog, uid=26735!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 763] - Components::addComponent[dbmgr], uid=26735, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:06 763] - Components::findComponents: found dbmgr, addr:192.168.0.107:51937
+ WARNING    cellapp-1 26735 8001  [2018-11-13 13:59:07 763] - EntityApp::checkTickPeriod: tick took 1223% (1.22 seconds)!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:08 814] - Components::findComponents: find cellappmgr(1)...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:08 882] - Components::findComponents: found cellappmgr, addr:192.168.0.107:51939
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:08 882] - Components::addComponent[cellappmgr], uid=26735, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:08 883] - Components::findComponents: found cellappmgr, addr:192.168.0.107:51939
+ WARNING    cellapp-1 26735 8001  [2018-11-13 13:59:09 883] - EntityApp::checkTickPeriod: tick took 1143% (1.14 seconds)!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:10 914] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:10 996] - Components::findComponents: found baseappmgr, addr:192.168.0.107:51933
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:10 996] - Components::addComponent[baseappmgr], uid=26735, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:10 997] - Components::findComponents: found baseappmgr, addr:192.168.0.107:51933
+ WARNING    cellapp-1 26735 8001  [2018-11-13 13:59:11 997] - EntityApp::checkTickPeriod: tick took 1157% (1.16 seconds)!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:13 114] - Components::findComponents: register self to dbmgr...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:13 140] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:13 214] - Components::findComponents: register self to baseappmgr...
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:13 240] - Components::process(): Found all the components!
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:15 840] - ServerApp::onRegisterNewApp: uid:26735, username:, componentType:baseapp, componentID:7001, globalorderID=5, grouporderID=1, intaddr:192.168.0.107, intport:51936, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:51937/0/0/0.
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:15 840] - Components::addComponent[baseapp], uid=26735, componentID=7001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO    cellapp-1 26735 8001  [2018-11-13 13:59:18 839] - EntityApp::onDbmgrInitCompleted: entityID alloc(1-2001), startGlobalOrder=4, startGroupOrder=1, digest=7F4FC8296AD553545CD95B23EFF6238F.
+    INFO    cellapp01 26735 8001  [2018-11-13 13:59:18 839] - IDClient::onAddRange: number of ids increased from 1 to 2001.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 13:59:20 042] - onInit::isReload:0
+ WARNING    cellapp01 26735 8001  [2018-11-13 13:59:20 043] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.20 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 13:59:20 043] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 1.20 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 13:59:20 043] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.20 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 13:59:20 044] - EntityApp::checkTickPeriod: tick took 1204% (1.20 seconds)!
+   DEBUG    cellapp01 26735 8001  [2018-11-13 13:59:20 114] - InitProgressHandler::~InitProgressHandler()
+   S_DBG    cellapp01 26735 8001  [2018-11-13 13:59:20 740] - onGlobalData: Halls
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:04:12 042] - Spaces::createNewSpace: new space(Room) 1.
+    INFO    cellapp01 26735 8001  [2018-11-13 14:04:12 043] - EntityApp::createEntity: new Room 2003
+    INFO    cellapp01 26735 8001  [2018-11-13 14:04:12 045] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 26735 8001  [2018-11-13 14:04:12 142] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:12 143] - 玩家进来了---2002 座位号为 0
+    INFO    cellapp01 26735 8001  [2018-11-13 14:04:12 242] - EntityApp::createEntity: new Account 2002
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:13 941] - 2002
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:13 942] - True
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:14 042] - cell account
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:14 042] - 1
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:15 041] - 玩家进来了---2004 座位号为 1
+    INFO    cellapp01 26735 8001  [2018-11-13 14:04:15 141] - EntityApp::createEntity: new Account 2004
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:16 942] - 2004
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:16 943] - True
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:16 943] - 全部就位---开始处理！
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:16 955] - 游戏开始！
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:17 118] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.18 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:17 119] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.18 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:17 119] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.18 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:17 119] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.18 seconds
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:17 120] - cell account
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:04:17 120] - 1
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:25 081] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:25 082] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:25 082] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:25 082] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:30 077] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:30 077] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.13 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:30 077] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:30 077] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.14 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:39 390] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.15 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:39 390] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.15 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:39 391] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.15 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:04:39 391] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:01 516] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.17 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:01 516] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.17 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:01 517] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.18 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:01 518] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.18 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:19 355] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:19 355] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:19 355] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:19 356] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:30 610] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.17 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:30 610] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.17 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:30 611] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.17 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:05:30 611] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.17 seconds
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:11:30 944] - Account::onWriteToDB(): 2004.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:12:19 345] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:12:22 145] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:12:22 345] - 只能打最后一张牌
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:12:24 778] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:12:24 779] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.13 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:12:24 779] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:12:24 779] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:14:00 946] - Account::onWriteToDB(): 2002.
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:00 046] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.10 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:00 046] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.10 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:07 858] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:07 859] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:07 859] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.11 seconds
+ WARNING    cellapp01 26735 8001  [2018-11-13 14:15:07 860] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.11 seconds
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:16:30 947] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:19:00 948] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:21:30 949] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:24:00 950] - Account::onWriteToDB(): 2004.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:01 650] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:01 950] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:02 850] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:03 050] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:03 550] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:03 750] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:03 950] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:04 150] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:04 650] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:05 550] - 只能打最后一张牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:36 050] - 不需要出牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:38 950] - 不需要出牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:41 451] - 不需要出牌
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:24:46 855] - 游戏结束---TODO
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:26:30 951] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:29:00 952] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:31:30 953] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:34:00 954] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:36:30 955] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:39:00 956] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:41:30 957] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:44:00 958] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:46:30 956] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:48:49 556] - Spaces::createNewSpace: new space(Room) 2.
+    INFO    cellapp01 26735 8001  [2018-11-13 14:48:49 556] - EntityApp::createEntity: new Room 2006
+    INFO    cellapp01 26735 8001  [2018-11-13 14:48:49 558] - KBEngine::addSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom, shouldLoadOnServer=1!
+    INFO    cellapp01 26735 8001  [2018-11-13 14:48:49 656] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=2, respath=spaces/mjRoom!
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:48:49 657] - 玩家进来了---2005 座位号为 0
+    INFO    cellapp01 26735 8001  [2018-11-13 14:48:49 756] - EntityApp::createEntity: new Account 2005
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:49:00 956] - Account::onWriteToDB(): 2002.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:49:26 057] - 2005
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:49:26 057] - True
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:49:26 157] - cell account
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:49:26 158] - 1
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:50:40 957] - Account::onWriteToDB(): 2005.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:50:48 856] - 玩家进来了---2007 座位号为 1
+    INFO    cellapp01 26735 8001  [2018-11-13 14:50:48 956] - EntityApp::createEntity: new Account 2007
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:52:20 956] - Account::onWriteToDB(): 2004.
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:26 257] - 2005
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:26 257] - False
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:26 357] - cell account
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:26 357] - 0
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:28 156] - 2005
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:28 156] - True
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:28 256] - cell account
+   S_DBG    cellapp01 26735 8001  [2018-11-13 14:53:28 257] - 1
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:54:00 957] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 26735 8001  [2018-11-13 14:55:15 957] - Account::onWriteToDB(): 2005.
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:00 955] - -----------------------------------------------------------------------------------------
+
+
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:01 921] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:01 921] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:01 921] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 489] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:49768 )
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 519] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:49768, SOMAXCONN=5.
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 519] - server-configs:
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 519] - 	gameUpdateHertz : 10
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 619] - 	defaultViewRadius : 80
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 619] - 	defaultViewHysteresisArea : 5
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 619] - 	entryScriptFile : kbemain
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 619] - 	internalAddr : 192.168.0.107:49768
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:02 620] - 	componentID : 8001
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:03 354] - ---- cellapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: 85A70C5E64F896E0F1A60BF405B4EB07. Config: Debug X86. Built: 15:53:53 Apr 29 2018. AppID: 8001. UID: 27620. PID: 7116 ----
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:03 354] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:03 419] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:03 428] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:08 129] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:08 577] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:08 665] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:09 228] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:09 266] - Script::install_py_dlls(): PyInit_select
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:09 439] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:10 014] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:10 764] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:12 788] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:12 788] - Script::install(): KBExtra is successfully!
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:18 455] - loaded entity-script:Account(1).
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:18 728] - loaded entity-script:Room(4).
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:18 759] - TelnetServer server is running on port 50000
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:19 317] - ---- cellapp is running ----
+   DEBUG    cellapp-1 27620 8001  [2018-11-13 22:26:20 150] - Components::process(): Request for the process of identity...
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:26 661] - EntityApp::checkTickPeriod: tick took 7343% (7.34 seconds)!
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:26 762] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.26 seconds
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:27 803] - Components::findComponents: find logger(1)...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:27 873] - Components::findComponents: found logger, addr:192.168.0.107:49753
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:27 873] - Components::addComponent: reset orderLog, uid=27620!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:27 873] - Components::addComponent[logger], uid=27620, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:29 152] - Components::findComponents: find dbmgr(2)...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:29 178] - Components::findComponents: found dbmgr, addr:192.168.0.107:49765
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:29 178] - Components::addComponent: reset orderLog, uid=27620!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:29 179] - Components::addComponent[dbmgr], uid=27620, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:29 179] - Components::findComponents: found dbmgr, addr:192.168.0.107:49765
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:30 181] - EntityApp::checkTickPeriod: tick took 2463% (2.46 seconds)!
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:30 632] - EntityApp::checkTickPeriod: tick took 450% (0.45 seconds)!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:31 204] - Components::findComponents: find cellappmgr(1)...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:31 282] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49764
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:31 282] - Components::addComponent[cellappmgr], uid=27620, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:31 282] - Components::findComponents: found cellappmgr, addr:192.168.0.107:49764
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:32 282] - EntityApp::checkTickPeriod: tick took 1164% (1.16 seconds)!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:33 304] - Components::findComponents: find baseappmgr(1)...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:33 384] - Components::findComponents: found baseappmgr, addr:192.168.0.107:49766
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:33 384] - Components::addComponent[baseappmgr], uid=27620, componentID=5000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:33 384] - Components::findComponents: found baseappmgr, addr:192.168.0.107:49766
+ WARNING    cellapp-1 27620 8001  [2018-11-13 22:26:34 384] - EntityApp::checkTickPeriod: tick took 1166% (1.17 seconds)!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:35 418] - Components::findComponents: register self to dbmgr...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:35 503] - Components::findComponents: register self to cellappmgr...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:35 517] - Components::findComponents: register self to baseappmgr...
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:35 603] - Components::process(): Found all the components!
+    INFO    cellapp-1 27620 8001  [2018-11-13 22:26:38 693] - EntityApp::onDbmgrInitCompleted: entityID alloc(1-2001), startGlobalOrder=5, startGroupOrder=1, digest=7F4FC8296AD553545CD95B23EFF6238F.
+    INFO    cellapp01 27620 8001  [2018-11-13 22:26:38 693] - IDClient::onAddRange: number of ids increased from 1 to 2001.
+   S_DBG    cellapp01 27620 8001  [2018-11-13 22:26:39 897] - onInit::isReload:0
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:26:39 897] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.38 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:26:39 898] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 1.38 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:26:39 898] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.38 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:26:39 899] - EntityApp::checkTickPeriod: tick took 1382% (1.38 seconds)!
+   DEBUG    cellapp01 27620 8001  [2018-11-13 22:26:40 892] - InitProgressHandler::~InitProgressHandler()
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:26:40 892] - EntityApp::checkTickPeriod: tick took 990% (0.99 seconds)!
+    INFO    cellapp01 27620 8001  [2018-11-13 22:27:35 518] - ServerApp::onRegisterNewApp: uid:27620, username:, componentType:baseapp, componentID:7001, globalorderID=6, grouporderID=1, intaddr:192.168.0.107, intport:49789, extaddr:192.168.0.107, extport:20015,  from 192.168.0.107:49765/0/0/0.
+    INFO    cellapp01 27620 8001  [2018-11-13 22:27:35 518] - Components::addComponent[baseapp], uid=27620, componentID=7001, globalorderid=6, grouporderid=1, totalcount=1
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:27:43 399] - e:\kbengine\kbe\src\lib\pyscript\pickler.cpp:141: Profile unpickle took 0.28 seconds
+   S_DBG    cellapp01 27620 8001  [2018-11-13 22:27:43 400] - onGlobalData: Halls
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:27:43 400] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.28 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:27:43 401] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.28 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:27:43 401] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.28 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 22:27:43 401] - EntityApp::checkTickPeriod: tick took 283% (0.28 seconds)!
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:15:44 476] - Spaces::createNewSpace: new space(Room) 1.
+    INFO    cellapp01 27620 8001  [2018-11-13 23:15:44 501] - EntityApp::createEntity: new Room 2003
+    INFO    cellapp01 27620 8001  [2018-11-13 23:15:44 544] - KBEngine::addSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom, shouldLoadOnServer=1!
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:15:44 563] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:15:44 563] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:15:44 564] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+    INFO    cellapp01 27620 8001  [2018-11-13 23:15:44 638] - KBEngine::onLoadedSpaceGeometryMapping: spaceID=1, respath=spaces/mjRoom!
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:15:44 639] - 玩家进来了---2002 座位号为 0
+    INFO    cellapp01 27620 8001  [2018-11-13 23:15:44 739] - EntityApp::createEntity: new Account 2002
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:15:47 638] - 2002
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:15:47 639] - True
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:15:47 739] - cell account
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:15:47 740] - 1
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:28 139] - 2002
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:28 140] - False
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:28 240] - cell account
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:28 240] - 0
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:31 640] - 2002
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:31 641] - True
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:31 740] - cell account
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:31 740] - 1
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:36 939] - 玩家进来了---2004 座位号为 1
+    INFO    cellapp01 27620 8001  [2018-11-13 23:19:37 040] - EntityApp::createEntity: new Account 2004
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 639] - 2004
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 640] - True
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 640] - 全部就位---开始处理！
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 674] - 游戏开始！
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:39 815] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:978: Profile scriptCall took 0.18 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:39 816] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 0.18 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:39 816] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.18 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:39 816] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.18 seconds
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 817] - cell account
+   S_DBG    cellapp01 27620 8001  [2018-11-13 23:19:39 817] - 1
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:58 389] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.15 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:58 389] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.15 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:58 390] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.15 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:19:58 390] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.15 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:15 455] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:15 456] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:15 456] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:15 456] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:20 667] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.13 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:20 668] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.13 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:20 668] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.13 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:20 668] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.13 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:24 142] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.10 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:24 142] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.10 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:24 142] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.10 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:24 142] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.10 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:39 361] - e:\kbengine\kbe\src\server\cellapp\entity.cpp:4236: Profile onTimer took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:39 362] - e:\kbengine\kbe\src\lib\server\serverapp.cpp:253: Profile callScriptTimers took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:39 362] - e:\kbengine\kbe\src\server\cellapp\cellapp.cpp:245: Profile gameTick took 0.12 seconds
+ WARNING    cellapp01 27620 8001  [2018-11-13 23:20:39 362] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.12 seconds
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:22:20 640] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:24:50 642] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:27:20 642] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:29:50 643] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:32:20 644] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:34:50 645] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:37:20 647] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:39:50 647] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:42:20 649] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:44:50 649] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:47:20 650] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:49:50 652] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:52:20 652] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:54:50 654] - Account::onWriteToDB(): 2004.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:57:20 654] - Account::onWriteToDB(): 2002.
+   DEBUG    cellapp01 27620 8001  [2018-11-13 23:59:50 656] - Account::onWriteToDB(): 2002.

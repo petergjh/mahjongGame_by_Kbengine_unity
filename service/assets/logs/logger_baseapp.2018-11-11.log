@@ -1,0 +1,1263 @@
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:28 890] - -----------------------------------------------------------------------------------------
+
+
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:30 855] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:30 855] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:30 855] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 517] - NetworkInterface::initialize(EXTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:20015 )
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 546] - NetworkInterface::initialize(EXTERNAL): address 192.168.0.107:20015, SOMAXCONN=128.
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 549] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:50738 )
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 549] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:50738, SOMAXCONN=128.
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 549] - server-configs:
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	gameUpdateHertz : 10
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	entryScriptFile : kbemain
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	internalAddr : 192.168.0.107:50738
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	externalAddr : 192.168.0.107:20015
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	externalCustomAddr : c.55908.3m.dkys.org
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:31 550] - 	componentID : 7001
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 496] - Components::findLogger: found logger, addr:192.168.0.107:50713
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 497] - Components::addComponent: reset orderLog, uid=22461!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 498] - Components::addComponent[logger], uid=22461, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 605] - ---- baseapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F9DFFB319FBADF35943ADF4D42C4718C. Config: Debug X86. Built: 15:53:31 Apr 29 2018. AppID: 7001. UID: 22461. PID: 9920 ----
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 605] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 632] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:32 694] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:34 643] - Script::install_py_dlls(): PyInit_pyexpat
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:34 701] - Script::install_py_dlls(): PyInit__socket
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:34 799] - Script::install_py_dlls(): PyInit__ssl
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:35 460] - Script::install_py_dlls(): PyInit__hashlib
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:35 540] - Script::install_py_dlls(): PyInit_select
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:35 598] - Script::install_py_dlls(): PyInit__ctypes
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:35 697] - Script::install_py_dlls(): PyInit__elementtree
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:35 969] - Script::install_py_dlls(): PyInit_unicodedata
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:36 725] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:36 725] - Script::install(): KBExtra is successfully!
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:37 786] - loaded entity-script:Account(1).
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:37 790] - loaded entity-script:CheckName(2).
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:37 836] - loaded entity-script:Halls(3).
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:37 847] - loaded entity-script:Room(4).
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:37 847] - Baseapp::initializeEnd: started resmgr tick(60s)!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:37 873] - TelnetServer server is running on port 40000
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:38 273] - ---- baseapp is running ----
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:38 274] - Components::process(): Request for the process of identity...
+ WARNING    baseapp-1 22461 7001  [2018-11-11 00:18:44 413] - EntityApp::checkTickPeriod: tick took 6140% (6.14 seconds)!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:45 474] - Components::findComponents: find dbmgr(1)...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:45 537] - Components::findComponents: found dbmgr, addr:192.168.0.107:50715
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:45 537] - Components::addComponent: reset orderLog, uid=22461!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:45 537] - Components::addComponent[dbmgr], uid=22461, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:45 538] - Components::findComponents: found dbmgr, addr:192.168.0.107:50715
+ WARNING    baseapp-1 22461 7001  [2018-11-11 00:18:46 538] - EntityApp::checkTickPeriod: tick took 1164% (1.16 seconds)!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:47 574] - Components::findComponents: find baseappmgr(1)...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:47 644] - Components::findComponents: found baseappmgr, addr:192.168.0.107:50716
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:47 644] - Components::addComponent[baseappmgr], uid=22461, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:47 645] - Components::findComponents: found baseappmgr, addr:192.168.0.107:50716
+ WARNING    baseapp-1 22461 7001  [2018-11-11 00:18:48 646] - EntityApp::checkTickPeriod: tick took 1171% (1.17 seconds)!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:49 674] - Components::findComponents: find cellappmgr(1)...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:49 757] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50714
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:49 757] - Components::addComponent[cellappmgr], uid=22461, componentID=6000, globalorderid=3, grouporderid=1, totalcount=1
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:49 759] - Components::findComponents: found cellappmgr, addr:192.168.0.107:50714
+ WARNING    baseapp-1 22461 7001  [2018-11-11 00:18:50 760] - EntityApp::checkTickPeriod: tick took 1185% (1.18 seconds)!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 818] - Components::findComponents: register self to dbmgr...
+   DEBUG    baseapp-1 22461 7001  [2018-11-11 00:18:51 819] - SyncEntityStreamTemplateHandler::~SyncEntityStreamTemplateHandler()
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 853] - Components::findComponents: register self to baseappmgr...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 853] - Components::findComponents: register self to cellappmgr...
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 874] - Components::process(): Found all the components!
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 876] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:cellapp, componentID:8001, globalorderID=5, grouporderID=1, intaddr:192.168.0.107, intport:50724, extaddr:nonsupport, extport:0,  from 192.168.0.107:50747/0/0/0.
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 876] - Components::addComponent[cellapp], uid=22461, componentID=8001, globalorderid=5, grouporderid=1, totalcount=1
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:51 876] - ServerApp::onRegisterNewApp: uid:22461, username:, componentType:cellapp, componentID:8001, globalorderID=5, grouporderID=1, intaddr:192.168.0.107, intport:50724, extaddr:nonsupport, extport:0,  from 192.168.0.107:50747/0/0/0.
+    INFO    baseapp-1 22461 7001  [2018-11-11 00:18:54 887] - EntityApp::onDbmgrInitCompleted: entityID alloc(2001-4001), startGlobalOrder=6, startGroupOrder=1, digest=7F4FC8296AD553545CD95B23EFF6238F.
+    INFO    baseapp01 22461 7001  [2018-11-11 00:18:54 887] - IDClient::onAddRange: number of ids increased from 2001 to 4001.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 00:18:56 100] - onInit::isReload:0
+ WARNING    baseapp01 22461 7001  [2018-11-11 00:18:56 100] - e:\kbengine\kbe\src\lib\server\entity_app.h:749: Profile processRecvMessages took 1.23 seconds
+ WARNING    baseapp01 22461 7001  [2018-11-11 00:18:56 100] - e:\kbengine\kbe\src\server\baseapp\baseapp.cpp:505: Profile gameTick took 1.23 seconds
+ WARNING    baseapp01 22461 7001  [2018-11-11 00:18:56 100] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 1.23 seconds
+ WARNING    baseapp01 22461 7001  [2018-11-11 00:18:56 101] - EntityApp::checkTickPeriod: tick took 1227% (1.23 seconds)!
+   DEBUG    baseapp01 22461 7001  [2018-11-11 00:18:56 691] - EntityAutoLoader::~EntityAutoLoader()
+  S_INFO    baseapp01 22461 7001  [2018-11-11 00:18:56 718] - onBaseAppReady: isBootstrap=True, appID=7001, bootstrapGroupIndex=1, bootstrapGlobalIndex=6
+    INFO    baseapp01 22461 7001  [2018-11-11 00:18:56 759] - EntityApp::createEntity: new Halls 2001
+   DEBUG    baseapp01 22461 7001  [2018-11-11 00:18:56 774] - InitProgressHandler::~InitProgressHandler()
+   DEBUG    baseapp01 22461 7001  [2018-11-11 16:55:30 524] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 16:55:31 824] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:57590/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 16:55:31 824] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:57590/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 16:55:32 224] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:57590/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 16:55:32 438] - PendingLoginMgr::remove: 1, size=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 16:55:32 466] - EntityApp::createEntity: new Account 2002
+  S_INFO    baseapp01 22461 7001  [2018-11-11 16:55:32 469] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:57590.
+    INFO    baseapp01 22461 7001  [2018-11-11 16:55:32 469] - Baseapp::onQueryAccountCBFromDbmgr: user=1, uuid=6622524027775156224, entityID=2002, flags=0, deadline=0.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 16:55:44 624] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 16:55:44 624] - 结束后长度
+  S_INFO    baseapp01 22461 7001  [2018-11-11 16:55:44 624] - 0
+    INFO    baseapp01 22461 7001  [2018-11-11 16:55:44 724] - EntityApp::createEntity: new Room 2003
+   S_DBG    baseapp01 22461 7001  [2018-11-11 16:55:44 924] - onGlobalData: Room_1
+   S_DBG    baseapp01 22461 7001  [2018-11-11 16:55:45 038] - 没有cell
+    INFO    baseapp01 22461 7001  [2018-11-11 16:57:01 633] - ServerApp::onChannelTimeOut: Channel 127.0.0.1:57590/0/0/0 timed out.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 16:57:01 633] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 16:57:01 633] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 16:58:25 224] - Baseapp::onBackupEntityCellData: Account(2002), 89 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:00:05 224] - Baseapp::onBackupEntityCellData: Room(2003), 147 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:03:38 223] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:03:38 223] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:05:05 223] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:06:45 223] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:08:38 222] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:08:38 222] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:10:05 222] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:11:45 221] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:13:25 221] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:13:38 221] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:13:38 221] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:15:05 221] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:18:25 220] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:18:38 221] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:18:38 221] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:20:05 220] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:23:25 220] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:23:38 219] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:23:38 219] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:26:45 219] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:28:25 219] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:28:38 219] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:28:38 219] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:30:05 219] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:33:38 218] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:33:38 218] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:35:05 218] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:36:45 217] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:38:38 217] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:38:38 217] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:40:05 217] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:41:45 217] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:43:25 217] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:43:38 216] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:43:38 216] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:45:05 216] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:48:38 216] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:48:38 216] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:50:05 315] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:51:45 315] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:53:25 315] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:53:38 216] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:53:38 216] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 17:55:05 315] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:58:25 314] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:58:38 214] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 17:58:38 214] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:01:45 314] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:03:38 214] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:03:38 214] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:05:05 313] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:06:45 313] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:08:38 213] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:08:38 213] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:10:05 312] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:11:45 312] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:13:38 212] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:13:38 212] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:15:05 312] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:16:45 312] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:18:25 311] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:18:38 211] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:18:38 211] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:21:45 311] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:23:25 310] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:23:38 211] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:23:38 211] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:26:45 310] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:28:25 310] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:28:38 210] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:28:38 210] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:30:05 310] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:33:25 309] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:33:38 209] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:33:38 209] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:35:05 309] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:38:25 308] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:38:38 208] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:38:38 208] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:40:05 308] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:43:38 208] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:43:38 208] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:45:05 307] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:46:45 307] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:48:25 306] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:48:38 207] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:48:38 207] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:50:05 307] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:53:25 306] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:53:38 206] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:53:38 206] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 18:56:45 305] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:58:38 205] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 18:58:38 205] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:00:05 305] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:01:45 305] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:03:25 304] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:03:38 204] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:03:38 204] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:06:45 304] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:08:25 304] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:08:38 203] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:08:38 203] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:10:05 303] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:13:25 303] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:13:38 203] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:13:38 203] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:16:45 303] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:18:25 302] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:18:38 202] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:18:38 203] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:21:45 301] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:23:25 301] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:23:38 201] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:23:38 201] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:26:45 301] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:28:25 301] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:28:38 201] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:28:38 201] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:31:45 300] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:33:38 200] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:33:38 200] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:35:05 299] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:36:45 399] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:38:25 299] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:38:38 299] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:38:38 299] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:40:05 299] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:43:38 198] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:43:38 198] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:45:05 298] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:46:45 298] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:48:25 298] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:48:38 197] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:48:38 198] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:45 297] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:51:47 897] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 397] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59480/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 19:51:49 398] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59480/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 897] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59480/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 897] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 897] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 897] - 59480
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 897] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:49 898] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59480.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:51:50 597] - PendingLoginMgr::add: 2, size=2.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:51:50 693] - PendingLoginMgr::process: [1] is timeout, currsize=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:52 897] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59484/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 19:51:52 897] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59484/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:53 397] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:59484/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:51:53 497] - PendingLoginMgr::remove: 2, size=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:53 497] - EntityApp::createEntity: new Account 2004
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:53 498] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:59484.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:51:53 498] - Baseapp::onQueryAccountCBFromDbmgr: user=2, uuid=6622569472824115200, entityID=2004, flags=0, deadline=0.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:55 497] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:55 497] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:55 497] - 326188-需要玩家数量--1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:51:55 597] - 没有cell
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:52:02 130] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 19:52:02 130] - Account[2004].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:52:06 532] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 19:52:06 533] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 19:53:38 197] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:53:38 197] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:54:17 397] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:55:32 396] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:56:08 196] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:56:08 196] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:02 396] - Baseapp::onBackupEntityCellData: Account(2004), 97 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:58:12 196] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:13 996] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59543/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 19:58:13 996] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59543/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59543/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - 59543
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:58:14 796] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59543.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:58:15 692] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:58:26 802] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 19:58:26 802] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:38 196] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:58:38 196] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 19:59:17 396] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:59:20 496] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 19:59:21 896] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59555/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 19:59:21 896] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59555/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 396] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59555/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 396] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 396] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 397] - 59555
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 397] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 19:59:22 397] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59555.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 19:59:22 692] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:00:12 467] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:00:12 467] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:00:32 396] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:00:36 795] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 196] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59567/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:00:38 196] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59567/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 696] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59567/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 696] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 697] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 697] - 59567
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 697] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:00:38 697] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59567.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:00:39 691] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:01:08 195] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:01:08 195] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:01:47 395] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:02:49 105] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:02:49 106] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:03:02 295] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:03:03 895] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59583/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:03:03 895] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59583/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 395] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59583/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 395] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 395] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 395] - 59583
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 395] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:03:04 396] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59583.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:03:04 691] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:03:08 063] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:03:08 063] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:03:38 195] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:03:38 195] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:04:17 395] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:05:19 195] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:05:22 795] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59616/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:05:22 795] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59616/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:59616/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - 59616
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:05:23 295] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:59616.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:05:23 691] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:05:32 395] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:06:08 195] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:06:08 195] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:06:47 395] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:02 395] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:08:34 495] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:35 894] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59636/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:08:35 895] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59636/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 395] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59636/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 395] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 395] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 395] - 59636
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 395] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:08:36 396] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59636.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:08:36 690] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:38 195] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:08:38 195] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:09:02 886] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:09:02 886] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:09:17 395] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:09:36 394] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 194] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59650/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:09:38 194] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59650/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59650/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - 59650
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:09:38 695] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59650.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:09:39 690] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:09:49 968] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:09:49 968] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:09:54 349] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:09:54 350] - Account[2004].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:10:10 794] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 195] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59661/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:10:13 195] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59661/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 594] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:59661/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 594] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 594] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 594] - 59661
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 594] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:10:13 595] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:59661.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:10:13 691] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:10:25 592] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:10:25 592] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:11:08 194] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:11:08 194] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:11:47 394] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:13:02 394] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:13:38 194] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:13:38 194] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:14:17 394] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:16:08 193] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:16:08 193] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:02 393] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:18:07 093] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:23 693] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59871/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:18:23 693] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59871/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:59871/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - 59871
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:18:24 193] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:59871.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:18:24 689] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:18:35 598] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:18:35 598] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:38 193] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:18:38 193] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:19:05 393] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:19:06 893] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59879/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:19:06 893] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59879/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:59879/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - 59879
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:19:07 393] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:59879.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:19:07 689] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:19:17 393] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:20:32 393] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:20:40 324] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:20:40 324] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:21:08 192] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:21:08 192] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:23:02 393] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:23:38 192] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:23:38 192] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:24:17 392] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:25:32 392] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:25:40 692] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 392] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:59945/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:25:54 392] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:59945/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:59945/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - 59945
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:25:54 892] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:59945.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:25:55 688] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:25:59 192] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2002.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:26:04 375] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:26:04 375] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:26:08 192] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:26:08 192] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:26:47 391] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:28:02 391] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:28:38 191] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:28:38 191] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:29:17 391] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:31:08 192] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:31:08 192] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:33:02 391] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:33:38 191] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:33:38 191] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:34:17 391] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:35:32 391] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:36:08 191] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:36:08 191] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:36:47 390] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:38:02 390] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:38:38 190] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:38:38 190] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:40:32 390] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:41:08 190] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:41:08 190] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:41:47 390] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:43:38 189] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:43:38 189] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:44:17 389] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:45:32 389] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:46:08 189] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:46:08 189] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:47:30 888] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:47:32 288] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:60104/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:47:32 289] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:60104/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 189] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:60104/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 189] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 189] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 189] - 60104
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 189] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 20:47:33 190] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:60104.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:47:33 685] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:47:51 689] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:47:51 690] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+ WARNING    baseapp01 22461 7001  [2018-11-11 20:47:51 788] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 20:47:56 953] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 20:47:56 953] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 20:48:02 388] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:48:38 189] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:48:38 189] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:49:17 388] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:50:32 388] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:51:08 188] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:51:08 188] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:51:47 388] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:53:02 387] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:53:38 187] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:53:38 187] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:55:32 388] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:56:08 187] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:56:08 187] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:56:47 387] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:58:38 187] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 20:58:38 187] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 20:59:17 387] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:00:32 387] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:01:08 187] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:01:08 187] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:01:47 387] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:03:02 286] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:03:38 186] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:03:38 186] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:04:17 287] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:06:08 186] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:06:08 186] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:06:47 286] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:08:02 285] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:08:38 186] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:08:38 186] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:10:32 285] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:11:08 185] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:11:08 185] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:11:47 285] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:13:02 285] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:13:38 185] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:13:38 185] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:14:17 284] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:16:08 184] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:16:08 184] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:16:47 284] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:18:02 284] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:18:38 183] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:18:38 183] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:19:17 283] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:21:08 184] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:21:08 184] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:21:47 284] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:23:02 283] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:23:38 184] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:23:38 184] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:25:32 282] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:26:08 183] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:26:08 183] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:26:47 283] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:28:02 282] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:28:38 182] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:28:38 182] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:29:17 283] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:31:08 182] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:31:08 182] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:31:47 282] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:33:02 282] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:33:38 181] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:33:38 181] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:34:17 281] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:36:08 181] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:36:08 181] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:36:47 281] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:38:02 281] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:38:38 181] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:38:38 181] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:40:32 281] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:41:08 181] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:41:08 181] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:41:47 281] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:43:02 280] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:43:38 180] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:43:38 180] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:45:32 279] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:46:08 179] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:46:08 179] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:46:47 280] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:48:38 179] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:48:38 179] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:49:17 279] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:50:32 279] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:51:08 179] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:51:08 179] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:51:47 278] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:53:02 279] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:53:38 179] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:53:38 179] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:54:17 278] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:56:08 178] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:56:08 178] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:58:02 278] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:58:38 178] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 21:58:38 178] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 21:59:17 278] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:00:32 277] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:01:08 177] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:01:08 177] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:01:47 277] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:03:02 277] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:03:38 177] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:03:38 177] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:05:32 276] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:06:08 176] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:06:08 176] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:06:47 276] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:08:02 276] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:08:38 176] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:08:38 176] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:09:17 276] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:11:08 175] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:11:08 175] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:13:02 275] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:13:38 175] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:13:38 175] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:14:17 275] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:15:32 275] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:16:08 175] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:16:08 175] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:16:47 275] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:18:02 275] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:18:38 175] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:18:38 175] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:20:32 274] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:21:08 174] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:21:08 174] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:21:47 274] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:23:02 274] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:23:38 174] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:23:38 174] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:24:05 874] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:24:17 274] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 474] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:60988/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:24:20 475] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:60988/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:60988/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - 60988
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:24:20 974] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:60988.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:24:21 672] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:24:29 174] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2002.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:24:29 274] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2002.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:24:29 374] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2002.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:26:08 173] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:26:08 173] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:27:15 088] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:27:15 088] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:28:02 273] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:28:38 173] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:28:38 173] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:29:17 273] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:30:32 273] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:31:08 173] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:31:08 173] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:31:47 272] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:02 272] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:33:06 172] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:07 572] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61174/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:33:07 572] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61174/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 672] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61174/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 672] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 672] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 672] - 61174
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 672] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:33:08 673] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61174.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:33:09 671] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:38 172] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:33:38 172] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:33:48 677] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:33:48 677] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:34:17 272] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:34:36 672] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:34:38 972] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61233/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:34:38 973] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61233/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:36:08 172] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:36:08 172] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:36:37 671] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:36:42 972] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 072] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61259/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:36:45 072] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61259/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 672] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61259/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 672] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 673] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 673] - 61259
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 673] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:36:45 673] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61259.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:36:46 670] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:36:53 172] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:36:53 272] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:36:53 372] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:37:18 292] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:37:18 293] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:37:22 172] - Baseapp::reloginBaseapp: accountName=1, key=6622611958640607232, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:22 172] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61263.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:37:28 172] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:37:31 171] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61267/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:37:31 171] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61267/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61267/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - 61267
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:33 172] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61267.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:37:33 670] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:37:38 650] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:37:38 650] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:37:41 672] - Baseapp::reloginBaseapp: accountName=2, key=6622612164799037440, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:37:41 673] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61270.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:38:02 271] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:38:18 877] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:38:18 878] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:38:24 771] - Baseapp::reloginBaseapp: accountName=2, key=6622612199158775809, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:38:24 772] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61278.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:38:31 036] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:38:31 036] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:38:34 271] - Baseapp::reloginBaseapp: accountName=2, key=6622612383842369537, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:38:34 271] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61281.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:38:38 171] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:38:38 171] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:38:58 826] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:38:58 826] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:39:00 071] - Baseapp::reloginBaseapp: accountName=2, key=6622612426792042497, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:39:00 072] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61284.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:39:17 271] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:39:22 959] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:39:22 959] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:39:56 371] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 171] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61310/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:39:58 171] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61310/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 672] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61310/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 672] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 672] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 672] - 61310
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 672] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:39:58 673] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61310.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:39:59 670] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:40:18 198] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:40:18 200] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:40:32 271] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:40:37 824] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:40:37 824] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:40:40 471] - Baseapp::reloginBaseapp: accountName=1, key=6622612787569295360, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:40:40 472] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61317.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:41:08 171] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:41:08 171] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:41:37 763] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:41:37 763] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:41:41 671] - Baseapp::reloginBaseapp: accountName=1, key=6622612967957921793, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:41:41 671] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61322.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:41:47 271] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:42:02 828] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:42:02 828] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:42:16 771] - Baseapp::reloginBaseapp: accountName=1, key=6622613229950926849, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:42:16 771] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61327.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:02 271] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:38 171] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:38 171] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:43:54 571] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:55 871] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61357/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:43:55 871] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61357/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 371] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61357/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 371] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 371] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 372] - 61357
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 372] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:43:56 372] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61357.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:43:56 669] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:44:17 271] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:44:32 958] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:44:32 959] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:44:40 837] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:44:40 837] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:44:42 971] - Baseapp::reloginBaseapp: accountName=2, key=6622613809771511808, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:44:42 971] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61364.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:45:01 771] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 070] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61372/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:45:03 070] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61372/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 970] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61372/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 970] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 970] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 970] - 61372
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 970] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:45:03 971] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61372.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:45:04 670] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:46:08 170] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:46:08 170] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:47:04 761] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:47:04 761] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:47:23 070] - Baseapp::reloginBaseapp: accountName=1, key=6622614097534320640, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:47:23 071] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61405.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:47:40 550] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:47:40 550] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:47:44 770] - Baseapp::reloginBaseapp: accountName=1, key=6622614698829742081, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:47:44 771] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61444.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:48:02 271] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:48:10 306] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:48:10 307] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:48:38 171] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:48:38 171] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:49:03 797] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:49:03 797] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:49:17 270] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:49:28 270] - Baseapp::reloginBaseapp: accountName=1, key=6622614789024055297, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:49:28 270] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61475.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:50:32 270] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:50:32 870] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:50:34 869] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61489/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:50:34 869] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61489/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 170] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61489/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 170] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 170] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 170] - 61489
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 170] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:50:36 171] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61489.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:50:36 669] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:50:59 124] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:50:59 124] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:08 170] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:08 170] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:51:39 670] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 070] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61495/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:51:41 070] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61495/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 570] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61495/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 570] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 570] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 570] - 61495
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 570] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:51:41 571] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61495.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:51:41 668] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:51:47 270] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:52:01 412] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:52:01 412] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:52:28 270] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:52:29 770] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61504/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 22:52:29 771] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61504/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 370] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61504/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 370] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 370] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 370] - 61504
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 370] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:52:30 371] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61504.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:52:30 668] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:52:42 760] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:52:42 760] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:52:46 969] - Baseapp::reloginBaseapp: accountName=2, key=6622615806931304448, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 22:52:46 970] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61508.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:53:38 169] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:53:38 169] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:54:17 270] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:54:24 688] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:54:24 688] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:55:32 269] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 22:55:39 060] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 22:55:39 060] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 22:56:08 169] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:56:08 169] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:58:02 269] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:58:38 168] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 22:58:38 168] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 22:59:17 268] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:00:32 268] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:01:08 168] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:01:08 168] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:01:47 268] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:02 268] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:21 368] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:23 368] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61618/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:03:23 368] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61618/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61618/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - 61618
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:24 268] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61618.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:24 667] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:30 467] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 268] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61622/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:03:32 268] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61622/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 768] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61622/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 768] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 768] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 768] - 61622
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 768] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:32 769] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61622.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:33 667] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:38 167] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:38 167] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:48 220] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:03:48 220] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:51 668] - Baseapp::reloginBaseapp: accountName=2, key=6622618826293313536, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:51 669] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61629.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:03:52 113] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:03:52 113] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:03:54 467] - Baseapp::reloginBaseapp: accountName=1, key=6622618860653051904, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:03:54 467] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61635.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:04:17 268] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:04:21 838] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:04:21 838] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:04:54 268] - Baseapp::reloginBaseapp: accountName=1, key=6622618955142332417, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:04:54 269] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61654.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:05:19 498] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:05:19 498] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:06:08 167] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:06:08 167] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:06:47 267] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:08:02 267] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:08:38 167] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:08:38 167] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:09:17 267] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:09:35 178] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:09:35 178] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:10:41 567] - Baseapp::reloginBaseapp: accountName=2, key=6622618942257430529, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:10:41 567] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61707.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:10:54 866] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:10:57 767] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61859/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:10:57 767] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61859/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 266] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61859/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 266] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 266] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 266] - 61859
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 266] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:10:58 267] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61859.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:10:58 666] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:11:03 123] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:11:03 123] - Account[2004].onClientDeath:
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:11:03 166] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:11:03 166] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2004.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:11:06 266] - Baseapp::reloginBaseapp: accountName=2, key=6622620703194021889, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:11:06 266] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61861.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:11:08 167] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:11:08 167] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:11:35 662] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:11:35 663] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:11:39 467] - Baseapp::reloginBaseapp: accountName=1, key=6622620776208465920, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:11:39 468] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61864.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:11:47 267] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:13:02 266] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:13:38 167] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:13:38 167] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:13:40 977] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:13:40 977] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:14:17 266] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:14:41 579] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:14:41 579] - Account[2002].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:14:57 566] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 466] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61900/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:14:59 467] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61900/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 966] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61900/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 966] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 966] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 967] - 61900
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 967] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:14:59 967] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61900.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:15:00 666] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:15:23 066] - PendingLoginMgr::add: 1, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:15:26 166] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61909/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:15:26 166] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61909/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - Baseapp::loginBaseapp: new user[1], channel[127.0.0.1:61909/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - Baseapp::loginBaseapp: user[1] has entity(2002).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - 61909
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:15:27 066] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61909.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:15:27 666] - PendingLoginMgr::process: [1] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:16:08 166] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:16:08 166] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:16:10 319] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:16:10 319] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:16:16 166] - Baseapp::reloginBaseapp: accountName=2, key=6622621811295584256, entityID=2004.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:16:16 167] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61916.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:02 266] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:18:30 370] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:18:30 370] - Account[2004].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:38 166] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:38 166] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:18:46 965] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 465] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61934/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:18:48 466] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61934/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 965] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:61934/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 966] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 966] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 966] - 61934
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 966] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:18:48 966] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:61934.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:18:49 665] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:19:17 266] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:20:32 265] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:21:08 165] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:21:08 165] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:21:47 265] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:22:00 258] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:00 259] - Account[2002].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:03 965] - Baseapp::reloginBaseapp: accountName=1, key=6622621931554668544, entityID=2002.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:22:03 965] - account[2002] entities enable. entityCall:Client id:2002, utype:1, component=client[0], addr: 127.0.0.1:61954.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:22:31 478] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:31 479] - Account[2004].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:22:39 465] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:40 965] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61963/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:22:40 965] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61963/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:41 465] - Baseapp::loginBaseapp: new user[11], channel[127.0.0.1:61963/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:22:41 565] - PendingLoginMgr::remove: 11, size=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:41 565] - EntityApp::createEntity: new Account 2005
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:22:41 566] - account[2005] entities enable. entityCall:Client id:2005, utype:1, component=client[0], addr: 127.0.0.1:61963.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:41 566] - Baseapp::onQueryAccountCBFromDbmgr: user=11, uuid=6622623795570475008, entityID=2005, flags=0, deadline=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:22:45 097] - Account::onClientDeath: 2002.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:45 097] - Account[2002].onClientDeath:
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:47 065] - 123123123------
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:47 065] - 结束后长度
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:47 065] - 0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:22:47 165] - EntityApp::createEntity: new Room 2006
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:47 365] - onGlobalData: Room_2
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:22:47 365] - 没有cell
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:23:03 065] - PendingLoginMgr::add: 22, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:05 365] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61972/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:23:05 365] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61972/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:05 865] - Baseapp::loginBaseapp: new user[22], channel[127.0.0.1:61972/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:23:05 965] - PendingLoginMgr::remove: 22, size=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:05 966] - EntityApp::createEntity: new Account 2007
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:05 967] - account[2007] entities enable. entityCall:Client id:2007, utype:1, component=client[0], addr: 127.0.0.1:61972.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:05 967] - Baseapp::onQueryAccountCBFromDbmgr: user=22, uuid=6622623898649690112, entityID=2007, flags=0, deadline=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:09 865] - EntityApp::createEntity: new CheckName 2008
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:13 265] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:13 265] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:13 265] - 755522-需要玩家数量--1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:13 365] - 没有cell
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:23:31 795] - Account::onClientDeath: 2005.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:23:31 796] - Account[2005].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:36 765] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:38 165] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:38 165] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:23:41 765] - PendingLoginMgr::add: 11, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 265] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:61981/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:23:45 266] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:61981/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 765] - Baseapp::loginBaseapp: new user[11], channel[127.0.0.1:61981/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 765] - Baseapp::loginBaseapp: user[11] has entity(2005).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 766] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 766] - 61981
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 766] - 11
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:23:45 766] - account[2005] entities enable. entityCall:Client id:2005, utype:1, component=client[0], addr: 127.0.0.1:61981.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:23:46 664] - PendingLoginMgr::process: [11] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:24:14 264] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:24:35 477] - Account::onClientDeath: 2007.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:24:35 477] - Account[2007].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:24:38 164] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:24:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:24:38 464] - Baseapp::reloginBaseapp: accountName=22, key=6622623898649690112, entityID=2007.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:24:38 465] - account[2007] entities enable. entityCall:Client id:2007, utype:1, component=client[0], addr: 127.0.0.1:61997.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:24:51 765] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:25:29 264] - Baseapp::onBackupEntityCellData: Account(2007), 130 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:25:38 164] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:25:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:26:06 764] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:27:21 764] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:27:26 765] - Account::onClientDeath: 2005.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:27:26 766] - Account[2005].onClientDeath:
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:27:27 464] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2005.
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:27:27 465] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2005.
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:27:27 564] - Baseapp::onEntityCall: not found clientEntityCall! entitycallType=6, entityID=2005.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:27:37 065] - Baseapp::reloginBaseapp: accountName=11, key=6622624070448381952, entityID=2005.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:27:37 065] - account[2005] entities enable. entityCall:Client id:2005, utype:1, component=client[0], addr: 127.0.0.1:62015.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:27:38 164] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:27:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:28:35 054] - Account::onClientDeath: 2005.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:28:35 054] - Account[2005].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:36 764] - Baseapp::onBackupEntityCellData: Room(2006), 193 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:38 164] - Baseapp::onBackupEntityCellData: Account(2005), 99 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:28:55 864] - PendingLoginMgr::add: 2, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 364] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62031/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:28:57 364] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62031/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 864] - Baseapp::loginBaseapp: new user[2], channel[127.0.0.1:62031/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 864] - Baseapp::loginBaseapp: user[2] has entity(2004).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 865] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 865] - 62031
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 865] - 2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:28:57 865] - account[2004] entities enable. entityCall:Client id:2004, utype:1, component=client[0], addr: 127.0.0.1:62031.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:28:58 663] - PendingLoginMgr::process: [2] is timeout, currsize=0.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:29:04 510] - Account::onClientDeath: 2004.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:29:04 510] - Account[2004].onClientDeath:
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:29:10 964] - PendingLoginMgr::add: 22, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 464] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62037/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:29:12 465] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62037/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 964] - Baseapp::loginBaseapp: new user[22], channel[127.0.0.1:62037/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 964] - Baseapp::loginBaseapp: user[22] has entity(2007).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 964] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 965] - 62037
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 965] - 22
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 965] - Baseapp::loginBaseapp: script LOG_ON_ACCEPT. oldClientChannel=127.0.0.1:61997/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 965] - Baseapp::kickChannel: pChannel=127.0.0.1:61997/0/0/0, failedcode=9, proxyID=2007.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:29:12 966] - account[2007] entities enable. entityCall:Client id:2007, utype:1, component=client[0], addr: 127.0.0.1:62037.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:29:13 663] - PendingLoginMgr::process: [22] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:14 263] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:38 164] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:29:51 764] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:30:20 287] - Account::onClientDeath: 2007.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:30:20 287] - Account[2007].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:30:38 164] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:30:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:31:06 763] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:31:21 963] - Baseapp::reloginBaseapp: accountName=22, key=6622625474902687744, entityID=2007.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:31:21 963] - account[2007] entities enable. entityCall:Client id:2007, utype:1, component=client[0], addr: 127.0.0.1:62049.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:31:38 163] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:31:38 163] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:31:44 264] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:31:54 269] - Account::onClientDeath: 2007.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:31:54 269] - Account[2007].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:32:38 164] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:32:38 164] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:32:59 263] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:33:36 763] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:34:14 263] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:34:38 163] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:34:38 163] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:34:51 763] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:35:29 263] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:35:38 163] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:35:38 163] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:36:06 763] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:36:38 162] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:36:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:36:44 263] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:38:36 763] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:38:38 162] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:38:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:39:14 262] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:39:51 762] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:40:38 162] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:40:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:41:06 762] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:41:38 162] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:41:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:41:44 262] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:42:21 761] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:42:38 162] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:42:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:42:59 262] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:43:36 761] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:43:38 162] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:43:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:44:38 161] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:44:38 161] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:45:29 261] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:45:38 162] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:45:38 162] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:46:06 761] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:46:38 161] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:46:38 161] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:46:44 261] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:47:21 761] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:47:38 161] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:47:38 161] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:47:59 261] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:14 261] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:49:46 260] - PendingLoginMgr::add: 222, size=1.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:49:51 261] - PendingLoginMgr::add: 111, size=2.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:51 761] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:52 561] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62191/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:49:52 562] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62191/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:53 061] - Baseapp::loginBaseapp: new user[111], channel[127.0.0.1:62191/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:49:53 161] - PendingLoginMgr::remove: 111, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:53 161] - EntityApp::createEntity: new Account 2009
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:49:53 162] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 127.0.0.1:62191.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:53 162] - Baseapp::onQueryAccountCBFromDbmgr: user=111, uuid=6622630804957102080, entityID=2009, flags=0, deadline=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:49:57 660] - EntityApp::createEntity: new CheckName 2010
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:00 561] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:00 561] - 结束后长度
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:00 561] - 0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:00 663] - EntityApp::createEntity: new Room 2011
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:50:00 861] - onGlobalData: Room_3
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:50:00 961] - 没有cell
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:08 461] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62197/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:50:08 461] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62197/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:08 960] - Baseapp::loginBaseapp: new user[222], channel[127.0.0.1:62197/0/0/0].
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:50:09 060] - PendingLoginMgr::remove: 222, size=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:09 061] - EntityApp::createEntity: new Account 2012
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:09 062] - account[2012] entities enable. entityCall:Client id:2012, utype:1, component=client[0], addr: 127.0.0.1:62197.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:09 062] - Baseapp::onQueryAccountCBFromDbmgr: user=222, uuid=6622630873676578816, entityID=2012, flags=0, deadline=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:13 261] - EntityApp::createEntity: new CheckName 2013
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:15 761] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:15 761] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:15 762] - 282447-需要玩家数量--1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:50:15 862] - 没有cell
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:19 061] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:38 161] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:38 161] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:50:42 161] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:51:05 260] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:51:38 160] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:51:38 160] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:52:14 460] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:52:37 560] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:52:38 160] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:52:38 160] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:53:00 560] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:53:23 660] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:53:38 160] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:53:38 160] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:54:01 634] - Account::onClientDeath: 2009.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:54:01 634] - Account[2009].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:06 560] - Baseapp::onBackupEntityCellData: Account(2012), 88 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:11 560] - Baseapp::onBackupEntityCellData: Account(2007), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:11 560] - Baseapp::onCellWriteToDBCompleted: Account(2007).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:54:19 361] - PendingLoginMgr::add: 111, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:20 860] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62232/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:54:20 860] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62232/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 360] - Baseapp::loginBaseapp: new user[111], channel[127.0.0.1:62232/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 360] - Baseapp::loginBaseapp: user[111] has entity(2009).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 360] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 361] - 62232
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 361] - 111
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:21 361] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 127.0.0.1:62232.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:54:21 660] - PendingLoginMgr::process: [111] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:26 360] - Baseapp::onBackupEntityCellData: Account(2009), 88 bytes.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:30 560] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:30 560] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:30 560] - 282447-需要玩家数量--2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:54:30 661] - 没有cell
+    INFO    baseapp01 22461 7001  [2018-11-11 23:54:32 960] - Baseapp::onBackupEntityCellData: Account(2009), 88 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:54:43 431] - Account::onClientDeath: 2009.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:54:43 431] - Account[2009].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:55:18 160] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:55:18 160] - Baseapp::onCellWriteToDBCompleted: Account(2002).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:55:19 060] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:55:51 560] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:55:51 560] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:56:05 260] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:56:24 860] - Baseapp::onBackupEntityCellData: Account(2009), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:56:24 860] - Baseapp::onCellWriteToDBCompleted: Account(2009).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:56:28 259] - Baseapp::onBackupEntityCellData: Room(2006), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:57:02 759] - PendingLoginMgr::add: 111, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 060] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62296/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:57:04 060] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62296/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 560] - Baseapp::loginBaseapp: new user[111], channel[127.0.0.1:62296/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 560] - Baseapp::loginBaseapp: user[111] has entity(2009).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 560] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 560] - 62296
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 560] - 111
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:04 561] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 127.0.0.1:62296.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:57:04 660] - PendingLoginMgr::process: [111] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:10 659] - Baseapp::onBackupEntityCellData: Account(2009), 88 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:14 459] - Baseapp::onBackupEntityCellData: Room(2011), 147 bytes.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:18 559] - 123123123------
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:18 559] - 1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:18 560] - 282447-需要玩家数量--2
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:18 659] - 没有cell
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:57:24 041] - Account::onClientDeath: 2009.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:57:24 041] - Account[2009].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:31 559] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:31 559] - Baseapp::onCellWriteToDBCompleted: Account(2005).
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:37 559] - Baseapp::onBackupEntityCellData: Account(2005), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:57:42 459] - PendingLoginMgr::add: 111, size=1.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:43 860] - ServerApp::onHello: verInfo=2.0.0, scriptVerInfo=0.1.0, encryptedKey=None, addr:127.0.0.1:62300/0/0/0
+ WARNING    baseapp01 22461 7001  [2018-11-11 23:57:43 860] - Baseapp::onHello: client is not encrypted, addr=127.0.0.1:62300/0/0/0
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 660] - Baseapp::loginBaseapp: new user[111], channel[127.0.0.1:62300/0/0/0].
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 660] - Baseapp::loginBaseapp: user[111] has entity(2009).
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 660] - 127.0.0.1
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 660] - 62300
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 660] - 111
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:57:44 661] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 127.0.0.1:62300.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:57:44 662] - PendingLoginMgr::process: [111] is timeout, currsize=0.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:57:48 260] - Baseapp::onBackupEntityCellData: Account(2009), 88 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:58:23 659] - Baseapp::onBackupEntityCellData: Room(2003), 1 bytes.
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:59:04 366] - Account::onClientDeath: 2009.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:59:04 366] - Account[2009].onClientDeath:
+    INFO    baseapp01 22461 7001  [2018-11-11 23:59:07 659] - Baseapp::reloginBaseapp: accountName=111, key=6622632827886698496, entityID=2009.
+  S_INFO    baseapp01 22461 7001  [2018-11-11 23:59:07 660] - account[2009] entities enable. entityCall:Client id:2009, utype:1, component=client[0], addr: 127.0.0.1:62313.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:59:09 859] - Baseapp::onBackupEntityCellData: Account(2002), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:59:44 859] - Baseapp::onBackupEntityCellData: Account(2004), 1 bytes.
+    INFO    baseapp01 22461 7001  [2018-11-11 23:59:44 859] - Baseapp::onCellWriteToDBCompleted: Account(2004).
+   DEBUG    baseapp01 22461 7001  [2018-11-11 23:59:50 044] - Account::onClientDeath: 2012.
+   S_DBG    baseapp01 22461 7001  [2018-11-11 23:59:50 044] - Account[2012].onClientDeath:

@@ -14,6 +14,18 @@ def onBaseAppReady(isBootstrap):
 	 (isBootstrap, os.getenv("KBE_COMPONENTID"), os.getenv("KBE_BOOTIDX_GROUP"), os.getenv("KBE_BOOTIDX_GLOBAL")))
 	if isBootstrap:
 		KBEngine.createEntityLocally("Halls",{})
+		CreateSaveGlobalEntity("AllPlayerPublicInfo")
+		CreateSaveGlobalEntity("OfflineMessage")
+		
+
+def CreateSaveGlobalEntity(entityType):
+	if KBEngine.globalData.has_key(entityType)==False:
+		KBEngine.createEntityAnywhere(entityType)
+
+def onAutoLoadEntityCreate(entityType, dbID ):
+	if KBEngine.globalData.has_key(entityType)==False:
+		KBEngine.globalData[entityType] = None 
+		KBEngine.createEntityAnywhereFromDBID(entityType, dbID)
 
 def onReadyForLogin(isBootstrap):
 	"""

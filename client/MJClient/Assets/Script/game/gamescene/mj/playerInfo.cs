@@ -15,8 +15,10 @@ public class playerInfo  {
 	Text talkText;
 	public bool isPlayer;
 	public Account account;
+	public Transform iconBG;
 	//牌类信息
 	public Transform MyCardlist, holdsCardPrfb, holdsRoot;
+	Transform tingPaiInfo, tingPaiPrfb, tingPaiInfoRoot;
 	public Transform Myflodslist, flodsCardPrfb, flodsRoot, flodsRoot2, playPaiPos;
 	public Transform MyPengList, pengPrfb, pengRoot;
 	public Transform MyGangList, diangangsPrf, diangangsRoot, wangangsPrf, wangangsRoot, angangsPrf, angangsRoot;
@@ -24,6 +26,7 @@ public class playerInfo  {
 	public float holdsCardWeight, flodsCardWeight, flodsCardHeight, pengRootWeight;
 	public Vector3 holdsStartPos;
 	Transform seleMJpai;
+	Dictionary<string, NoUsePai> _NoUsePai = new Dictionary<string, NoUsePai>();
 	public playerInfo(Transform tr, int index)
 	{
 		root = tr;
@@ -40,15 +43,20 @@ public class playerInfo  {
 		ServerIndex = serverSeatIndex;
 		//0号位玩家的手牌单独操作
 		MonoBehaviour.print("索引为--" + localIndex);
+		iconBG = root.Find("iconBG");
 		if (localIndex == 0)
 		{
 			isPlayer = true;
 			MyCardlist = MJpanel.instance.transform.Find("MycardList");
+			tingPaiInfo = MJpanel.instance.transform.Find("tingPaiInfo");
+			tingPaiInfoRoot = tingPaiInfo.Find("root");
+			tingPaiPrfb = tingPaiInfo.Find("prfb");
 		}
 		else
 		{
 			MyCardlist = root.Find("MycardList");
 			holdsStartPos = MyCardlist.Find("holdCardStart").localPosition;
+			EventInterface.AddOnEvent(iconBG, iconBGClick);
 		}
 		holdsCardPrfb = MyCardlist.Find("HoldsCard");
 		holdsRoot = MyCardlist.Find("holdsRoot");
@@ -76,6 +84,15 @@ public class playerInfo  {
 		flodsCardHeight = flodsCardPrfb.GetComponent<RectTransform>().rect.height;
 		pengRootWeight = pengPrfb.GetComponent<RectTransform>().rect.width;
 	}
+
+	private void iconBGClick(Transform tr)
+	{
+		if (account == null)
+			return;
+		GameObject go = GameManager.GetInstance().LoadPanel("Prefabs/PlayerInfoShowPanel", GameObject.Find("Canvas/Root").transform);
+		go.GetComponent<PlayerInfoShowPanel>().showPanel(account);
+	}
+
 	//获取一张要实例化的麻将牌，用于展示
 	/// <summary>
 	/// Gets the MJ prfb.
@@ -104,13 +121,21 @@ public class playerInfo  {
 			return tr.gameObject;
 		}
 	}
+	List<sbyte> copy(List<SByte> olditem)
+	{
+		List<SByte> newItem = new List<sbyte>();
+		for (int i = 0; i < olditem.Count; i++) {
+			newItem.Add(olditem[i]);
+		}
+		return newItem;
+	}
 	void initMyHandCords(bool isTurn)
 	{
 		for (int i = 0; i < holdsRoot.childCount; i++) {
 			GameObject.Destroy(holdsRoot.GetChild(i).gameObject);
 		}
 		Account account = (Account)KBEngineApp.app.player();
-		List<SByte> handCards = account.holds;
+		List<SByte> handCards = copy(account.holds);
 		sbyte pai = account.holds[account.holds.Count - 1];
 		if (isTurn)
 		{
@@ -163,12 +188,14 @@ public class playerInfo  {
 				{
 					if (rm.public_roomInfo.turn == ServerIndex)
 					{
-						rm.cellEntityCall.chuPai((sbyte)(int.Parse(seleMJpai.name)));						
+						rm.cellEntityCall.chuPai((sbyte)(int.Parse(seleMJpai.name)));
+						heidTingPaiInfo();
+						return;
 					}
 					else {
 						seleMJpai.DOLocalMoveY(holdsCardPrfb.localPosition.y, 0.3f);
+						seleMJpai = null;
 					}
-					seleMJpai = null;
 				}
 				else{
 					MonoBehaviour.print("网络不稳定，即将断线重连！！！");
@@ -178,7 +205,45 @@ public class playerInfo  {
 
 
 		}
+		if (seleMJpai.Find("jt").gameObject.activeSelf)
+			showTingPaiInfo(seleMJpai.name);
+		else
+			heidTingPaiInfo();
 	}
+	void showTingPaiInfo(string pai)
+	{
+		heidTingPaiInfo();
+		if (hasPai_IN_nousePai(pai, _NoUsePai))
+		{
+			tingPaiInfo.Find("bg").GetComponent<RectTransform>().sizeDelta = new Vector2(116 * _NoUsePai[pai].tingPaiList.Count, tingPaiInfo.Find("bg").GetComponent<RectTransform>().rect.height);
+			for (int i = 0; i < _NoUsePai[pai].tingPaiList.Count; i++)
+			{
+				GameObject item = getMJPrfb(tingPaiPrfb.gameObject, tingPaiInfoRoot, i);
+				item.name = pai + "";
+				item.transform.Find("hs").GetComponent<Image>().sprite = MJpanel.instance.getUISprite("UI/MJSprite/" + MJpanel.instance.getMJType(int.Parse(_NoUsePai[pai].tingPaiList[i])));
+				item.transform.localPosition = tingPaiPrfb.transform.localPosition + new Vector3(i * 108, 0, 0);
+				item.transform.Find("Text").GetComponent<Text>().text = _NoUsePai[pai].tingPaiFans[i] + "番";
+				item.transform.SetParent(tingPaiInfoRoot, false);
+				item.gameObject.SetActive(true);
+			}
+			tingPaiInfo.gameObject.SetActive(true);
+		}
+	}
+	void heidTingPaiInfo()
+	{
+		tingPaiInfo.gameObject.SetActive(false);
+		for (int i = 0; i < tingPaiInfoRoot.childCount; i++)
+		{
+			tingPaiInfoRoot.GetChild(i).gameObject.SetActive(false);
+		}
+	}
+	bool hasPai_IN_nousePai(string pai, Dictionary<string, NoUsePai> no)
+	{
+		if (no.ContainsKey(pai))
+			return true;
+		return false;
+	}
+
 	public void upDataPlayerHandCards()
 	{
 		Account account = (Account)KBEngineApp.app.player();
@@ -186,10 +251,71 @@ public class playerInfo  {
 		if (account.roomSeatIndex == MJpanel.instance.room.public_roomInfo.turn && MJpanel.instance.room.public_roomInfo.chuPai == -1)
 		{
 			initMyHandCords(true);
+
+			//显示听牌信息
+			showTingPaiInfo();
 		}
 		else
 		{
 			initMyHandCords(false);
+		}
+	}
+	//显示听牌信息
+	public void showTingPaiInfo()
+	{
+		heidAllJT();
+		if (account == null)
+			account = (Account)KBEngineApp.app.player();
+		TING_PAI_LIST d = account.TingPaiList;
+		if (d.Count == 0)
+			return;
+		Dictionary<string, string> data = new Dictionary<string, string>();
+		List<Dictionary<int, int>> fanshu = new List<Dictionary<int, int>>();
+		List<Dictionary<string, string>> d1 = new List<Dictionary<string, string>>();
+		List<int> noUsePai = new List<int>();
+		List<NoUsePai> no = new List<NoUsePai>();
+		Dictionary<string, NoUsePai> no1 = new Dictionary<string, NoUsePai>();
+		for (int i = 0; i < d.Count; i++)
+		{
+			TING_PAI_DIC ff = d[i];
+			string pai = ff.nousepai;
+			string P = ff.pai;
+			string fan = ff.fan;
+			if (!no1.ContainsKey(pai))
+			{  //!hasPai_IN_nousePai(pai,no1)
+				NoUsePai _no = new NoUsePai();
+				_no.pai = pai + "";
+				_no.tingPaiList.Add(P);
+				_no.tingPaiFans.Add(fan);
+				no1.Add(pai, _no);
+			}
+			else
+			{
+				NoUsePai _no = no1[pai];
+				if (!_no.tingPaiList.Contains(P))
+				{
+					_no.tingPaiList.Add(P);
+					_no.tingPaiFans.Add(fan);
+				}
+			}
+		}
+		_NoUsePai = no1;
+		for (int i = 0; i < holdsRoot.childCount; i++)
+		{
+			Transform tr = holdsRoot.GetChild(i);
+			if (no1.ContainsKey(tr.name))
+			{
+				tr.Find("jt").gameObject.SetActive(true);
+			}
+		}
+	}
+	//隐藏听牌信息
+	public void heidAllJT()
+	{
+		for (int i = 0; i < holdsRoot.childCount; i++)
+		{
+			Transform tr = holdsRoot.GetChild(i);
+			tr.Find("jt").gameObject.SetActive(false);
 		}
 	}
 
@@ -287,6 +413,25 @@ public class playerInfo  {
 	public void showChuPai(int pai) {
 		playPaiPos.gameObject.SetActive(true);
 		playPaiPos.transform.Find("hs").GetComponent<Image>().sprite = MJpanel.instance.getUISprite("UI/MJSprite/" + MJpanel.instance.getMJType(pai));
+	}
+	void deleAllChild(Transform tr) {
+		for (int i = 0; i < tr.childCount; i++)
+		{
+			GameObject.Destroy(tr.GetChild(i).gameObject);
+		}
+	}
+	public void clearAllCard() {
+		//删除手牌
+		deleAllChild(holdsRoot);
+		//删除打出去的牌
+		deleAllChild(flodsRoot);
+		deleAllChild(flodsRoot2);
+		//删除碰
+		deleAllChild(pengRoot);
+		deleAllChild(diangangsRoot);
+		deleAllChild(wangangsRoot);
+		deleAllChild(angangsRoot);
+		deleAllChild(huRoot);
 	}
 	public void heidChuPai()
 	{

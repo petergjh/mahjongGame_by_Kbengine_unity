@@ -51,7 +51,7 @@ namespace KBEngine
 			while(size > 0)
 			{
 				--size;
-				datas.Add(stream.readPython());
+				datas.Add(stream.readEntitycall());
 			};
 
 			return datas;
@@ -62,7 +62,151 @@ namespace KBEngine
 			stream.writeUint32((UInt32)v.Count);
 			for(int i=0; i<v.Count; ++i)
 			{
-				stream.writePython(v[i]);
+				stream.writeEntitycall(v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_MAIL : DATATYPE_BASE
+	{
+		public MAIL createFromStreamEx(MemoryStream stream)
+		{
+			MAIL datas = new MAIL();
+			datas.senderDBID = stream.readUint64();
+			datas.senderName = stream.readUnicode();
+			datas.targetDBID = stream.readUint64();
+			datas.targetName = stream.readUnicode();
+			datas.lookOver = stream.readUint8();
+			datas.mailType = stream.readUint8();
+			datas.mailInfo = stream.readUnicode();
+			datas.mailID = stream.readInt32();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MAIL v)
+		{
+			stream.writeUint64(v.senderDBID);
+			stream.writeUnicode(v.senderName);
+			stream.writeUint64(v.targetDBID);
+			stream.writeUnicode(v.targetName);
+			stream.writeUint8(v.lookOver);
+			stream.writeUint8(v.mailType);
+			stream.writeUnicode(v.mailInfo);
+			stream.writeInt32(v.mailID);
+		}
+	}
+
+
+
+	public class DATATYPE_MAIL_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_MAIL itemType = new DATATYPE_MAIL();
+
+		public MAIL_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			MAIL_LIST datas = new MAIL_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, MAIL_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_FRIENDS_LIST : DATATYPE_BASE
+	{
+		public FRIENDS_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			FRIENDS_LIST datas = new FRIENDS_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(stream.readUint64());
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, FRIENDS_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				stream.writeUint64(v[i]);
+			};
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYRE_DATA : DATATYPE_BASE
+	{
+		public PLAYRE_DATA createFromStreamEx(MemoryStream stream)
+		{
+			PLAYRE_DATA datas = new PLAYRE_DATA();
+			datas.playerName = stream.readUnicode();
+			datas.playerDBID = stream.readUint64();
+			datas.playerGold = stream.readUint32();
+			datas.isOnLine = stream.readUint8();
+			datas.entity = stream.readEntitycall();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYRE_DATA v)
+		{
+			stream.writeUnicode(v.playerName);
+			stream.writeUint64(v.playerDBID);
+			stream.writeUint32(v.playerGold);
+			stream.writeUint8(v.isOnLine);
+			stream.writeEntitycall(v.entity);
+		}
+	}
+
+
+
+	public class DATATYPE_PLAYRE_DATA_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_PLAYRE_DATA itemType = new DATATYPE_PLAYRE_DATA();
+
+		public PLAYRE_DATA_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			PLAYRE_DATA_LIST datas = new PLAYRE_DATA_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, PLAYRE_DATA_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
 			};
 		}
 	}

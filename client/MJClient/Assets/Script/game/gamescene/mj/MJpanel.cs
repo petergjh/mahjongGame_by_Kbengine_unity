@@ -10,17 +10,21 @@ public class MJpanel : MonoBehaviour {
 	public int roomMaxPlayer = 2;
 	public static MJpanel instance;
 	public Room room;
+	public Account account;
 	public static bool roomIsIn;
+	ActionData _actionData;
 	List<playerInfo> playerInfoList = new List<playerInfo>();
 	List<playerInfo> realyPlayer = new List<playerInfo>();
 	public Transform MyCardlist, holdsCardPrfb, holdsRoot;
 	// Use this for initialization
 	void Start () {
+		account = (Account)KBEngineApp.app.player();
 		instance = this;
 		//创建玩家消息
 		for (int i = 0; i < 4; i++) {
 			playerInfoList.Add(new playerInfo(transform.Find("playerInfo/player"+(i+1)), i));
 		}
+		_actionData = new ActionData();
 		roomIdText = transform.Find("roomID").GetComponent<Text>();
 		leaveBtn = transform.Find("leaveBtn");
 		changeRoomBtn = transform.Find("changeBtn");
@@ -73,8 +77,30 @@ public class MJpanel : MonoBehaviour {
 		KBEngine.Event.registerOut("onOtherPlayerMoPai", this, "onOtherPlayerMoPai");
 		KBEngine.Event.registerOut("onPeng", this, "onPeng");
 		KBEngine.Event.registerOut("onGang", this, "onGang");
-		KBEngine.Event.registerOut("onHu", this, "onHu");
+		KBEngine.Event.registerOut("onHu", this, "onHu");	
+		KBEngine.Event.registerOut("chupai", this, "chupai");
+		KBEngine.Event.registerOut("has_action", this, "has_action");
+		KBEngine.Event.registerOut("GameOver", this, "GameOver");
 		
+
+	}
+	public void GameOver() {
+		foreach (var pi in realyPlayer)
+		{
+			pi.clearAllCard();
+		}
+
+		gameStart();
+	}
+	public void has_action() {
+		_actionData.UpDataActionData();
+	}
+	public void chupai() {
+		if (account.TingPaiList.Count > 0) {
+			print("有听牌信息");
+			account.showTingPaiInfo();
+			//playerInfoList[0].showTingPaiInfo();
+		}
 	}
 	public void onHu(int userID,bool isZimo, int pai)
 	{
@@ -106,10 +132,12 @@ public class MJpanel : MonoBehaviour {
 	}
 	public void onMoPai(int pai) {
 		GetPlayerInfoByUserID(KBEngineApp.app.player().id).upDataHandCards();
+		numOfMJText.text = room.public_roomInfo.numOfMJ + "";
 	}
 	public void onOtherPlayerMoPai(int userID)
 	{
 		GetPlayerInfoByUserID(userID).upDataHandCards();
+		numOfMJText.text = room.public_roomInfo.numOfMJ + "";
 	}
 	public string getMJType(int pai)
 	{
@@ -136,6 +164,10 @@ public class MJpanel : MonoBehaviour {
 	{
 		GetPlayerInfoByUserID(userID).showChuPai(pai);
 		GetPlayerInfoByUserID(userID).upDataHandCards();
+		if (userID == account.id) {
+			print("隐藏----------------------------------------------------");
+			GetPlayerInfoByUserID(userID).heidAllJT();
+		}
 	}
 
 	public void onPlayCardOver(int userID,int pai) {
@@ -151,34 +183,51 @@ public class MJpanel : MonoBehaviour {
 		changeRoomBtn.gameObject.SetActive(false);
 		//显示麻将剩余数量
 		numOfMJText.text = room.public_roomInfo.numOfMJ+"";
-		print("庄家索引是" + room.public_roomInfo.button);
-		print(room.public_roomInfo.playerInfo[1].userId + " 玩家手牌数量==" + room.public_roomInfo.playerInfo[1].holdsCount);
 		//初始化打出牌，碰、杠、胡牌
 		for (int i = 0; i < room.public_roomInfo.playerInfo.Count; i++) {
 			PLAYER_PUBLIC_INFO pb = room.public_roomInfo.playerInfo[i];
 			playerInfo pi = GetPlayerInfoByServerIndex(i);
 			realyPlayer.Add(pi);  //按照房间人数安排的玩家列表
 			pi.initSeat(i);
+			//隐藏准备的图片
+			pi.changeReady(0);
 			pi.upDataHandCards(); //初始化手中牌
 			pi.upDataFlodsCard();  //更新打出的牌
 			pi.upDataPengCard();  //更新碰的牌
 			pi.upDataGangCard(); //更新杠的牌
+			pi.upDataHuCard();//更新胡的牌
 		}
+		
 		//处理正在打出的牌
 		int chuPai = room.public_roomInfo.chuPai;
 		if (chuPai != -1) {
 			GetPlayerInfoByServerIndex(room.public_roomInfo.turn).showChuPai(chuPai);
 		}
-		foreach (PLAYER_PUBLIC_INFO pb in room.public_roomInfo.playerInfo) {
-
-
+		//处理操作信息
+		if (account.actionData.gang ==1 || account.actionData.peng == 1 || account.actionData.hu == 1) {
+			account.showActionData();
+			_actionData.UpDataActionData();	
+		}
+	}
+	public void initIdle() {
+		readyBtn.gameObject.SetActive(true);
+		leaveBtn.gameObject.SetActive(true);
+		changeRoomBtn.gameObject.SetActive(true);
+		numOfMJText.text = "";
+		for (int i = 0; i < room.public_roomInfo.playerInfo.Count; i++)
+		{
+			//PLAYER_PUBLIC_INFO pb = room.public_roomInfo.playerInfo[i];
+			playerInfo pi = GetPlayerInfoByServerIndex(i);
+			pi.root.gameObject.SetActive(true);
+			pi.initSeat(i);
 		}
 	}
 	public void gameStart() {
 		//判断游戏状态
 		
 		switch (room.public_roomInfo.state) {
-			case "idel":
+			case "idle":
+				initIdle();
 				break;
 			case "playing":
 				initGameState_Playing();
@@ -287,6 +336,13 @@ public class MJpanel : MonoBehaviour {
 			roomIdText.text =""+ ((Room)entity).roomKey;			
 			room = (Room)entity;
 			roomMaxPlayer = room.public_roomInfo.playerMaxCount;
+			//隐藏没有用到的椅子
+			if (roomMaxPlayer == 2) {
+				transform.Find("playerInfo/player2").gameObject.SetActive(false);
+				transform.Find("playerInfo/player4").gameObject.SetActive(false);
+			} else if (roomMaxPlayer == 3) {
+				transform.Find("playerInfo/player4").gameObject.SetActive(false);
+			}
 			gameStart();
 		}
 	}
@@ -325,4 +381,10 @@ public class MJpanel : MonoBehaviour {
 		roomIsIn = false;
 		KBEngine.Event.deregisterOut(this);
 	}
+}
+public class NoUsePai
+{
+	public string pai;
+	public List<string> tingPaiList = new List<string>();
+	public List<string> tingPaiFans = new List<string>();
 }

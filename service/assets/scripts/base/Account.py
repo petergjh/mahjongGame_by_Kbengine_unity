@@ -2,16 +2,32 @@
 import KBEngine
 from KBEDebug import *
 import Functor
+from interfaces.MailSystem import MailSystem
+
 MAIN_STATE_IDEL = 1
 MAIN_STATE_MATCH = 2
 MAIN_STATE_INGAME = 3
-class Account(KBEngine.Proxy):
+class Account(KBEngine.Proxy,MailSystem):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
+		MailSystem.__init__(self)
 		self.MainState = MAIN_STATE_IDEL
 		self.roomKey = 0;
-
-
+		self.playerName = self.cellData["playerName"]
+		self.playerGold = self.cellData["playerGold"]
+	def reqAddFriend(self,dbid):
+		if dbid not in self.friendsList:
+			self.friendsList.append(dbid);
+			self.client.callClientMsg("添加成功")
+		else:
+			self.client.callClientMsg("你们已经是好友了")
+	def GetPlayerInfo(self):
+		_data={
+			"playerName":self.playerName,
+			"playerDBID":self.databaseID,
+			"playerGold":self.playerGold
+			}
+		return _data;
 	def onTimer(self, id, userArg):
 		"""
 		KBEngine method.
@@ -29,7 +45,18 @@ class Account(KBEngine.Proxy):
 		cell部分。
 		"""
 		INFO_MSG("account[%i] entities enable. entityCall:%s" % (self.id, self.client))
-			
+		KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
+		KBEngine.globalData["OfflineMessage"].register(self, self.databaseID)
+		#self.initFriendsList()
+		
+	def initFriendsList(self):
+		infoList = KBEngine.globalData["AllPlayerPublicInfo"].GetPlayersInfo(self.friendsList)
+		if self.client:
+			self.client.initFriendsListOK(infoList)
+
+	def reqFriendsList(self):
+		self.initFriendsList()
+
 	def onLogOnAttempt(self, ip, port, password):
 		"""
 		KBEngine method.
@@ -44,6 +71,7 @@ class Account(KBEngine.Proxy):
 		客户端对应实体已经销毁
 		"""
 		DEBUG_MSG("Account[%i].onClientDeath:" % self.id)
+		KBEngine.globalData["AllPlayerPublicInfo"].deregister(self, self.databaseID)
 		#self.destroy()
 
 	def reqCreateAvatar(self,name):
@@ -71,8 +99,11 @@ class Account(KBEngine.Proxy):
 			self.isNewPlayer = 0
 			self.playerName_base = name;
 			self.playerID_base = self.databaseID+10000
+			self.playerName = name
 			self.cellData["playerName"] = name
 			self.cellData["playerID"] = self.playerID_base
+			self.writeToDB()
+			KBEngine.globalData["AllPlayerPublicInfo"].register(self, self.databaseID)
 			if self.client:
 				self.client.OnReqCreateAvatar(0)
 		else:
@@ -92,11 +123,14 @@ class Account(KBEngine.Proxy):
 
 	def onLoseCell(self):
 		self.MainState = MAIN_STATE_IDEL
+		self.inRoom = False
+		self.playerGold = self.cellData["playerGold"]
 		if self.client:
 			self.client.playerLevelRoom()
 
 	def enterRoomSuccess(self,roomKey):
 		self.roomKey = roomKey
+		self.inRoom = True
 
 	def reqChangeRoom(self):
 		KBEngine.globalData["Halls"].changeRoom(self,self.roomKey)

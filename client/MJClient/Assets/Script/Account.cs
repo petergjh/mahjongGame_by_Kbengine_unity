@@ -52,6 +52,7 @@
 		public override void game_chupai_push()
 		{
 			MonoBehaviour.print(playerName+"--到你出牌了");
+			Event.fireOut("chupai");
 		}
 
 		public override void game_mopai_push(sbyte arg1)
@@ -64,6 +65,7 @@
 		public override void has_action()
 		{
 			MonoBehaviour.print(playerName + "--有操作了");
+			Event.fireOut("has_action");
 		}
 
 		public override void onGang(uint arg1, sbyte arg2, string arg3)
@@ -157,6 +159,42 @@
 				MonoBehaviour.print("正在听的牌 ---  " + td.pai);
 				MonoBehaviour.print("番数 ---  " + td.fan);
 			}
+		}
+
+		public override void onGameOver()
+		{
+			MonoBehaviour.print("游戏结束！！！");
+			Event.fireOut("GameOver");
+		}
+
+		public override void initFriendsListOK(PLAYRE_DATA_LIST arg1)
+		{
+			Event.fireOut("initFriendsListOK", arg1);
+			
+		}
+
+		public override void callClientMsg(string arg1)
+		{
+			Event.fireOut("callClientMsg", arg1);
+		}
+
+		public override void addMail(MAIL arg1)
+		{
+			mailList.Add(arg1);
+			Event.fireOut("upDataMailList");
+		}
+
+		public override void deleMail(int arg1)
+		{
+			MonoBehaviour.print("删除！！！");
+			for (int i = 0; i < mailList.Count; i++)
+			{
+				if (mailList[i].mailID == arg1) {
+					mailList.Remove(mailList[i]);
+					break;
+				}
+			}
+			Event.fireOut("upDataMailList");
 		}
 	}
 }

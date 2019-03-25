@@ -21,14 +21,24 @@ namespace KBEngine
 
 		public TING_PAI_LIST TingPaiList = new TING_PAI_LIST();
 		public virtual void onTingPaiListChanged(TING_PAI_LIST oldValue) {}
+		public Int32 _lastmailID = 0;
+		public virtual void on_lastmailIDChanged(Int32 oldValue) {}
 		public PLAYER_ACTION_DIC actionData = new PLAYER_ACTION_DIC();
 		public virtual void onActionDataChanged(PLAYER_ACTION_DIC oldValue) {}
+		public FRIENDS_LIST friendsList = new FRIENDS_LIST();
+		public virtual void onFriendsListChanged(FRIENDS_LIST oldValue) {}
 		public MJ_LIST holds = new MJ_LIST();
 		public virtual void onHoldsChanged(MJ_LIST oldValue) {}
+		public Byte inRoom = 0;
+		public virtual void onInRoomChanged(Byte oldValue) {}
 		public Byte isNewPlayer = 1;
 		public virtual void onIsNewPlayerChanged(Byte oldValue) {}
 		public Byte isReady = 0;
 		public virtual void onIsReadyChanged(Byte oldValue) {}
+		public MAIL_LIST mailList = new MAIL_LIST();
+		public virtual void onMailListChanged(MAIL_LIST oldValue) {}
+		public UInt32 playerGold = 1000;
+		public virtual void onPlayerGoldChanged(UInt32 oldValue) {}
 		public UInt16 playerID = 0;
 		public virtual void onPlayerIDChanged(UInt16 oldValue) {}
 		public UInt16 playerID_base = 0;
@@ -41,11 +51,16 @@ namespace KBEngine
 		public virtual void onRoomSeatIndexChanged(Byte oldValue) {}
 
 		public abstract void OnReqCreateAvatar(Byte arg1); 
+		public abstract void addMail(MAIL arg1); 
+		public abstract void callClientMsg(string arg1); 
+		public abstract void deleMail(Int32 arg1); 
 		public abstract void game_begin_push(); 
 		public abstract void game_chupai_push(); 
 		public abstract void game_mopai_push(SByte arg1); 
 		public abstract void hasTing(TING_PAI_LIST arg1); 
 		public abstract void has_action(); 
+		public abstract void initFriendsListOK(PLAYRE_DATA_LIST arg1); 
+		public abstract void onGameOver(); 
 		public abstract void onGang(UInt32 arg1, SByte arg2, string arg3); 
 		public abstract void onGetRoomInfo(ROOM_PUBLIC_INFO arg1); 
 		public abstract void onHu(UInt32 arg1, Byte arg2, SByte arg3); 
@@ -85,6 +100,14 @@ namespace KBEngine
 			return cellEntityCall;
 		}
 
+		public override void attachComponents()
+		{
+		}
+
+		public override void detachComponents()
+		{
+		}
+
 		public override void onRemoteMethodCall(MemoryStream stream)
 		{
 			ScriptModule sm = EntityDef.moduledefs["Account"];
@@ -92,14 +115,21 @@ namespace KBEngine
 			UInt16 methodUtype = 0;
 			UInt16 componentPropertyUType = 0;
 
-			if(sm.useMethodDescrAlias)
+			if(sm.usePropertyDescrAlias)
 			{
 				componentPropertyUType = stream.readUint8();
-				methodUtype = stream.readUint8();
 			}
 			else
 			{
 				componentPropertyUType = stream.readUint16();
+			}
+
+			if(sm.useMethodDescrAlias)
+			{
+				methodUtype = stream.readUint8();
+			}
+			else
+			{
 				methodUtype = stream.readUint16();
 			}
 
@@ -123,66 +153,85 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 20:
+				case 23:
 					Byte OnReqCreateAvatar_arg1 = stream.readUint8();
 					OnReqCreateAvatar(OnReqCreateAvatar_arg1);
 					break;
-				case 23:
-					game_begin_push();
+				case 48:
+					MAIL addMail_arg1 = ((DATATYPE_MAIL)method.args[0]).createFromStreamEx(stream);
+					addMail(addMail_arg1);
+					break;
+				case 40:
+					string callClientMsg_arg1 = stream.readUnicode();
+					callClientMsg(callClientMsg_arg1);
+					break;
+				case 49:
+					Int32 deleMail_arg1 = stream.readInt32();
+					deleMail(deleMail_arg1);
 					break;
 				case 26:
+					game_begin_push();
+					break;
+				case 29:
 					game_chupai_push();
 					break;
-				case 28:
+				case 31:
 					SByte game_mopai_push_arg1 = stream.readInt8();
 					game_mopai_push(game_mopai_push_arg1);
 					break;
-				case 34:
+				case 37:
 					TING_PAI_LIST hasTing_arg1 = ((DATATYPE_TING_PAI_LIST)method.args[0]).createFromStreamEx(stream);
 					hasTing(hasTing_arg1);
 					break;
-				case 25:
+				case 28:
 					has_action();
 					break;
-				case 31:
+				case 39:
+					PLAYRE_DATA_LIST initFriendsListOK_arg1 = ((DATATYPE_PLAYRE_DATA_LIST)method.args[0]).createFromStreamEx(stream);
+					initFriendsListOK(initFriendsListOK_arg1);
+					break;
+				case 38:
+					onGameOver();
+					break;
+				case 34:
 					UInt32 onGang_arg1 = stream.readUint32();
 					SByte onGang_arg2 = stream.readInt8();
 					string onGang_arg3 = stream.readUnicode();
 					onGang(onGang_arg1, onGang_arg2, onGang_arg3);
 					break;
-				case 22:
+				case 25:
 					ROOM_PUBLIC_INFO onGetRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					onGetRoomInfo(onGetRoomInfo_arg1);
 					break;
-				case 32:
+				case 35:
 					UInt32 onHu_arg1 = stream.readUint32();
 					Byte onHu_arg2 = stream.readUint8();
 					SByte onHu_arg3 = stream.readInt8();
 					onHu(onHu_arg1, onHu_arg2, onHu_arg3);
 					break;
-				case 27:
+				case 30:
 					UInt32 onPlayCard_arg1 = stream.readUint32();
 					SByte onPlayCard_arg2 = stream.readInt8();
 					onPlayCard(onPlayCard_arg1, onPlayCard_arg2);
 					break;
-				case 33:
+				case 36:
 					UInt32 onPlayCardOver_arg1 = stream.readUint32();
 					SByte onPlayCardOver_arg2 = stream.readInt8();
 					onPlayCardOver(onPlayCardOver_arg1, onPlayCardOver_arg2);
 					break;
-				case 29:
+				case 32:
 					UInt32 otherPlayerMopai_arg1 = stream.readUint32();
 					otherPlayerMopai(otherPlayerMopai_arg1);
 					break;
-				case 30:
+				case 33:
 					UInt32 peng_notify_push_arg1 = stream.readUint32();
 					SByte peng_notify_push_arg2 = stream.readInt8();
 					peng_notify_push(peng_notify_push_arg1, peng_notify_push_arg2);
 					break;
-				case 21:
+				case 24:
 					playerLevelRoom();
 					break;
-				case 24:
+				case 27:
 					ROOM_PUBLIC_INFO upDataClientRoomInfo_arg1 = ((DATATYPE_ROOM_PUBLIC_INFO)method.args[0]).createFromStreamEx(stream);
 					upDataClientRoomInfo(upDataClientRoomInfo_arg1);
 					break;
@@ -234,9 +283,9 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 10:
+					case 13:
 						TING_PAI_LIST oldval_TingPaiList = TingPaiList;
-						TingPaiList = ((DATATYPE_TING_PAI_LIST)EntityDef.id2datatypes[29]).createFromStreamEx(stream);
+						TingPaiList = ((DATATYPE_TING_PAI_LIST)EntityDef.id2datatypes[34]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -250,9 +299,25 @@ namespace KBEngine
 						}
 
 						break;
-					case 9:
+					case 15:
+						Int32 oldval__lastmailID = _lastmailID;
+						_lastmailID = stream.readInt32();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								on_lastmailIDChanged(oldval__lastmailID);
+						}
+						else
+						{
+							if(inWorld)
+								on_lastmailIDChanged(oldval__lastmailID);
+						}
+
+						break;
+					case 12:
 						PLAYER_ACTION_DIC oldval_actionData = actionData;
-						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[27]).createFromStreamEx(stream);
+						actionData = ((DATATYPE_PLAYER_ACTION_DIC)EntityDef.id2datatypes[32]).createFromStreamEx(stream);
 
 						if(prop.isBase())
 						{
@@ -282,7 +347,23 @@ namespace KBEngine
 						}
 
 						break;
-					case 8:
+					case 1:
+						FRIENDS_LIST oldval_friendsList = friendsList;
+						friendsList = ((DATATYPE_FRIENDS_LIST)EntityDef.id2datatypes[26]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onFriendsListChanged(oldval_friendsList);
+						}
+						else
+						{
+							if(inWorld)
+								onFriendsListChanged(oldval_friendsList);
+						}
+
+						break;
+					case 11:
 						MJ_LIST oldval_holds = holds;
 						holds = ((DATATYPE_MJ_LIST)EntityDef.id2datatypes[22]).createFromStreamEx(stream);
 
@@ -298,7 +379,23 @@ namespace KBEngine
 						}
 
 						break;
-					case 5:
+					case 4:
+						Byte oldval_inRoom = inRoom;
+						inRoom = stream.readUint8();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onInRoomChanged(oldval_inRoom);
+						}
+						else
+						{
+							if(inWorld)
+								onInRoomChanged(oldval_inRoom);
+						}
+
+						break;
+					case 8:
 						Byte oldval_isNewPlayer = isNewPlayer;
 						isNewPlayer = stream.readUint8();
 
@@ -314,7 +411,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 7:
+					case 10:
 						Byte oldval_isReady = isReady;
 						isReady = stream.readUint8();
 
@@ -330,7 +427,39 @@ namespace KBEngine
 						}
 
 						break;
-					case 4:
+					case 14:
+						MAIL_LIST oldval_mailList = mailList;
+						mailList = ((DATATYPE_MAIL_LIST)EntityDef.id2datatypes[25]).createFromStreamEx(stream);
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onMailListChanged(oldval_mailList);
+						}
+						else
+						{
+							if(inWorld)
+								onMailListChanged(oldval_mailList);
+						}
+
+						break;
+					case 7:
+						UInt32 oldval_playerGold = playerGold;
+						playerGold = stream.readUint32();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onPlayerGoldChanged(oldval_playerGold);
+						}
+						else
+						{
+							if(inWorld)
+								onPlayerGoldChanged(oldval_playerGold);
+						}
+
+						break;
+					case 6:
 						UInt16 oldval_playerID = playerID;
 						playerID = stream.readUint16();
 
@@ -346,7 +475,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 2:
+					case 3:
 						UInt16 oldval_playerID_base = playerID_base;
 						playerID_base = stream.readUint16();
 
@@ -362,7 +491,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 3:
+					case 5:
 						string oldval_playerName = playerName;
 						playerName = stream.readUnicode();
 
@@ -378,7 +507,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 1:
+					case 2:
 						string oldval_playerName_base = playerName_base;
 						playerName_base = stream.readUnicode();
 
@@ -410,7 +539,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 6:
+					case 9:
 						Byte oldval_roomSeatIndex = roomSeatIndex;
 						roomSeatIndex = stream.readUint8();
 
@@ -461,8 +590,29 @@ namespace KBEngine
 				}
 			}
 
+			Int32 oldval__lastmailID = _lastmailID;
+			Property prop__lastmailID = pdatas[5];
+			if(prop__lastmailID.isBase())
+			{
+				if(inited && !inWorld)
+					on_lastmailIDChanged(oldval__lastmailID);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop__lastmailID.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						on_lastmailIDChanged(oldval__lastmailID);
+					}
+				}
+			}
+
 			PLAYER_ACTION_DIC oldval_actionData = actionData;
-			Property prop_actionData = pdatas[5];
+			Property prop_actionData = pdatas[6];
 			if(prop_actionData.isBase())
 			{
 				if(inited && !inWorld)
@@ -503,8 +653,29 @@ namespace KBEngine
 				}
 			}
 
+			FRIENDS_LIST oldval_friendsList = friendsList;
+			Property prop_friendsList = pdatas[7];
+			if(prop_friendsList.isBase())
+			{
+				if(inited && !inWorld)
+					onFriendsListChanged(oldval_friendsList);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_friendsList.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onFriendsListChanged(oldval_friendsList);
+					}
+				}
+			}
+
 			MJ_LIST oldval_holds = holds;
-			Property prop_holds = pdatas[6];
+			Property prop_holds = pdatas[8];
 			if(prop_holds.isBase())
 			{
 				if(inited && !inWorld)
@@ -524,8 +695,29 @@ namespace KBEngine
 				}
 			}
 
+			Byte oldval_inRoom = inRoom;
+			Property prop_inRoom = pdatas[9];
+			if(prop_inRoom.isBase())
+			{
+				if(inited && !inWorld)
+					onInRoomChanged(oldval_inRoom);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_inRoom.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onInRoomChanged(oldval_inRoom);
+					}
+				}
+			}
+
 			Byte oldval_isNewPlayer = isNewPlayer;
-			Property prop_isNewPlayer = pdatas[7];
+			Property prop_isNewPlayer = pdatas[10];
 			if(prop_isNewPlayer.isBase())
 			{
 				if(inited && !inWorld)
@@ -546,7 +738,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_isReady = isReady;
-			Property prop_isReady = pdatas[8];
+			Property prop_isReady = pdatas[11];
 			if(prop_isReady.isBase())
 			{
 				if(inited && !inWorld)
@@ -566,8 +758,50 @@ namespace KBEngine
 				}
 			}
 
+			MAIL_LIST oldval_mailList = mailList;
+			Property prop_mailList = pdatas[12];
+			if(prop_mailList.isBase())
+			{
+				if(inited && !inWorld)
+					onMailListChanged(oldval_mailList);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_mailList.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onMailListChanged(oldval_mailList);
+					}
+				}
+			}
+
+			UInt32 oldval_playerGold = playerGold;
+			Property prop_playerGold = pdatas[13];
+			if(prop_playerGold.isBase())
+			{
+				if(inited && !inWorld)
+					onPlayerGoldChanged(oldval_playerGold);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_playerGold.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onPlayerGoldChanged(oldval_playerGold);
+					}
+				}
+			}
+
 			UInt16 oldval_playerID = playerID;
-			Property prop_playerID = pdatas[9];
+			Property prop_playerID = pdatas[14];
 			if(prop_playerID.isBase())
 			{
 				if(inited && !inWorld)
@@ -588,7 +822,7 @@ namespace KBEngine
 			}
 
 			UInt16 oldval_playerID_base = playerID_base;
-			Property prop_playerID_base = pdatas[10];
+			Property prop_playerID_base = pdatas[15];
 			if(prop_playerID_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -609,7 +843,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName = playerName;
-			Property prop_playerName = pdatas[11];
+			Property prop_playerName = pdatas[16];
 			if(prop_playerName.isBase())
 			{
 				if(inited && !inWorld)
@@ -630,7 +864,7 @@ namespace KBEngine
 			}
 
 			string oldval_playerName_base = playerName_base;
-			Property prop_playerName_base = pdatas[12];
+			Property prop_playerName_base = pdatas[17];
 			if(prop_playerName_base.isBase())
 			{
 				if(inited && !inWorld)
@@ -672,7 +906,7 @@ namespace KBEngine
 			}
 
 			Byte oldval_roomSeatIndex = roomSeatIndex;
-			Property prop_roomSeatIndex = pdatas[13];
+			Property prop_roomSeatIndex = pdatas[18];
 			if(prop_roomSeatIndex.isBase())
 			{
 				if(inited && !inWorld)

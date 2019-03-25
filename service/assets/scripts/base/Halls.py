@@ -13,6 +13,7 @@ class Halls(KBEngine.Entity):
 		self.fen_pei_timer = 0
 		self.NeedPlayerRoomEntity = {}
 		self.allRoomEntityList = {}
+		print("有好友列表个数---"+str(len(self.friendsList))+"个")
 
 	def EnterMatchesMatch(self,entityCall):
 		if entityCall in self.waitingEnterPlayerEntitys:

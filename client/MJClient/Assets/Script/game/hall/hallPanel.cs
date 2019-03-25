@@ -16,6 +16,7 @@ public class hallPanel : MonoBehaviour {
 	Transform Friends_Content,Friend_item;
 	Transform mailBtn;
 	string _name,_id;
+	public Transform noFriendsTr;
 	// Use this for initialization
 	void init(){
 		topRoot = transform.Find ("top");
@@ -45,8 +46,72 @@ public class hallPanel : MonoBehaviour {
 		bottomRoot = transform.Find ("bottom");
 		mailBtn = bottomRoot.Find ("message_btn");
 		EventInterface.AddOnEvent (mailBtn, Click);
+		account = (Account)KBEngineApp.app.player();
+		account.baseEntityCall.reqFriendsList();
+		showMailInfo(account);
+	}
+
+	public void showMailInfo(Account ac) {
+		print("有邮件----"+account.mailList.Count);
+		bool hasNew = false;
+		if (account.mailList.Count > 0) {
+			
+			foreach (var item in account.mailList)
+			{
+				if (item.lookOver == 0)
+					hasNew = true;
+				break;
+			}
+		}
+		if (hasNew)
+		{
+			mailBtn.GetChild(0).gameObject.SetActive(true);
+		}
+		else {
+			mailBtn.GetChild(0).gameObject.SetActive(false);
+		}
+	}
+	public void initFriendsListOK(PLAYRE_DATA_LIST arg1)
+	{
+		if (arg1.Count == 0)
+		{
+			MonoBehaviour.print("没有好友！！！");
+			noFriendsTr.gameObject.SetActive(true);
+		}
+		else
+		{
+			noFriendsTr.gameObject.SetActive(false);
+			foreach (Transform item in Friends_Content)
+			{
+				Destroy(item.gameObject);
+			}
+			MonoBehaviour.print("有好友---！" + arg1.Count);
+			foreach (var item in arg1)
+			{
+				MonoBehaviour.print(item.playerName + "---" + item.playerDBID + "---" + item.playerGold + "---" + item.isOnLine);
+				Transform tr = Instantiate(Friend_item);
+				tr.SetParent(Friends_Content,false);
+				tr.gameObject.SetActive(true);
+				string active = item.isOnLine == 0 ? "离线" : "在线";
+				tr.Find("name").GetComponent<Text>().text = item.playerName+"("+ active + ")";
+				tr.Find("dbid").GetComponent<Text>().text = item.playerDBID+"";
+				tr.Find("goldText").GetComponent<Text>().text = item.playerGold+"";
+				Transform btn = tr.Find("Give");
+				EventInterface.AddOnEvent(btn, SendMsg);
+			}
+		}
 
 	}
+
+	private void SendMsg(Transform tr)
+	{
+		//GameObject go = GameManager.GetInstance().LoadPanel("Prefabs/sendMsgPanel", GameObject.Find("Canvas/Root").transform);
+		//go.GetComponent<sendMsgPanel>().showPanel(tr.parent);
+		string d = tr.parent.Find("dbid").GetComponent<Text>().text;
+		string name = tr.parent.Find("name").GetComponent<Text>().text;
+		account.baseEntityCall.reqGiveGold(ulong.Parse(d), name);
+	}
+
 	void Click(Transform tr){
 		if (tr == xzddBtn) {
 			Account acc = (Account)KBEngineApp.app.player();
@@ -64,7 +129,9 @@ public class hallPanel : MonoBehaviour {
 		}else if(tr == CreatRoomBtn){
 			
 		}else if(tr == mailBtn){
-			
+			//account.baseEntityCall.reqSendMail(2, "xfsaf",3,account.playerName);
+			GameManager.GetInstance().LoadPanel("Prefabs/MailPanel", GameObject.Find("Canvas/Root").transform);
+
 		}
 	}
 	void initPlayerData() {
@@ -105,9 +172,13 @@ public class hallPanel : MonoBehaviour {
 	void installEvents()
 	{
 		KBEngine.Event.registerOut("OnReqCreateAvatar", this, "OnReqCreateAvatar");
-
+		KBEngine.Event.registerOut("initFriendsListOK", this, "initFriendsListOK");
+		KBEngine.Event.registerOut("upDataMailList", this, "upDataMailList");
+		
 	}
-
+	public void upDataMailList() {
+		showMailInfo(account);
+	}
 	public void OnReqCreateAvatar(int code)
 	{
 		if (code == 0)

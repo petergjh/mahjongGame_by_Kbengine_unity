@@ -1,0 +1,94 @@
+  INFO root [2018-11-15 14:18:14,976] - 
+  INFO root [2018-11-15 14:18:15,012] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-15 14:18:16,140] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-15 14:18:16,140] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-15 14:18:16,140] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-15 14:18:16,854] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:52199 )
+  INFO root [2018-11-15 14:18:16,855] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:52199, SOMAXCONN=5.
+  INFO root [2018-11-15 14:18:16,870] - server-configs:
+  INFO root [2018-11-15 14:18:16,870] - 	internalAddr : 192.168.0.107:52199
+  INFO root [2018-11-15 14:18:16,871] - 	componentID : 4000
+  INFO root [2018-11-15 14:18:17,043] - ---- dbmgr Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: F28F1C37BCC70CD27B77841D4A30E3D7. Config: Debug X86. Built: 15:52:44 Apr 29 2018. AppID: 4000. UID: 4926. PID: 9488 ----
+  INFO root [2018-11-15 14:18:17,044] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-15 14:18:17,060] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-15 14:18:17,061] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-11-15 14:18:20,347] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-11-15 14:18:20,440] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-11-15 14:18:20,468] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-11-15 14:18:21,072] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-11-15 14:18:21,113] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-11-15 14:18:21,134] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-11-15 14:18:21,218] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-11-15 14:18:22,392] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-11-15 14:18:23,479] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:52:37) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-11-15 14:18:23,480] - Script::install(): KBExtra is successfully!
+  INFO root [2018-11-15 14:18:24,966] - Dbmgr::initializeEnd: digest(7F4FC8296AD553545CD95B23EFF6238F)
+S_INFO root [2018-11-15 14:18:24,967] - onDBMgrReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-11-15 14:18:25,022] - TelnetServer server is running on port 32000
+  INFO root [2018-11-15 14:18:25,149] - Dbmgr::initInterfacesHandler: interfaces addr(127.0.0.1:30099), accountType:(interfaces), chargeType:(interfaces).
+  WARN root [2018-11-15 14:18:25,833] - DBUtil::initialize: db(default) password is not encrypted!
+please use password(rsa):
+7926431C7EFEFBE2D084B0ECB39432D1DB3C4FB93F366D9BECA18D1EEEE11C557AB3D9B21D351AA50BE78C1C0C1AC6954D8774D7A539A2C942270BEE5DF5C21EFF4A6400B2DFE13D5736D70949916D5A48803F169159D0ED22077851E4106DDCE9EA3CD162935E3301F98514E590043F96B3A19CEFB146B37F034EAEBD1BA26E
+ DEBUG root [2018-11-15 14:18:26,365] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-15 14:18:28,614] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+  INFO root [2018-11-15 14:18:28,615] - DBUtil::createInterface[0x23f4b0]: interface=default, dbtype=mysql, ip=localhost, port=3306, currdatabase=kbe, username=kbe, connected=yes.
+
+  INFO root [2018-11-15 14:18:28,646] - ThreadPool::createThreadPool: creating  threadpool...
+ DEBUG root [2018-11-15 14:18:28,647] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-15 14:18:28,648] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-15 14:18:28,648] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+  INFO root [2018-11-15 14:18:28,648] - ThreadPool::createThreadPool: successfully(5), newThreadCount=5, normalMaxThreadCount=5, maxThreadCount=5
+ DEBUG root [2018-11-15 14:18:28,649] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-15 14:18:28,649] - DBInterfaceMysql::attach: connect: localhost:3306 starting...
+ DEBUG root [2018-11-15 14:18:28,651] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-15 14:18:28,651] - DBThread::onStart(): 0x6e69f0!
+ DEBUG root [2018-11-15 14:18:28,651] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-15 14:18:28,651] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-15 14:18:28,652] - DBThread::onStart(): 0x6e6968!
+ DEBUG root [2018-11-15 14:18:28,652] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-15 14:18:28,652] - DBThread::onStart(): 0x6e68e0!
+ DEBUG root [2018-11-15 14:18:28,652] - DBInterfaceMysql::attach: successfully! addr: localhost:3306
+ DEBUG root [2018-11-15 14:18:28,653] - DBThread::onStart(): 0x6e6a78!
+ DEBUG root [2018-11-15 14:18:28,653] - DBThread::onStart(): 0x6e6b00!
+  INFO root [2018-11-15 14:18:29,635] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:29,638] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,116] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,142] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-15 14:18:30,167] - DBTask::process(): took 0.49 seconds
+sql:(CREATE TABLE IF NOT EXISTS kbe_accountinfos (`accountName` varchar(128) not null, PRIMARY KEY idKey (`accountName`),`password` varchar(255),`bindata` blob,`email` varchar(191) not null, UNIQUE KEY `email` (`email`),`entityDBID` bigint(20) unsigned not null DEFAULT 0, UNIQUE KEY `entityDBID` (`entityDBID`),`flags` int unsigned not null DEFAULT 0,`deadline` bigint(20) not null DEFAULT 0,`regtime` bigint(20) not null DEFAULT 0,`lasttime` bigint(20) not null DEFAULT 0,`numlogin` int unsigned not null DEFAULT 0)ENGINE=InnoDB)
+  INFO root [2018-11-15 14:18:30,176] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,217] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,535] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,536] - DBInterfaceMysql::query: successfully!
+  INFO root [2018-11-15 14:18:30,537] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-15 14:18:30,537] - DBTask::process(): took 0.88 seconds
+sql:(delete from kbe_email_verification where logtime<1542259110 and type=3)
+  WARN root [2018-11-15 14:18:30,689] - DBTask::process(): took 1.03 seconds
+sql:(insert into kbe_serverlog (heartbeatTime, logger) values(1542262710,4000) ON DUPLICATE KEY UPDATE heartbeatTime=1542262710)
+  WARN root [2018-11-15 14:18:30,704] - DBTask::process(): took 0.54 seconds
+sql:(show index from tbl_Account)
+  INFO root [2018-11-15 14:18:30,781] - DBInterfaceMysql::query: successfully!
+  WARN root [2018-11-15 14:18:30,782] - DBTask::process(): took 1.13 seconds
+sql:(delete from kbe_entitylog where logger in (4000))
+  WARN root [2018-11-15 14:18:30,799] - DBTask::process(): took 1.14 seconds
+sql:(show index from tbl_CheckName)
+  WARN root [2018-11-15 14:18:31,415] - DBTask::process(): took 0.88 seconds
+sql:(show index from tbl_Halls)
+  WARN root [2018-11-15 14:18:31,416] - DBTask::process(): delay 1.05 seconds, try adjusting the kbengine[_defs].xml(numConnections) and MySQL(my.cnf->max_connections or innodb_flush_log_at_trx_commit)!
+sql:(show index from tbl_Room)
+  WARN root [2018-11-15 14:18:31,417] - DBTask::process(): took 0.73 seconds
+sql:(show index from tbl_Room)
+  WARN root [2018-11-15 14:18:31,430] - e:\kbengine\kbe\src\server\dbmgr\dbmgr.cpp:275: Profile scriptCall took 6.46 seconds
+  INFO root [2018-11-15 14:18:31,858] - ---- dbmgr is running ----
+ DEBUG root [2018-11-15 14:18:31,859] - Components::process(): Request for the process of identity...
+  INFO root [2018-11-15 14:18:38,325] - ServerApp::onRegisterNewApp: uid:4926, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52198, extaddr:nonsupport, extport:0,  from 192.168.0.107:52218/0/0/0.
+  INFO root [2018-11-15 14:18:38,326] - Components::addComponent: reset orderLog, uid=4926!
+  INFO root [2018-11-15 14:18:38,326] - Components::addComponent[baseappmgr], uid=4926, componentID=5000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-15 14:18:38,327] - ServerApp::onRegisterNewApp: uid:4926, username:, componentType:cellappmgr, componentID:6000, globalorderID=-1, grouporderID=-1, intaddr:192.168.0.107, intport:52194, extaddr:nonsupport, extport:0,  from 192.168.0.107:52220/0/0/0.
+  INFO root [2018-11-15 14:18:38,328] - Components::addComponent[cellappmgr], uid=4926, componentID=6000, globalorderid=2, grouporderid=1, totalcount=1
+  INFO root [2018-11-15 14:18:39,266] - Components::findComponents: find logger(1)...
+  INFO root [2018-11-15 14:18:39,360] - Components::findComponents: found logger, addr:192.168.0.107:52193
+  INFO root [2018-11-15 14:18:39,360] - Components::addComponent[logger], uid=4926, componentID=2000, globalorderid=3, grouporderid=1, totalcount=1
+  WARN root [2018-11-15 14:18:39,408] - Forwarding logs to logger[192.168.0.107:52193/0/0/0]...

@@ -1,0 +1,46 @@
+  INFO root [2018-11-16 14:39:38,740] - 
+  INFO root [2018-11-16 14:39:38,745] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2018-11-16 14:39:39,398] - Resmgr::initialize: KBE_ROOT=E:/kbengine/
+  INFO root [2018-11-16 14:39:39,399] - Resmgr::initialize: KBE_RES_PATH=E:/kbengine/kbe/res/;E:/kbengine/assets/;E:/kbengine/assets/scripts/;E:/kbengine/assets/res/
+  INFO root [2018-11-16 14:39:39,399] - Resmgr::initialize: KBE_BIN_PATH=E:/kbengine/kbe/bin/server/
+  INFO root [2018-11-16 14:39:39,901] - NetworkInterface::initialize(EXTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:20013 )
+  INFO root [2018-11-16 14:39:40,037] - NetworkInterface::initialize(EXTERNAL): address 192.168.0.107:20013, SOMAXCONN=128.
+  INFO root [2018-11-16 14:39:40,042] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.0.107 ( 192.168.0.107:51792 )
+  INFO root [2018-11-16 14:39:40,042] - NetworkInterface::initialize(INTERNAL): address 192.168.0.107:51792, SOMAXCONN=128.
+  INFO root [2018-11-16 14:39:40,042] - server-configs:
+  INFO root [2018-11-16 14:39:40,043] - 	internalAddr : 192.168.0.107:51792
+  INFO root [2018-11-16 14:39:40,043] - 	externalAddr : 192.168.0.107:20013
+  INFO root [2018-11-16 14:39:40,043] - 	externalCustomAddr : c.55908.3m.dkys.org
+  INFO root [2018-11-16 14:39:40,043] - 	componentID : 9000
+  INFO root [2018-11-16 14:39:40,833] - ---- loginapp Version: 2.0.0. ScriptVersion: 0.1.0. Protocol: B20F257E332779D9E1EA7D34638E6146. Config: Debug X86. Built: 15:53:07 Apr 29 2018. AppID: 9000. UID: 29102. PID: 10056 ----
+  INFO root [2018-11-16 14:39:40,834] - Server : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz with 4194303kB RAM
+  INFO root [2018-11-16 14:39:40,835] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2018-11-16 14:39:41,021] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2018-11-16 14:39:46,495] - Script::install_py_dlls(): PyInit_pyexpat
+ DEBUG root [2018-11-16 14:39:46,617] - Script::install_py_dlls(): PyInit__socket
+ DEBUG root [2018-11-16 14:39:46,645] - Script::install_py_dlls(): PyInit__ssl
+ DEBUG root [2018-11-16 14:39:47,237] - Script::install_py_dlls(): PyInit__hashlib
+ DEBUG root [2018-11-16 14:39:47,514] - Script::install_py_dlls(): PyInit_select
+ DEBUG root [2018-11-16 14:39:47,560] - Script::install_py_dlls(): PyInit__ctypes
+ DEBUG root [2018-11-16 14:39:47,621] - Script::install_py_dlls(): PyInit__elementtree
+ DEBUG root [2018-11-16 14:39:48,867] - Script::install_py_dlls(): PyInit_unicodedata
+  INFO root [2018-11-16 14:39:50,921] - Script::install(): is successfully, Python=(3.4.2 (default, Apr 29 2018, 15:53:05) [MSC v.1913 32 bit (Intel)])!
+  INFO root [2018-11-16 14:39:50,922] - Script::install(): KBExtra is successfully!
+S_INFO root [2018-11-16 14:39:51,077] - onLoginAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2018-11-16 14:39:51,078] - TelnetServer server is running on port 31000
+  INFO root [2018-11-16 14:39:51,958] - ---- loginapp is running ----
+ DEBUG root [2018-11-16 14:39:51,972] - Components::process(): Request for the process of identity...
+  WARN root [2018-11-16 14:39:52,443] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20144, errorno=10048
+  WARN root [2018-11-16 14:39:59,070] - e:\kbengine\kbe\src\lib\network\event_dispatcher.cpp:153: Profile callSystemTimers took 0.12 seconds
+  INFO root [2018-11-16 14:40:00,077] - Components::findComponents: find logger(1)...
+  INFO root [2018-11-16 14:40:00,116] - Components::findComponents: found logger, addr:192.168.0.107:51787
+  INFO root [2018-11-16 14:40:00,117] - Components::addComponent: reset orderLog, uid=29102!
+  INFO root [2018-11-16 14:40:00,117] - Components::addComponent[logger], uid=29102, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-16 14:40:00,143] - Components::findComponents: find dbmgr(2)...
+  INFO root [2018-11-16 14:40:00,219] - Components::findComponents: found dbmgr, addr:192.168.0.107:51790
+  INFO root [2018-11-16 14:40:00,220] - Components::addComponent: reset orderLog, uid=29102!
+  INFO root [2018-11-16 14:40:00,220] - Components::addComponent[dbmgr], uid=29102, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2018-11-16 14:40:00,220] - Components::findComponents: found dbmgr, addr:192.168.0.107:51790
+  WARN root [2018-11-16 14:40:01,220] - Forwarding logs to logger[192.168.0.107:51787/0/0/0]...
